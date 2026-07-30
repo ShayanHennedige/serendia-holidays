@@ -72,7 +72,6 @@ export async function POST(request: Request) {
     return Response.json({
       error: 'We could not deliver your final tour request. Your details have not been shown as successfully submitted. Please try again or contact us directly.',
       code: classifySubmissionError(error),
-      diagnostic: sanitiseSubmissionError(error),
     }, { status: 502 });
   } finally {
     // Best-effort zeroisation: the generated PDF is never written to disk and
@@ -80,15 +79,6 @@ export async function POST(request: Request) {
     pdf?.fill(0);
     pdf = undefined;
   }
-}
-
-function sanitiseSubmissionError(error: unknown) {
-  const firstLine = error instanceof Error ? error.message.split('\n', 1)[0] : 'Unknown PDF generation error';
-  return firstLine
-    .replace(/https?:\/\/\S+/gi, '[url]')
-    .replace(/(?:\/[\w.@%+,-]+){2,}/g, '[path]')
-    .replace(/[A-Za-z0-9_-]{32,}/g, '[redacted]')
-    .slice(0, 240);
 }
 
 function classifySubmissionError(error: unknown) {

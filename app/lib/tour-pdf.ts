@@ -1,8 +1,10 @@
 import 'server-only';
 
+import chromium from '@sparticuz/chromium-min';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import puppeteerCore from 'puppeteer-core';
 import type { TourSubmissionSnapshot } from './tour-types';
 
 let vercelChromiumPath: Promise<string> | undefined;
@@ -34,16 +36,12 @@ export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMap
 
 async function launchPdfBrowser() {
   if (process.env.VERCEL) {
-    const [{ default: chromium }, { default: puppeteer }] = await Promise.all([
-      import('@sparticuz/chromium-min'),
-      import('puppeteer-core'),
-    ]);
     const executablePath = await resolveVercelChromiumPath(chromium.executablePath);
 
-    return puppeteer.launch({
+    return puppeteerCore.launch({
       headless: 'shell',
       executablePath,
-      args: puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
+      args: puppeteerCore.defaultArgs({ args: chromium.args, headless: 'shell' }),
     });
   }
 
