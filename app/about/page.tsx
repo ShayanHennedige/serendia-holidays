@@ -37,7 +37,7 @@ const team = [
   {
     name: 'Dharshan Hennedige',
     role: 'Founder · Travel & hospitality',
-    image: '/dharshan image.webp',
+    image: '/dharshanimage 2.jpg',
     copy: '24 years across hotels and travel, including nearly seven years as Executive Secretary of the Sri Lanka Tourism Development Authority.',
   },
   {
@@ -197,10 +197,16 @@ export default function AboutPage() {
           </div>
 
           <div className={styles.teamGrid}>
-            {team.map((member, index) => (
-              <article className={`${styles.person}${index === 0 ? ` ${styles.personLead}` : ''}`} data-reveal key={member.name}>
+            {team.map((member) => (
+              <article className={styles.person} data-reveal key={member.name}>
                 <div className={styles.personImage}>
-                  <Image src={member.image} alt={member.name} fill sizes={index === 0 ? '(max-width: 800px) 100vw, 48vw' : '(max-width: 620px) 100vw, 25vw'} />
+                  <Image
+                    className={styles.personPortrait}
+                    src={member.image}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 620px) 100vw, (max-width: 899px) 50vw, 33vw"
+                  />
                   <div className={styles.personGlow} />
                 </div>
                 <div className={styles.personInfo}>

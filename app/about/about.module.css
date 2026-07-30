@@ -447,7 +447,7 @@
 }
 
 .teamSection {
-  padding: clamp(110px, 12vw, 175px) 0;
+  padding: clamp(95px, 10vw, 145px) 0;
   background: var(--ice);
 }
 
@@ -456,12 +456,12 @@
   grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
   gap: 70px;
   align-items: end;
-  margin-bottom: 70px;
+  margin-bottom: 56px;
 }
 
 .teamHeading h2 {
-  max-width: 850px;
-  font-size: clamp(4.2rem, 7.4vw, 7.4rem);
+  max-width: 720px;
+  font-size: clamp(3.6rem, 6vw, 6rem);
 }
 
 .teamHeading > p {
@@ -473,21 +473,17 @@
 
 .teamGrid {
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 20px;
 }
 
 .person {
-  grid-column: span 4;
   min-width: 0;
   overflow: hidden;
   border: 1px solid rgba(6, 42, 47, 0.12);
   background: #fff;
   transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease;
 }
-
-.person:nth-child(1) { grid-column: span 7; }
-.person:nth-child(2) { grid-column: span 5; }
 
 .person:hover {
   transform: translateY(-7px);
@@ -498,23 +494,27 @@
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #d8e2df;
+  background: #d5ddda;
 }
 
-.person:nth-child(1) .personImage,
-.person:nth-child(2) .personImage { aspect-ratio: 16 / 10; }
-
-.personImage img {
+.personPortrait {
+  z-index: 1;
   object-fit: cover;
   object-position: center 24%;
   transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 300ms ease;
 }
 
-.person:nth-child(1) .personImage img { object-position: center 35%; }
-.person:hover .personImage img { transform: scale(1.035); }
+.person:nth-child(1) .personPortrait { object-position: center 18%; }
+.person:nth-child(2) .personPortrait { object-position: center 46%; }
+.person:nth-child(3) .personPortrait { object-position: center 28%; }
+.person:nth-child(4) .personPortrait { object-position: center 20%; }
+.person:nth-child(5) .personPortrait { object-position: center 18%; }
+
+.person:hover .personPortrait { transform: scale(1.025); }
 
 .personGlow {
   position: absolute;
+  z-index: 2;
   inset: 0;
   background: linear-gradient(180deg, transparent 62%, rgba(5, 35, 39, 0.42));
   opacity: 0.35;
@@ -523,7 +523,7 @@
 
 .person:hover .personGlow { opacity: 0.72; }
 
-.personInfo { padding: 27px 28px 32px; }
+.personInfo { padding: 22px 24px 26px; }
 
 .personInfo > p {
   margin-bottom: 13px;
@@ -536,9 +536,9 @@
 }
 
 .personInfo h3 {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-size: clamp(1.9rem, 2.4vw, 2.55rem);
   font-weight: 400;
   letter-spacing: -0.05em;
   line-height: 0.98;
@@ -752,10 +752,7 @@
   .disciplineCopy { padding: 40px; }
   .teamHeading { grid-template-columns: 1fr; gap: 23px; }
   .teamHeading > p { max-width: 600px; }
-  .person,
-  .person:nth-child(1),
-  .person:nth-child(2) { grid-column: span 6; }
-  .person:nth-child(1) { grid-column: span 12; }
+  .teamGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hotelGrid { grid-template-columns: 1fr; gap: 75px; }
   .hotelIntro { position: static; }
 }
@@ -800,12 +797,7 @@
   .teamSection,
   .hotelSection { padding: 88px 0; }
   .teamHeading { margin-bottom: 48px; }
-  .person,
-  .person:nth-child(1),
-  .person:nth-child(2) { grid-column: span 12; }
-  .person:nth-child(1) .personImage,
-  .person:nth-child(2) .personImage,
-  .personImage { aspect-ratio: 4 / 3; }
+  .teamGrid { grid-template-columns: 1fr; }
   .personInfo { padding: 25px 23px 29px; }
   .personInfo h3 { font-size: 2.35rem; }
   .hotelSteps article { grid-template-columns: 42px 1fr; gap: 14px; }
