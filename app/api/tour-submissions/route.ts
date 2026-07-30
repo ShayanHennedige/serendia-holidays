@@ -83,6 +83,13 @@ export async function POST(request: Request) {
 
 function classifySubmissionError(error: unknown) {
   const message = error instanceof Error ? error.message.toLowerCase() : '';
+  if (message.includes('unexpected status code')) return 'CHROMIUM_PACK_HTTP_ERROR';
+  if (message.includes('request timeout')) return 'CHROMIUM_PACK_TIMEOUT';
+  if (message.includes('input directory')) return 'CHROMIUM_PACK_MISSING';
+  if (message.includes('cannot open shared object') || message.includes('shared libraries')) return 'CHROMIUM_LIBRARY_MISSING';
+  if (message.includes('failed to launch')) return 'CHROMIUM_LAUNCH_FAILED';
+  if (message.includes('spawn')) return 'CHROMIUM_SPAWN_FAILED';
+  if (message.includes('protocol error')) return 'CHROMIUM_PROTOCOL_ERROR';
   if (message.includes('chrom') || message.includes('browser') || message.includes('executable')) return 'PDF_BROWSER_UNAVAILABLE';
   if (message.includes('pdf asset') || message.includes('enoent')) return 'PDF_ASSET_UNAVAILABLE';
   if (message.includes('permission') || message.includes('erofs') || message.includes('eacces')) return 'SUBMISSION_STORAGE_UNAVAILABLE';
