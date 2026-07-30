@@ -1,39 +1,35 @@
 import InnerHero from '../components/InnerHero';
+import GalleryBrowser from './GalleryBrowser';
+import { getGoogleDriveGallery } from '../lib/googleDriveGallery';
 
-const galleryImages: string[] = [
-  '/images/hero-1.png',
-  '/images/hero-2.png',
-  '/images/hero-3.png',
-  '/images/tour-polonnaruwa.png',
-  '/images/hero-4.png',
-  '/images/hero-1.png',
-];
+// Render on request so the gallery always reflects the latest public Drive contents.
+export const revalidate = 0;
 
 export const metadata = {
   title: 'Gallery - Serendia Holidays By Venom',
   description: 'Our tour gallery.',
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const collections = await getGoogleDriveGallery();
+
   return (
-    <main>
+    <main className="drive-gallery-page">
       <InnerHero 
         title="Gallery" 
         bgImage="/images/hero-1.png"
       />
-      <section className="page-content">
+      <section className="drive-gallery-intro">
         <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Memories from Sri Lanka</h2>
+          <div className="drive-gallery-heading">
+            <p className="drive-gallery-eyebrow">Stories from the road</p>
+            <h2>Real journeys.<br /><em>Unscripted moments.</em></h2>
+            <p className="drive-gallery-copy">
+              A living collection of Sri Lanka as our guests experienced it—warm welcomes,
+              wild landscapes and the small moments that stay with you.
+            </p>
           </div>
-          
-          <div className="gallery-grid">
-            {galleryImages.map((src, index) => (
-              <div key={index} className="gallery-item">
-                <img src={src} alt={`Gallery image ${index + 1}`} />
-              </div>
-            ))}
-          </div>
+          <GalleryBrowser collections={collections} />
         </div>
       </section>
     </main>

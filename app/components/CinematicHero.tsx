@@ -153,11 +153,11 @@ export default function CinematicHero() {
         timeline
           .fromTo(
             media,
-            { scale: 1.04, yPercent: index % 2 === 0 ? -2.5 : 2.5, filter: 'brightness(.46) saturate(.76)' },
-            { scale: 1.18, yPercent: index % 2 === 0 ? 2.5 : -2.5, filter: 'brightness(.9) saturate(1.05)', duration: 1, ease: 'none' },
+            { scale: 1.04, yPercent: index % 2 === 0 ? -2.5 : 2.5, filter: 'brightness(.64) saturate(.9)' },
+            { scale: 1.18, yPercent: index % 2 === 0 ? 2.5 : -2.5, filter: 'brightness(1.02) saturate(1.08)', duration: 1, ease: 'none' },
             0,
           )
-          .fromTo(wash, { autoAlpha: 0.82 }, { autoAlpha: 0.28, duration: 0.45, ease: 'power2.out' }, 0)
+          .fromTo(wash, { autoAlpha: 0.62 }, { autoAlpha: 0.2, duration: 0.45, ease: 'power2.out' }, 0)
           .fromTo(letterbox, { scaleY: 1 }, { scaleY: 0.38, duration: 0.36, ease: 'power3.out' }, 0)
           .fromTo(frame, { autoAlpha: 0, scale: 0.94 }, { autoAlpha: 0.72, scale: 1, duration: 0.38 }, 0.05);
 
@@ -174,7 +174,7 @@ export default function CinematicHero() {
 
         timeline
           .to(content, { autoAlpha: 0, y: -32, filter: 'blur(8px)', duration: 0.2, ease: 'power2.in' }, 0.79)
-          .to(wash, { autoAlpha: 0.78, duration: 0.21 }, 0.79)
+          .to(wash, { autoAlpha: 0.58, duration: 0.21 }, 0.79)
           .to(frame, { autoAlpha: 0, scale: 1.025, duration: 0.18 }, 0.82);
       });
     }, root);
