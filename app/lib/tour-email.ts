@@ -39,12 +39,22 @@ export async function sendTourSubmissionEmail(options: {
 
 function createTransport() {
   const host = process.env.EMAIL_SMTP_HOST;
-  const port = Number(process.env.EMAIL_SMTP_PORT || '465');
+  const portValue = process.env.EMAIL_SMTP_PORT;
+  const port = Number(portValue || '465');
   const user = process.env.EMAIL_SMTP_USER;
   const pass = process.env.EMAIL_SMTP_PASS;
+  const missingVariables = [
+    !host && 'EMAIL_SMTP_HOST',
+    !portValue && 'EMAIL_SMTP_PORT',
+    !user && 'EMAIL_SMTP_USER',
+    !pass && 'EMAIL_SMTP_PASS',
+  ].filter((name): name is string => Boolean(name));
 
-  if (!host || !Number.isFinite(port) || !user || !pass) {
-    throw new Error('Email delivery is not configured. Set EMAIL_SMTP_HOST, EMAIL_SMTP_PORT, EMAIL_SMTP_USER and EMAIL_SMTP_PASS.');
+  if (missingVariables.length || !Number.isFinite(port)) {
+    const detail = missingVariables.length
+      ? ` Missing Vercel variables: ${missingVariables.join(', ')}.`
+      : ' EMAIL_SMTP_PORT must be a valid number.';
+    throw new Error(`Email delivery is not configured.${detail}`);
   }
 
   return nodemailer.createTransport({
