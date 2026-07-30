@@ -1,13 +1,13 @@
 import 'server-only';
 
-import chromium from '@sparticuz/chromium-min';
 import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import puppeteerCore from 'puppeteer-core';
 import type { TourSubmissionSnapshot } from './tour-types';
 
 let vercelChromiumPath: Promise<string> | undefined;
+type ChromiumRuntime = { args: string[]; executablePath: (input?: string) => Promise<string> };
+type PuppeteerRuntime = Pick<typeof import('puppeteer-core'), 'defaultArgs' | 'launch'>;
 
 export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMapSvg: string, routeMapDataUri?: string): Promise<Uint8Array> {
   const [browser, logo, hero] = await Promise.all([
@@ -36,7 +36,13 @@ export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMap
 
 async function launchPdfBrowser() {
   if (process.env.VERCEL) {
-    const executablePath = await resolveVercelChromiumPath(chromium.executablePath);
+    const [chromiumModule, puppeteerModule] = await Promise.all([
+      import('@sparticuz/chromium-min'),
+      import('puppeteer-core'),
+    ]);
+    const chromium = (chromiumModule.default ?? chromiumModule) as unknown as ChromiumRuntime;
+    const puppeteerCore = (puppeteerModule.default ?? puppeteerModule) as unknown as PuppeteerRuntime;
+    const executablePath = await resolveVercelChromiumPath((input) => chromium.executablePath(input));
 
     return puppeteerCore.launch({
       headless: 'shell',
