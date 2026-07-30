@@ -10,8 +10,8 @@ let vercelChromiumPath: Promise<string> | undefined;
 export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMapSvg: string, routeMapDataUri?: string): Promise<Uint8Array> {
   const [browser, logo, hero] = await Promise.all([
     launchPdfBrowser(),
-    imageDataUri(join(process.cwd(), 'public', 'black logo.png'), 'image/png'),
-    imageDataUri(join(process.cwd(), 'public', 'images', 'hero-1.png'), 'image/png'),
+    publicImageDataUri('black logo.png', 'image/png'),
+    publicImageDataUri('images/hero-1.png', 'image/png'),
   ]);
 
   try {
@@ -41,9 +41,9 @@ async function launchPdfBrowser() {
     const executablePath = await resolveVercelChromiumPath(chromium.executablePath);
 
     return puppeteer.launch({
-      headless: true,
+      headless: 'shell',
       executablePath,
-      args: chromium.args,
+      args: puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
     });
   }
 
@@ -58,11 +58,7 @@ async function launchPdfBrowser() {
 
 function resolveVercelChromiumPath(resolveExecutable: (input?: string) => Promise<string>) {
   if (!vercelChromiumPath) {
-    const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
-    if (!deploymentHost) {
-      throw new Error('Vercel deployment URL is unavailable for the Chromium pack.');
-    }
-    const packUrl = `https://${deploymentHost}/chromium-pack.tar`;
+    const packUrl = process.env.CHROMIUM_PACK_URL || `${deploymentOrigin()}/chromium-pack.tar`;
     vercelChromiumPath = resolveExecutable(packUrl).catch((error) => {
       vercelChromiumPath = undefined;
       throw error;
@@ -189,6 +185,28 @@ function escapeHtml(value: string) {
 async function imageDataUri(path: string, mimeType: string) {
   const buffer = await readFile(path);
   return `data:${mimeType};base64,${buffer.toString('base64')}`;
+}
+
+async function publicImageDataUri(relativePath: string, mimeType: string) {
+  if (!process.env.VERCEL) {
+    return imageDataUri(join(process.cwd(), 'public', relativePath), mimeType);
+  }
+
+  const encodedPath = relativePath.split('/').map(encodeURIComponent).join('/');
+  const response = await fetch(`${deploymentOrigin()}/${encodedPath}`, { cache: 'force-cache' });
+  if (!response.ok) {
+    throw new Error(`PDF asset request failed with status ${response.status}.`);
+  }
+  const buffer = Buffer.from(await response.arrayBuffer());
+  return `data:${mimeType};base64,${buffer.toString('base64')}`;
+}
+
+function deploymentOrigin() {
+  const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+  if (!deploymentHost) {
+    throw new Error('Vercel deployment URL is unavailable for PDF generation.');
+  }
+  return `https://${deploymentHost}`;
 }
 
 async function resolveBrowserExecutablePath(puppeteer: { executablePath: () => Promise<string> | string }) {

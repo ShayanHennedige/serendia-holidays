@@ -69,13 +69,24 @@ export async function POST(request: Request) {
     const message = error instanceof Error ? error.message : 'Tour submission failed.';
     logAiInteraction('tour-submission-failed', { reference, error: message }, 'pending-review');
     console.error('Could not finalise tour submission.', error);
-    return Response.json({ error: 'We could not deliver your final tour request. Your details have not been shown as successfully submitted. Please try again or contact us directly.' }, { status: 502 });
+    return Response.json({
+      error: 'We could not deliver your final tour request. Your details have not been shown as successfully submitted. Please try again or contact us directly.',
+      code: classifySubmissionError(error),
+    }, { status: 502 });
   } finally {
     // Best-effort zeroisation: the generated PDF is never written to disk and
     // its backing bytes are cleared as soon as the Meta request completes.
     pdf?.fill(0);
     pdf = undefined;
   }
+}
+
+function classifySubmissionError(error: unknown) {
+  const message = error instanceof Error ? error.message.toLowerCase() : '';
+  if (message.includes('chrom') || message.includes('browser') || message.includes('executable')) return 'PDF_BROWSER_UNAVAILABLE';
+  if (message.includes('pdf asset') || message.includes('enoent')) return 'PDF_ASSET_UNAVAILABLE';
+  if (message.includes('permission') || message.includes('erofs') || message.includes('eacces')) return 'SUBMISSION_STORAGE_UNAVAILABLE';
+  return 'PDF_GENERATION_FAILED';
 }
 
 export const runtime = 'nodejs';
