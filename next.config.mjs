@@ -1,10 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  serverExternalPackages: ['@sparticuz/chromium', 'puppeteer-core'],
-  outputFileTracingIncludes: {
-    '/api/tour-submissions': ['./node_modules/@sparticuz/chromium/bin/**/*'],
-    '/api/tour-submissions/email': ['./node_modules/@sparticuz/chromium/bin/**/*'],
-  },
+  serverExternalPackages: ['@sparticuz/chromium-min', 'puppeteer-core'],
 };
 
 export default nextConfig;
