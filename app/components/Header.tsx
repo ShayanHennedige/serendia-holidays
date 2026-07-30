@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import NaturalLanguageSearch from './NaturalLanguageSearch';
 import { useLanguage } from './LanguageProvider';
-import { localeLabels, supportedLocales, type Locale } from '../lib/i18n';
+import { localeCountries, localeLabels, supportedLocales, type Locale } from '../lib/i18n';
 import { homeDictionaries } from '../lib/homeI18n';
 
 const localeFlags: Record<Locale, string> = {
@@ -188,7 +188,7 @@ export default function Header() {
                         <span className="language-option-flag" aria-hidden="true">{localeFlags[option]}</span>
                         <span className="language-option-copy">
                           <strong>{localeLabels[option]}</strong>
-                          <small>{option.toUpperCase()}</small>
+                          <small>{localeCountries[option].name} · {localeCountries[option].code}</small>
                         </span>
                         <svg className="language-option-check" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
                           <path d="m3 8.5 3.1 3L13 4.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />

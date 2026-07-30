@@ -10,6 +10,15 @@ export const localeLabels: Record<Locale, string> = {
   lt: 'Lietuvių',
 };
 
+export const localeCountries: Record<Locale, { name: string; code: string }> = {
+  en: { name: 'United Kingdom', code: 'UK' },
+  fr: { name: 'France', code: 'FR' },
+  de: { name: 'Germany', code: 'DE' },
+  it: { name: 'Italy', code: 'IT' },
+  es: { name: 'Spain', code: 'ES' },
+  lt: { name: 'Lithuania', code: 'LT' },
+};
+
 const en = {
   nav: { home: 'Welcome', tours: 'Tours', excursions: 'Excursions', plan: 'Plan Your Trip', hotels: 'Hotels', transport: 'Transportation', cricket: 'Cricket Tourism', consultancy: 'Hospitality Consultancy', about: 'About', gallery: 'Gallery', aboutUs: 'About Us', why: 'Why Choose Us', contact: 'Contact', search: 'Search', menu: 'Menu' },
   hero: { kicker: 'Serendia Holidays · Intelligent island journeys', title: 'Sri Lanka, Scene by Scene', copy: 'Move through coast, wildlife and culture in cinematic 3D—then let our catalogue-aware travel intelligence shape the route around you.', ask: 'Ask Serendia AI', placeholder: 'A week with wildlife and a beach finish…', build: 'Build My Journey', explore: 'Explore Tours' },
