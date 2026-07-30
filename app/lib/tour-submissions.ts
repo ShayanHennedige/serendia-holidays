@@ -2,12 +2,15 @@ import 'server-only';
 
 import { randomBytes } from 'node:crypto';
 import { appendFile, mkdir, readFile, writeFile } from 'node:fs/promises';
+import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import type { FinalTourSubmissionRequest, PinnedLocation, TourSubmissionSnapshot } from './tour-types';
 
 const storageDirectory = process.env.TOUR_SUBMISSION_DIRECTORY
   ? resolve(process.env.TOUR_SUBMISSION_DIRECTORY)
-  : join(process.cwd(), '.data', 'tour-submissions');
+  : process.env.VERCEL
+    ? join(tmpdir(), 'tour-submissions')
+    : join(process.cwd(), '.data', 'tour-submissions');
 
 const knownCoordinates: Record<string, [number, number]> = {
   airport: [79.8841, 7.1808],

@@ -1,6 +1,6 @@
 # Final tour submission setup
 
-The planner finalisation flow validates the customer request, creates an immutable submission snapshot and reference, builds a numbered route map, and generates a customer-facing PDF in memory. After the PDF is created, the UI asks whether it should be emailed to the operations inbox. If confirmed, the backend regenerates the PDF from the saved snapshot and sends it by SMTP, then clears the temporary PDF buffer.
+The planner finalisation flow validates the customer request, creates an immutable submission snapshot and reference, builds a numbered route map, and generates a customer-facing PDF in memory. After the PDF is created, the UI asks whether it should be emailed to the operations inbox. If confirmed, the backend regenerates the PDF from the temporary snapshot or the validated request fallback and sends it by SMTP, then clears the temporary PDF buffer.
 
 ## Required production configuration
 
@@ -17,6 +17,8 @@ Copy the relevant values from `.env.example` into the hosting platform's encrypt
 - `TOUR_SUBMISSION_EMAIL_TO`: destination inbox for the emailed PDF. Defaults to `dream@venomholidays.com`.
 
 `PUPPETEER_EXECUTABLE_PATH` is optional when the Puppeteer-managed browser is available. Set it when the host supplies its own Chrome binary.
+
+On Vercel, the install script prepares a static Chromium pack and the PDF route uses `puppeteer-core` with `@sparticuz/chromium-min`. The pack is generated during installation and must not be committed.
 
 The current flow no longer depends on WhatsApp delivery for the tour submission handoff; the final step is the SMTP email prompt.
 

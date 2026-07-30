@@ -39,10 +39,11 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
     setSendError(null);
 
     try {
+      const submission = { customer, tour: tourDetails, itinerary, consent };
       const response = await fetch('/api/tour-submissions', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ customer, tour: tourDetails, itinerary, consent }),
+        body: JSON.stringify(submission),
       });
       const data = await response.json();
       if (!response.ok) {
@@ -61,7 +62,7 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
         const emailResponse = await fetch('/api/tour-submissions/email', {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ reference: data.reference }),
+          body: JSON.stringify({ reference: data.reference, submission }),
         });
         const emailData = await emailResponse.json();
 

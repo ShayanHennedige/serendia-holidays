@@ -5,11 +5,14 @@ import {
   createStaticRouteMap,
   loadTourSnapshot,
   recordTourDelivery,
+  validateFinalTourRequest,
 } from '../../../lib/tour-submissions';
+import type { TourSubmissionSnapshot } from '../../../lib/tour-types';
 import { getTourSubmissionEmailRecipient, sendTourSubmissionEmail } from '../../../lib/tour-email';
 
 interface EmailTourSubmissionRequest {
   reference?: string;
+  submission?: unknown;
 }
 
 export async function POST(request: Request) {
@@ -24,8 +27,24 @@ export async function POST(request: Request) {
   if (!reference) {
     return Response.json({ error: 'Missing submission reference.' }, { status: 400 });
   }
+  if (!/^TRIP-SL-\d{6}-[A-F0-9]{4}$/.test(reference)) {
+    return Response.json({ error: 'Invalid submission reference.' }, { status: 400 });
+  }
 
-  const snapshot = await loadTourSnapshot(reference);
+  let snapshot = await loadTourSnapshot(reference);
+  if (!snapshot && body.submission) {
+    const validation = validateFinalTourRequest(body.submission);
+    if (validation.ok === false) {
+      return Response.json({ error: validation.error }, { status: 400 });
+    }
+    snapshot = {
+      ...validation.data,
+      reference,
+      generatedAt: new Date().toISOString(),
+      status: 'Submitted',
+      schemaVersion: 1,
+    } satisfies TourSubmissionSnapshot;
+  }
   if (!snapshot) {
     return Response.json({ error: 'Saved submission not found.' }, { status: 404 });
   }

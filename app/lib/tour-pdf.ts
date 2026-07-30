@@ -5,19 +5,14 @@ import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { TourSubmissionSnapshot } from './tour-types';
 
+let vercelChromiumPath: Promise<string> | undefined;
+
 export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMapSvg: string, routeMapDataUri?: string): Promise<Uint8Array> {
-  const [{ default: puppeteer }, logo, hero] = await Promise.all([
-    import('puppeteer'),
+  const [browser, logo, hero] = await Promise.all([
+    launchPdfBrowser(),
     imageDataUri(join(process.cwd(), 'public', 'black logo.png'), 'image/png'),
     imageDataUri(join(process.cwd(), 'public', 'images', 'hero-1.png'), 'image/png'),
   ]);
-
-  const executablePath = await resolveBrowserExecutablePath(puppeteer);
-  const browser = await puppeteer.launch({
-    headless: true,
-    executablePath,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-  });
 
   try {
     const page = await browser.newPage();
@@ -35,6 +30,45 @@ export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMap
   } finally {
     await browser.close();
   }
+}
+
+async function launchPdfBrowser() {
+  if (process.env.VERCEL) {
+    const [{ default: chromium }, { default: puppeteer }] = await Promise.all([
+      import('@sparticuz/chromium-min'),
+      import('puppeteer-core'),
+    ]);
+    const executablePath = await resolveVercelChromiumPath(chromium.executablePath);
+
+    return puppeteer.launch({
+      headless: true,
+      executablePath,
+      args: chromium.args,
+    });
+  }
+
+  const { default: puppeteer } = await import('puppeteer');
+  const executablePath = await resolveBrowserExecutablePath(puppeteer);
+  return puppeteer.launch({
+    headless: true,
+    executablePath,
+    args: ['--no-sandbox', '--disable-setuid-sandbox'],
+  });
+}
+
+function resolveVercelChromiumPath(resolveExecutable: (input?: string) => Promise<string>) {
+  if (!vercelChromiumPath) {
+    const deploymentHost = process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL;
+    if (!deploymentHost) {
+      throw new Error('Vercel deployment URL is unavailable for the Chromium pack.');
+    }
+    const packUrl = `https://${deploymentHost}/chromium-pack.tar`;
+    vercelChromiumPath = resolveExecutable(packUrl).catch((error) => {
+      vercelChromiumPath = undefined;
+      throw error;
+    });
+  }
+  return vercelChromiumPath;
 }
 
 function renderTourHtml(snapshot: TourSubmissionSnapshot, routeMapSvg: string, routeMapDataUri: string | undefined, logo: string, hero: string): string {
