@@ -35,7 +35,7 @@ export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMap
 async function launchPdfBrowser() {
   if (process.env.VERCEL) {
     const [{ default: chromium }, { default: puppeteer }] = await Promise.all([
-      import('@sparticuz/chromium-min'),
+      import('@sparticuz/chromium'),
       import('puppeteer-core'),
     ]);
     const executablePath = await resolveVercelChromiumPath(chromium.executablePath);
@@ -56,10 +56,9 @@ async function launchPdfBrowser() {
   });
 }
 
-function resolveVercelChromiumPath(resolveExecutable: (input?: string) => Promise<string>) {
+function resolveVercelChromiumPath(resolveExecutable: () => Promise<string>) {
   if (!vercelChromiumPath) {
-    const packUrl = process.env.CHROMIUM_PACK_URL || `${deploymentOrigin()}/chromium-pack.tar`;
-    vercelChromiumPath = resolveExecutable(packUrl).catch((error) => {
+    vercelChromiumPath = resolveExecutable().catch((error) => {
       vercelChromiumPath = undefined;
       throw error;
     });

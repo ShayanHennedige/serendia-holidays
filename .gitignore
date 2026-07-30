@@ -6,4 +6,3 @@ node_modules/
 *.log
 .DS_Store
 *.tsbuildinfo
-public/chromium-pack.tar

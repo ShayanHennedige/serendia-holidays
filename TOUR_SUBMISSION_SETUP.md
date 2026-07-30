@@ -18,8 +18,7 @@ Copy the relevant values from `.env.example` into the hosting platform's encrypt
 
 `PUPPETEER_EXECUTABLE_PATH` is optional when the Puppeteer-managed browser is available. Set it when the host supplies its own Chrome binary.
 
-On Vercel, the install script prepares a static Chromium pack and the PDF route uses `puppeteer-core` with `@sparticuz/chromium-min`. The pack is generated during installation and must not be committed.
-`CHROMIUM_PACK_URL` can optionally point to an externally hosted pack; otherwise the generated pack is loaded from the production deployment URL.
+On Vercel, the PDF routes use `puppeteer-core` with the self-contained `@sparticuz/chromium` serverless binary. Next.js output tracing explicitly includes the compressed browser files in both function bundles.
 
 The current flow no longer depends on WhatsApp delivery for the tour submission handoff; the final step is the SMTP email prompt.
 
