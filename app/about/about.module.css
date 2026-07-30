@@ -1,0 +1,835 @@
+.page {
+  --ink: #061c22;
+  --ink-soft: #0b3036;
+  --ocean: #104751;
+  --signal: #ef704e;
+  --signal-soft: #ffad8f;
+  --ice: #edf4f1;
+  --white: #fbfdfc;
+  --muted: #6d7d7c;
+  overflow: clip;
+  background: var(--ink);
+  color: var(--ink);
+}
+
+.hero {
+  position: relative;
+  min-height: max(720px, 100svh);
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.heroVideo {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.02);
+  will-change: transform;
+}
+
+.heroAtmosphere {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at 72% 34%, rgba(239, 112, 78, 0.13), transparent 30%),
+    linear-gradient(180deg, rgba(3, 20, 25, 0.28), rgba(3, 20, 25, 0.12) 38%, rgba(3, 20, 25, 0.9) 92%),
+    linear-gradient(90deg, rgba(3, 20, 25, 0.68), transparent 72%);
+}
+
+.heroGrid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0.17;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+  background-size: 25vw 25vw;
+  mask-image: linear-gradient(180deg, black, transparent 74%);
+  pointer-events: none;
+}
+
+.heroInner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: max(720px, 100svh);
+  padding-top: 130px;
+  padding-bottom: clamp(38px, 6vh, 66px);
+}
+
+.heroLabel,
+.signal {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+
+.heroLabel {
+  margin-bottom: 25px;
+  color: var(--signal-soft);
+  animation: labelIn 700ms 240ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.signal {
+  margin-bottom: 19px;
+  color: var(--signal);
+}
+
+.hero h1 {
+  max-width: 1100px;
+  margin: 0;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(5rem, 9.9vw, 9.7rem);
+  font-weight: 400;
+  letter-spacing: -0.067em;
+  line-height: 0.79;
+  text-transform: uppercase;
+}
+
+.hero h1 > span {
+  display: block;
+  overflow: hidden;
+  padding: 0.06em 0;
+}
+
+.hero h1 > span > span { display: block; }
+
+.heroDock {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(360px, 1.2fr) auto;
+  gap: 34px;
+  align-items: center;
+  margin-top: clamp(36px, 6vh, 62px);
+  padding-top: 23px;
+  border-top: 1px solid rgba(255, 255, 255, 0.32);
+  animation: dockIn 800ms 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.heroDock > p {
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.heroMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.heroMeta span {
+  padding: 9px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroScroll {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-width: 54px;
+  min-height: 54px;
+  padding: 0 17px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #fff;
+  transition: color 200ms ease, background 200ms ease, border-color 200ms ease;
+}
+
+.heroScroll span {
+  max-width: 0;
+  overflow: hidden;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: max-width 300ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroScroll:hover {
+  border-color: var(--signal);
+  background: var(--signal);
+}
+
+.heroScroll:hover span { max-width: 190px; }
+
+.perspective {
+  padding: clamp(110px, 13vw, 190px) 0;
+  background: var(--white);
+}
+
+.perspectiveGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 28px 24px;
+}
+
+.perspectiveHeading { grid-column: 1 / span 7; }
+.perspectiveCopy { grid-column: 9 / span 4; padding-top: 60px; }
+
+.perspectiveHeading h2,
+.journeyHeading h2,
+.teamHeading h2,
+.hotelIntro h2,
+.closing h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: -0.064em;
+  line-height: 0.88;
+  text-wrap: balance;
+}
+
+.perspectiveHeading h2 {
+  font-size: clamp(4.4rem, 7.8vw, 7.9rem);
+}
+
+.perspectiveHeading h2 span { color: var(--signal); }
+
+.perspectiveCopy p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.perspectiveCopy p + p { margin-top: 22px; }
+
+.perspectiveVisual {
+  position: relative;
+  grid-column: 1 / -1;
+  min-height: 680px;
+  margin-top: 80px;
+}
+
+.visualMain {
+  position: absolute;
+  inset: 0 20% 0 0;
+  overflow: hidden;
+  background: #dbe6e1;
+}
+
+.visualMain::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(3, 28, 31, 0.48));
+}
+
+.visualMain img,
+.visualInset img {
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.perspectiveVisual:hover .visualMain img { transform: scale(1.03); }
+
+.visualInset {
+  position: absolute;
+  right: 0;
+  bottom: -58px;
+  width: 34%;
+  aspect-ratio: 4 / 5;
+  z-index: 2;
+  overflow: hidden;
+  border: 11px solid var(--white);
+  background: var(--ink);
+}
+
+.visualInset::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(3, 28, 31, 0.76));
+}
+
+.visualInset span {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  left: 20px;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.perspectiveVisual > p {
+  position: absolute;
+  bottom: 30px;
+  left: 28px;
+  z-index: 2;
+  max-width: 470px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.7vw, 3.7rem);
+  line-height: 1;
+}
+
+.journey {
+  position: relative;
+  background: var(--ink);
+  color: #fff;
+}
+
+.journeyPin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 105px 0 70px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(33, 125, 132, 0.2), transparent 26%),
+    var(--ink);
+}
+
+.journeyHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(250px, 0.7fr);
+  gap: 60px;
+  align-items: end;
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.journeyHeading h2 {
+  color: #fff;
+  font-size: clamp(3.5rem, 5.8vw, 6rem);
+}
+
+.journeyHeading > p {
+  max-width: 370px;
+  padding-bottom: 4px;
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 0.95rem;
+  line-height: 1.72;
+}
+
+.journeyViewport {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--signal) rgba(255, 255, 255, 0.12);
+}
+
+:global(.motion-ready) .journeyViewport { overflow: hidden; }
+
+.journeyTrack {
+  display: flex;
+  width: max-content;
+  gap: 24px;
+  padding-right: max(24px, calc((100vw - 1200px) / 2));
+  padding-left: max(24px, calc((100vw - 1200px) / 2));
+  will-change: transform;
+}
+
+.disciplineCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(350px, 0.88fr);
+  flex: 0 0 min(78vw, 980px);
+  min-height: min(570px, 58vh);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #0b3036;
+}
+
+.disciplineImage {
+  position: relative;
+  min-height: 100%;
+  overflow: hidden;
+  background: #173f43;
+}
+
+.disciplineImage img {
+  object-fit: cover;
+  transition: transform 750ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.disciplineCard:hover .disciplineImage img { transform: scale(1.045); }
+
+.disciplineShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(3, 23, 26, 0.08), rgba(3, 23, 26, 0.62));
+}
+
+.disciplineCount,
+.disciplineMeta {
+  position: absolute;
+  z-index: 2;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.disciplineCount { top: 22px; left: 23px; }
+.disciplineMeta { right: 23px; bottom: 21px; left: 23px; }
+
+.disciplineCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(35px, 4.6vw, 65px);
+}
+
+.disciplineCopy > p {
+  margin-bottom: 20px;
+  color: var(--signal-soft);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.disciplineCopy h3 {
+  margin-bottom: 22px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 4.3vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.93;
+}
+
+.disciplineCopy > span {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.92rem;
+  line-height: 1.72;
+}
+
+.disciplineCopy a,
+.hotelIntro a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+  width: fit-content;
+  min-height: 48px;
+  margin-top: 32px;
+  padding: 0 16px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.disciplineCopy a:hover,
+.hotelIntro a:hover {
+  border-color: var(--signal);
+  background: var(--signal);
+  color: #fff;
+}
+
+.teamSection {
+  padding: clamp(110px, 12vw, 175px) 0;
+  background: var(--ice);
+}
+
+.teamHeading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 0.65fr);
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 70px;
+}
+
+.teamHeading h2 {
+  max-width: 850px;
+  font-size: clamp(4.2rem, 7.4vw, 7.4rem);
+}
+
+.teamHeading > p {
+  max-width: 390px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.person {
+  grid-column: span 4;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(6, 42, 47, 0.12);
+  background: #fff;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 300ms ease;
+}
+
+.person:nth-child(1) { grid-column: span 7; }
+.person:nth-child(2) { grid-column: span 5; }
+
+.person:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 26px 55px rgba(7, 37, 41, 0.12);
+}
+
+.personImage {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #d8e2df;
+}
+
+.person:nth-child(1) .personImage,
+.person:nth-child(2) .personImage { aspect-ratio: 16 / 10; }
+
+.personImage img {
+  object-fit: cover;
+  object-position: center 24%;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), filter 300ms ease;
+}
+
+.person:nth-child(1) .personImage img { object-position: center 35%; }
+.person:hover .personImage img { transform: scale(1.035); }
+
+.personGlow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 62%, rgba(5, 35, 39, 0.42));
+  opacity: 0.35;
+  transition: opacity 250ms ease;
+}
+
+.person:hover .personGlow { opacity: 0.72; }
+
+.personInfo { padding: 27px 28px 32px; }
+
+.personInfo > p {
+  margin-bottom: 13px;
+  color: var(--signal);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.personInfo h3 {
+  margin-bottom: 15px;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.2vw, 3.2rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.personInfo > span {
+  display: block;
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.hotelSection {
+  padding: clamp(110px, 12vw, 175px) 0;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(32, 120, 126, 0.2), transparent 28%),
+    var(--ink-soft);
+  color: #fff;
+}
+
+.hotelGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(460px, 1.1fr);
+  gap: clamp(70px, 10vw, 150px);
+  align-items: start;
+}
+
+.hotelIntro {
+  position: sticky;
+  top: 120px;
+}
+
+.hotelIntro h2 {
+  color: #fff;
+  font-size: clamp(4rem, 6.7vw, 6.7rem);
+}
+
+.hotelIntro > p:not(.signal) {
+  max-width: 490px;
+  margin-top: 30px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
+  line-height: 1.78;
+}
+
+.hotelSteps { border-top: 1px solid rgba(255, 255, 255, 0.16); }
+
+.hotelSteps article {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 25px;
+  padding: 34px 0 38px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.hotelSteps article > span {
+  color: var(--signal-soft);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.hotelSteps h3 {
+  margin-bottom: 12px;
+  color: #fff;
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.hotelSteps p {
+  max-width: 520px;
+  color: rgba(255, 255, 255, 0.57);
+  font-size: 0.94rem;
+  line-height: 1.72;
+}
+
+.closing {
+  position: relative;
+  display: grid;
+  min-height: 720px;
+  overflow: hidden;
+  color: #fff;
+}
+
+.closing > img {
+  object-fit: cover;
+  object-position: center 66%;
+  transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.closing:hover > img { transform: scale(1.025); }
+
+.closingShade {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgba(4, 28, 31, 0.9), rgba(4, 28, 31, 0.5) 58%, rgba(4, 28, 31, 0.18)),
+    linear-gradient(180deg, transparent 55%, rgba(4, 28, 31, 0.66));
+}
+
+.closingInner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 720px;
+}
+
+.closing h2 {
+  max-width: 1020px;
+  color: #fff;
+  font-size: clamp(4.2rem, 7.6vw, 7.8rem);
+}
+
+.closingActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 38px;
+}
+
+.closingActions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  min-height: 54px;
+  padding: 0 19px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: background 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.closingActions a:first-child {
+  border-color: var(--signal);
+  background: var(--signal);
+}
+
+.closingActions a:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--ink);
+}
+
+.heroScroll:focus-visible,
+.disciplineCopy a:focus-visible,
+.hotelIntro a:focus-visible,
+.closingActions a:focus-visible {
+  outline: 3px solid var(--signal-soft);
+  outline-offset: 4px;
+}
+
+@keyframes labelIn {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dockIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1050px) {
+  .heroDock { grid-template-columns: 1fr 1fr auto; gap: 24px; }
+  .perspectiveHeading { grid-column: 1 / span 8; }
+  .perspectiveCopy { grid-column: 9 / span 4; }
+  .perspectiveVisual { min-height: 560px; }
+  .disciplineCard { flex-basis: 86vw; grid-template-columns: 1.05fr 0.95fr; }
+  .teamHeading { grid-template-columns: 1.2fr 0.8fr; gap: 45px; }
+  .hotelGrid { grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr); gap: 70px; }
+}
+
+@media (max-width: 899px) {
+  .heroDock { grid-template-columns: 1fr auto; }
+  .heroMeta { grid-column: 1; grid-row: 2; }
+  .heroScroll { grid-column: 2; grid-row: 1 / span 2; }
+  .perspectiveGrid { grid-template-columns: 1fr; }
+  .perspectiveHeading,
+  .perspectiveCopy,
+  .perspectiveVisual { grid-column: 1; }
+  .perspectiveCopy { max-width: 650px; padding-top: 0; }
+  .perspectiveVisual { min-height: 520px; margin-top: 52px; }
+  .journeyPin { min-height: auto; padding: 100px 0; }
+  .journeyHeading { grid-template-columns: 1fr; gap: 22px; }
+  .journeyHeading > p { max-width: 540px; }
+  .journeyViewport { overflow: visible; }
+  :global(.motion-ready) .journeyViewport { overflow: visible; }
+  .journeyTrack {
+    display: grid;
+    width: auto;
+    gap: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+    transform: none !important;
+  }
+  .disciplineCard {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .disciplineImage { min-height: 480px; }
+  .disciplineCopy { padding: 40px; }
+  .teamHeading { grid-template-columns: 1fr; gap: 23px; }
+  .teamHeading > p { max-width: 600px; }
+  .person,
+  .person:nth-child(1),
+  .person:nth-child(2) { grid-column: span 6; }
+  .person:nth-child(1) { grid-column: span 12; }
+  .hotelGrid { grid-template-columns: 1fr; gap: 75px; }
+  .hotelIntro { position: static; }
+}
+
+@media (max-width: 620px) {
+  .hero,
+  .heroInner { min-height: max(690px, 100svh); }
+  .heroVideo { object-position: 58% center; }
+  .heroGrid { background-size: 50vw 50vw; }
+  .heroInner { padding-top: 118px; padding-bottom: 32px; }
+  .heroLabel { max-width: 270px; margin-bottom: 18px; }
+  .hero h1 { font-size: clamp(3.65rem, 16.7vw, 5.05rem); line-height: 0.82; }
+  .heroDock { grid-template-columns: 1fr auto; gap: 19px 14px; margin-top: 30px; padding-top: 18px; }
+  .heroDock > p { font-size: 1rem; }
+  .heroMeta { gap: 5px; }
+  .heroMeta span { padding: 7px 8px; }
+  .heroScroll span { display: none; }
+  .perspective { padding: 88px 0 125px; }
+  .perspectiveHeading h2,
+  .journeyHeading h2,
+  .teamHeading h2,
+  .hotelIntro h2,
+  .closing h2 { font-size: clamp(3.25rem, 14.5vw, 4.65rem); }
+  .perspectiveCopy p,
+  .journeyHeading > p,
+  .disciplineCopy > span,
+  .teamHeading > p,
+  .personInfo > span,
+  .hotelIntro > p:not(.signal),
+  .hotelSteps p { font-size: 1rem; }
+  .perspectiveVisual { min-height: 500px; margin-top: 38px; }
+  .visualMain { inset: 0 0 80px; }
+  .visualInset { right: -8px; bottom: 0; width: 48%; border-width: 7px; }
+  .perspectiveVisual > p { right: 28px; bottom: 108px; font-size: 2.05rem; }
+  .journeyPin { padding: 84px 0; }
+  .journeyHeading { margin-bottom: 43px; }
+  .journeyTrack { padding-right: 20px; padding-left: 20px; }
+  .disciplineImage { min-height: 340px; }
+  .disciplineCopy { padding: 31px 25px 34px; }
+  .disciplineCopy h3 { font-size: 2.75rem; }
+  .disciplineCopy a { width: 100%; }
+  .teamSection,
+  .hotelSection { padding: 88px 0; }
+  .teamHeading { margin-bottom: 48px; }
+  .person,
+  .person:nth-child(1),
+  .person:nth-child(2) { grid-column: span 12; }
+  .person:nth-child(1) .personImage,
+  .person:nth-child(2) .personImage,
+  .personImage { aspect-ratio: 4 / 3; }
+  .personInfo { padding: 25px 23px 29px; }
+  .personInfo h3 { font-size: 2.35rem; }
+  .hotelSteps article { grid-template-columns: 42px 1fr; gap: 14px; }
+  .hotelSteps h3 { font-size: 2.65rem; }
+  .closing,
+  .closingInner { min-height: 650px; }
+  .closingActions { flex-direction: column; align-items: stretch; }
+  .closingActions a { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroLabel,
+  .heroDock { animation: none; }
+  .heroVideo { transform: none !important; }
+  .visualMain img,
+  .visualInset img,
+  .disciplineImage img,
+  .person,
+  .personImage img,
+  .personGlow,
+  .closing > img,
+  .heroScroll,
+  .heroScroll span,
+  .disciplineCopy a,
+  .hotelIntro a,
+  .closingActions a { transition: none; }
+}

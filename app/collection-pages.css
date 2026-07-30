@@ -1,0 +1,1056 @@
+/* Shared design language for Excursions, Transportation and Cricket Tourism. */
+.collection-kicker {
+  margin-bottom: 16px;
+  color: #c3512f;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.19em;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+
+.collection-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 52px;
+  margin-bottom: 50px;
+}
+
+.collection-heading h2 {
+  font-size: clamp(2.9rem, 5vw, 5rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+}
+
+.collection-heading > p {
+  max-width: 390px;
+  color: #65716d;
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.collection-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: #143f38;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.collection-text-link span {
+  transition: transform 200ms ease;
+}
+
+.collection-text-link:hover span {
+  transform: translate(3px, -3px);
+}
+
+.collection-text-link:focus-visible,
+.excursions-cta a:focus-visible,
+.transportation-page a:focus-visible,
+.cricket-page a:focus-visible {
+  outline: 3px solid #f2a47f;
+  outline-offset: 4px;
+}
+
+/* Excursions: a one-day field guide. */
+.excursions-page { background: #edf1ec; }
+
+.excursions-page .inner-hero {
+  height: min(650px, 76vh);
+  min-height: 520px;
+  background-position: center 48%;
+}
+
+.excursions-page .inner-hero::before {
+  background: linear-gradient(180deg, rgba(6, 26, 21, 0.44), rgba(7, 28, 23, 0.12) 48%, rgba(7, 28, 23, 0.62));
+}
+
+.excursions-page .inner-hero-title { font-size: clamp(4rem, 8vw, 7.2rem); }
+
+.excursions-page .inner-hero-subtitle,
+.transportation-page .inner-hero-subtitle,
+.cricket-page .inner-hero-subtitle {
+  max-width: 660px;
+  margin: 22px auto 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.excursions-intro {
+  padding: 96px 0 86px;
+  background: #fff;
+}
+
+.excursions-intro-grid,
+.transport-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  gap: clamp(60px, 10vw, 150px);
+  align-items: end;
+}
+
+.excursions-intro h2,
+.transport-intro h2 {
+  font-size: clamp(3.25rem, 5.8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.excursions-intro-copy > p,
+.transport-intro-grid > div:last-child > p {
+  margin-bottom: 28px;
+  color: #5f6b67;
+  font-size: 1.03rem;
+  line-height: 1.82;
+}
+
+.excursion-assurances {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.excursion-assurances span {
+  padding: 8px 11px;
+  border: 1px solid rgba(15, 61, 52, 0.16);
+  border-radius: 999px;
+  color: #48625c;
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.excursions-journal {
+  padding: 104px 0 116px;
+  background: linear-gradient(rgba(15, 61, 52, 0.035) 1px, transparent 1px), #edf1ec;
+  background-size: 100% 80px;
+}
+
+.excursion-journal-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.excursion-story-card {
+  grid-column: span 4;
+  overflow: hidden;
+  border: 1px solid rgba(18, 56, 49, 0.13);
+  background: #fff;
+  box-shadow: 0 20px 55px rgba(17, 48, 42, 0.06);
+}
+
+.excursion-story-card.is-featured,
+.excursion-story-card:nth-child(6),
+.excursion-story-card:nth-child(9) { grid-column: span 8; }
+
+.excursion-story-image {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #173d35;
+}
+
+.excursion-story-card.is-featured .excursion-story-image,
+.excursion-story-card:nth-child(6) .excursion-story-image,
+.excursion-story-card:nth-child(9) .excursion-story-image { aspect-ratio: 16 / 7; }
+
+.excursion-story-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(4, 22, 18, 0.65));
+}
+
+.excursion-story-image img {
+  object-fit: cover;
+  transition: transform 650ms cubic-bezier(0.2, 0.72, 0.25, 1), filter 400ms ease;
+}
+
+.excursion-story-card:hover .excursion-story-image img {
+  transform: scale(1.045);
+  filter: saturate(1.08);
+}
+
+.excursion-story-theme {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  z-index: 1;
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.excursion-story-copy { padding: clamp(25px, 3vw, 38px); }
+
+.excursion-story-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 17px;
+  color: #a64c32;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.excursion-story-meta span:last-child {
+  color: #66736f;
+  white-space: nowrap;
+}
+
+.excursion-story-copy h3 {
+  margin-bottom: 14px;
+  font-size: clamp(1.75rem, 2.8vw, 3rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+
+.excursion-story-copy > p {
+  margin-bottom: 25px;
+  color: #68736f;
+  font-size: 0.91rem;
+  line-height: 1.7;
+}
+
+.excursions-cta {
+  padding: 104px 0;
+  background: linear-gradient(100deg, rgba(81, 40, 27, 0.97), rgba(151, 63, 38, 0.88)), url('/images/excursion-colombo.webp') center / cover;
+}
+
+.excursions-cta-inner {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.excursions-cta .collection-kicker { color: #f3b497; }
+
+.excursions-cta h2 {
+  margin-bottom: 22px;
+  color: #fff;
+  font-size: clamp(3.2rem, 5.8vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.94;
+}
+
+.excursions-cta-inner > p:not(.collection-kicker) {
+  max-width: 610px;
+  margin: 0 auto 34px;
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 1rem;
+}
+
+.excursions-cta-inner > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.excursions-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  min-height: 52px;
+  padding: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.excursions-cta a:first-child {
+  border-color: #fff;
+  background: #fff;
+  color: #713a2a;
+}
+
+/* Transportation: route families instead of a generic vehicle gallery. */
+.transportation-page { background: #e9eef0; }
+
+.transportation-page .inner-hero {
+  height: min(660px, 78vh);
+  min-height: 530px;
+  background-position: center 48%;
+}
+
+.transportation-page .inner-hero::before {
+  background: linear-gradient(180deg, rgba(5, 24, 29, 0.52), rgba(7, 28, 31, 0.12) 48%, rgba(5, 26, 30, 0.62));
+}
+
+.transportation-page .inner-hero-title { font-size: clamp(3.7rem, 7.3vw, 7rem); }
+
+.transport-intro {
+  padding: 96px 0 88px;
+  background: #fff;
+}
+
+.transport-modes {
+  padding: 110px 0 120px;
+  background: repeating-linear-gradient(90deg, transparent 0, transparent calc(25% - 1px), rgba(23, 55, 63, 0.055) 25%), #e9eef0;
+}
+
+.transport-section-heading { margin-bottom: 54px; }
+
+.transport-section-heading h2,
+.transport-service-title h2 {
+  font-size: clamp(3rem, 5vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+}
+
+.transport-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(380px, 0.75fr);
+  min-height: 560px;
+  overflow: hidden;
+  background: #0b3436;
+  color: #fff;
+}
+
+.transport-feature-air {
+  grid-template-columns: minmax(380px, 0.78fr) minmax(0, 1.22fr);
+  background: #15313e;
+}
+
+.transport-feature-image {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+.transport-feature-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(4, 21, 23, 0.5));
+}
+
+.transport-feature-image img {
+  object-fit: cover;
+  transition: transform 800ms cubic-bezier(0.2, 0.72, 0.25, 1);
+}
+
+.transport-feature:hover .transport-feature-image img { transform: scale(1.035); }
+
+.transport-feature-image > span {
+  position: absolute;
+  right: 24px;
+  bottom: 21px;
+  z-index: 1;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.transport-feature-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(42px, 5vw, 74px);
+}
+
+.transport-mode-label {
+  margin-bottom: 17px;
+  color: #f19a71;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.transport-feature-copy h3,
+.transport-road-heading h3 {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: clamp(2.65rem, 4.5vw, 4.7rem);
+  font-weight: 400;
+  letter-spacing: -0.045em;
+  line-height: 0.96;
+}
+
+.transport-feature-copy > p:not(.transport-mode-label) {
+  margin-bottom: 28px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
+.transport-feature-copy ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transport-feature-copy li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.76rem;
+  font-weight: 700;
+}
+
+.transport-feature-copy li::before {
+  content: '';
+  position: absolute;
+  top: 0.65em;
+  left: 0;
+  width: 8px;
+  height: 1px;
+  background: #f19a71;
+}
+
+.transport-road-section { padding: 102px 0; }
+
+.transport-road-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 50px;
+  margin-bottom: 42px;
+}
+
+.transport-road-heading h3 {
+  margin: 0;
+  color: #142d34;
+}
+
+.transport-road-heading > p {
+  max-width: 370px;
+  color: #637075;
+  line-height: 1.7;
+}
+
+.transport-fleet-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.transport-vehicle-card {
+  overflow: hidden;
+  border: 1px solid rgba(18, 54, 62, 0.13);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.transport-vehicle-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #cfdadd;
+}
+
+.transport-vehicle-image img {
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+
+.transport-vehicle-card:hover img { transform: scale(1.04); }
+
+.transport-vehicle-card > div:last-child { padding: 24px 22px 27px; }
+
+.transport-vehicle-card p {
+  margin-bottom: 9px;
+  color: #b34f32;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.transport-vehicle-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.55rem;
+  font-weight: 400;
+}
+
+.transport-vehicle-card span {
+  color: #697579;
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.transport-service-strip {
+  padding: 104px 0 88px;
+  background: #fff;
+}
+
+.transport-service-title {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.5fr) minmax(0, 1.5fr);
+  gap: 50px;
+  align-items: end;
+  margin-bottom: 56px;
+}
+
+.transport-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid rgba(18, 54, 62, 0.14);
+  border-bottom: 1px solid rgba(18, 54, 62, 0.14);
+}
+
+.transport-service-grid article { padding: 31px 26px 35px; }
+.transport-service-grid article + article { border-left: 1px solid rgba(18, 54, 62, 0.14); }
+
+.transport-service-grid h3 {
+  margin-bottom: 13px;
+  font-size: 1.28rem;
+  font-weight: 400;
+}
+
+.transport-service-grid p {
+  color: #697579;
+  font-size: 0.84rem;
+  line-height: 1.65;
+}
+
+.transport-cta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin-top: 42px;
+  padding: 28px 30px;
+  background: #0d3435;
+  color: #fff;
+}
+
+.transport-cta-row p { color: rgba(255, 255, 255, 0.74); }
+
+.transport-cta-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-width: 215px;
+  min-height: 50px;
+  padding: 0 17px;
+  background: #c3512f;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Cricket Tourism: inside the boundary. */
+.cricket-page {
+  --cricket-green: #082f28;
+  --cricket-ink: #0e2420;
+  --cricket-crease: #edf3e9;
+  background: var(--cricket-green);
+}
+
+.cricket-page .inner-hero {
+  height: min(690px, 80vh);
+  min-height: 550px;
+  background-position: center 54%;
+}
+
+.cricket-page .inner-hero::before {
+  background: linear-gradient(180deg, rgba(3, 16, 26, 0.42), rgba(3, 24, 28, 0.2) 48%, rgba(4, 27, 24, 0.72));
+}
+
+.cricket-page .inner-hero-title { font-size: clamp(3.5rem, 7.4vw, 7rem); }
+
+.cricket-opening {
+  padding: 100px 0 92px;
+  overflow: hidden;
+  background: var(--cricket-green);
+  color: #fff;
+}
+
+.cricket-opening-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 80px;
+  align-items: center;
+}
+
+.cricket-opening-copy { max-width: 820px; }
+
+.cricket-opening-copy .collection-kicker,
+.cricket-offerings .collection-kicker,
+.cricket-cta .collection-kicker { color: #e68b61; }
+
+.cricket-opening h2 {
+  margin-bottom: 28px;
+  color: #fff;
+  font-size: clamp(3.5rem, 6vw, 6.4rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.9;
+}
+
+.cricket-opening-copy > p:last-child {
+  max-width: 690px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.03rem;
+  line-height: 1.82;
+}
+
+.cricket-crease-mark {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 5px 1fr;
+  gap: 28px;
+  height: 190px;
+  align-items: stretch;
+}
+
+.cricket-crease-mark::before,
+.cricket-crease-mark::after,
+.cricket-crease-mark span {
+  content: '';
+  border: 1px solid rgba(255, 255, 255, 0.42);
+}
+
+.cricket-crease-mark i {
+  position: relative;
+  display: block;
+  background: #e68b61;
+}
+
+.cricket-crease-mark i::before,
+.cricket-crease-mark i::after {
+  content: '';
+  position: absolute;
+  left: -10px;
+  width: 25px;
+  height: 5px;
+  background: #e68b61;
+}
+
+.cricket-crease-mark i::before { top: 0; }
+.cricket-crease-mark i::after { bottom: 0; }
+
+.cricket-profile {
+  padding: 110px 0;
+  background: #f6f4ee;
+}
+
+.cricket-profile-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(430px, 1.15fr);
+  gap: clamp(60px, 9vw, 135px);
+  align-items: center;
+}
+
+.cricket-profile-image {
+  position: relative;
+  min-height: 620px;
+  overflow: hidden;
+  background: #dce3dc;
+}
+
+.cricket-profile-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 65%, rgba(6, 31, 26, 0.6));
+}
+
+.cricket-profile-image img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cricket-profile-image > span {
+  position: absolute;
+  right: 22px;
+  bottom: 20px;
+  z-index: 1;
+  color: #fff;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.cricket-profile-copy h2 {
+  margin-bottom: 12px;
+  font-size: clamp(3.25rem, 5.7vw, 5.9rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.cricket-profile-role {
+  margin-bottom: 26px;
+  color: #b44e31;
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cricket-profile-copy > p:not(.collection-kicker):not(.cricket-profile-role) {
+  color: #64706c;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.cricket-profile-copy dl {
+  margin-top: 38px;
+  border-top: 1px solid rgba(9, 47, 40, 0.16);
+}
+
+.cricket-profile-copy dl > div {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 28px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(9, 47, 40, 0.16);
+}
+
+.cricket-profile-copy dt {
+  color: #123c34;
+  font-family: var(--font-heading);
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+.cricket-profile-copy dd {
+  color: #6a7471;
+  font-size: 0.84rem;
+}
+
+.cricket-offerings {
+  position: relative;
+  padding: 110px 0 122px;
+  overflow: hidden;
+  background: #0a3029;
+}
+
+.cricket-offerings::before {
+  content: '';
+  position: absolute;
+  inset: 60px 8% 70px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 52% / 16%;
+  pointer-events: none;
+}
+
+.cricket-offerings-heading {
+  position: relative;
+  z-index: 1;
+  max-width: 780px;
+  margin-bottom: 55px;
+}
+
+.cricket-offerings-heading h2 {
+  margin-bottom: 22px;
+  color: #fff;
+  font-size: clamp(3.2rem, 5.7vw, 5.9rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.cricket-offerings-heading > p:last-child {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.75;
+}
+
+.cricket-offerings-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.cricket-offerings-grid article {
+  grid-column: span 2;
+  min-height: 285px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.17);
+  background: rgba(8, 37, 32, 0.82);
+  backdrop-filter: blur(10px);
+}
+
+.cricket-offerings-grid article:nth-child(4),
+.cricket-offerings-grid article:nth-child(5) { grid-column: span 3; }
+
+.cricket-offerings-grid article > p {
+  margin-bottom: 44px;
+  color: #e68b61;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.cricket-offerings-grid h3 {
+  margin-bottom: 17px;
+  color: #fff;
+  font-size: clamp(1.65rem, 2.7vw, 2.65rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.cricket-offerings-grid article > span {
+  color: rgba(255, 255, 255, 0.63);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.cricket-spectator {
+  padding: 100px 0;
+  background: #dce6df;
+}
+
+.cricket-spectator-grid {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(60px, 9vw, 130px);
+  align-items: center;
+}
+
+.cricket-spectator-score {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 340px;
+  padding: 28px;
+  border: 10px solid #c9d5cd;
+  background: #102c27;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
+  color: #f3c368;
+  text-align: center;
+}
+
+.cricket-spectator-score span {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+.cricket-spectator-score strong {
+  align-self: center;
+  font-family: var(--font-heading);
+  font-size: clamp(3.2rem, 6vw, 6rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.cricket-spectator-grid h2 {
+  margin-bottom: 23px;
+  font-size: clamp(3.2rem, 5.6vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.cricket-spectator-grid > div:last-child > p:not(.collection-kicker) {
+  max-width: 620px;
+  margin-bottom: 28px;
+  color: #5e6d68;
+  line-height: 1.78;
+}
+
+.cricket-spectator-grid a,
+.cricket-cta a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 52px;
+  padding: 0 18px;
+  background: #c3512f;
+  color: #fff;
+  font-size: 0.69rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.cricket-cta {
+  padding: 92px 0;
+  background: #f6f4ee;
+}
+
+.cricket-cta-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+  gap: clamp(60px, 10vw, 150px);
+  align-items: end;
+}
+
+.cricket-cta h2 {
+  font-size: clamp(3.2rem, 5.5vw, 5.7rem);
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 0.92;
+}
+
+.cricket-cta-inner > div:last-child > p {
+  margin-bottom: 27px;
+  color: #616e6a;
+  line-height: 1.75;
+}
+
+.cricket-related {
+  background: #0a2823;
+  color: #fff;
+}
+
+.cricket-related .container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  min-height: 88px;
+}
+
+.cricket-related span {
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.48);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.cricket-related a {
+  padding: 12px 0;
+  border-bottom: 1px solid transparent;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.cricket-related a:hover { border-color: #e68b61; }
+
+@media (max-width: 1050px) {
+  .excursion-story-card,
+  .excursion-story-card:nth-child(6),
+  .excursion-story-card:nth-child(9) { grid-column: span 6; }
+
+  .excursion-story-card.is-featured { grid-column: span 12; }
+  .transport-fleet-grid,
+  .transport-service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .transport-service-grid article:nth-child(3) { border-left: 0; }
+  .transport-service-grid article:nth-child(n + 3) { border-top: 1px solid rgba(18, 54, 62, 0.14); }
+  .cricket-opening-grid { grid-template-columns: minmax(0, 1fr) 210px; gap: 55px; }
+}
+
+@media (max-width: 820px) {
+  .excursions-intro-grid,
+  .transport-intro-grid,
+  .cricket-profile-grid,
+  .cricket-spectator-grid,
+  .cricket-cta-inner { grid-template-columns: 1fr; }
+
+  .collection-heading,
+  .transport-road-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .transport-feature,
+  .transport-feature-air { grid-template-columns: 1fr; }
+  .transport-air-copy { order: 2; }
+  .transport-air-image { order: 1; }
+  .transport-service-title { grid-template-columns: 1fr; gap: 18px; }
+  .cricket-opening-grid { grid-template-columns: 1fr; }
+  .cricket-crease-mark { width: min(280px, 70vw); height: 120px; }
+  .cricket-profile-image { min-height: 540px; }
+}
+
+@media (max-width: 650px) {
+  .excursions-page .inner-hero,
+  .transportation-page .inner-hero,
+  .cricket-page .inner-hero {
+    height: 72vh;
+    min-height: 520px;
+    background-attachment: scroll;
+  }
+
+  .excursions-page .inner-hero-title,
+  .transportation-page .inner-hero-title,
+  .cricket-page .inner-hero-title { font-size: clamp(2.8rem, 15vw, 4.8rem); }
+
+  .transportation-page .inner-hero-title,
+  .cricket-page .inner-hero-title { font-size: clamp(2.45rem, 11vw, 3.45rem); }
+
+  .collection-hero-subtitle {
+    max-width: 300px;
+    font-size: 0.67rem;
+    line-height: 1.7;
+  }
+
+  .excursions-intro,
+  .transport-intro,
+  .cricket-opening { padding: 72px 0 68px; }
+
+  .excursions-journal,
+  .transport-modes,
+  .cricket-offerings { padding: 76px 0 82px; }
+
+  .excursion-story-card,
+  .excursion-story-card:nth-child(6),
+  .excursion-story-card:nth-child(9),
+  .excursion-story-card.is-featured { grid-column: span 12; }
+
+  .excursion-story-image { aspect-ratio: 4 / 3; }
+  .excursion-story-meta { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .excursions-cta { padding: 74px 0; }
+  .excursions-cta-actions { align-items: stretch; flex-direction: column; }
+  .excursions-cta-actions a { width: 100%; }
+
+  .transport-feature,
+  .transport-feature-air { min-height: 0; }
+  .transport-feature-image,
+  .transport-air-image { aspect-ratio: 4 / 3; }
+  .transport-road { padding: 78px 0; }
+  .transport-fleet-grid,
+  .transport-service-grid { grid-template-columns: 1fr; }
+  .transport-service-grid article + article { border-left: 0; border-top: 1px solid rgba(18, 54, 62, 0.14); }
+  .transport-service-strip { padding: 76px 0 68px; }
+  .transport-cta-row { align-items: stretch; flex-direction: column; }
+  .transport-cta-row a { width: 100%; }
+
+  .cricket-profile,
+  .cricket-spectator,
+  .cricket-cta { padding: 76px 0; }
+  .cricket-profile-image { min-height: 450px; }
+  .cricket-profile-copy dl > div { grid-template-columns: 1fr; gap: 6px; }
+  .cricket-offerings::before { display: none; }
+  .cricket-offerings-grid { grid-template-columns: 1fr; }
+  .cricket-offerings-grid article,
+  .cricket-offerings-grid article:nth-child(4),
+  .cricket-offerings-grid article:nth-child(5) { grid-column: span 1; min-height: 0; }
+  .cricket-spectator-score { min-height: 275px; }
+  .cricket-related .container { align-items: flex-start; flex-direction: column; gap: 4px; padding-top: 24px; padding-bottom: 24px; }
+  .cricket-related span { margin-right: 0; margin-bottom: 10px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .collection-pages a,
+  .excursion-story-image img,
+  .transport-feature-image img,
+  .transport-air-image img,
+  .transport-vehicle-image img { transition: none !important; }
+}
