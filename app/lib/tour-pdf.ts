@@ -1,5 +1,6 @@
 import 'server-only';
 
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { TourSubmissionSnapshot } from './tour-types';
@@ -11,9 +12,10 @@ export async function generateTourPdf(snapshot: TourSubmissionSnapshot, routeMap
     imageDataUri(join(process.cwd(), 'public', 'images', 'hero-1.png'), 'image/png'),
   ]);
 
+  const executablePath = await resolveBrowserExecutablePath(puppeteer);
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || undefined,
+    executablePath,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
@@ -153,4 +155,36 @@ function escapeHtml(value: string) {
 async function imageDataUri(path: string, mimeType: string) {
   const buffer = await readFile(path);
   return `data:${mimeType};base64,${buffer.toString('base64')}`;
+}
+
+async function resolveBrowserExecutablePath(puppeteer: { executablePath: () => Promise<string> | string }) {
+  const configuredPath = process.env.PUPPETEER_EXECUTABLE_PATH;
+  if (configuredPath && existsSync(configuredPath)) return configuredPath;
+
+  try {
+    const bundledPath = await puppeteer.executablePath();
+    if (existsSync(bundledPath)) return bundledPath;
+  } catch {
+    // Fall through to common system browser locations.
+  }
+
+  const systemCandidates = process.platform === 'darwin'
+    ? [
+        '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+        '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+        '/Applications/Chromium.app/Contents/MacOS/Chromium',
+      ]
+    : [
+        '/usr/bin/google-chrome',
+        '/usr/bin/chromium',
+        '/usr/bin/chromium-browser',
+        '/snap/bin/chromium',
+      ];
+
+  const systemPath = systemCandidates.find((candidate) => existsSync(candidate));
+  if (systemPath) return systemPath;
+
+  throw new Error(
+    'No Chrome/Chromium executable was found for PDF generation. Set PUPPETEER_EXECUTABLE_PATH or install a Puppeteer-managed browser with `npx puppeteer browsers install chrome`.'
+  );
 }

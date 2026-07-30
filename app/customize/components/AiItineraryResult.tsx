@@ -13,7 +13,6 @@ interface AiItineraryResultProps {
 
 interface SubmissionConfirmation {
   reference: string;
-  deliveryStatus: 'sent' | 'simulated';
 }
 
 const initialCustomer: TourCustomer = {
@@ -28,7 +27,9 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
   const [customer, setCustomer] = useState<TourCustomer>(initialCustomer);
   const [consent, setConsent] = useState(false);
   const [sending, setSending] = useState(false);
+  const [emailSending, setEmailSending] = useState(false);
   const [confirmation, setConfirmation] = useState<SubmissionConfirmation | null>(null);
+  const [emailNotice, setEmailNotice] = useState<string | null>(null);
   const [sendError, setSendError] = useState<string | null>(null);
 
   const finaliseTour = async (event: FormEvent<HTMLFormElement>) => {
@@ -48,7 +49,33 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
         setSendError(data.error || 'Could not finalise your tour request right now.');
         return;
       }
-      setConfirmation({ reference: data.reference, deliveryStatus: data.deliveryStatus });
+      setConfirmation({ reference: data.reference });
+      const shouldEmail = window.confirm(`The PDF has been created. Send it to dream@venomholidays.com now?`);
+      if (!shouldEmail) {
+        setEmailNotice('PDF created successfully. Email sending was skipped.');
+        return;
+      }
+
+      setEmailSending(true);
+      try {
+        const emailResponse = await fetch('/api/tour-submissions/email', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify({ reference: data.reference }),
+        });
+        const emailData = await emailResponse.json();
+
+        if (!emailResponse.ok) {
+          setEmailNotice(emailData.error || 'The PDF was created, but the email could not be sent.');
+          return;
+        }
+
+        setEmailNotice(`PDF emailed to ${emailData.recipient || 'dream@venomholidays.com'}.`);
+      } catch {
+        setEmailNotice('The PDF was created, but the email could not be sent right now.');
+      } finally {
+        setEmailSending(false);
+      }
     } catch {
       setSendError('Could not finalise your tour request right now.');
     } finally {
@@ -67,6 +94,8 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
           <span>Reference number</span>
           <strong>{confirmation.reference}</strong>
         </div>
+        {emailSending && <p className="planner-delivery-note">Sending the PDF by email now...</p>}
+        {emailNotice && <p className="planner-delivery-note">{emailNotice}</p>}
         <div className="planner-next-steps">
           <h3>Our travel consultants will now:</h3>
           <ul>
@@ -76,12 +105,6 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
             <li>Contact you shortly</li>
           </ul>
         </div>
-        {confirmation.deliveryStatus === 'simulated' && (
-          <p className="planner-delivery-note">Local delivery simulation is active. The PDF was generated in memory and cleared; live company WhatsApp delivery starts when production mode and credentials are configured.</p>
-        )}
-        {confirmation.deliveryStatus === 'sent' && (
-          <p className="planner-delivery-note planner-delivery-note-whatsapp">Your PDF was delivered directly to the Serendia company WhatsApp for consultant review.</p>
-        )}
         <div className="planner-confirmation-actions">
           <button type="button" className="planner-secondary-button" onClick={onEditRequest || onStartOver}>Edit Request</button>
           <Link className="planner-text-link" href="/contact">Contact Us →</Link>
@@ -118,7 +141,7 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
       <form className="planner-result-section planner-finalise-panel" onSubmit={finaliseTour}>
         <span className="planner-result-kicker">Final submission</span>
         <h3>Finalise My Tour</h3>
-        <p>We will create a professional PDF and deliver it internally to our travel consultants. It is not automatically sent to you.</p>
+        <p>We will create a professional PDF first, then ask whether you want it emailed to dream@venomholidays.com.</p>
 
         <div className="planner-grid planner-grid-2 planner-final-contact-grid">
           <label className="planner-field-stack">Full name *
@@ -149,11 +172,11 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
         {sendError && <div className="planner-inline-error">{sendError} You can also WhatsApp/Call +94 77 398 6504.</div>}
         <div className="planner-actions">
           <button type="button" className="planner-secondary-button" onClick={onEditRequest || onStartOver}>← Edit preferences</button>
-          <button type="submit" className="planner-primary-button" disabled={sending || !customer.fullName.trim() || (!customer.email.trim() && !customer.phone.trim()) || !consent}>
-            {sending ? 'Creating PDF & sending securely…' : 'Finalise My Tour →'}
+          <button type="submit" className="planner-primary-button" disabled={sending || emailSending || !customer.fullName.trim() || (!customer.email.trim() && !customer.phone.trim()) || !consent}>
+            {sending ? 'Creating PDF…' : emailSending ? 'Sending email…' : 'Finalise My Tour →'}
           </button>
         </div>
-        <small className="planner-security-note">Generated in memory · Delivered to company WhatsApp · PDF not stored on the server</small>
+        <small className="planner-security-note">Generated in memory · PDF not stored on the server · Email prompt appears after creation</small>
       </form>
     </div>
   );

@@ -1,7 +1,7 @@
 import 'server-only';
 
 import { randomBytes } from 'node:crypto';
-import { appendFile, mkdir, writeFile } from 'node:fs/promises';
+import { appendFile, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve } from 'node:path';
 import type { FinalTourSubmissionRequest, PinnedLocation, TourSubmissionSnapshot } from './tour-types';
 
@@ -33,10 +33,11 @@ const knownCoordinates: Record<string, [number, number]> = {
 export interface DeliveryRecord {
   reference: string;
   at: string;
-  channel: 'whatsapp';
+  channel: 'whatsapp' | 'email';
   status: 'sent' | 'simulated' | 'failed';
   providerMediaId?: string;
   providerMessageId?: string;
+  recipient?: string;
   error?: string;
 }
 
@@ -85,9 +86,22 @@ export async function saveTourSnapshot(snapshot: TourSubmissionSnapshot, routeMa
   await Promise.all(writes);
 }
 
-export async function recordWhatsAppDelivery(record: DeliveryRecord): Promise<void> {
+export async function recordTourDelivery(record: DeliveryRecord): Promise<void> {
   await mkdir(storageDirectory, { recursive: true, mode: 0o700 });
   await appendFile(join(storageDirectory, 'delivery-log.jsonl'), `${JSON.stringify(record)}\n`, { encoding: 'utf8', mode: 0o600 });
+}
+
+export async function recordWhatsAppDelivery(record: DeliveryRecord): Promise<void> {
+  await recordTourDelivery(record);
+}
+
+export async function loadTourSnapshot(reference: string): Promise<TourSubmissionSnapshot | null> {
+  try {
+    const content = await readFile(join(storageDirectory, `${reference}.json`), 'utf8');
+    return JSON.parse(content) as TourSubmissionSnapshot;
+  } catch {
+    return null;
+  }
 }
 
 export function createRouteMapSvg(destinations: PinnedLocation[], experiences: string[] = []): string {

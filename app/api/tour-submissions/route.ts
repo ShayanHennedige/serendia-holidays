@@ -4,12 +4,10 @@ import {
   createRouteMapSvg,
   createStaticRouteMap,
   createTourReference,
-  recordWhatsAppDelivery,
   saveTourSnapshot,
   validateFinalTourRequest,
 } from '../../lib/tour-submissions';
 import type { TourSubmissionSnapshot } from '../../lib/tour-types';
-import { sendTourPdfToCompany } from '../../lib/whatsapp';
 
 export async function POST(request: Request) {
   let input: unknown;
@@ -41,20 +39,6 @@ export async function POST(request: Request) {
     const routeMapDataUri = routeMapPng ? `data:image/png;base64,${routeMapPng.toString('base64')}` : undefined;
     pdf = await generateTourPdf(snapshot, routeMapSvg, routeMapDataUri);
 
-    const delivery = await sendTourPdfToCompany({
-      pdf,
-      filename,
-      caption: createWhatsAppCaption(snapshot),
-    });
-    await recordWhatsAppDelivery({
-      reference,
-      at: new Date().toISOString(),
-      channel: 'whatsapp',
-      status: delivery.status,
-      providerMediaId: delivery.providerMediaId,
-      providerMessageId: delivery.providerMessageId,
-    });
-
     const reviewRecord = logAiInteraction('tour-submission', {
       reference,
       status: 'Submitted',
@@ -71,19 +55,18 @@ export async function POST(request: Request) {
       specialRequests: snapshot.tour.specialRequests,
       routeMap: `${reference}-route.${routeMapPng ? 'png' : 'svg'}`,
       pdf: filename,
-      deliveryStatus: delivery.status,
+      deliveryStatus: 'pdf-generated',
     }, 'submitted');
 
     return Response.json({
       ok: true,
       reference,
       status: 'Submitted',
-      deliveryStatus: delivery.status,
+      pdfCreated: true,
       reviewId: reviewRecord.id,
     });
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Tour submission failed.';
-    await recordWhatsAppDelivery({ reference, at: new Date().toISOString(), channel: 'whatsapp', status: 'failed', error: message });
     logAiInteraction('tour-submission-failed', { reference, error: message }, 'pending-review');
     console.error('Could not finalise tour submission.', error);
     return Response.json({ error: 'We could not deliver your final tour request. Your details have not been shown as successfully submitted. Please try again or contact us directly.' }, { status: 502 });
@@ -93,22 +76,6 @@ export async function POST(request: Request) {
     pdf?.fill(0);
     pdf = undefined;
   }
-}
-
-function createWhatsAppCaption(snapshot: TourSubmissionSnapshot) {
-  const { customer, tour, reference } = snapshot;
-  return [
-    'New Tour Request Received',
-    '',
-    'A customer submitted a personalised Sri Lanka tour through the website.',
-    `Customer: ${customer.fullName}`,
-    `Country: ${customer.country || 'Not provided'}`,
-    `Travel dates: ${tour.arrivalDate} – ${tour.departureDate}`,
-    `Travellers: ${tour.adults} adult(s), ${tour.children} child(ren)`,
-    `Tour reference: ${reference}`,
-    '',
-    'The complete itinerary, preferences, special requests and route map are attached as a PDF.',
-  ].join('\n');
 }
 
 export const runtime = 'nodejs';
