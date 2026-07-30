@@ -9,11 +9,22 @@ import { useLanguage } from './LanguageProvider';
 import { localeLabels, supportedLocales, type Locale } from '../lib/i18n';
 import { homeDictionaries } from '../lib/homeI18n';
 
+const localeFlags: Record<Locale, string> = {
+  en: '🇬🇧',
+  fr: '🇫🇷',
+  de: '🇩🇪',
+  it: '🇮🇹',
+  es: '🇪🇸',
+  lt: '🇱🇹',
+};
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [languageOpen, setLanguageOpen] = useState(false);
   const navRef = useRef<HTMLElement | null>(null);
+  const languageRef = useRef<HTMLDivElement | null>(null);
   const { locale, setLocale, dictionary: { nav } } = useLanguage();
   const shared = homeDictionaries[locale].header;
 
@@ -31,9 +42,30 @@ export default function Header() {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (!languageOpen) return;
+
+    const closeOnOutsideClick = (event: PointerEvent) => {
+      if (!languageRef.current?.contains(event.target as Node)) setLanguageOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setLanguageOpen(false);
+    };
+
+    document.addEventListener('pointerdown', closeOnOutsideClick);
+    document.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsideClick);
+      document.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [languageOpen]);
+
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
-  const closeMenu = () => setMenuOpen(false);
+  const closeMenu = () => {
+    setMenuOpen(false);
+    setLanguageOpen(false);
+  };
 
   const pathname = usePathname();
   const isPlannerPage = pathname === '/customize';
@@ -119,12 +151,54 @@ export default function Header() {
                 <line x1="21" y1="21" x2="16.65" y2="16.65" />
               </svg>
             </button>
-            <label className="language-switcher" aria-label={shared.language}>
-              <span>{locale.toUpperCase()}</span>
-              <select value={locale} onChange={(event) => setLocale(event.target.value as Locale)}>
-                {supportedLocales.map((option) => <option key={option} value={option}>{localeLabels[option]}</option>)}
-              </select>
-            </label>
+            <div className={`language-switcher${languageOpen ? ' open' : ''}`} ref={languageRef}>
+              <button
+                type="button"
+                className="language-trigger"
+                aria-label={`${shared.language}: ${localeLabels[locale]}`}
+                aria-haspopup="menu"
+                aria-expanded={languageOpen}
+                aria-controls="header-language-menu"
+                onClick={() => setLanguageOpen((open) => !open)}
+              >
+                <span className="language-trigger-flag" aria-hidden="true">{localeFlags[locale]}</span>
+                <span className="language-trigger-code">{locale.toUpperCase()}</span>
+                <svg className="language-trigger-chevron" viewBox="0 0 12 8" width="10" height="7" aria-hidden="true">
+                  <path d="m1 1.5 5 5 5-5" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+
+              <div className="language-menu" id="header-language-menu" role="menu" aria-label={shared.language}>
+                <p className="language-menu-title">{shared.language}</p>
+                <div className="language-menu-options">
+                  {supportedLocales.map((option) => {
+                    const selected = option === locale;
+                    return (
+                      <button
+                        type="button"
+                        className={`language-option${selected ? ' selected' : ''}`}
+                        role="menuitemradio"
+                        aria-checked={selected}
+                        key={option}
+                        onClick={() => {
+                          setLocale(option);
+                          setLanguageOpen(false);
+                        }}
+                      >
+                        <span className="language-option-flag" aria-hidden="true">{localeFlags[option]}</span>
+                        <span className="language-option-copy">
+                          <strong>{localeLabels[option]}</strong>
+                          <small>{option.toUpperCase()}</small>
+                        </span>
+                        <svg className="language-option-check" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true">
+                          <path d="m3 8.5 3.1 3L13 4.8" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
             <Link href="/customize" className={`nav-plan-cta ${pathname === '/customize' ? 'active' : ''}`} onClick={closeMenu}>
               {nav.plan}<span aria-hidden="true">↗</span>
             </Link>
