@@ -721,6 +721,34 @@
   .hotelGrid { grid-template-columns: minmax(0, 0.85fr) minmax(420px, 1.15fr); gap: 70px; }
 }
 
+@media (min-width: 900px) and (max-height: 820px) {
+  .journeyPin {
+    height: 100svh;
+    min-height: 100svh;
+    padding: 20px 0;
+  }
+
+  .journeyHeading { margin-bottom: 16px; }
+  .journeyHeading .signal { margin-bottom: 8px; }
+  .journeyHeading h2 { font-size: clamp(2.8rem, 5.4vw, 3.45rem); }
+  .journeyHeading > p { font-size: 0.8rem; line-height: 1.5; }
+
+  .disciplineCard {
+    height: calc(100svh - 180px);
+    min-height: 0;
+  }
+
+  .disciplineCopy { padding: 22px 26px; }
+  .disciplineCopy > p { margin-bottom: 10px; font-size: 0.65rem; }
+  .disciplineCopy h3 {
+    margin-bottom: 12px;
+    font-size: clamp(1.95rem, 3.5vw, 2.4rem);
+    line-height: 0.96;
+  }
+  .disciplineCopy > span { font-size: 0.78rem; line-height: 1.45; }
+  .disciplineCopy a { min-height: 40px; margin-top: 16px; }
+}
+
 @media (max-width: 899px) {
   .heroDock { grid-template-columns: 1fr auto; }
   .heroMeta { grid-column: 1; grid-row: 2; }

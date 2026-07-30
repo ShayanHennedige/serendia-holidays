@@ -87,7 +87,15 @@ export default function AboutMotion() {
           const track = root.querySelector<HTMLElement>('[data-horizontal-track]');
           if (!section || !pin || !track) return;
 
-          const travelDistance = () => Math.max(0, track.scrollWidth - window.innerWidth + 80);
+          const cards = Array.from(track.children).filter(
+            (child): child is HTMLElement => child instanceof HTMLElement,
+          );
+          const travelDistance = () => {
+            const firstCard = cards.at(0);
+            const lastCard = cards.at(-1);
+            if (!firstCard || !lastCard) return 0;
+            return Math.max(0, lastCard.offsetLeft - firstCard.offsetLeft);
+          };
 
           gsap.to(track, {
             x: () => -travelDistance(),
@@ -100,6 +108,14 @@ export default function AboutMotion() {
               pin,
               anticipatePin: 1,
               invalidateOnRefresh: true,
+              ...(cards.length > 1 ? {
+                snap: {
+                  snapTo: 1 / (cards.length - 1),
+                  duration: { min: 0.12, max: 0.35 },
+                  delay: 0.06,
+                  ease: 'power1.inOut',
+                },
+              } : {}),
             },
           });
         });
