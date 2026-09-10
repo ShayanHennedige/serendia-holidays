@@ -11,7 +11,7 @@ interface Highlight {
 
 const highlightMedia: Omit<Highlight, 'title'>[] = [
   {
-    image: '/images/tour-polonnaruwa.png',
+    image: '/images/polonnaruwa.webp',
     href: '/excursions/polonnaruwa-excursion',
   },
   {
@@ -19,7 +19,7 @@ const highlightMedia: Omit<Highlight, 'title'>[] = [
     href: '/excursions/yala-excursion-from-bentota-or-galle',
   },
   {
-    image: '/images/hero-2.png',
+    image: '/images/Nuwaraeliya.webp',
     href: '/excursions/nuwara-eliya-excursion-from-kandy',
   },
   {

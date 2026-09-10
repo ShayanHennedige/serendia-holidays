@@ -29,7 +29,7 @@ export default function BestOfSriLankaTourPage() {
         },
         {
           title: 'Day 03: Sigiriya - Polonnaruwa',
-          image: '/images/tour-polonnaruwa.png',
+          image: '/images/polonnaruwa.webp',
           paragraphs: [
             "This cultural stretch focuses on Sri Lanka's heritage triangle with time for ancient cities, rock fortresses, and well known archaeological sites.",
             'Wildlife and nature are woven into the route so the holiday feels like a single, connected journey instead of disconnected stops.',
@@ -37,7 +37,7 @@ export default function BestOfSriLankaTourPage() {
         },
         {
           title: 'Day 05: Kandy - Nuwara Eliya',
-          image: '/images/hero-1.png',
+          image: '/images/kandy-to-nuwara-eliya-tea-country.png',
           paragraphs: [
             'The trip then climbs into tea country, where cooler air, hill stations, and scenic train or road views shift the rhythm of the holiday.',
             'Nuwara Eliya gives the tour a softer pace before the southern wildlife and beach portions begin.',

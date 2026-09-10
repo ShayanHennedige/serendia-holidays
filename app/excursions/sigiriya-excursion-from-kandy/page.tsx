@@ -10,7 +10,7 @@ export default function SigiriyaFromKandyExcursionPage() {
     <TripDetailPage
       title="Sigiriya Excursion from Kandy"
       subtitle="Full Day"
-      heroImage="/images/excursion-sigiriya.webp"
+      heroImage="/images/excursion-heroes/sigiriya-hero.png"
       heroNote="Travel through Matale’s spice country before an afternoon climb of Sri Lanka’s iconic Lion Rock fortress."
       facts={[
         { label: 'Duration', value: 'Full Day' },

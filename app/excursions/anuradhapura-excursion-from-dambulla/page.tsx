@@ -10,7 +10,7 @@ export default function AnuradhapuraExcursionPage() {
     <TripDetailPage
       title="Anuradhapura Excursion from Dambulla"
       subtitle="Full Day"
-      heroImage="/images/excursion-anuradhapura.webp"
+      heroImage="/images/excursion-heroes/anuradhapura-hero.png"
       heroNote="A day among Sri Lanka’s first capital, sacred stupas, ancient reservoirs and enduring stone carvings."
       facts={[
         { label: 'Duration', value: 'Full Day' },

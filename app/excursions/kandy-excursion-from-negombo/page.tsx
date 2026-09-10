@@ -10,7 +10,7 @@ export default function KandyFromNegomboExcursionPage() {
     <TripDetailPage
       title="Kandy Excursion from Negombo"
       subtitle="Full Day"
-      heroImage="/images/excursion-kandy.webp"
+      heroImage="/images/excursion-heroes/kandy-hero.png"
       heroNote="A private hill-capital day shaped for guests staying in Negombo, with cultural and garden highlights."
       facts={[
         { label: 'Duration', value: 'Full Day' },

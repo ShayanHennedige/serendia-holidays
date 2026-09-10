@@ -10,7 +10,7 @@ export default function TrincomaleeExcursionPage() {
     <TripDetailPage
       title="Trincomalee Excursion"
       subtitle="Full Day"
-      heroImage="/images/excursion-trincomalee.webp"
+      heroImage="/images/excursion-heroes/trincomalee-hero.png"
       heroNote="Sri Lanka’s great eastern harbour, a luminous beach and the sacred cliff-top setting of Koneswaram."
       facts={[
         { label: 'Duration', value: 'Full Day' },

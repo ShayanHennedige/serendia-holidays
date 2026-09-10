@@ -10,7 +10,7 @@ export default function NuwaraEliyaExcursionPage() {
     <TripDetailPage
       title="Nuwara-Eliya Excursion from Kandy"
       subtitle="Full Day"
-      heroImage="/images/hero-1.png"
+      heroImage="/images/Nuwaraeliya.webp"
       heroNote="Scenic tea country drive with waterfall and factory stops."
       facts={[
         { label: 'Duration', value: 'Full Day' },
@@ -21,7 +21,7 @@ export default function NuwaraEliyaExcursionPage() {
       sections={[
         {
           title: 'En Route View Ramboda Falls',
-          image: '/images/hero-1.png',
+          image: '/images/3-ramboda-falls.jpg',
           paragraphs: [
             "Ramboda Falls is among Sri Lanka's best-known waterfall stops and makes a natural pause on the journey from Kandy to the hill country.",
             'Altitude, cooler temperatures, and tea estates along the road turn the transfer itself into part of the experience rather than just the transit.',
@@ -29,10 +29,18 @@ export default function NuwaraEliyaExcursionPage() {
         },
         {
           title: 'Visit The Labookellie Tea Factory',
-          image: '/images/hero-2.png',
+          image: '/images/Labukale-Tea-factory-3.webp',
           paragraphs: [
             "Labookellie is a historic tea factory where you can see how tea is processed before it reaches Sri Lanka's export markets.",
             'After lunch and a relaxed town visit, the return to Kandy closes the day with a cool mountain drive through the central highlands.',
+          ],
+        },
+        {
+          title: 'See How Ceylon Tea Is Made',
+          image: '/images/Ceylon-Tea-Trails-Hatton-Sri-Lanka-norwood-tea-plantation-factory-inside.webp',
+          paragraphs: [
+            'Watch freshly picked leaves move through the early stages of tea making, from withering to the careful preparation that shapes Ceylon tea’s character.',
+            'It is a close-up look at the work behind the estates that make this highland route so distinctive.',
           ],
         },
       ]}

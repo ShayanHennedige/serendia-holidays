@@ -1811,6 +1811,18 @@ button, input {
   margin-top: 0;
 }
 
+/* Detail page heroes use a cinematic wide-banner treatment. */
+.inner-hero.inner-hero-full-image {
+  background-color: #0b1c19;
+  height: auto;
+  min-height: 520px;
+  aspect-ratio: 2.35 / 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Keep image sizing relative to the banner, not the browser viewport. */
+  background-attachment: scroll;
+}
+
 .inner-hero::before {
   content: '';
   position: absolute;

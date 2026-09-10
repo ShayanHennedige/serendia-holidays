@@ -10,7 +10,7 @@ export default function YalaExcursionPage() {
     <TripDetailPage
       title="Yala Excursion from Bentota or Galle"
       subtitle="Full Day"
-      heroImage="/images/excursion-yala.webp"
+      heroImage="/images/excursion-heroes/yala-hero.png"
       heroNote="Afternoon safari departures and hotel return in the evening."
       facts={[
         { label: 'Duration', value: 'Full Day' },

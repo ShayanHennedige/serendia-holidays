@@ -44,7 +44,7 @@ const excursions: Excursion[] = [
   },
   {
     title: 'Nuwara Eliya from Kandy',
-    image: '/images/hero-2.png',
+    image: '/images/Nuwaraeliya.webp',
     href: '/excursions/nuwara-eliya-excursion-from-kandy',
     route: 'Kandy → Nuwara Eliya',
     duration: 'Full day',

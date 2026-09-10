@@ -99,7 +99,7 @@ export default function TripDetailPage({
 }: TripDetailPageProps) {
   return (
     <main>
-      <InnerHero title={title} subtitle={subtitle} bgImage={heroImage} />
+      <InnerHero title={title} subtitle={subtitle} bgImage={heroImage} showFullImage />
 
       <section className="page-content trip-overview">
         <div className="container">

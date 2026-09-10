@@ -2,12 +2,13 @@ interface InnerHeroProps {
   title: string;
   subtitle?: string;
   bgImage: string;
+  showFullImage?: boolean;
 }
 
-export default function InnerHero({ title, subtitle, bgImage }: InnerHeroProps) {
+export default function InnerHero({ title, subtitle, bgImage, showFullImage = false }: InnerHeroProps) {
   return (
     <section 
-      className="inner-hero" 
+      className={`inner-hero${showFullImage ? ' inner-hero-full-image' : ''}`}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="inner-hero-content fade-in visible">

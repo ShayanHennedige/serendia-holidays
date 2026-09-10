@@ -10,7 +10,7 @@ export default function PolonnaruwaExcursionPage() {
     <TripDetailPage
       title="Polonnaruwa Excursion"
       subtitle="Full Day"
-      heroImage="/images/tour-polonnaruwa.png"
+      heroImage="/images/excursion-heroes/polonnaruwa-hero.png"
       heroNote="Ancient city ruins, wildlife, and a relaxed return to the hotel after lunch."
       facts={[
         { label: 'Duration', value: 'Full Day' },
@@ -21,7 +21,7 @@ export default function PolonnaruwaExcursionPage() {
       sections={[
         {
           title: 'Polonnaruwa Ancient City',
-          image: '/images/tour-polonnaruwa.png',
+          image: '/images/polonnaruwa.webp',
           paragraphs: [
             'As an eco-tourism venue, the city is divided into new and old town with the impressively preserved ruins split into five main areas, including The Quadrangle, the Northern City Group and the Rest House group.',
             'The route is easy to explore on foot, and the surrounding area is well maintained so you can leave the car behind and move between the monuments at a relaxed pace.',
@@ -29,7 +29,7 @@ export default function PolonnaruwaExcursionPage() {
         },
         {
           title: 'Minneriya National Park',
-          image: '/images/hero-2.png',
+          image: '/images/Minneriya-National-Park-Elephants-scaled.webp',
           paragraphs: [
             'Minneriya Jeep Safari is one of the most popular activities for travelers who want to see elephants in their natural habitat.',
             'Suggested safari times are 5.30am to 8.30am in the morning or 3.00pm to 6.00pm in the afternoon before returning to the hotel.',

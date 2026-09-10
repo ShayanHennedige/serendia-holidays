@@ -10,7 +10,7 @@ export default function KandyFromColomboExcursionPage() {
     <TripDetailPage
       title="Kandy Excursion from Colombo"
       subtitle="Full Day"
-      heroImage="/images/excursion-kandy.webp"
+      heroImage="/images/excursion-heroes/kandy-hero.png"
       heroNote="Sri Lanka’s hill capital, its most venerated temple, botanical gardens and a Pinnawala stop in one full day."
       facts={[
         { label: 'Duration', value: 'Full Day' },

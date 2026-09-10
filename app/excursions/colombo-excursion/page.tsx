@@ -10,7 +10,7 @@ export default function ColomboExcursionPage() {
     <TripDetailPage
       title="Colombo Excursion"
       subtitle="Half Day"
-      heroImage="/images/excursion-colombo.webp"
+      heroImage="/images/excursion-heroes/colombo-hero.png"
       heroNote="A compact introduction to Colombo’s markets, heritage buildings, museums and modern skyline."
       facts={[
         { label: 'Duration', value: 'Half Day' },
