@@ -1,4 +1,5 @@
 import React from 'react';
+import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import './collection-pages.css';
 import Header from './components/Header';
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ScrollToTop />
           <AIChatConcierge />
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
