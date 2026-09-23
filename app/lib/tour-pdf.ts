@@ -42,12 +42,15 @@ async function launchPdfBrowser() {
     ]);
     const chromium = (chromiumModule.default ?? chromiumModule) as unknown as ChromiumRuntime;
     const puppeteerCore = (puppeteerModule.default ?? puppeteerModule) as unknown as PuppeteerRuntime;
-    const executablePath = await resolveVercelChromiumPath((input) => chromium.executablePath(input));
+    const [executablePath, args] = await Promise.all([
+      resolveVercelChromiumPath((input) => chromium.executablePath(input)),
+      puppeteerCore.defaultArgs({ args: chromium.args, headless: 'shell' }),
+    ]);
 
     return puppeteerCore.launch({
       headless: 'shell',
       executablePath,
-      args: puppeteerCore.defaultArgs({ args: chromium.args, headless: 'shell' }),
+      args,
     });
   }
 
