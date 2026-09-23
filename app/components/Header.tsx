@@ -8,6 +8,7 @@ import NaturalLanguageSearch from './NaturalLanguageSearch';
 import { useLanguage } from './LanguageProvider';
 import { localeCountries, localeLabels, supportedLocales, type Locale } from '../lib/i18n';
 import { homeDictionaries } from '../lib/homeI18n';
+import { tourPackages } from '../lib/tourPackages';
 
 const localeFlags: Record<Locale, string> = {
   en: '🇬🇧',
@@ -70,12 +71,17 @@ export default function Header() {
   const pathname = usePathname();
   const isPlannerPage = pathname === '/customize';
 
+  // Tour package detail pages open on a white hero, so the header needs its solid
+  // (dark-text) treatment from the top rather than only after scrolling.
+  const lightHero = /^\/tour-packages\/.+/.test(pathname);
+  const solid = scrolled || lightHero;
+
   if (isPlannerPage) {
     return null;
   }
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''}`} id="header">
+    <header className={`header ${solid ? 'scrolled' : ''}`} id="header">
       <div className="header-inner">
         <Link href="/" className="logo" aria-label="Serendia Holidays by Venom — home">
           <span className="logo-brand" aria-hidden="true">
@@ -106,6 +112,17 @@ export default function Header() {
             </li>
             <li className="nav-item">
               <Link href="/tours" className={`nav-link ${pathname.startsWith('/tours') ? 'active' : ''}`} onClick={closeMenu}>{nav.tours}</Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/tour-packages" className={`nav-link ${pathname.startsWith('/tour-packages') ? 'active' : ''}`} onClick={closeMenu}>{nav.packages} <span className="nav-chevron">⌄</span></Link>
+              <div className="nav-dropdown nav-dropdown-wide">
+                <Link href="/tour-packages" onClick={closeMenu}>{nav.allPackages}</Link>
+                {tourPackages.map((pkg) => (
+                  <Link key={pkg.slug} href={`/tour-packages/${pkg.slug}`} onClick={closeMenu}>
+                    {pkg.name} <span className="nav-dropdown-meta">{pkg.nights} nights</span>
+                  </Link>
+                ))}
+              </div>
             </li>
             <li className="nav-item">
               <Link href="/excursions" className={`nav-link ${pathname.startsWith('/excursions') || pathname === '/transportation' || pathname === '/cricket-tourism' ? 'active' : ''}`} onClick={closeMenu}>{nav.excursions} <span className="nav-chevron">⌄</span></Link>

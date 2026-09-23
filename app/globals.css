@@ -6024,3 +6024,27 @@ button.nav-search {
   .staff-status { grid-column: 2; justify-self: start; }
   .staff-content-tool form > div { grid-template-columns: 1fr; }
 }
+
+/* Tour Packages dropdown — wider, with a nights column beside each name */
+.nav-dropdown-wide {
+  min-width: 330px;
+}
+
+.nav-dropdown-wide a {
+  align-items: baseline;
+}
+
+.nav-dropdown-meta {
+  flex: none;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #7a8a88;
+  white-space: nowrap;
+}
+
+.nav-dropdown-wide a:hover .nav-dropdown-meta {
+  color: inherit;
+  opacity: 0.75;
+}
