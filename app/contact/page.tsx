@@ -1,4 +1,5 @@
 import InnerHero from '../components/InnerHero';
+import WhatsAppInquiryForm from './WhatsAppInquiryForm';
 
 export const metadata = {
   title: 'Contact - Serendia Holidays By Venom',
@@ -57,6 +58,7 @@ export default function ContactPage() {
                 </div>
               </div>
             </div>
+            <WhatsAppInquiryForm />
           </div>
         </div>
       </section>
