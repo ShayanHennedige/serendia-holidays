@@ -1,6 +1,11 @@
 node_modules/
 .next/
 .data/
+.libretranslate-venv/
+.libretranslate-data/
+.libretranslate-config/
+.libretranslate-cache/
+:memory:.ses
 .env*
 !.env.example
 *.log

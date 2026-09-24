@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/dev-with-translate.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "translate:server": "XDG_DATA_HOME=$PWD/.libretranslate-data XDG_CONFIG_HOME=$PWD/.libretranslate-config XDG_CACHE_HOME=$PWD/.libretranslate-cache ./.libretranslate-venv/bin/libretranslate --load-only en,fr,de,it,es,lt --host 127.0.0.1 --port 5000",
     "postinstall": "node scripts/prepare-chromium.mjs"
   },
   "dependencies": {

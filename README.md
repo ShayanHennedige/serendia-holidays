@@ -20,6 +20,18 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Automatic page translation
+
+The site-wide language selector translates legacy English page copy through a self-hosted LibreTranslate service. No Google API key is needed.
+
+For local development, start it in a second terminal:
+
+```bash
+npm run translate:server
+```
+
+The website uses `http://127.0.0.1:5000` by default. In production, run LibreTranslate as a separate private service and set `LIBRETRANSLATE_URL` to its internal URL. Do not expose LibreTranslate directly to the public internet.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

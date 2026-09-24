@@ -6,8 +6,11 @@ import './tour-packages.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import BackButton from './components/BackButton';
 import AIChatConcierge from './components/AIChatConcierge';
 import LanguageProvider from './components/LanguageProvider';
+import AutoPageTranslation from './components/AutoPageTranslation';
+import WhatsAppSupport from './components/WhatsAppSupport';
 
 export const metadata = {
   title: 'Welcome - Serendia Holidays By Venom',
@@ -41,10 +44,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         <LanguageProvider>
           <Header />
+          <BackButton />
           {children}
+          <AutoPageTranslation />
           <Footer />
           <ScrollToTop />
           <AIChatConcierge />
+          <WhatsAppSupport phoneNumber={process.env.COMPANY_WHATSAPP_NUMBER || '94773986504'} />
         </LanguageProvider>
         <Analytics />
       </body>

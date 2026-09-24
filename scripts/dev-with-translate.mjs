@@ -1,0 +1,63 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { spawn } from 'node:child_process';
+import net from 'node:net';
+
+const projectRoot = process.cwd();
+const translator = join(projectRoot, '.libretranslate-venv', 'bin', 'libretranslate');
+
+function isPortOpen(port) {
+  return new Promise((resolve) => {
+    const socket = net.createConnection({ host: '127.0.0.1', port });
+    socket.once('connect', () => {
+      socket.end();
+      resolve(true);
+    });
+    socket.once('error', () => resolve(false));
+  });
+}
+
+if (!existsSync(translator)) {
+  console.error('LibreTranslate is not installed. Run: python3 -m venv .libretranslate-venv && .libretranslate-venv/bin/pip install libretranslate');
+  process.exit(1);
+}
+
+const translatorAlreadyRunning = await isPortOpen(5000);
+const translationProcess = translatorAlreadyRunning ? null : spawn(
+  translator,
+  ['--load-only', 'en,fr,de,it,es,lt', '--host', '127.0.0.1', '--port', '5000'],
+  {
+    cwd: projectRoot,
+    env: {
+      ...process.env,
+      XDG_DATA_HOME: join(projectRoot, '.libretranslate-data'),
+      XDG_CONFIG_HOME: join(projectRoot, '.libretranslate-config'),
+      XDG_CACHE_HOME: join(projectRoot, '.libretranslate-cache'),
+    },
+    stdio: 'inherit',
+  },
+);
+
+if (translatorAlreadyRunning) console.log('Using the LibreTranslate service already running on http://127.0.0.1:5000');
+
+const nextProcess = spawn(process.platform === 'win32' ? 'npx.cmd' : 'npx', ['next', 'dev'], {
+  cwd: projectRoot,
+  env: process.env,
+  stdio: 'inherit',
+});
+
+let stopping = false;
+const stop = (code = 0) => {
+  if (stopping) return;
+  stopping = true;
+  translationProcess?.kill('SIGTERM');
+  nextProcess.kill('SIGTERM');
+  process.exit(code);
+};
+
+process.on('SIGINT', () => stop());
+process.on('SIGTERM', () => stop());
+translationProcess?.on('exit', (code) => {
+  if (!stopping) stop(code ?? 1);
+});
+nextProcess.on('exit', (code) => stop(code ?? 0));

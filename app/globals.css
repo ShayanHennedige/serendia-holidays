@@ -136,6 +136,47 @@ button, input {
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
+.site-back-navigation {
+  position: fixed;
+  top: calc(var(--header-height) + 14px);
+  left: clamp(16px, 3vw, 44px);
+  z-index: 990;
+}
+
+.site-back-navigation button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 38px;
+  padding: 8px 12px 8px 10px;
+  border: 1px solid rgba(20, 54, 47, 0.14);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 8px 20px rgba(14, 42, 35, 0.14);
+  color: var(--color-dark);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.site-back-navigation button:hover {
+  transform: translateX(-2px);
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.site-back-navigation button:focus-visible {
+  outline: 3px solid rgb(195 81 47 / 32%);
+  outline-offset: 3px;
+}
+
+.site-back-navigation svg {
+  width: 17px;
+  height: 17px;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
@@ -1491,8 +1532,8 @@ button, input {
 /* ===== SCROLL TO TOP ===== */
 .scroll-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 164px;
+  right: 28px;
   width: 46px;
   height: 46px;
   border-radius: 50%;
@@ -4612,17 +4653,20 @@ select.form-control {
 }
 
 .drive-gallery-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-  padding: 0 0 24px;
+  display: grid;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+  align-items: start;
+  column-gap: clamp(38px, 7vw, 112px);
+  padding: 4px 0 32px;
   border-bottom: 1px solid rgba(9, 31, 38, 0.14);
-  margin-bottom: 34px;
+  margin-bottom: 38px;
+}
+
+.drive-gallery-summary {
+  padding-top: 5px;
 }
 
 .drive-gallery-count {
-  flex: 0 0 auto;
   margin: 0;
   color: #637072;
   font-size: 0.78rem;
@@ -4635,23 +4679,46 @@ select.form-control {
   color: #c84f2f;
 }
 
+.drive-gallery-summary-copy {
+  max-width: 275px;
+  margin: 14px 0 0;
+  color: #637072;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.drive-gallery-filter-panel {
+  min-width: 0;
+}
+
+.drive-gallery-filter-label {
+  margin: 0 0 12px;
+  color: #637072;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
 .drive-gallery-filters {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 8px;
+  justify-content: flex-start;
+  gap: 9px;
 }
 
 .drive-gallery-filters button {
   border: 1px solid rgba(9, 31, 38, 0.14);
   border-radius: 999px;
-  padding: 10px 16px;
+  padding: 11px 16px;
   background: transparent;
   color: #253a40;
   cursor: pointer;
   font: inherit;
   font-size: 0.8rem;
   font-weight: 600;
+  line-height: 1.15;
+  white-space: nowrap;
   transition: background 180ms ease, border-color 180ms ease, color 180ms ease;
 }
 
@@ -4830,8 +4897,8 @@ select.form-control {
   }
 
   .drive-gallery-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
   }
 
   .drive-gallery-filters {
@@ -5241,8 +5308,40 @@ button.nav-search {
 .ai-concierge {
   position: fixed;
   right: 22px;
-  bottom: 22px;
+  bottom: 90px;
   z-index: 1400;
+}
+
+.whatsapp-support {
+  position: fixed;
+  z-index: 1400;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #25d366;
+  box-shadow: 0 14px 36px rgba(18, 121, 67, 0.32);
+  color: #fff;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.whatsapp-support:hover {
+  background: #1fb85a;
+  transform: translateY(-3px);
+}
+
+.whatsapp-support:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.whatsapp-support svg {
+  width: 29px;
+  height: 29px;
 }
 
 .ai-concierge-toggle {
@@ -5372,7 +5471,17 @@ button.nav-search {
 @media (max-width: 480px) {
   .ai-concierge {
     right: 14px;
+    bottom: 82px;
+  }
+
+  .whatsapp-support {
+    right: 14px;
     bottom: 14px;
+  }
+
+  .scroll-top {
+    right: 20px;
+    bottom: 150px;
   }
 }
 
@@ -6212,4 +6321,20 @@ button.nav-search {
 .nav-dropdown-wide a:hover .nav-dropdown-meta {
   color: inherit;
   opacity: 0.75;
+}
+
+.translation-service-notice {
+  position: fixed;
+  z-index: 1200;
+  right: 20px;
+  bottom: 20px;
+  max-width: min(360px, calc(100vw - 40px));
+  margin: 0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: #17312d;
+  box-shadow: 0 12px 28px rgba(15, 44, 39, 0.22);
+  color: #fff;
+  font-size: 0.86rem;
+  line-height: 1.45;
 }

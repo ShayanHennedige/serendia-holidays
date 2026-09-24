@@ -9,6 +9,10 @@ const eslintConfig = defineConfig([
     ".next/**",
     "out/**",
     "build/**",
+    ".libretranslate-venv/**",
+    ".libretranslate-data/**",
+    ".libretranslate-config/**",
+    ".libretranslate-cache/**",
     "next-env.d.ts",
   ]),
 ]);

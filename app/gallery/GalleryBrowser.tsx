@@ -72,28 +72,39 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
   return (
     <>
       <div className="drive-gallery-toolbar">
-        <p className="drive-gallery-count">
-          <span>{totalImages}</span> photographs from {collections.length}{' '}
-          {collections.length === 1 ? 'client journey' : 'client journeys'}
-        </p>
-        <div className="drive-gallery-filters" aria-label="Filter gallery by journey">
-          <button
-            type="button"
-            className={activeCollection === 'all' ? 'active' : ''}
-            onClick={() => setActiveCollection('all')}
-          >
-            All journeys
-          </button>
-          {collections.map((collection) => (
+        <div className="drive-gallery-summary">
+          <p className="drive-gallery-count">
+            <span>{totalImages}</span> photographs from {collections.length}{' '}
+            {collections.length === 1 ? 'client journey' : 'client journeys'}
+          </p>
+          <p className="drive-gallery-summary-copy">Choose a journey to view the photographs from that stay.</p>
+        </div>
+
+        <div className="drive-gallery-filter-panel">
+          <p className="drive-gallery-filter-label" id="journey-filter-label">
+            Browse by journey
+          </p>
+          <div className="drive-gallery-filters" aria-labelledby="journey-filter-label">
             <button
               type="button"
-              className={activeCollection === collection.id ? 'active' : ''}
-              key={collection.id}
-              onClick={() => setActiveCollection(collection.id)}
+              className={activeCollection === 'all' ? 'active' : ''}
+              aria-pressed={activeCollection === 'all'}
+              onClick={() => setActiveCollection('all')}
             >
-              {collection.title}
+              All journeys
             </button>
-          ))}
+            {collections.map((collection) => (
+              <button
+                type="button"
+                className={activeCollection === collection.id ? 'active' : ''}
+                aria-pressed={activeCollection === collection.id}
+                key={collection.id}
+                onClick={() => setActiveCollection(collection.id)}
+              >
+                {collection.title}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 

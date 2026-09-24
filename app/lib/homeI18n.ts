@@ -41,7 +41,7 @@ type HomeCopy = {
     items: Array<{ text: string; location: string }>;
   };
   footer: { copyright: string };
-  utilities: { scrollTop: string };
+  utilities: { scrollTop: string; back: string };
 };
 
 export const homeDictionaries: Record<Locale, HomeCopy> = {
@@ -89,7 +89,7 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australian', text: 'We returned home with so many special and cherished memories after an incredible holiday. Thank you for taking such good care of us throughout the journey. It was difficult to settle back home after such a wonderful experience.' },
       ],
     },
-    footer: { copyright: 'Copyright' }, utilities: { scrollTop: 'Scroll to top' },
+    footer: { copyright: 'Copyright' }, utilities: { scrollTop: 'Scroll to top', back: 'Back' },
   },
   fr: {
     header: { allExcursions: 'Toutes les excursions', sriLankanHotels: 'Hôtels au Sri Lanka', search: 'Rechercher', language: 'Langue', menu: 'Menu' },
@@ -135,7 +135,7 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australiens', text: 'Nous sommes rentrés avec tant de souvenirs précieux après des vacances incroyables. Merci d’avoir si bien pris soin de nous tout au long du voyage. Le retour à la maison a été difficile après une expérience aussi merveilleuse.' },
       ],
     },
-    footer: { copyright: 'Tous droits réservés' }, utilities: { scrollTop: 'Retour en haut' },
+    footer: { copyright: 'Tous droits réservés' }, utilities: { scrollTop: 'Retour en haut', back: 'Retour' },
   },
   de: {
     header: { allExcursions: 'Alle Ausflüge', sriLankanHotels: 'Hotels in Sri Lanka', search: 'Suchen', language: 'Sprache', menu: 'Menü' },
@@ -181,7 +181,7 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australier', text: 'Nach einem unglaublichen Urlaub sind wir mit vielen besonderen Erinnerungen nach Hause zurückgekehrt. Vielen Dank, dass Sie sich während der gesamten Reise so gut um uns gekümmert haben. Nach diesem wunderbaren Erlebnis fiel die Rückkehr schwer.' },
       ],
     },
-    footer: { copyright: 'Alle Rechte vorbehalten' }, utilities: { scrollTop: 'Nach oben' },
+    footer: { copyright: 'Alle Rechte vorbehalten' }, utilities: { scrollTop: 'Nach oben', back: 'Zurück' },
   },
   it: {
     header: { allExcursions: 'Tutte le escursioni', sriLankanHotels: 'Hotel in Sri Lanka', search: 'Cerca', language: 'Lingua', menu: 'Menu' },
@@ -227,7 +227,7 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australiani', text: 'Siamo tornati a casa con tantissimi ricordi speciali dopo una vacanza incredibile. Grazie per esservi presi cura di noi durante tutto il viaggio. È stato difficile tornare alla normalità dopo un’esperienza così meravigliosa.' },
       ],
     },
-    footer: { copyright: 'Tutti i diritti riservati' }, utilities: { scrollTop: 'Torna in alto' },
+    footer: { copyright: 'Tutti i diritti riservati' }, utilities: { scrollTop: 'Torna in alto', back: 'Indietro' },
   },
   es: {
     header: { allExcursions: 'Todas las excursiones', sriLankanHotels: 'Hoteles en Sri Lanka', search: 'Buscar', language: 'Idioma', menu: 'Menú' },
@@ -273,7 +273,7 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australia', text: 'Volvimos a casa con muchísimos recuerdos especiales después de unas vacaciones increíbles. Gracias por cuidarnos tan bien durante todo el viaje. Fue difícil volver a la rutina después de una experiencia tan maravillosa.' },
       ],
     },
-    footer: { copyright: 'Todos los derechos reservados' }, utilities: { scrollTop: 'Volver arriba' },
+    footer: { copyright: 'Todos los derechos reservados' }, utilities: { scrollTop: 'Volver arriba', back: 'Volver' },
   },
   lt: {
     header: { allExcursions: 'Visos ekskursijos', sriLankanHotels: 'Šri Lankos viešbučiai', search: 'Ieškoti', language: 'Kalba', menu: 'Meniu' },
@@ -319,6 +319,6 @@ export const homeDictionaries: Record<Locale, HomeCopy> = {
         { location: 'Australija', text: 'Po neįtikėtinų atostogų grįžome namo su daugybe ypatingų ir brangių prisiminimų. Ačiū, kad taip gerai mumis rūpinotės visos kelionės metu. Po tokios nuostabios patirties buvo sunku grįžti į kasdienybę.' },
       ],
     },
-    footer: { copyright: 'Visos teisės saugomos' }, utilities: { scrollTop: 'Grįžti į viršų' },
+    footer: { copyright: 'Visos teisės saugomos' }, utilities: { scrollTop: 'Grįžti į viršų', back: 'Grįžti' },
   },
 };

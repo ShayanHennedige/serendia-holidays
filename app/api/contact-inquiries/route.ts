@@ -9,6 +9,7 @@ type ContactInquiry = {
   departureDate?: unknown;
   travellers?: unknown;
   message?: unknown;
+  sourcePage?: unknown;
 };
 
 const recipient = process.env.CONTACT_INQUIRY_EMAIL_TO || 'dharshan@venomholidays.com';
@@ -34,10 +35,11 @@ export async function POST(request: Request) {
     departureDate: stringField(body.departureDate, 10),
     travellers: stringField(body.travellers, 2),
     message: stringField(body.message, 1500),
+    sourcePage: stringField(body.sourcePage, 180),
   };
 
-  if (!inquiry.fullName || !inquiry.whatsapp) {
-    return Response.json({ error: 'Please provide your full name and WhatsApp number.' }, { status: 400 });
+  if (!inquiry.fullName || (!inquiry.whatsapp && !inquiry.email)) {
+    return Response.json({ error: 'Please provide your full name and either an email address or WhatsApp number.' }, { status: 400 });
   }
   if (inquiry.email && !/^\S+@\S+\.\S+$/.test(inquiry.email)) {
     return Response.json({ error: 'Please provide a valid email address.' }, { status: 400 });
@@ -71,6 +73,7 @@ export async function POST(request: Request) {
         `Country: ${inquiry.country || 'Not provided'}`,
         `Travel dates: ${inquiry.arrivalDate || 'Not provided'} to ${inquiry.departureDate || 'Not provided'}`,
         `Travellers: ${inquiry.travellers || 'Not provided'}`,
+        `Page: ${inquiry.sourcePage || 'Not provided'}`,
         '',
         `Request: ${inquiry.message || 'Not provided'}`,
       ].join('\n'),
