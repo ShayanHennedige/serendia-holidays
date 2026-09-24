@@ -1,8 +1,9 @@
 import { supportedLocales, type Locale } from '../../lib/i18n';
 
-const MAX_TEXTS_PER_REQUEST = 128;
+const MAX_TEXTS_PER_REQUEST = 32;
 const MAX_CHARACTERS_PER_TEXT = 5_000;
-const MAX_TOTAL_CHARACTERS = 40_000;
+const MAX_TOTAL_CHARACTERS = 12_000;
+const TRANSLATION_TIMEOUT_MS = 45_000;
 
 interface TranslationRequest {
   texts?: unknown;
@@ -63,7 +64,7 @@ export async function POST(request: Request) {
       },
       body: JSON.stringify({ q: texts, source: 'en', target, format: 'text' }),
       cache: 'no-store',
-      signal: AbortSignal.timeout(20_000),
+      signal: AbortSignal.timeout(TRANSLATION_TIMEOUT_MS),
     });
 
     if (!response.ok) {

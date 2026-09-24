@@ -111,7 +111,11 @@ export default function Header() {
               <Link href="/" className={`nav-link ${pathname === '/' ? 'active' : ''}`} onClick={closeMenu}>{nav.home}</Link>
             </li>
             <li className="nav-item">
-              <Link href="/tours" className={`nav-link ${pathname.startsWith('/tours') ? 'active' : ''}`} onClick={closeMenu}>{nav.tours}</Link>
+              <Link href="/tours" className={`nav-link ${pathname.startsWith('/tours') || pathname === '/cricket-tourism' ? 'active' : ''}`} onClick={closeMenu}>{nav.tours} <span className="nav-chevron">⌄</span></Link>
+              <div className="nav-dropdown">
+                <Link href="/tours" onClick={closeMenu}>{nav.tours}</Link>
+                <Link href="/cricket-tourism" onClick={closeMenu}>{nav.cricket}</Link>
+              </div>
             </li>
             <li className="nav-item">
               <Link href="/tour-packages" className={`nav-link ${pathname.startsWith('/tour-packages') ? 'active' : ''}`} onClick={closeMenu}>{nav.packages} <span className="nav-chevron">⌄</span></Link>
@@ -125,11 +129,10 @@ export default function Header() {
               </div>
             </li>
             <li className="nav-item">
-              <Link href="/excursions" className={`nav-link ${pathname.startsWith('/excursions') || pathname === '/transportation' || pathname === '/cricket-tourism' ? 'active' : ''}`} onClick={closeMenu}>{nav.excursions} <span className="nav-chevron">⌄</span></Link>
+              <Link href="/excursions" className={`nav-link ${pathname.startsWith('/excursions') || pathname === '/transportation' ? 'active' : ''}`} onClick={closeMenu}>{nav.excursions} <span className="nav-chevron">⌄</span></Link>
               <div className="nav-dropdown">
                 <Link href="/excursions" onClick={closeMenu}>{shared.allExcursions}</Link>
                 <Link href="/transportation" onClick={closeMenu}>{nav.transport}</Link>
-                <Link href="/cricket-tourism" onClick={closeMenu}>{nav.cricket}</Link>
               </div>
             </li>
             <li className="nav-item">

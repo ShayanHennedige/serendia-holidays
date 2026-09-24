@@ -20,7 +20,7 @@ const highlightMedia: Omit<Highlight, 'title'>[] = [
     href: '/excursions/yala-excursion-from-bentota-or-galle',
   },
   {
-    image: '/images/Nuwaraeliya.webp',
+    image: '/images/excursions/nuwara-eliya-tea-train.webp',
     href: '/excursions/nuwara-eliya-excursion-from-kandy',
   },
   {

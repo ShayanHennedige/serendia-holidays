@@ -7,6 +7,7 @@ import { useLanguage } from './LanguageProvider';
 const CACHE_KEY_PREFIX = 'serendia-page-translation:';
 const EXCLUDED_PATHS = ['/', '/customize'];
 const EXCLUDED_PREFIXES = ['/tour-packages'];
+const TRANSLATION_BATCH_SIZE = 24;
 
 type TranslationCache = Record<string, string>;
 type TranslationTarget = (translation: string) => void;
@@ -134,8 +135,8 @@ export default function AutoPageTranslation() {
       const missing = [...targetsByText.keys()].filter((text) => !cache[text]);
 
       try {
-        for (let index = 0; index < missing.length; index += 128) {
-          const texts = missing.slice(index, index + 128);
+        for (let index = 0; index < missing.length; index += TRANSLATION_BATCH_SIZE) {
+          const texts = missing.slice(index, index + TRANSLATION_BATCH_SIZE);
           const response = await fetch('/api/translations', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },

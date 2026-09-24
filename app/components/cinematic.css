@@ -189,8 +189,8 @@
 .vh-film-vignette {
   z-index: -4;
   background:
-    radial-gradient(circle at 50% 44%, transparent 18%, rgba(1, 4, 4, 0.08) 52%, rgba(1, 4, 4, 0.56) 115%),
-    linear-gradient(180deg, rgba(2, 5, 5, 0.18), transparent 22%, transparent 72%, rgba(2, 5, 5, 0.48));
+    radial-gradient(circle at 50% 44%, transparent 24%, rgba(1, 4, 4, 0.05) 58%, rgba(1, 4, 4, 0.36) 115%),
+    linear-gradient(180deg, rgba(2, 5, 5, 0.12), transparent 22%, transparent 72%, rgba(2, 5, 5, 0.3));
 }
 
 .vh-film-grain {
@@ -527,7 +527,7 @@
 
   .vh-film-video {
     transform: none !important;
-    filter: brightness(0.88) saturate(1) !important;
+    filter: brightness(1.02) saturate(1.03) !important;
   }
 
   .vh-film-copy,

@@ -21,7 +21,7 @@ export default function YalaExcursionPage() {
       sections={[
         {
           title: 'Yala National Park Safari',
-          image: '/images/excursion-yala.webp',
+          image: '/images/excursions/yala-elephants-safari.webp',
           paragraphs: [
             'Yala is the oldest National Park in Sri Lanka and is split into blocks, with Block 1 open to the public and widely known for wildlife viewing.',
             'The park is best known for elephants, leopards, crocodiles, peafowl, and a large variety of birds, so every drive has a strong chance of producing memorable sightings.',
@@ -29,7 +29,7 @@ export default function YalaExcursionPage() {
         },
         {
           title: 'Afternoon Safari Proceeds',
-          image: '/images/excursion-yala.webp',
+          image: '/images/excursions/yala-afternoon-leopard-safari.webp',
           paragraphs: [
             'The main road through the park separates the landscape, with dense forest on one side and grasslands on the other, creating a dramatic route for game drives.',
             'The best time to visit is during the dry season, when animals are easier to spot and the park delivers a classic Sri Lankan safari experience.',

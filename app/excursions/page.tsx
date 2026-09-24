@@ -44,7 +44,7 @@ const excursions: Excursion[] = [
   },
   {
     title: 'Nuwara Eliya from Kandy',
-    image: '/images/Nuwaraeliya.webp',
+    image: '/images/excursions/nuwara-eliya-tea-train.webp',
     href: '/excursions/nuwara-eliya-excursion-from-kandy',
     route: 'Kandy → Nuwara Eliya',
     duration: 'Full day',
@@ -89,7 +89,7 @@ const excursions: Excursion[] = [
   },
   {
     title: 'Kandy from Negombo',
-    image: '/images/excursion-kandy.webp',
+    image: '/images/excursions/negombo-beach-outtrigger.webp',
     href: '/excursions/kandy-excursion-from-negombo',
     route: 'Negombo → Kandy',
     duration: 'Full day',

@@ -5,6 +5,7 @@ import net from 'node:net';
 
 const projectRoot = process.cwd();
 const translator = join(projectRoot, '.libretranslate-venv', 'bin', 'libretranslate');
+const requiredLanguages = ['en', 'fr', 'de', 'it', 'es', 'lt'];
 
 function isPortOpen(port) {
   return new Promise((resolve) => {
@@ -15,6 +16,23 @@ function isPortOpen(port) {
     });
     socket.once('error', () => resolve(false));
   });
+}
+
+const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+async function waitForTranslator() {
+  for (let attempt = 0; attempt < 90; attempt += 1) {
+    try {
+      const response = await fetch('http://127.0.0.1:5000/languages');
+      const languages = await response.json();
+      const available = new Set(Array.isArray(languages) ? languages.map((language) => language?.code) : []);
+      if (requiredLanguages.every((language) => available.has(language))) return true;
+    } catch {
+      // The process can have an open port while the translation models are still loading.
+    }
+    await wait(1_000);
+  }
+  return false;
 }
 
 if (!existsSync(translator)) {
@@ -39,6 +57,12 @@ const translationProcess = translatorAlreadyRunning ? null : spawn(
 );
 
 if (translatorAlreadyRunning) console.log('Using the LibreTranslate service already running on http://127.0.0.1:5000');
+
+if (!await waitForTranslator()) {
+  console.error('LibreTranslate did not become ready with all configured languages.');
+  translationProcess?.kill('SIGTERM');
+  process.exit(1);
+}
 
 const nextProcess = spawn(process.platform === 'win32' ? 'npx.cmd' : 'npx', ['next', 'dev'], {
   cwd: projectRoot,
