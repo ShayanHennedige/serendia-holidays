@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -72,6 +73,31 @@ export default function CinematicHero() {
   const activeChapterRef = useRef(0);
   const [activeChapter, setActiveChapter] = useState(0);
   const [paused, setPaused] = useState(false);
+  const [loadedVideos, setLoadedVideos] = useState<boolean[]>(() => chapterMedia.map(() => false));
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setLoadedVideos((current) => current.map((loaded, index) => index === 0 || loaded));
+    }, 1200);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const index = sceneRefs.current.indexOf(entry.target as HTMLElement);
+          if (index > 0) {
+            setLoadedVideos((current) => current.map((loaded, videoIndex) => videoIndex === index || loaded));
+          }
+        });
+      },
+      { rootMargin: '50% 0px' },
+    );
+
+    sceneRefs.current.slice(1).forEach((scene) => observer.observe(scene));
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -130,7 +156,7 @@ export default function CinematicHero() {
       }
 
       sceneRefs.current.forEach((scene, index) => {
-        const media = scene.querySelector<HTMLElement>('.vh-film-video');
+        const media = scene.querySelector<HTMLElement>('.vh-film-motion-layer');
         const wash = scene.querySelector<HTMLElement>('.vh-film-color-wash');
         const content = scene.querySelector<HTMLElement>('.vh-film-copy');
         const text = scene.querySelectorAll<HTMLElement>('[data-film-reveal]');
@@ -249,21 +275,23 @@ export default function CinematicHero() {
               aria-labelledby={`film-title-${chapter.number}`}
             >
               <div className="vh-film-motion-layer">
-                <video
-                  ref={(element) => {
-                    if (element) videoRefs.current[index] = element;
-                  }}
-                  className="vh-film-video"
-                  poster={chapter.poster}
-                  preload={index === 0 ? 'auto' : 'metadata'}
-                  autoPlay={index === 0}
-                  muted
-                  loop
-                  playsInline
-                  aria-hidden="true"
-                >
-                  <source src={chapter.video} type="video/mp4" />
-                </video>
+                <Image className="vh-film-poster" src={chapter.poster} alt="" fill sizes="100vw" preload={index === 0} quality={70} />
+                {loadedVideos[index] && (
+                  <video
+                    ref={(element) => {
+                      if (element) videoRefs.current[index] = element;
+                    }}
+                    className="vh-film-video"
+                    preload="metadata"
+                    autoPlay={index === 0}
+                    muted
+                    loop
+                    playsInline
+                    aria-hidden="true"
+                  >
+                    <source src={chapter.video} type="video/mp4" />
+                  </video>
+                )}
               </div>
 
               <div className="vh-film-color-wash" aria-hidden="true" />

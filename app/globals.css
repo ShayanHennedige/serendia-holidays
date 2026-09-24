@@ -1224,6 +1224,42 @@ button, input {
   border: none;
 }
 
+.video-load-button {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 12px;
+  width: 100%;
+  border: 0;
+  background: linear-gradient(135deg, rgba(5, 20, 16, 0.72), rgba(195, 81, 47, 0.68)), url('/video-posters/nine-arch.jpg') center / cover;
+  color: var(--color-white);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.video-load-button-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  padding-left: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background: rgba(5, 20, 16, 0.35);
+  font-size: 1rem;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.video-load-button:hover .video-load-button-icon,
+.video-load-button:focus-visible .video-load-button-icon {
+  transform: scale(1.08);
+  background: rgba(5, 20, 16, 0.58);
+}
+
 .about-text {
   max-width: 800px;
   margin: 0 auto;

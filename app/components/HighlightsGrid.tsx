@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useLanguage } from './LanguageProvider';
 import { homeDictionaries } from '../lib/homeI18n';
 
@@ -43,7 +44,13 @@ export default function HighlightsGrid() {
         <div className="highlights-grid">
           {highlights.map((item, index) => (
             <a key={index} href={item.href} className="highlight-card">
-              <img src={item.image} alt={item.title} />
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 767px) min(100vw - 48px, 450px), 500px"
+                quality={70}
+              />
               <div className="highlight-overlay">
                 <h3 className="highlight-title">{item.title}</h3>
               </div>
