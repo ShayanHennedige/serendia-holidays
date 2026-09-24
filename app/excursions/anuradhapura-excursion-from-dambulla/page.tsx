@@ -21,7 +21,7 @@ export default function AnuradhapuraExcursionPage() {
       sections={[
         {
           title: 'Ruwanwelisaya & the Sacred City',
-          image: '/images/excursion-anuradhapura.webp',
+          image: '/images/excursions/ruwanwelisaya-sacred-city.webp',
           paragraphs: [
             'Anuradhapura was Sri Lanka’s first great royal capital and remained a centre of power and Buddhist culture for more than a millennium. Its monumental stupas, reservoirs and monasteries reveal the scale and sophistication of the ancient city.',
             'The route includes Ruwanwelisaya, built during the reign of King Dutugemunu, followed by selected sacred-city landmarks such as the Sri Maha Bodhi, the Samadhi Buddha and Kuttam Pokuna. Lunch is arranged independently in Anuradhapura.',

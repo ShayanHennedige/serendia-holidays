@@ -12,9 +12,16 @@ export default function BackButton() {
   if (pathname === '/') return null;
 
   const goBack = () => {
-    const cameFromThisSite = document.referrer && new URL(document.referrer).origin === window.location.origin;
-    if (cameFromThisSite && window.history.length > 1) router.back();
-    else router.push('/');
+    // `document.referrer` is not updated for client-side navigation, so it
+    // cannot reliably tell us where a visitor came from. The browser history
+    // is the source of truth for returning to the page they just viewed.
+    if (window.history.length > 1) {
+      router.back();
+      return;
+    }
+
+    // A direct visit has no in-site page to return to.
+    router.push('/');
   };
 
   return (

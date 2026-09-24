@@ -21,7 +21,7 @@ export default function KandyFromNegomboExcursionPage() {
       sections={[
         {
           title: 'Kandy & the Temple of the Tooth',
-          image: '/images/excursion-kandy.webp',
+          image: '/images/packages/kandy-city.jpg',
           paragraphs: [
             'Travel inland from Negombo to Sri Lanka’s historic hill capital. The city’s cultural centre is the Temple of the Sacred Tooth Relic, set within the former royal palace complex beside Kandy Lake.',
             'The visit is arranged around current opening hours and temple rituals, with appropriate time for a privately arranged lunch in Kandy.',
@@ -29,7 +29,7 @@ export default function KandyFromNegomboExcursionPage() {
         },
         {
           title: 'Peradeniya Gardens & Pinnawala',
-          image: '/images/excursion-kandy.webp',
+          image: '/images/excursions/peradeniya-royal-gardens.webp',
           paragraphs: [
             'Continue to the Royal Botanical Gardens at Peradeniya for shaded avenues, tropical collections and the orchid house.',
             'A Pinnawala stop can be added on the outward or return journey depending on current schedules, before arriving back in Negombo in the evening.',

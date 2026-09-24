@@ -21,7 +21,7 @@ export default function ColomboExcursionPage() {
       sections={[
         {
           title: 'Old Colombo & Pettah',
-          image: '/images/excursion-colombo.webp',
+          image: '/images/packages/colombo.jpg',
           paragraphs: [
             'Colombo combines commercial energy with layers of colonial, religious and civic history. The route moves through Pettah’s market streets and selected landmarks that show the city’s blend of East and West, past and present.',
             'Depending on opening hours and your interests, stops can include Buddhist and Hindu temples, historic churches and the Old Parliament area.',

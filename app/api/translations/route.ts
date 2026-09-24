@@ -54,7 +54,7 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Translation request is too large.' }, { status: 400 });
   }
 
-  const endpoint = `${(process.env.LIBRETRANSLATE_URL || 'http://127.0.0.1:5000').replace(/\/$/, '')}/translate`;
+  const endpoint = `${(process.env.LIBRETRANSLATE_URL || 'http://127.0.0.1:5100').replace(/\/$/, '')}/translate`;
 
   try {
     const response = await fetch(endpoint, {

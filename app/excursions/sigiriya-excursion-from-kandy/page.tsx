@@ -21,7 +21,7 @@ export default function SigiriyaFromKandyExcursionPage() {
       sections={[
         {
           title: 'Matale Spice Garden',
-          image: '/images/excursion-sigiriya.webp',
+          image: '/images/excursions/matale-spice-garden.webp',
           paragraphs: [
             'Pause in Matale to discover the fragrant plants behind Sri Lanka’s culinary traditions. A guided garden visit introduces familiar spices, their cultivation and their traditional uses.',
             'Continue to Sigiriya for lunch at your own arrangement and time to prepare for the climb.',
@@ -29,7 +29,7 @@ export default function SigiriyaFromKandyExcursionPage() {
         },
         {
           title: 'Climb Sigiriya Lion Rock',
-          image: '/images/excursion-sigiriya.webp',
+          image: '/images/excursions/sigiriya-lion-rock-ascent.webp',
           paragraphs: [
             'Sigiriya rose to prominence in the fifth century as the royal citadel of King Kashyapa. Its water gardens, monumental lion gateway, mirror wall, frescoes and summit ruins form one of Sri Lanka’s defining UNESCO World Heritage experiences.',
             'The source itinerary schedules the climb at around 3.00pm and allows approximately two hours. Return to Kandy in the late evening after the descent.',

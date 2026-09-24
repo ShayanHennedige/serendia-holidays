@@ -29,7 +29,7 @@ export default function TrincomaleeExcursionPage() {
         },
         {
           title: 'Koneswaram Temple & Swami Rock',
-          image: '/images/excursion-trincomalee.webp',
+          image: '/images/excursions/koneswaram-swami-rock.webp',
           paragraphs: [
             'Koneswaram Temple occupies a dramatic sacred site above the sea at Swami Rock. The wider Trincomalee area contains places of significance to both Hindu and Buddhist communities, reflecting the east coast’s layered history.',
             'After the temple and coastal viewpoints, return to the Habarana hotel in the evening.',

@@ -6,6 +6,10 @@ import net from 'node:net';
 const projectRoot = process.cwd();
 const translator = join(projectRoot, '.libretranslate-venv', 'bin', 'libretranslate');
 const requiredLanguages = ['en', 'fr', 'de', 'it', 'es', 'lt'];
+const translatorUrl = process.env.LIBRETRANSLATE_URL || 'http://127.0.0.1:5100';
+const translatorAddress = new URL(translatorUrl);
+const translatorHost = translatorAddress.hostname;
+const translatorPort = Number(translatorAddress.port || 5100);
 
 function isPortOpen(port) {
   return new Promise((resolve) => {
@@ -23,7 +27,7 @@ const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, mill
 async function waitForTranslator() {
   for (let attempt = 0; attempt < 90; attempt += 1) {
     try {
-      const response = await fetch('http://127.0.0.1:5000/languages');
+      const response = await fetch(`${translatorUrl.replace(/\/$/, '')}/languages`);
       const languages = await response.json();
       const available = new Set(Array.isArray(languages) ? languages.map((language) => language?.code) : []);
       if (requiredLanguages.every((language) => available.has(language))) return true;
@@ -40,10 +44,10 @@ if (!existsSync(translator)) {
   process.exit(1);
 }
 
-const translatorAlreadyRunning = await isPortOpen(5000);
+const translatorAlreadyRunning = await isPortOpen(translatorPort);
 const translationProcess = translatorAlreadyRunning ? null : spawn(
   translator,
-  ['--load-only', 'en,fr,de,it,es,lt', '--host', '127.0.0.1', '--port', '5000'],
+  ['--load-only', 'en,fr,de,it,es,lt', '--host', translatorHost, '--port', String(translatorPort)],
   {
     cwd: projectRoot,
     env: {
@@ -56,7 +60,7 @@ const translationProcess = translatorAlreadyRunning ? null : spawn(
   },
 );
 
-if (translatorAlreadyRunning) console.log('Using the LibreTranslate service already running on http://127.0.0.1:5000');
+if (translatorAlreadyRunning) console.log(`Using the LibreTranslate service already running on ${translatorUrl}`);
 
 if (!await waitForTranslator()) {
   console.error('LibreTranslate did not become ready with all configured languages.');
