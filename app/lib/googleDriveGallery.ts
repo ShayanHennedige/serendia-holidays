@@ -26,6 +26,16 @@ export type GalleryCollection = {
 };
 
 const knownCollectionDetails: Record<string, GalleryFolderDetails> = {
+  '1lUZnNtWsRTsoCkXnMnQb-7AbO6YHfOoi': {
+    clientName: 'Mr. Sadique Haroon & Family',
+    country: 'Family Journey',
+    title: 'Mr. Sadique Haroon & Family',
+  },
+  '1qGhGNzsWoyKuICDxnYwgKcwDNWZQpX3P': {
+    clientName: 'Mr. Robert & Mrs. Alexandra Kiparoglou',
+    country: 'Australian',
+    title: 'Mr. Robert & Mrs. Alexandra Kiparoglou – Australian',
+  },
   '11aEtTZHCL1NnB7SEC28FkcjO1r2Pq3MP': {
     clientName: 'Mr & Mrs. Reccioni',
     country: 'Australian',
