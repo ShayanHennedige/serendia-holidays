@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: serendia-libretranslate
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile.libretranslate
+    dockerContext: .
+    branch: main
+    autoDeploy: true
+    healthCheckPath: /languages

@@ -1,0 +1,5 @@
+FROM libretranslate/libretranslate:latest
+
+# Render supplies PORT at runtime. Only the languages offered by the website
+# are loaded, which keeps the service footprint as small as possible.
+CMD ["sh", "-c", "exec libretranslate --host 0.0.0.0 --port ${PORT:-5000} --load-only en,fr,de,it,es,lt --disable-web-ui --batch-limit 32 --char-limit 12000 --req-limit 60 --threads 1"]
