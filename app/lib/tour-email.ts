@@ -22,6 +22,8 @@ export async function sendTourSubmissionEmail(options: {
     throw new Error('Email delivery is not configured. Set EMAIL_FROM_ADDRESS.');
   }
 
+  const attachment = createPdfAttachment(options.pdf);
+
   await transport.sendMail({
     from,
     to: recipient,
@@ -30,11 +32,23 @@ export async function sendTourSubmissionEmail(options: {
     attachments: [
       {
         filename: options.filename,
-        content: Buffer.from(options.pdf),
+        content: attachment.toString('base64'),
+        encoding: 'base64',
         contentType: 'application/pdf',
+        contentDisposition: 'attachment',
       },
     ],
   });
+}
+
+function createPdfAttachment(pdf: Uint8Array): Buffer {
+  // Copy the bytes before handing them to the SMTP library. This avoids a
+  // shared Uint8Array buffer being changed after the request has completed.
+  const attachment = Buffer.from(pdf);
+  if (attachment.byteLength < 8 || attachment.subarray(0, 5).toString('ascii') !== '%PDF-') {
+    throw new Error('Generated PDF is invalid and was not emailed.');
+  }
+  return attachment;
 }
 
 function createTransport() {
