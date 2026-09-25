@@ -1,0 +1,15 @@
+services:
+  libretranslate:
+    build:
+      context: .
+      dockerfile: Dockerfile.libretranslate
+    environment:
+      PORT: 5100
+    ports:
+      - "5100:5100"
+    volumes:
+      - libretranslate-models:/home/libretranslate/.local
+    restart: unless-stopped
+
+volumes:
+  libretranslate-models:

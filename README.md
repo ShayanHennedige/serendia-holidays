@@ -30,7 +30,13 @@ For local development, start it in a second terminal:
 npm run translate:server
 ```
 
-The website uses `http://127.0.0.1:5100` by default. In production, deploy the included `render.yaml` Blueprint, then set Vercel's `LIBRETRANSLATE_URL` to the resulting Render HTTPS service URL and redeploy. The API route is the only website code that calls this service; do not put that URL in a `NEXT_PUBLIC_` variable.
+The website uses `http://127.0.0.1:5100` by default. To run LibreTranslate with Docker instead of the local Python service:
+
+```bash
+docker compose -f docker-compose.libretranslate.yml up -d --build
+```
+
+The first start downloads the six language models and stores them in the Docker volume. For production, run the same Compose service on an always-on public server with HTTPS, set Vercel's `LIBRETRANSLATE_URL` to that server URL, and redeploy. The API route is the only website code that calls this service; do not put that URL in a `NEXT_PUBLIC_` variable.
 
 ## Learn More
 
