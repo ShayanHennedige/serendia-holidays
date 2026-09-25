@@ -6,9 +6,9 @@ const daily = 'Kasdienės išvykos';
 const privateGuide = 'Privati patirtis su jūsų vairuotoju-gidu';
 const unesco = 'Įėjimas į UNESCO pasaulio paveldo objektą įskaičiuotas';
 const onRequest = 'Kaina pagal užklausą';
-const perPerson = 'vienam asmeniui, su puspansionu';
-const period = '2026 m. lapkr. 1 d. – 2027 m. bal. 30 d.';
-const roomNight = (amount: number) => `USD ${amount} už kambarį per naktį, su puspansionu`;
+const perPerson = '2 asmenims';
+const period = '2026 m. lapkr. 1–gruod. 19 d. ir 2027 m. saus. 11–bal. 30 d.';
+const roomNight = (amount: number) => `USD ${amount} už kambarį per naktį`;
 const departure = 'Išvykimas';
 const toAirport = (from: string) => `(iš ${from} į oro uostą)`;
 const departureIntro =
@@ -541,11 +541,11 @@ const content: ContentDictionary = {
   'pkg.grand-tour-of-sri-lanka.priceBasis': perPerson,
   'pkg.grand-tour-of-sri-lanka.period': period,
   'pkg.grand-tour-of-sri-lanka.visiting.0': culturalTriangle,
-  'pkg.grand-tour-of-sri-lanka.extensionPrice': roomNight(200),
+  'pkg.grand-tour-of-sri-lanka.extensionPrice': roomNight(325),
   'pkg.grand-tour-of-sri-lanka.ext.0.title': moreBentotaTitle,
   'pkg.grand-tour-of-sri-lanka.ext.0.description':
     'Trys dienos paplūdimyje prabėga greitai. Pridėkite papildomų naktų Sheraton Kosgoda Turtle Beach Resort — arba Cinnamon Bay ar Eden Resort — su tuo pačiu puspansionu ir likite tame pačiame kambaryje, užuot kraustęsi.',
-  'pkg.grand-tour-of-sri-lanka.ext.0.price': roomNight(200),
+  'pkg.grand-tour-of-sri-lanka.ext.0.price': roomNight(325),
   'pkg.grand-tour-of-sri-lanka.ext.1.title': '2 variantas: Maldyvai',
   'pkg.grand-tour-of-sri-lanka.ext.1.description':
     'Iš Kolombo į Malę — devyniasdešimties minučių skrydis, todėl Maldyvai natūraliai tampa antrąja Šri Lankos kelionės dalimi. Suderinsime salos kurortą su turu ir sutvarkysime jungiamuosius skrydžius bei pervežimus kaip vieną užsakymą.',
@@ -585,11 +585,11 @@ const content: ContentDictionary = {
   'pkg.ancient-cities-and-golden-sands.priceBasis': perPerson,
   'pkg.ancient-cities-and-golden-sands.period': period,
   'pkg.ancient-cities-and-golden-sands.visiting.0': culturalTriangle,
-  'pkg.ancient-cities-and-golden-sands.extensionPrice': roomNight(170),
+  'pkg.ancient-cities-and-golden-sands.extensionPrice': roomNight(325),
   'pkg.ancient-cities-and-golden-sands.ext.0.title': moreBentotaTitle,
   'pkg.ancient-cities-and-golden-sands.ext.0.description':
     'Dviejų dienų paplūdimyje vos pakanka lagaminams išsikrauti. Pratęskite viešnagę Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay arba Eden Resort & Spa su tuo pačiu puspansionu.',
-  'pkg.ancient-cities-and-golden-sands.ext.0.price': roomNight(170),
+  'pkg.ancient-cities-and-golden-sands.ext.0.price': roomNight(325),
   'pkg.ancient-cities-and-golden-sands.ext.1.title': '2 variantas: pridėti Jalą',
   'pkg.ancient-cities-and-golden-sands.ext.1.description':
     'Dvi naktys Jaloje pakeliui į pakrantę paverčia tai ir gamtos kelione — visos dienos džipų safaris geriausiame salos leopardų parke, o pakeliui dar Kataragama ir Ravanos kriokliai.',
@@ -622,11 +622,11 @@ const content: ContentDictionary = {
   'pkg.classic-sri-lanka.priceBasis': perPerson,
   'pkg.classic-sri-lanka.period': period,
   'pkg.classic-sri-lanka.visiting.1': culturalTriangle,
-  'pkg.classic-sri-lanka.extensionPrice': roomNight(170),
+  'pkg.classic-sri-lanka.extensionPrice': roomNight(325),
   'pkg.classic-sri-lanka.ext.0.title': moreBentotaTitle,
   'pkg.classic-sri-lanka.ext.0.description':
     'Pridėkite naktų Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay arba Eden Resort & Spa su tuo pačiu puspansionu ir užbaikite savaitę kaip dera, o ne kraudamiesi lagaminų septintą dieną.',
-  'pkg.classic-sri-lanka.ext.0.price': roomNight(170),
+  'pkg.classic-sri-lanka.ext.0.price': roomNight(325),
   'pkg.classic-sri-lanka.ext.1.title': '2 variantas: pridėti Elą ir Jalą',
   'pkg.classic-sri-lanka.ext.1.description':
     'Iš Nuvara Elijos tęskite į rytus, užuot sukę link pakrantės: Ela dėl Devynių arkų tilto, paskui Jala dėl leopardų safario, o į paplūdimį grįžtama per Galę.',
@@ -663,11 +663,11 @@ const content: ContentDictionary = {
   'pkg.beach-safari-and-tea-country.bestFor.4': 'Arbatos kraštas',
   'pkg.beach-safari-and-tea-country.priceBasis': perPerson,
   'pkg.beach-safari-and-tea-country.period': period,
-  'pkg.beach-safari-and-tea-country.extensionPrice': roomNight(125),
+  'pkg.beach-safari-and-tea-country.extensionPrice': roomNight(325),
   'pkg.beach-safari-and-tea-country.ext.0.title': moreBentotaTitle,
   'pkg.beach-safari-and-tea-country.ext.0.description':
     'Pradėkite dar lėčiau. Pridėkite naktų kelionės pradžioje Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay arba Eden Resort & Spa su tuo pačiu puspansionu.',
-  'pkg.beach-safari-and-tea-country.ext.0.price': roomNight(125),
+  'pkg.beach-safari-and-tea-country.ext.0.price': roomNight(325),
   'pkg.beach-safari-and-tea-country.ext.1.title': '2 variantas: pridėti Kultūrinį trikampį',
   'pkg.beach-safari-and-tea-country.ext.1.description':
     'Šis maršrutas sąmoningai praleidžia Sigiriją ir Polonaruvą. Pridėkite dvi ar tris naktis į šiaurę nuo Kandžio ir dar prieš kelionę į oro uostą aplankysite uolos tvirtovę, Mineuriją ir Anuradhapurą.',

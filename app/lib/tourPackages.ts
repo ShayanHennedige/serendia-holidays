@@ -792,17 +792,17 @@ export const tourPackages: TourPackage[] = [
     tourType: 'Suggested itinerary',
     visiting: ['Cultural Triangle', 'Kandy', 'Nuwara Eliya', 'Ella', 'Yala', 'Galle', 'Bentota'],
     bestFor: ['First-time visitors', 'Culture', 'Wildlife & 4x4 safari', 'Tea country', 'Beach finish', 'Honeymoon'],
-    priceFrom: 'USD 2,300',
-    priceBasis: 'per person, half board',
-    period: '01 Nov 2026 – 30 Apr 2027',
-    extensionPrice: 'USD 200 per room per night, half board',
+    priceFrom: 'USD 2,665',
+    priceBasis: 'for 2 guests',
+    period: '01 Nov – 19 Dec 2026 & 11 Jan – 30 Apr 2027',
+    extensionPrice: 'USD 325 per room, per night',
     extensions: [
       {
         title: 'Option 1: More time at Bentota',
         description:
           'Three beach days go quickly. Add extra nights at the Sheraton Kosgoda Turtle Beach Resort — or at Cinnamon Bay or Eden Resort — on the same half-board basis, and keep the same room rather than moving.',
         image: `${IMG}/bentota-beach.jpg`,
-        price: 'USD 200 per room per night, half board',
+        price: 'USD 325 per room, per night',
       },
       {
         title: 'Option 2: The Maldives',
@@ -904,17 +904,17 @@ export const tourPackages: TourPackage[] = [
     tourType: 'Multi-centre',
     visiting: ['Cultural Triangle', 'Kandy', 'Bentota'],
     bestFor: ['Short trips', 'Culture', 'Families', 'Wildlife', 'Beach finish'],
-    priceFrom: 'USD 2,000',
-    priceBasis: 'per person, half board',
-    period: '01 Nov 2026 – 30 Apr 2027',
-    extensionPrice: 'USD 170 per room per night, half board',
+    priceFrom: 'USD 1,320',
+    priceBasis: 'for 2 guests',
+    period: '01 Nov – 19 Dec 2026 & 11 Jan – 30 Apr 2027',
+    extensionPrice: 'USD 325 per room, per night',
     extensions: [
       {
         title: 'Option 1: More time at Bentota',
         description:
           'Two beach days is barely enough to unpack. Extend your stay at the Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay or Eden Resort & Spa on the same half-board basis.',
         image: `${IMG}/bentota-beach.jpg`,
-        price: 'USD 170 per room per night, half board',
+        price: 'USD 325 per room, per night',
       },
       {
         title: 'Option 2: Add Yala',
@@ -982,17 +982,17 @@ export const tourPackages: TourPackage[] = [
     tourType: 'Suggested itinerary',
     visiting: ['Negombo', 'Cultural Triangle', 'Kandy', 'Nuwara Eliya', 'Bentota'],
     bestFor: ['First-time visitors', 'Short trips', 'Culture', 'Tea country', 'Beach finish'],
-    priceFrom: 'USD 2,000',
-    priceBasis: 'per person, half board',
-    period: '01 Nov 2026 – 30 Apr 2027',
-    extensionPrice: 'USD 170 per room per night, half board',
+    priceFrom: 'USD 1,360',
+    priceBasis: 'for 2 guests',
+    period: '01 Nov – 19 Dec 2026 & 11 Jan – 30 Apr 2027',
+    extensionPrice: 'USD 325 per room, per night',
     extensions: [
       {
         title: 'Option 1: More time at Bentota',
         description:
           'Add nights at the Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay or Eden Resort & Spa on the same half-board basis, and finish the week properly rather than packing on day seven.',
         image: `${IMG}/bentota-beach.jpg`,
-        price: 'USD 170 per room per night, half board',
+        price: 'USD 325 per room, per night',
       },
       {
         title: 'Option 2: Add Ella and Yala',
@@ -1083,17 +1083,17 @@ export const tourPackages: TourPackage[] = [
     tourType: 'Multi-centre',
     visiting: ['Bentota', 'Galle', 'Yala', 'Ella', 'Kandy', 'Colombo', 'Negombo'],
     bestFor: ['Beach first', 'Wildlife & 4x4 safari', 'Best value', 'Honeymoon', 'Tea country'],
-    priceFrom: 'USD 1,200',
-    priceBasis: 'per person, half board',
-    period: '01 Nov 2026 – 30 Apr 2027',
-    extensionPrice: 'USD 125 per room per night, half board',
+    priceFrom: 'USD 1,615',
+    priceBasis: 'for 2 guests',
+    period: '01 Nov – 19 Dec 2026 & 11 Jan – 30 Apr 2027',
+    extensionPrice: 'USD 325 per room, per night',
     extensions: [
       {
         title: 'Option 1: More time at Bentota',
         description:
           'Start slower still. Add nights at the front of the trip at the Sheraton Kosgoda Turtle Beach Resort, Cinnamon Bay or Eden Resort & Spa, on the same half-board basis.',
         image: `${IMG}/bentota-beach.jpg`,
-        price: 'USD 125 per room per night, half board',
+        price: 'USD 325 per room, per night',
       },
       {
         title: 'Option 2: Add the Cultural Triangle',

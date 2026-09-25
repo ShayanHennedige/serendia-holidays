@@ -80,7 +80,9 @@ export default function TourPackagesIndex() {
                   </ul>
 
                   <p className="pkg-card-price">
-                    {copy.common.from} {pkg.priceFrom} <span>{pkg.priceBasis}</span>
+                    {copy.common.from} {pkg.priceFrom}
+                    <span>{pkg.priceBasis}</span>
+                    <small>{pkg.period}</small>
                   </p>
 
                   <Link href={`/tour-packages/${pkg.slug}`} className="pkg-index-card-link">

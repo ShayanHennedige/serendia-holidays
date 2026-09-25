@@ -6,9 +6,9 @@ const daily = 'Tägliche Abfahrten';
 const privateGuide = 'Privates Erlebnis mit Ihrem Fahrer-Guide';
 const unesco = 'Eintritt zum UNESCO-Welterbe inbegriffen';
 const onRequest = 'Preis auf Anfrage';
-const perPerson = 'pro Person, Halbpension';
-const period = '01. Nov. 2026 – 30. Apr. 2027';
-const roomNight = (amount: number) => `USD ${amount} pro Zimmer und Nacht, Halbpension`;
+const perPerson = 'für 2 Personen';
+const period = '01. Nov. – 19. Dez. 2026 und 11. Jan. – 30. Apr. 2027';
+const roomNight = (amount: number) => `USD ${amount} pro Zimmer und Nacht`;
 const departure = 'Abreise';
 const toAirport = (from: string) => `(${from} zum Flughafen)`;
 const departureIntro =
@@ -531,11 +531,11 @@ const content: ContentDictionary = {
   'pkg.grand-tour-of-sri-lanka.priceBasis': perPerson,
   'pkg.grand-tour-of-sri-lanka.period': period,
   'pkg.grand-tour-of-sri-lanka.visiting.0': culturalTriangle,
-  'pkg.grand-tour-of-sri-lanka.extensionPrice': roomNight(200),
+  'pkg.grand-tour-of-sri-lanka.extensionPrice': roomNight(325),
   'pkg.grand-tour-of-sri-lanka.ext.0.title': moreBentotaTitle,
   'pkg.grand-tour-of-sri-lanka.ext.0.description':
     'Drei Strandtage vergehen schnell. Hängen Sie zusätzliche Nächte im Sheraton Kosgoda Turtle Beach Resort — oder im Cinnamon Bay oder Eden Resort — auf derselben Halbpensionsbasis an und behalten Sie dasselbe Zimmer, statt umzuziehen.',
-  'pkg.grand-tour-of-sri-lanka.ext.0.price': roomNight(200),
+  'pkg.grand-tour-of-sri-lanka.ext.0.price': roomNight(325),
   'pkg.grand-tour-of-sri-lanka.ext.1.title': 'Option 2: Die Malediven',
   'pkg.grand-tour-of-sri-lanka.ext.1.description':
     'Colombo–Malé ist ein Neunzig-Minuten-Sprung, was die Malediven zur natürlichen zweiten Hälfte einer Sri-Lanka-Reise macht. Wir kombinieren Ihr Inselresort mit der Rundreise und übernehmen Anschlussflüge und Transfers als eine Buchung.',
@@ -575,11 +575,11 @@ const content: ContentDictionary = {
   'pkg.ancient-cities-and-golden-sands.priceBasis': perPerson,
   'pkg.ancient-cities-and-golden-sands.period': period,
   'pkg.ancient-cities-and-golden-sands.visiting.0': culturalTriangle,
-  'pkg.ancient-cities-and-golden-sands.extensionPrice': roomNight(170),
+  'pkg.ancient-cities-and-golden-sands.extensionPrice': roomNight(325),
   'pkg.ancient-cities-and-golden-sands.ext.0.title': moreBentotaTitle,
   'pkg.ancient-cities-and-golden-sands.ext.0.description':
     'Zwei Strandtage reichen kaum zum Auspacken. Verlängern Sie Ihren Aufenthalt im Sheraton Kosgoda Turtle Beach Resort, im Cinnamon Bay oder im Eden Resort & Spa auf derselben Halbpensionsbasis.',
-  'pkg.ancient-cities-and-golden-sands.ext.0.price': roomNight(170),
+  'pkg.ancient-cities-and-golden-sands.ext.0.price': roomNight(325),
   'pkg.ancient-cities-and-golden-sands.ext.1.title': 'Option 2: Yala ergänzen',
   'pkg.ancient-cities-and-golden-sands.ext.1.description':
     'Zwei Nächte in Yala auf dem Weg zur Küste machen daraus zusätzlich eine Tierreise — eine ganztägige Jeep-Safari im besten Leopardenpark der Insel, dazu Kataragama und die Ravana-Wasserfälle unterwegs.',
@@ -612,11 +612,11 @@ const content: ContentDictionary = {
   'pkg.classic-sri-lanka.priceBasis': perPerson,
   'pkg.classic-sri-lanka.period': period,
   'pkg.classic-sri-lanka.visiting.1': culturalTriangle,
-  'pkg.classic-sri-lanka.extensionPrice': roomNight(170),
+  'pkg.classic-sri-lanka.extensionPrice': roomNight(325),
   'pkg.classic-sri-lanka.ext.0.title': moreBentotaTitle,
   'pkg.classic-sri-lanka.ext.0.description':
     'Hängen Sie Nächte im Sheraton Kosgoda Turtle Beach Resort, im Cinnamon Bay oder im Eden Resort & Spa auf derselben Halbpensionsbasis an und beenden Sie die Woche in Ruhe, statt an Tag sieben zu packen.',
-  'pkg.classic-sri-lanka.ext.0.price': roomNight(170),
+  'pkg.classic-sri-lanka.ext.0.price': roomNight(325),
   'pkg.classic-sri-lanka.ext.1.title': 'Option 2: Ella und Yala ergänzen',
   'pkg.classic-sri-lanka.ext.1.description':
     'Fahren Sie ab Nuwara Eliya weiter nach Osten, statt zur Küste abzubiegen: Ella für die Nine Arch Bridge, dann Yala für eine Leoparden-Safari, und anschließend über Galle an den Strand.',
@@ -653,11 +653,11 @@ const content: ContentDictionary = {
   'pkg.beach-safari-and-tea-country.bestFor.4': 'Teeland',
   'pkg.beach-safari-and-tea-country.priceBasis': perPerson,
   'pkg.beach-safari-and-tea-country.period': period,
-  'pkg.beach-safari-and-tea-country.extensionPrice': roomNight(125),
+  'pkg.beach-safari-and-tea-country.extensionPrice': roomNight(325),
   'pkg.beach-safari-and-tea-country.ext.0.title': moreBentotaTitle,
   'pkg.beach-safari-and-tea-country.ext.0.description':
     'Starten Sie noch langsamer. Hängen Sie am Anfang der Reise Nächte im Sheraton Kosgoda Turtle Beach Resort, im Cinnamon Bay oder im Eden Resort & Spa an, auf derselben Halbpensionsbasis.',
-  'pkg.beach-safari-and-tea-country.ext.0.price': roomNight(125),
+  'pkg.beach-safari-and-tea-country.ext.0.price': roomNight(325),
   'pkg.beach-safari-and-tea-country.ext.1.title': 'Option 2: Das Kulturelle Dreieck ergänzen',
   'pkg.beach-safari-and-tea-country.ext.1.description':
     'Diese Route lässt Sigiriya und Polonnaruwa bewusst aus. Ergänzen Sie zwei oder drei Nächte nördlich von Kandy, und Sie nehmen die Felsenfestung, Minneriya und Anuradhapura mit, bevor es zum Flughafen geht.',

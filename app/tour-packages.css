@@ -176,6 +176,16 @@
   color: var(--pkg-muted);
 }
 
+.pkg-card-price small {
+  display: block;
+  margin-top: 0.45rem;
+  color: var(--pkg-muted);
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
 /* ==========================================================================
    Hero — copy left, image mosaic right
    ========================================================================== */
