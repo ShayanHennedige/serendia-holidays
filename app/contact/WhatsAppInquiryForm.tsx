@@ -15,6 +15,11 @@ type Inquiry = {
   message: string;
 };
 
+type InquiryConfirmation = {
+  title: string;
+  message: string;
+};
+
 const initialInquiry: Inquiry = {
   fullName: '',
   whatsapp: '',
@@ -30,6 +35,7 @@ export default function WhatsAppInquiryForm() {
   const [inquiry, setInquiry] = useState(initialInquiry);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [confirmation, setConfirmation] = useState<InquiryConfirmation | null>(null);
   const [sendingEmail, setSendingEmail] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -61,20 +67,30 @@ export default function WhatsAppInquiryForm() {
     inquiry.message.trim() ? `Request: ${inquiry.message.trim()}` : '',
   ].filter(Boolean);
 
-  const refreshContactPage = () => {
-    window.setTimeout(() => window.location.reload(), 1500);
+  const showConfirmation = (title: string, message: string) => {
+    setConfirmation({ title, message });
+    window.setTimeout(() => window.location.reload(), 4_000);
+  };
+
+  const closeConfirmation = () => {
+    setConfirmation(null);
+    window.location.reload();
   };
 
   const openWhatsApp = () => {
     if (!formRef.current?.reportValidity() || !validateDates()) return;
 
-    const popup = window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageLines().join('\n'))}`, '_blank', 'noopener,noreferrer');
+    const popup = window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(messageLines().join('\n'))}`, '_blank');
     if (!popup) {
       setError('WhatsApp could not open. Please allow pop-ups and try again.');
       return;
     }
-    setSuccess('WhatsApp has opened with your inquiry details. This page will refresh shortly.');
-    refreshContactPage();
+    popup.opener = null;
+    setSuccess('');
+    showConfirmation(
+      'Your inquiry is ready on WhatsApp',
+      'WhatsApp has opened with your trip details. Please press Send in WhatsApp so our travel team receives your inquiry.',
+    );
   };
 
   const sendEmail = async (event: FormEvent<HTMLFormElement>) => {
@@ -90,8 +106,11 @@ export default function WhatsAppInquiryForm() {
       });
       const result = await response.json() as { error?: string };
       if (!response.ok) throw new Error(result.error || 'We could not send your email inquiry.');
-      setSuccess('Your inquiry has been emailed to our travel team. This page will refresh shortly.');
-      refreshContactPage();
+      setSuccess('');
+      showConfirmation(
+        'Inquiry received',
+        'Thank you. Your inquiry has been sent to our travel team, and we will get back to you shortly.',
+      );
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : 'We could not send your email inquiry. Please try WhatsApp instead.');
     } finally {
@@ -100,7 +119,19 @@ export default function WhatsAppInquiryForm() {
   };
 
   return (
-    <section className="contact-form-panel contact-panel" aria-labelledby="whatsapp-inquiry-title">
+    <>
+      {confirmation && (
+        <div className="contact-confirmation-backdrop" role="presentation">
+          <section className="contact-confirmation-dialog" role="dialog" aria-modal="true" aria-labelledby="contact-confirmation-title" aria-describedby="contact-confirmation-message">
+            <span className="contact-confirmation-mark" aria-hidden="true">✓</span>
+            <h2 id="contact-confirmation-title">{confirmation.title}</h2>
+            <p id="contact-confirmation-message">{confirmation.message}</p>
+            <button type="button" className="contact-confirmation-button" onClick={closeConfirmation}>Done</button>
+            <small>This page will refresh automatically.</small>
+          </section>
+        </div>
+      )}
+      <section className="contact-form-panel contact-panel" aria-labelledby="whatsapp-inquiry-title">
       <div className="contact-panel-header">
         <h3 id="whatsapp-inquiry-title" className="contact-form-title">Start on WhatsApp</h3>
         <p className="contact-form-intro">Share a few trip details and we will receive them directly in WhatsApp.</p>
@@ -152,6 +183,7 @@ export default function WhatsAppInquiryForm() {
           <p className="contact-whatsapp-note">Choose WhatsApp for an instant chat or email to send the details to our travel team.</p>
         </div>
       </form>
-    </section>
+      </section>
+    </>
   );
 }
