@@ -31,6 +31,48 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
   const [confirmation, setConfirmation] = useState<SubmissionConfirmation | null>(null);
   const [emailNotice, setEmailNotice] = useState<string | null>(null);
   const [sendError, setSendError] = useState<string | null>(null);
+  const [pdfDownloading, setPdfDownloading] = useState(false);
+  const [pdfDownloadError, setPdfDownloadError] = useState<string | null>(null);
+
+  const downloadPdf = async () => {
+    if (!confirmation || pdfDownloading) return;
+
+    setPdfDownloading(true);
+    setPdfDownloadError(null);
+    try {
+      const response = await fetch('/api/tour-submissions/pdf', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({
+          reference: confirmation.reference,
+          submission: { customer, tour: tourDetails, itinerary, consent },
+        }),
+      });
+
+      if (!response.ok || !response.headers.get('content-type')?.includes('application/pdf')) {
+        const data = await response.json().catch(() => null) as { error?: string } | null;
+        throw new Error(data?.error || 'We could not create your PDF right now.');
+      }
+
+      const pdf = await response.blob();
+      if (pdf.size === 0 || !pdf.type.includes('application/pdf')) {
+        throw new Error('The PDF download was incomplete. Please try again.');
+      }
+
+      const url = URL.createObjectURL(pdf);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `Personalised_Tour_Request_${confirmation.reference}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1_000);
+    } catch (error) {
+      setPdfDownloadError(error instanceof Error ? error.message : 'We could not create your PDF right now.');
+    } finally {
+      setPdfDownloading(false);
+    }
+  };
 
   const finaliseTour = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -97,6 +139,7 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
         </div>
         {emailSending && <p className="planner-delivery-note">Sending the PDF by email now...</p>}
         {emailNotice && <p className="planner-delivery-note">{emailNotice}</p>}
+        {pdfDownloadError && <p className="planner-inline-error">{pdfDownloadError}</p>}
         <div className="planner-next-steps">
           <h3>Our travel consultants will now:</h3>
           <ul>
@@ -107,6 +150,9 @@ export default function AiItineraryResult({ itinerary, tourDetails, onStartOver,
           </ul>
         </div>
         <div className="planner-confirmation-actions">
+          <button type="button" className="planner-primary-button" onClick={downloadPdf} disabled={pdfDownloading}>
+            {pdfDownloading ? 'Preparing PDF…' : 'Download PDF'}
+          </button>
           <button type="button" className="planner-secondary-button" onClick={onEditRequest || onStartOver}>Edit Request</button>
           <Link className="planner-text-link" href="/contact">Contact Us →</Link>
         </div>
