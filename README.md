@@ -30,7 +30,7 @@ For local development, start it in a second terminal:
 npm run translate:server
 ```
 
-The website uses `http://127.0.0.1:5100` by default. In production, run LibreTranslate as a separate private service and set `LIBRETRANSLATE_URL` to its internal URL. Do not expose LibreTranslate directly to the public internet.
+The website uses `http://127.0.0.1:5100` by default. In production, deploy the included `render.yaml` Blueprint, then set Vercel's `LIBRETRANSLATE_URL` to the resulting Render HTTPS service URL and redeploy. The API route is the only website code that calls this service; do not put that URL in a `NEXT_PUBLIC_` variable.
 
 ## Learn More
 
