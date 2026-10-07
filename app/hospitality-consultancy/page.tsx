@@ -1,5 +1,6 @@
 import InnerHero from '../components/InnerHero';
 import RecommendedGrid from '../components/RecommendedGrid';
+import { pageMetadata } from '../lib/seo';
 
 const consultancyItems: string[] = [
   'Contribution to concept design.',
@@ -22,10 +23,11 @@ const consultancyItems: string[] = [
   'Provide advice and supervision on the hotel soft run.',
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Hospitality Project Management Consultancy - Serendia Holidays By Venom',
   description: 'Advisory services for hotel investors, from land acquisition through to operational commissioning.',
-};
+  path: '/hospitality-consultancy',
+});
 
 export default function HospitalityConsultancyPage() {
   return (

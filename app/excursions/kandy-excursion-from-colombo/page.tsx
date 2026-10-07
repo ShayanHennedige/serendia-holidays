@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Kandy Excursion from Colombo - Serendia Holidays By Venom',
   description: 'Full-day Kandy excursion from Colombo with the Temple of the Tooth, Royal Botanical Gardens and Pinnawala.',
-};
+  path: '/excursions/kandy-excursion-from-colombo',
+});
 
 export default function KandyFromColomboExcursionPage() {
   return (

@@ -1,9 +1,11 @@
 import InnerHero from '../components/InnerHero';
+import { pageMetadata } from '../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Contact - Serendia Holidays By Venom',
-  description: 'Get in touch with Serendia Holidays By Venom.',
-};
+  description: 'Contact Serendia Holidays By Venom in Pannipitiya, Sri Lanka. Call or WhatsApp +94 77 398 6504 to plan a tailor-made Sri Lanka or Maldives holiday.',
+  path: '/contact',
+});
 
 export default function ContactPage() {
   return (

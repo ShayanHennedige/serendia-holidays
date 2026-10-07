@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Nuwara-Eliya Excursion from Kandy - Serendia Holidays By Venom',
-  description: 'Full day Nuwara Eliya excursion from Kandy with tea factory stops.',
-};
+  description: 'Full-day Nuwara Eliya excursion from Kandy through Sri Lanka tea country, with Ramboda Falls, and the historic Labookellie tea factory.',
+  path: '/excursions/nuwara-eliya-excursion-from-kandy',
+});
 
 export default function NuwaraEliyaExcursionPage() {
   return (

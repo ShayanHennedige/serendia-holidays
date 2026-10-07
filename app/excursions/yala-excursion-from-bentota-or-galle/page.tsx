@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Yala Excursion from Bentota or Galle - Serendia Holidays By Venom',
-  description: 'Full day Yala excursion with afternoon safari options.',
-};
+  description: 'Full-day Yala National Park excursion from Bentota or Galle with an afternoon jeep safari to spot leopards, elephants and birdlife.',
+  path: '/excursions/yala-excursion-from-bentota-or-galle',
+});
 
 export default function YalaExcursionPage() {
   return (

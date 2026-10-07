@@ -1,5 +1,6 @@
 import InnerHero from '../components/InnerHero';
 import Link from 'next/link';
+import { pageMetadata } from '../lib/seo';
 
 const hotels = [
   {
@@ -64,10 +65,11 @@ const propertyTypes = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Sri Lankan Hotels - Serendia Holidays By Venom',
-  description: 'Sri Lankan hotel partners.',
-};
+  description: 'Hand-picked Sri Lankan hotel and villa partners, from boutique stays to tranquil villas, bookable with your tailor-made Serendia Holidays itinerary.',
+  path: '/sri-lankan-hotels',
+});
 
 export default function HotelsPage() {
   return (

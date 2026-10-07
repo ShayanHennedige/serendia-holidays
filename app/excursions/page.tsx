@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
+import { pageMetadata } from '../lib/seo';
 
 interface Excursion {
   title: string;
@@ -98,10 +99,11 @@ const excursions: Excursion[] = [
   },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Excursions - Serendia Holidays By Venom',
   description: 'Private half-day and full-day excursions across Sri Lanka.',
-};
+  path: '/excursions',
+});
 
 export default function ExcursionsPage() {
   return (

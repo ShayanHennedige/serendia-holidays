@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Colombo Excursion - Serendia Holidays By Venom',
   description: 'Half-day Colombo excursion covering Pettah, the National Museum, civic landmarks and the Lotus Tower.',
-};
+  path: '/excursions/colombo-excursion',
+});
 
 export default function ColomboExcursionPage() {
   return (

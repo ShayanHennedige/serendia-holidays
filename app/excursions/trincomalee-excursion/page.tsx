@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Trincomalee Excursion - Serendia Holidays By Venom',
   description: 'Full-day Trincomalee excursion with Marble Beach, the natural harbour and Koneswaram Temple.',
-};
+  path: '/excursions/trincomalee-excursion',
+});
 
 export default function TrincomaleeExcursionPage() {
   return (

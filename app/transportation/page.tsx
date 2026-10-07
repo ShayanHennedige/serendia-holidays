@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
+import { pageMetadata } from '../lib/seo';
 
 const roadFleet = [
   { title: 'Private car', image: '/images/transport-car.png', fit: 'Solo travellers and couples', note: 'The most flexible way to move at your own pace.' },
@@ -16,10 +17,11 @@ const servicePromises = [
   ['One coordinated plan', 'Road, rail and air options can be combined into one reviewed journey.'],
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Transportation - Serendia Holidays By Venom',
   description: 'Private vehicles, scenic rail and air connections for tailor-made travel across Sri Lanka.',
-};
+  path: '/transportation',
+});
 
 export default function TransportationPage() {
   return (
