@@ -1,9 +1,11 @@
 import HotelDetailPage from '../../components/HotelDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Devi Tranquil Villa - Serendia Holidays By Venom',
   description: 'A relaxed Sri Lankan villa stay with comfortable service and easy holiday access.',
-};
+  path: '/sri-lankan-hotels/devi-tranquil-villa',
+});
 
 export default function DeviTranquilVillaPage() {
   return (

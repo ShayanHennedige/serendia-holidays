@@ -6,6 +6,10 @@ import HighlightsGrid from './components/HighlightsGrid';
 import Testimonials from './components/Testimonials';
 import HomepageParallax from './components/HomepageParallax';
 
+export const metadata = {
+  alternates: { canonical: '/' },
+};
+
 export default function Home() {
   return (
     <main>

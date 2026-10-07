@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Best of Sri Lanka Culture, Nature and Wild Life - Serendia Holidays By Venom',
   description: 'Eight nights and nine days around Sri Lanka with culture, wildlife, and coast.',
-};
+  path: '/tours/best-of-sri-lanka-culture-nature-and-wild-life',
+});
 
 export default function BestOfSriLankaTourPage() {
   return (

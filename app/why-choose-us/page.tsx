@@ -2,11 +2,13 @@ import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
 import TrustSignalStrip from '../components/TrustSignalStrip';
 import { companyFacts } from '../lib/companyFacts';
+import { pageMetadata } from '../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Why Choose Us - Serendia Holidays By Venom',
   description: 'Why international travellers choose Serendia Holidays over other Sri Lankan destination management companies.',
-};
+  path: '/why-choose-us',
+});
 
 export default function WhyChooseUsPage() {
   return (

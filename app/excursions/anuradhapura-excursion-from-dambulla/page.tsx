@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Anuradhapura Excursion from Dambulla - Serendia Holidays By Venom',
   description: 'Full-day Anuradhapura excursion from Dambulla with Ruwanwelisaya, Sri Maha Bodhi, Kuttam Pokuna and Isurumuniya.',
-};
+  path: '/excursions/anuradhapura-excursion-from-dambulla',
+});
 
 export default function AnuradhapuraExcursionPage() {
   return (

@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Sigiriya Excursion from Kandy - Serendia Holidays By Venom',
   description: 'Full-day Sigiriya excursion from Kandy with a Matale spice garden and afternoon Lion Rock climb.',
-};
+  path: '/excursions/sigiriya-excursion-from-kandy',
+});
 
 export default function SigiriyaFromKandyExcursionPage() {
   return (

@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Kandy Excursion from Negombo - Serendia Holidays By Venom',
   description: 'Private full-day Kandy excursion from Negombo with the Temple of the Tooth, Peradeniya and Pinnawala.',
-};
+  path: '/excursions/kandy-excursion-from-negombo',
+});
 
 export default function KandyFromNegomboExcursionPage() {
   return (

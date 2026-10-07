@@ -1,9 +1,11 @@
 import TripDetailPage from '../../components/TripDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Polonnaruwa Excursion - Serendia Holidays By Venom',
-  description: 'Full day Polonnaruwa excursion with Minneriya National Park.',
-};
+  description: 'Full-day Polonnaruwa excursion exploring the ancient royal city ruins, followed by an elephant jeep safari in Minneriya National Park.',
+  path: '/excursions/polonnaruwa-excursion',
+});
 
 export default function PolonnaruwaExcursionPage() {
   return (

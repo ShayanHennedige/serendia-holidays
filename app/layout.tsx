@@ -13,6 +13,7 @@ import LanguageProvider from './components/LanguageProvider';
 import AutoPageTranslation from './components/AutoPageTranslation';
 import WhatsAppSupport from './components/WhatsAppSupport';
 import { siteName, siteUrl, siteUrlFor } from './lib/site';
+import { jsonLdScript, organizationJsonLd } from './lib/seo';
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -79,31 +80,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body suppressHydrationWarning>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'TravelAgency',
-              name: siteName,
-              url: siteUrl,
-              logo: siteUrlFor('/android-chrome-512x512.png'),
-              image: siteUrlFor('/images/hero-1.png'),
-              telephone: '+94 77 398 6504',
-              email: 'dharshan@venomholidays.com',
-              address: {
-                '@type': 'PostalAddress',
-                streetAddress: '63A, Old Road, Pannipitiya',
-                addressCountry: 'LK',
-              },
-              areaServed: ['Sri Lanka', 'Maldives'],
-              sameAs: [
-                'https://www.facebook.com/Venom-Holidays-1790614197716887/',
-                'https://www.instagram.com/venomholidays/',
-              ],
-            }),
-          }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(organizationJsonLd)} />
         <LanguageProvider>
           <Header />
           <BackButton />

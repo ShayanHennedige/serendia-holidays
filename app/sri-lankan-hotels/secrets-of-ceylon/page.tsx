@@ -1,9 +1,11 @@
 import HotelDetailPage from '../../components/HotelDetailPage';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Secrets of Ceylon - Serendia Holidays By Venom',
   description: 'A boutique Sri Lankan hotel option for travelers looking for a refined stay.',
-};
+  path: '/sri-lankan-hotels/secrets-of-ceylon',
+});
 
 export default function SecretsOfCeylonPage() {
   return (

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AboutMotion from './AboutMotion';
 import styles from './about.module.css';
+import { pageMetadata } from '../lib/seo';
 
 const disciplines = [
   {
@@ -81,10 +82,11 @@ function ArrowIcon() {
   );
 }
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'About Us - Serendia Holidays By Venom',
   description: 'Meet the Sri Lankan travel, cricket and hospitality specialists behind Serendia Holidays by Venom.',
-};
+  path: '/about',
+});
 
 export default function AboutPage() {
   return (

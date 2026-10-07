@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
+import { pageMetadata } from '../lib/seo';
 
 const offerings = [
   { label: 'Tour format', title: 'School and club tours', description: 'Complete touring programmes that bring fixtures, accommodation, transport and island experiences into one practical plan.' },
@@ -10,10 +11,11 @@ const offerings = [
   { label: 'Touring party', title: 'Players and families', description: 'Accommodation options for players, staff and accompanying families, integrated with the wider touring itinerary.' },
 ];
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: 'Cricket Tourism - Serendia Holidays By Venom',
   description: 'Cricket tour packages, spectator visits, ground bookings and technical coaching arranged by Serendia Holidays.',
-};
+  path: '/cricket-tourism',
+});
 
 export default function CricketTourismPage() {
   return (
