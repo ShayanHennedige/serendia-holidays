@@ -1,51 +1,49 @@
 'use client';
 
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
-import { dictionaries, supportedLocales, type Dictionary, type Locale } from '../lib/i18n';
+import { useRouter } from 'next/navigation';
+import { dictionaries, type Dictionary, type Locale } from '../lib/i18n';
+import { LOCALE_COOKIE, isLocale } from '../lib/localeDetection';
 
 interface LanguageContextValue { locale: Locale; setLocale: (locale: Locale) => void; dictionary: Dictionary; }
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export default function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('en');
+function saveLocaleCookie(locale: Locale) {
+  document.cookie = `${LOCALE_COOKIE}=${locale}; path=/; max-age=31536000; samesite=lax`;
+}
+
+// The server picks the language (see i18n/request.ts) and passes it in as initialLocale,
+// so the first paint is already in the visitor's language.
+export default function LanguageProvider({ initialLocale, children }: { initialLocale: Locale; children: ReactNode }) {
+  const router = useRouter();
+  const [chosenLocale, setChosenLocale] = useState<Locale | null>(null);
+  const locale = chosenLocale ?? initialLocale;
 
   useEffect(() => {
-    const stored = localStorage.getItem('serendia-locale');
-    const storedLocale = supportedLocales.includes(stored as Locale) ? stored as Locale : null;
-    const browserCode = navigator.language.slice(0, 2).toLowerCase();
-    const browserLocale = supportedLocales.includes(browserCode as Locale) ? browserCode as Locale : 'en';
-    const controller = new AbortController();
-    let cancelled = false;
-
-    const applyLocale = (next: Locale) => {
-      if (cancelled) return;
-      setLocaleState(next);
-      document.documentElement.lang = next;
-    };
-
-    if (storedLocale) {
-      applyLocale(storedLocale);
-    } else {
-      fetch('/api/locale', { cache: 'no-store', signal: controller.signal })
-        .then((response) => response.ok ? response.json() as Promise<{ locale: Locale | null }> : null)
-        .then((result) => {
-          const detected = result?.locale;
-          applyLocale(detected && supportedLocales.includes(detected) ? detected : browserLocale);
-        })
-        .catch((error: unknown) => {
-          if (error instanceof DOMException && error.name === 'AbortError') return;
-          applyLocale(browserLocale);
-        });
+    // Visitors who picked a language before the cookie existed had it saved in localStorage only.
+    try {
+      const legacy = localStorage.getItem(LOCALE_COOKIE);
+      localStorage.removeItem(LOCALE_COOKIE);
+      if (isLocale(legacy) && legacy !== initialLocale && !document.cookie.includes(`${LOCALE_COOKIE}=`)) {
+        saveLocaleCookie(legacy);
+        router.refresh();
+      }
+    } catch {
+      // Storage can be unavailable; the server-detected language still applies.
     }
+  }, [initialLocale, router]);
 
-    return () => {
-      cancelled = true;
-      controller.abort();
-    };
-  }, []);
+  const value = useMemo(() => ({
+    locale,
+    setLocale: (next: Locale) => {
+      setChosenLocale(next);
+      saveLocaleCookie(next);
+      document.documentElement.lang = next;
+      router.refresh();
+    },
+    dictionary: dictionaries[locale],
+  }), [locale, router]);
 
-  const setLocale = (next: Locale) => { setLocaleState(next); localStorage.setItem('serendia-locale', next); document.documentElement.lang = next; };
-  const value = useMemo(() => ({ locale, setLocale, dictionary: dictionaries[locale] }), [locale]);
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
 }
 

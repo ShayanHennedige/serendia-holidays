@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import { usePathname } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import { useLanguage } from './LanguageProvider';
 
 interface ChatMessage {
@@ -12,6 +13,7 @@ interface ChatMessage {
 export default function AIChatConcierge() {
   const pathname = usePathname();
   const { locale, dictionary: { chat } } = useLanguage();
+  const t = useTranslations('ChatToggle');
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -111,7 +113,7 @@ export default function AIChatConcierge() {
         type="button"
         className="ai-concierge-toggle"
         onClick={() => setOpen((current) => !current)}
-        aria-label={open ? 'Close AI concierge chat' : 'Open AI concierge chat'}
+        aria-label={open ? t('close') : t('open')}
       >
         {open ? (
           '×'

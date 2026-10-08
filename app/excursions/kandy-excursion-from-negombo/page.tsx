@@ -1,5 +1,6 @@
 import TripDetailPage from '../../components/TripDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES, getTripCopy, withSectionImages } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Kandy Excursion from Negombo - Serendia Holidays By Venom',
@@ -7,44 +8,22 @@ export const metadata = pageMetadata({
   path: '/excursions/kandy-excursion-from-negombo',
 });
 
-export default function KandyFromNegomboExcursionPage() {
+// Page text lives in messages/<locale>/excursions.json under ExcursionPages.kandyNegombo.
+const sectionImages = [
+  '/images/packages/kandy-city.jpg',
+  '/images/excursions/peradeniya-royal-gardens.webp',
+];
+
+export default async function KandyFromNegomboExcursionPage() {
+  const copy = await getTripCopy('ExcursionPages.kandyNegombo');
+
   return (
     <TripDetailPage
-      title="Kandy Excursion from Negombo"
-      subtitle="Full Day"
+      {...copy}
       heroImage="/images/excursion-heroes/kandy-hero.png"
-      heroNote="A private hill-capital day shaped for guests staying in Negombo, with cultural and garden highlights."
-      facts={[
-        { label: 'Duration', value: 'Full Day' },
-        { label: 'Excursion', value: 'Kandy from Negombo' },
-        { label: 'Distance', value: 'Approximately 115km (one way)' },
-        { label: 'Depart', value: 'Morning', note: 'Final pickup time confirmed for your hotel and traffic conditions' },
-      ]}
-      sections={[
-        {
-          title: 'Kandy & the Temple of the Tooth',
-          image: '/images/packages/kandy-city.jpg',
-          paragraphs: [
-            'Travel inland from Negombo to Sri Lanka’s historic hill capital. The city’s cultural centre is the Temple of the Sacred Tooth Relic, set within the former royal palace complex beside Kandy Lake.',
-            'The visit is arranged around current opening hours and temple rituals, with appropriate time for a privately arranged lunch in Kandy.',
-          ],
-        },
-        {
-          title: 'Peradeniya Gardens & Pinnawala',
-          image: '/images/excursions/peradeniya-royal-gardens.webp',
-          paragraphs: [
-            'Continue to the Royal Botanical Gardens at Peradeniya for shaded avenues, tropical collections and the orchid house.',
-            'A Pinnawala stop can be added on the outward or return journey depending on current schedules, before arriving back in Negombo in the evening.',
-          ],
-        },
-      ]}
-      bookingIntro="This route is adapted from our established Kandy day excursion and timed specifically for your Negombo hotel."
+      sections={withSectionImages(copy.sections, sectionImages)}
       catalogSlug="excursion-kandy-negombo"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

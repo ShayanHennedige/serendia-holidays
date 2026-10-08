@@ -9,6 +9,8 @@ import { useLanguage } from './LanguageProvider';
 import { localeCountries, localeLabels, supportedLocales, type Locale } from '../lib/i18n';
 import { homeDictionaries } from '../lib/homeI18n';
 import { tourPackages } from '../lib/tourPackages';
+import { countWords, localizePackage } from '../lib/tourPackagesI18n';
+import { usePackagesI18n } from './tour-packages/usePackagesI18n';
 
 const localeFlags: Record<Locale, string> = {
   en: '🇬🇧',
@@ -28,6 +30,7 @@ export default function Header() {
   const languageRef = useRef<HTMLDivElement | null>(null);
   const { locale, setLocale, dictionary: { nav } } = useLanguage();
   const shared = homeDictionaries[locale].header;
+  const { copy: packagesCopy, content: packagesContent } = usePackagesI18n();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -121,9 +124,9 @@ export default function Header() {
               <Link href="/tour-packages" className={`nav-link ${pathname.startsWith('/tour-packages') ? 'active' : ''}`} onClick={closeMenu}>{nav.packages} <span className="nav-chevron">⌄</span></Link>
               <div className="nav-dropdown nav-dropdown-wide">
                 <Link href="/tour-packages" onClick={closeMenu}>{nav.allPackages}</Link>
-                {tourPackages.map((pkg) => (
+                {tourPackages.map((pkg) => localizePackage(pkg, packagesContent, packagesCopy)).map((pkg) => (
                   <Link key={pkg.slug} href={`/tour-packages/${pkg.slug}`} onClick={closeMenu}>
-                    {pkg.name} <span className="nav-dropdown-meta">{pkg.nights} nights</span>
+                    {pkg.name} <span className="nav-dropdown-meta">{pkg.nights} {countWords(locale, packagesCopy, pkg.nights).nightWord}</span>
                   </Link>
                 ))}
               </div>

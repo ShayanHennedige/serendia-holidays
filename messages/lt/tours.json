@@ -1,0 +1,154 @@
+{
+  "Tours": {
+    "heroTitle": "Kelionės",
+    "heroSubtitle": "Privačios kelionės · vietos ekspertų žinios · visiškai pagal jus",
+    "intro": {
+      "eyebrow": "Kelionės, sukurtos jums",
+      "title": "Atraskite Šri Lanką savo ritmu.",
+      "copy": "Šie maršrutai – apgalvoti atspirties taškai, o ne nekeičiami paketai. Tempą, apgyvendinimą ir patirtis pritaikome prie to, kaip norite keliauti.",
+      "cta": "Pradėkite nuo savo kelionės stiliaus",
+      "factsLabel": "Kelionių kolekcijos apžvalga",
+      "journeys": "Atrinktos kelionės",
+      "days": "Dienos saloje",
+      "tailorMade": "Pritaikyta individualiai"
+    },
+    "catalogue": {
+      "eyebrow": "Kolekcija",
+      "title": "Pasirinkite savo atspirties tašką",
+      "copy": "Kultūra, laukinė gamta, pakrantė ar nuotykiai – kiekvieną maršrutą gali patobulinti mūsų vietos komanda.",
+      "exploreLabel": "Atrasti: {title}",
+      "highlightsLabel": "Svarbiausi akcentai: {title}",
+      "viewJourney": "Peržiūrėti visą kelionę",
+      "designJourney": "Kurti šią kelionę"
+    },
+    "planner": {
+      "eyebrow": "Maršrutas, kuris tinka būtent jums",
+      "title": "Neradote tinkamos kelionės?",
+      "copy": "Papasakokite, kas jus traukia į Šri Lanką, ir mes parengsime pirmąjį juodraštį pagal jūsų laiką, pomėgius ir pageidaujamą tempą.",
+      "plan": "Planuokite kelionę",
+      "talk": "Susisiekite su mūsų komanda"
+    },
+    "items": {
+      "bestOf": {
+        "title": "Geriausia Šri Lankoje: kultūra, gamta ir laukinė gamta",
+        "duration": "8 naktys · 9 dienos",
+        "eyebrow": "Išskirtinė kelionė",
+        "summary": "Turininga pažintis su sala: senovės miestai ir rūke skendinčios aukštumos, susitikimai su laukiniais gyvūnais ir atpalaiduojanti pabaiga pakrantėje.",
+        "highlights": [
+          "Kultūrinis trikampis",
+          "Kalnų regionas",
+          "Safaris"
+        ]
+      },
+      "amazing": {
+        "title": "Nuostabioji Šri Lanka",
+        "duration": "9 naktys · 10 dienų",
+        "eyebrow": "Kultūra ir pakrantė",
+        "summary": "Plati kelionė aplink salą tiems, kurie nori pažinti paveldą, vietos gyvenimą, vaizdingus geležinkelio kraštus ir pabūti prie Indijos vandenyno.",
+        "highlights": [
+          "Senovės miestai",
+          "Arbatos kraštas",
+          "Pietinė pakrantė"
+        ]
+      },
+      "escape": {
+        "title": "Pabėgimas į rojų",
+        "duration": "4 naktys · 5 dienos",
+        "eyebrow": "Trumpa išvyka prie jūros",
+        "summary": "Kompaktiškas, neskubrus maršrutas su šilto vandens paplūdimiais, savitais apgyvendinimo variantais ir kaip tik tiek kultūros tarp ramių rytų saloje.",
+        "highlights": [
+          "Poilsis prie jūros",
+          "Privatūs pervežimai",
+          "Vietinė virtuvė"
+        ]
+      },
+      "nature": {
+        "title": "Šri Lankos gamta ir laukinis pasaulis",
+        "duration": "10 naktų · 11 dienų",
+        "eyebrow": "Laukinė sala",
+        "summary": "Nuo atogrąžų miškų pakraščių iki plačių nacionalinių parkų – gamtos kelionė, paremta atsakingu laukinių gyvūnų stebėjimu.",
+        "highlights": [
+          "Safaris Jaloje",
+          "Paukščiai",
+          "Nakvynė miške"
+        ]
+      },
+      "classic": {
+        "title": "Klasikinė Šri Lanka",
+        "duration": "6 naktys · 7 dienos",
+        "eyebrow": "Svarbiausia Šri Lankoje",
+        "summary": "Svarbiausi salos akcentai per vieną apgalvotą savaitę: gyvas paveldas, vėsios aukštumos, įsimintina kelionė traukiniu ir šiltas vietinių svetingumas.",
+        "highlights": [
+          "Kandis",
+          "Vaizdinga kelionė traukiniu",
+          "Galė"
+        ]
+      },
+      "adventure": {
+        "title": "Savarankiškas nuotykis",
+        "duration": "14 naktų · 15 dienų",
+        "eyebrow": "Aktyvi kelionė",
+        "summary": "Lanksti ekspedicija smalsiems keliautojams: žygiai, dviračiai, baidarės ir stovyklavimas, paliekant laiko savarankiškiems atradimams.",
+        "highlights": [
+          "Žygiai",
+          "Dviračiai",
+          "Baidarės"
+        ]
+      }
+    }
+  },
+  "TourBestOfSriLanka": {
+    "title": "Geriausia Šri Lankoje: kultūra, gamta ir laukinė gamta",
+    "subtitle": "8 naktys / 9 dienos",
+    "heroNote": "Lanksti kelionė aplink salą, apjungianti kultūrą, laukinę gamtą, arbatos kraštą ir pakrantę.",
+    "facts": [
+      {
+        "label": "Trukmė",
+        "value": "8 naktys / 9 dienos"
+      },
+      {
+        "label": "Kelionė",
+        "value": "Geriausia Šri Lankoje: kultūra, gamta ir laukinė gamta"
+      },
+      {
+        "label": "Pobūdis",
+        "value": "Privati kelionė aplink salą"
+      },
+      {
+        "label": "Kaina",
+        "value": "Pagal užklausą"
+      }
+    ],
+    "sections": [
+      {
+        "title": "01 diena: oro uostas – Kolombas",
+        "paragraphs": [
+          "Atvykimas ir pervežimas į Kolombą pirmajai nakvynei, kad atvykimo diena būtų lengva ir lanksti.",
+          "Maršrutą galima pritaikyti prie skrydžio laiko, pageidaujamos viešbučio klasės ir tempo, kurio norite likusiai kelionei."
+        ]
+      },
+      {
+        "title": "03 diena: Sigirija – Polonaruva",
+        "paragraphs": [
+          "Ši kultūrinė kelionės dalis skirta Šri Lankos kultūriniam trikampiui – laikas senovės miestams, uolų tvirtovėms ir žinomoms archeologinėms vietovėms.",
+          "Laukinė gamta ir gamta įpintos į maršrutą, todėl atostogos tampa viena vientisa kelione, o ne atskirų sustojimų virtine."
+        ]
+      },
+      {
+        "title": "05 diena: Kandis – Nuvara Elija",
+        "paragraphs": [
+          "Vėliau kelionė kyla į arbatos kraštą, kur vėsesnis oras, kalnų miesteliai ir vaizdai iš traukinio ar kelio pakeičia atostogų ritmą.",
+          "Nuvara Elija suteikia kelionei ramesnį tempą prieš prasidedant safario ir paplūdimio dienoms pietuose."
+        ]
+      },
+      {
+        "title": "07 diena: Jala – Galė – Bentota",
+        "paragraphs": [
+          "Maršrutas baigiasi safario ir pakrantės deriniu – nuo nacionalinio parko per pietus iki paplūdimių juostos.",
+          "Kadangi kelionė privati, sustojimų tvarką ir nakvynės vietas galima pritaikyti prie jūsų pomėgių ir kelionės datų."
+        ]
+      }
+    ],
+    "bookingIntro": "Nurodykite pageidaujamą kelionės mėnesį ir viešbučio kategoriją, o mes suplanuosime visą maršrutą pagal jūsų planus."
+  }
+}

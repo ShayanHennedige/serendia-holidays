@@ -1,0 +1,113 @@
+{
+  "About": {
+    "hero": {
+      "label": "Serendia Holidays by Venom · Šri Lanka",
+      "line1": "Vietos žinios.",
+      "line2": "Visada judėjime.",
+      "dock": "Kelionės, kriketas ir svetingumas – sujungti vienos Šri Lankos komandos.",
+      "meta1": "Nepriklausomi",
+      "meta2": "Įkurta 2019 m.",
+      "meta3": "Šri Lanka",
+      "scrollLabel": "Slinkti prie mūsų požiūrio",
+      "scroll": "Atraskite mūsų požiūrį"
+    },
+    "perspective": {
+      "signal": "Mūsų požiūris",
+      "title1": "Ne iš kelionių vadovo.",
+      "title2": "Iš patirties.",
+      "copy1": "Serendia 2019 m. įkūrė žmonės, kurių karjera jau buvo susijusi su Šri Lankos turizmu, viešbučių valdymu ir tarptautiniu kriketu.",
+      "copy2": "Ši patirtis keičia mūsų užduodamus klausimus, pastebimas detales ir kuriamas keliones.",
+      "altLeopard": "Leopardas Šri Lankos miške",
+      "altColombo": "Kolombo siluetas saulėlydžio metu",
+      "inset": "Salos energija",
+      "caption": "Planuojame matydami visą salą – nuo ramiausio kelio iki labiausiai perpildytos rungtynių dienos."
+    },
+    "disciplinesSection": {
+      "signal": "Kaip mąstome",
+      "title1": "Trys kryptys.",
+      "title2": "Vienas judantis planas.",
+      "copy": "Peržvelkite tris pasaulius, formuojančius kiekvieną Serendia kelionę."
+    },
+    "disciplines": [
+      {
+        "signal": "Kelionių kūrimas",
+        "title": "Pažinkite salą kaip vieną vientisą istoriją.",
+        "copy": "Privačios kelionės, poilsis prie jūros, viešbučiai ir transportas pritaikomi jūsų tempui, o ne sudedami iš atskirų užsakymų.",
+        "link": "Atrasti keliones",
+        "meta": "Individualiai · Šri Lanka ir Maldyvai"
+      },
+      {
+        "signal": "Kriketo turizmas",
+        "title": "Keliaukite su žmonėmis, kurie supranta žaidimą.",
+        "copy": "Rungtynes, aikštes, treniruotes, sirgalius ir šeimų keliones koordinuoja komanda, turinti tikrą tarptautinio kriketo patirtį.",
+        "link": "Į kriketo turizmą",
+        "meta": "Mokyklos · Klubai · Sirgaliai"
+      },
+      {
+        "signal": "Svetingumo kompetencija",
+        "title": "Sukurkite svetingumą dar prieš atvykstant pirmajam svečiui.",
+        "copy": "Viešbučių koncepcijos nuo planavimo ir pirkimų pereina prie veiklos, mokymų ir prižiūrimo bandomojo atidarymo.",
+        "link": "Peržiūrėti konsultacijas",
+        "meta": "Koncepcija · Veikla · Atidarymas"
+      }
+    ],
+    "teamSection": {
+      "signal": "Žmogiškasis veiksnys",
+      "title": "Žmonės, kurie viską sujungia.",
+      "copy": "Jokio perdavimo tarp beveidžių skyrių. Idėją kuriantys žmonės lieka arti detalių."
+    },
+    "team": [
+      {
+        "role": "Įkūrėjas · Kelionės ir svetingumas",
+        "copy": "24 metai viešbučių ir kelionių srityje, iš jų beveik septyneri – Šri Lankos turizmo plėtros tarnybos vykdomuoju sekretoriumi."
+      },
+      {
+        "role": "Svetingumas ir komercija",
+        "copy": "37 metų patirtis svetingumo srityje, vadovaujant maitinimo, pardavimų ir rinkodaros sritims."
+      },
+      {
+        "role": "Kriketo turizmas",
+        "copy": "Buvęs Šri Lankos rinktinės Test ir ODI žaidėjas, daugiau nei 20 metų profesionaliame krikete ir treniravime."
+      },
+      {
+        "role": "Kelionių konsultantas",
+        "copy": "Sujungia kelionių planavimą ir technologijas, kad kiekviena kelionė būtų aiškesnė, paprastesnė ir asmeniškesnė."
+      },
+      {
+        "role": "Sistemų priežiūra",
+        "copy": "Prižiūri skaitmenines sistemas, užtikrinančias sklandžią kasdienę įmonės kelionių veiklą."
+      }
+    ],
+    "hotel": {
+      "signal": "Svetingumo konsultacijos",
+      "title": "Viešbutis yra kelionė dar prieš tapdamas kelionės tikslu.",
+      "copy": "Padedame investuotojams nuo pirmųjų praktinių sprendimų iki veiklos, pasirengusios priimti pirmuosius svečius.",
+      "link": "Peržiūrėti visą paslaugą"
+    },
+    "hotelJourney": [
+      {
+        "title": "Kurti",
+        "text": "Koncepcijos kūrimas, statybų planavimas ir praktinė erdvių, kuriomis naudosis svečiai ir komandos, peržiūra."
+      },
+      {
+        "title": "Apsaugoti",
+        "text": "Projekto finansai, pirkimai, taupymo galimybės ir privalomi dokumentai."
+      },
+      {
+        "title": "Pasiruošti",
+        "text": "Veiklos vadovai, automatizavimas, įrangos paleidimas, personalo ir rinkodaros planai."
+      },
+      {
+        "title": "Atidaryti",
+        "text": "Mokymai, statybvietės priežiūra ir praktinė pagalba bandomojo viešbučio atidarymo metu."
+      }
+    ],
+    "closing": {
+      "alt": "Šri Lankos pakrantė saulėlydžio metu",
+      "signal": "Pasiruošę, kai būsite pasiruošę jūs",
+      "title": "Jūsų Šri Lankos istorija prasideda su žmogumi, kuris ją pažįsta.",
+      "plan": "Planuokite kelionę",
+      "talk": "Pasikalbėkite su komanda"
+    }
+  }
+}

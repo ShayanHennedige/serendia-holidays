@@ -1,0 +1,148 @@
+{
+  "HotelDetail": {
+    "profileKicker": "Viešbučio aprašymas",
+    "overviewTitle": "Apžvalga",
+    "galleryTitle": "Galerija",
+    "bookKicker": "Užsisakykite viešnagę",
+    "bookTitle": "Susisiekite",
+    "contactLink": "Teiraukitės dėl laisvų vietų",
+    "packageNote": "Šiuos viešbučius galime įtraukti į jūsų atostogų Šri Lankoje planą ir pagal užsakymą suorganizuoti pervežimus, ekskursijas bei pasitikimą oro uoste."
+  },
+  "Hotels": {
+    "heroTitle": "Šri Lankos viešbučiai",
+    "partners": {
+      "title": "Mūsų apgyvendinimo partneriai",
+      "subtitle": "Patirkite tikrą Šri Lankos svetingumą",
+      "copy": "Peržiūrėkite kruopščiai atrinktas Šri Lankos apgyvendinimo vietas, tinkančias poilsiui prie jūros, kelionėms aplink salą ir privatiems turams. Kiekviename puslapyje rasite trumpą apžvalgą ir informaciją, reikalingą viešnagei suplanuoti."
+    },
+    "ratings": {
+      "title": "Viešbučių klasifikacija pagal žvaigždutes",
+      "subtitle": "Trumpas aptarnavimo ir patogumų lygio vadovas",
+      "items": [
+        {
+          "label": "5 žvaigždutės",
+          "value": "Aukščiausias lygis ir platus pirmos klasės paslaugų pasirinkimas"
+        },
+        {
+          "label": "4 žvaigždutės",
+          "value": "Išskirtinis lygis su aukštos kokybės baldais ir komfortu"
+        },
+        {
+          "label": "3 žvaigždutės",
+          "value": "Gerai įrengti viešbučiai su patogiais, švariais kambariais ir kokybiškais baldais"
+        },
+        {
+          "label": "Mažiau nei 3 žvaigždutės",
+          "value": "Paprastas, gerai prižiūrimas lygis"
+        },
+        {
+          "label": "Neklasifikuoti viešbučiai",
+          "value": "Gerai prižiūrimos apgyvendinimo vietos su tinkamais patogumais, kurioms netaikoma žvaigždučių klasifikacija."
+        },
+        {
+          "label": "Butikiniai viešbučiai ir vilos",
+          "value": "Nedidelės, bet išskirtinės vietos reikliems svečiams, siūlančios išskirtinį aptarnavimą už aukščiausios klasės kainą."
+        }
+      ]
+    },
+    "types": {
+      "title": "Dažniausi apgyvendinimo tipai",
+      "subtitle": "Apgyvendinimo stiliai, kuriuos galite sutikti Šri Lankoje",
+      "items": [
+        {
+          "label": "Bungalas",
+          "value": "Nedidelis vieno aukšto namas su uždara veranda."
+        },
+        {
+          "label": "Gyvenimas pas šeimą",
+          "value": "Viešnagė vietos šeimos namuose, padedanti keliautojams geriau pažinti vietos gyvenimo būdą."
+        },
+        {
+          "label": "Nuomojami apartamentai",
+          "value": "Kambarys ar keli kambariai, įrengti kaip būstas, dažniausiai pastate, kuriame gyvena kelios šeimos."
+        },
+        {
+          "label": "Svečių namai",
+          "value": "Svečių namai būna nuo biudžetinių kambarių iki prabangių apartamentų, o didesniuose miestuose dažnai primena mažus viešbučius."
+        },
+        {
+          "label": "Butikinis viešbutis",
+          "value": "Nedidelė, bet išskirtinė vieta reikliems svečiams, siūlanti išskirtinį aptarnavimą už aukščiausios klasės kainą."
+        }
+      ]
+    },
+    "help": {
+      "copy": "Jei norite pagalbos renkantis tinkamą viešbučio tipą, pritaikysime apgyvendinimą prie jūsų maršruto, biudžeto ir pageidaujamo aptarnavimo lygio.",
+      "link": "Paprašykite rekomendacijų"
+    },
+    "viewDetails": "Peržiūrėti"
+  },
+  "HotelPages": {
+    "devi": {
+      "title": "Devi Tranquil Villa",
+      "subtitle": "Viešbutis Šri Lankoje",
+      "overview": "Devi Tranquil Villa – rami, nedidelė apgyvendinimo vieta keliautojams, ieškantiems tylesnės bazės su praktišku aptarnavimu, patogiu susisiekimu ir asmeniškesne atmosfera nei dideliame kurortiniame viešbutyje.",
+      "highlights": [
+        {
+          "label": "Pobūdis",
+          "value": "Viešnagė viloje"
+        },
+        {
+          "label": "Geriausiai tinka",
+          "value": "Privačioms atostogoms"
+        },
+        {
+          "label": "Atmosfera",
+          "value": "Atpalaiduojanti ir asmeniška"
+        },
+        {
+          "label": "Vieta",
+          "value": "Patogi kelionėms po apylinkes"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Patogūs kambariai",
+          "text": "Puikiai tinka trumpoms viešnagėms, kelionėms aplink salą ir poroms, ieškančioms ramesnės vietos."
+        },
+        {
+          "title": "Lengvas atostogų planavimas",
+          "text": "Praktiškas pasirinkimas, jei norite apgyvendinimą derinti su ekskursijomis ir pervežimais."
+        }
+      ]
+    },
+    "secrets": {
+      "title": "Secrets of Ceylon",
+      "subtitle": "Butikinis viešbutis",
+      "overview": "Secrets of Ceylon – butikinio stiliaus vieta su aukštesnio lygio aptarnavimu, puikiai tinkanti keliautojams, vertinantiems komfortą, privatumą ir išpuoselėtą svečių patirtį.",
+      "highlights": [
+        {
+          "label": "Pobūdis",
+          "value": "Butikinis viešbutis"
+        },
+        {
+          "label": "Geriausiai tinka",
+          "value": "Poroms ir nedidelėms grupėms"
+        },
+        {
+          "label": "Aptarnavimas",
+          "value": "Asmeniškas ir aukščiausios klasės"
+        },
+        {
+          "label": "Tinka",
+          "value": "Kelionėms aplink salą ir trumpoms išvykoms"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Rafinuota viešnagė",
+          "text": "Išpuoselėta aplinka svečiams, norintiems kruopščiau atrinktos apgyvendinimo vietos."
+        },
+        {
+          "title": "Patogi bazė kelionėms",
+          "text": "Naudinga stotelė maršrutuose, kur viešnagės kokybė svarbi ne mažiau nei vieta."
+        }
+      ]
+    }
+  }
+}

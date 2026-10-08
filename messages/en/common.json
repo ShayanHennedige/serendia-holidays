@@ -1,0 +1,129 @@
+{
+  "TripDetail": {
+    "overviewKicker": "Basic Information",
+    "overviewTitle": "Trip Overview"
+  },
+  "Recommended": {
+    "kicker": "Selected from your interests",
+    "heading": "You may also like",
+    "picked": "Picked for your journey",
+    "types": {
+      "tour": "Tour",
+      "excursion": "Excursion",
+      "hotel": "Hotel",
+      "transport": "Transport",
+      "cricket": "Cricket",
+      "consultancy": "Consultancy"
+    }
+  },
+  "Catalog": {
+    "tour-best-of-sri-lanka": {
+      "title": "Best of Sri Lanka Culture, Nature and Wild Life",
+      "summary": "8 nights / 9 days combining ancient cities, tea country and a safari-to-beach finish."
+    },
+    "tours-index": {
+      "title": "Tours",
+      "summary": "Tailor-made multi-day tours from short breaks to two-week round trips."
+    },
+    "excursion-polonnaruwa": {
+      "title": "Polonnaruwa Excursion",
+      "summary": "A single-day trip to the ancient city of Polonnaruwa."
+    },
+    "excursion-anuradhapura": {
+      "title": "Anuradhapura Excursion from Dambulla",
+      "summary": "A full-day sacred-city journey from Dambulla to Anuradhapura’s stupas, temples and ancient reservoirs."
+    },
+    "excursion-colombo": {
+      "title": "Colombo Excursion",
+      "summary": "A half-day circuit through Pettah, heritage Colombo, the National Museum and modern city landmarks."
+    },
+    "excursion-kandy-colombo": {
+      "title": "Kandy Excursion from Colombo",
+      "summary": "A full-day journey to Kandy’s Temple of the Tooth, Peradeniya gardens and Pinnawala from Colombo."
+    },
+    "excursion-sigiriya": {
+      "title": "Sigiriya Excursion from Kandy",
+      "summary": "A full-day trip through Matale spice country to climb the Sigiriya Lion Rock citadel."
+    },
+    "excursion-trincomalee": {
+      "title": "Trincomalee Excursion",
+      "summary": "A full-day east-coast excursion to Trincomalee harbour, Marble Beach and Koneswaram Temple."
+    },
+    "excursion-yala": {
+      "title": "Yala Excursion from Bentota or Galle",
+      "summary": "A single-day safari add-on for guests staying on the south coast."
+    },
+    "excursion-nuwara-eliya": {
+      "title": "Nuwara-Eliya Excursion from Kandy",
+      "summary": "A single-day trip into tea country from Kandy."
+    },
+    "excursion-kandy-negombo": {
+      "title": "Kandy Excursion from Negombo",
+      "summary": "A private full-day Kandy circuit tailored for travellers staying in Negombo."
+    },
+    "excursions-index": {
+      "title": "Excursions",
+      "summary": "Single-day trips from key hub towns covering ancient cities, hill country, national parks and the coast."
+    },
+    "hotel-devi-tranquil-villa": {
+      "title": "Devi Tranquil Villa",
+      "summary": "A signature private villa property."
+    },
+    "hotel-secrets-of-ceylon": {
+      "title": "Secrets of Ceylon",
+      "summary": "A curated collection of boutique Sri Lankan stays."
+    },
+    "hotels-index": {
+      "title": "Sri Lankan Hotels",
+      "summary": "The full accommodation directory, from five-star hotels to boutique villas and home stays."
+    },
+    "transport-options": {
+      "title": "Transportation",
+      "summary": "Self-drive and chauffeur-driven cars/vans/coaches, luxury rail, helicopter/air-taxi charter and a hop-on city tour."
+    },
+    "cricket-tourism": {
+      "title": "Cricket Tourism",
+      "summary": "Cricket tour packages for schools and clubs, spectator packages, ground bookings and technical coaching."
+    },
+    "hospitality-consultancy": {
+      "title": "Hospitality Project Management Consultancy",
+      "summary": "Advisory services for hotel investors from land acquisition through to operational commissioning."
+    }
+  },
+  "ChatToggle": {
+    "open": "Open AI concierge chat",
+    "close": "Close AI concierge chat"
+  },
+  "ItineraryMap": {
+    "style": "Map style",
+    "satellite": "Satellite",
+    "map": "Map",
+    "unavailable": "Route map unavailable.",
+    "controls": {
+      "NavigationControl": {
+        "ZoomIn": "Zoom in",
+        "ZoomOut": "Zoom out",
+        "ResetBearing": "Reset bearing to north"
+      },
+      "AttributionControl": {
+        "ToggleAttribution": "Toggle attribution"
+      },
+      "ScrollZoomBlocker": {
+        "CmdMessage": "Use ⌘ + scroll to zoom the map",
+        "CtrlMessage": "Use Ctrl + scroll to zoom the map"
+      },
+      "TouchPanBlocker": {
+        "Message": "Use two fingers to move the map"
+      },
+      "Marker": {
+        "Title": "Map marker"
+      },
+      "Map": {
+        "Title": "Map"
+      },
+      "LogoControl": {
+        "Title": "Mapbox homepage"
+      }
+    }
+  }
+}

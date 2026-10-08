@@ -1,0 +1,302 @@
+{
+  "Planner": {
+    "footer": "© 2026 Serendia Holidays. Visos teisės saugomos.",
+    "back": "← Atgal",
+    "change": "Keisti",
+    "kinds": {
+      "individualTags": [
+        "1–5 keliautojai",
+        "Vienas",
+        "Pora",
+        "Šeima",
+        "Maža grupė"
+      ],
+      "groupTags": [
+        "6+ keliautojai",
+        "Įmonė",
+        "Mokykla",
+        "Turistų grupė",
+        "Renginys"
+      ]
+    },
+    "pill": {
+      "groupLong": "Grupė · 6+ keliautojai",
+      "individualLong": "Individuali · 1–5 keliautojai",
+      "group": "Grupė",
+      "individual": "Individuali",
+      "early": "Pradinis planavimas",
+      "full": "Visa informacija"
+    },
+    "start": {
+      "title": "Kaip norėtumėte pradėti?",
+      "copy": "Rinkitės pagal tai, kiek informacijos turite dabar.",
+      "early": {
+        "title": "Pradinis planavimas",
+        "subtitle": "Apytikslės datos ir žmonių skaičius. Skrydžių ir asmeninė informacija bus pateikta vėliau.",
+        "tags": [
+          "3 žingsniai",
+          "Datos",
+          "Žmonių skaičius",
+          "Pageidavimai"
+        ]
+      },
+      "full": {
+        "title": "Visa informacija paruošta",
+        "subtitle": "Visa informacija – skrydžiai, pasų numeriai ir išsamūs asmens duomenys.",
+        "tags": [
+          "4 žingsniai",
+          "Skrydžiai",
+          "Pasai",
+          "Visa informacija"
+        ]
+      }
+    },
+    "steps": {
+      "overview": "Kelionės apžvalga",
+      "travelers": "Keliautojai",
+      "dates": "Datos ir skrydžiai",
+      "accommodation": "Apgyvendinimas",
+      "activities": "Veiklos"
+    },
+    "agent": {
+      "toggle": "Šį užsakymą tvarko kelionių agentūra",
+      "name": "Agento vardas",
+      "namePlaceholder": "Agento vardas",
+      "email": "Agento el. paštas",
+      "agency": "Agentūra / įmonė",
+      "agencyPlaceholder": "Kelionių agentūra"
+    },
+    "travelers": {
+      "title": "Keliautojai",
+      "numberTitle": "Keliautojų skaičius",
+      "total": "Iš viso: {count}",
+      "adults": "Suaugusieji",
+      "adultsHint": "18 m. ir vyresni",
+      "children": "Vaikai",
+      "childrenHint": "Jaunesni nei 12 m."
+    },
+    "details": {
+      "title": "Keliautojų duomenys",
+      "copy": "Paso ir kontaktinė informacija",
+      "lead": "Pagrindinis keliautojas",
+      "primary": "Pagrindinis kontaktas",
+      "firstName": "Vardas",
+      "firstNamePlaceholder": "Vardas",
+      "lastName": "Pavardė",
+      "lastNamePlaceholder": "Pavardė",
+      "passport": "Paso Nr.",
+      "passportPlaceholder": "Paso numeris",
+      "country": "Šalis",
+      "countryPlaceholder": "Šalis",
+      "email": "El. paštas",
+      "emailPlaceholder": "El. pašto adresas",
+      "phone": "Telefono numeris",
+      "phonePlaceholder": "Telefono numeris"
+    },
+    "dates": {
+      "title": "Kelionės datos",
+      "arrival": "Atvykimo data *",
+      "departure": "Išvykimo data *",
+      "laterNote": "Skrydžių numerius, atvykimo laiką ir keleivių duomenis galėsite pridėti vėliau užklausos puslapyje."
+    },
+    "flights": {
+      "title": "Kelionės datos ir skrydžiai",
+      "arrival": "Atvykimas",
+      "departure": "Išvykimas",
+      "date": "Data *",
+      "flight": "Skrydžio Nr. (neprivaloma)",
+      "flightPlaceholder": "pvz., {code}",
+      "time": "Laikas (neprivaloma)",
+      "hours": "VV",
+      "minutes": "MM"
+    },
+    "accommodation": {
+      "title": "Apgyvendinimo pageidavimai",
+      "copy": "Kiekvienoje kategorijoje pasirinkite vieną ar kelias jūsų kelionei tinkamas parinktis.",
+      "hotelType": "Viešbučio tipas *",
+      "roomCategory": "Kambario kategorija *",
+      "mealPlan": "Maitinimas",
+      "budget": "Biudžetas *",
+      "multiple": "(galima rinktis kelis)",
+      "optionalMultiple": "(neprivaloma · galima rinktis kelis)",
+      "rooms": "Kambarių skaičius *",
+      "roomsTotal": "{count, plural, one {# kambarys} few {# kambariai} other {# kambarių}}"
+    },
+    "options": {
+      "activities": [
+        "Laukinė gamta ir gamta",
+        "Sveikatingumas ir dvasingumas",
+        "Archeologija ir paveldas",
+        "Arbata ir kalnų kraštas",
+        "Žygiai ir nuotykiai",
+        "Paplūdimys ir vandens sportas",
+        "Kultūra ir paveldas",
+        "Miestas ir laisvalaikis",
+        "Eko ir kaimo patirtys",
+        "Kriketas ir sportas"
+      ],
+      "hotelTypes": [
+        "3 žvaigždutės",
+        "4 žvaigždutės",
+        "5 žvaigždutės",
+        "Butikinis",
+        "Vila",
+        "Ekonominis"
+      ],
+      "roomCategories": [
+        "Standartinis",
+        "Deluxe",
+        "Superior",
+        "Liuksas"
+      ],
+      "mealPlans": [
+        "BB · Nakvynė su pusryčiais",
+        "HB · Pusryčiai ir vakarienė",
+        "FB · Visas maitinimas",
+        "AI · Viskas įskaičiuota",
+        "RO · Tik nakvynė"
+      ],
+      "budgets": [
+        "Taupus",
+        "Komfortas",
+        "Premium",
+        "Ypatinga prabanga"
+      ],
+      "travelStyles": [
+        "Privati ir lanksti",
+        "Kultūra ir paveldas",
+        "Laukinė gamta ir gamta",
+        "Sveikatingumas ir lėtos kelionės",
+        "Šeimos atradimai",
+        "Prabangi kelionė po salą"
+      ],
+      "paces": [
+        "Ramus",
+        "Subalansuotas",
+        "Aktyvus"
+      ],
+      "transport": [
+        "Privatus automobilis",
+        "Privatus mikroautobusas",
+        "Prabangus automobilis",
+        "Traukinys + vairuotojas",
+        "Autobusas"
+      ],
+      "rooms": {
+        "double": {
+          "title": "Dvivietis (DBL)",
+          "note": "1 dvigulė lova · 2 svečiai"
+        },
+        "single": {
+          "title": "Vienvietis (SGL)",
+          "note": "1 viengulė lova · 1 svečias"
+        },
+        "triple": {
+          "title": "Trivietis (TPL)",
+          "note": "3 lovos · 3 svečiai"
+        },
+        "quad": {
+          "title": "Keturvietis (QTPL)",
+          "note": "4 lovos · 4 svečiai"
+        }
+      }
+    },
+    "activities": {
+      "title": "Veiklos",
+      "copy": "Pasirinkite jus dominančias veiklas",
+      "error": "Pasirinkite bent vieną veiklą"
+    },
+    "journey": {
+      "title": "Kelionės pageidavimai",
+      "copy": "Padėkite mūsų konsultantams pritaikyti tempą, komfortą ir transportą.",
+      "style": "Kelionės stilius",
+      "pace": "Kelionės tempas",
+      "transport": "Pageidaujamas transportas",
+      "chauffeur": "Įtraukti privatų vairuotoją"
+    },
+    "requests": {
+      "title": "Ypatingi pageidavimai",
+      "copy": "Pageidavimai, mitybos poreikiai ar ypatingi susitarimai",
+      "dietary": "Mitybos poreikiai",
+      "dietaryPlaceholder": "Pvz., vegetariškas maistas, alergijos",
+      "accessibility": "Prieinamumo poreikiai",
+      "accessibilityPlaceholder": "Pvz., pritaikyta neįgaliųjų vežimėliui, ribotas vaikščiojimas",
+      "requestsPlaceholder": "Pvz., pageidaujame butikinių viešbučių, pritaikymo vežimėliui, vegetariško maisto, minime metines..."
+    },
+    "summary": {
+      "travelers": "Keliautojai: {count}",
+      "style": "Būdas: {mode}"
+    },
+    "errors": {
+      "unavailable": "DI kelionių planuoklė laikinai nepasiekiama.",
+      "contact": "Taip pat galite rašyti per WhatsApp ar skambinti +94 77 398 6504 arba <link>susisiekti su mumis</link>."
+    },
+    "actions": {
+      "generate": "Sukurti DI maršrutą ✦",
+      "generating": "Kuriamas jūsų maršrutas…",
+      "continue": "Tęsti →"
+    }
+  },
+  "PlannerResult": {
+    "errors": {
+      "pdf": "Šiuo metu nepavyko sukurti PDF.",
+      "pdfIncomplete": "PDF atsisiuntimas nebaigtas. Bandykite dar kartą.",
+      "finalise": "Šiuo metu nepavyko užbaigti jūsų užklausos."
+    },
+    "confirmEmail": "PDF sukurtas. Siųsti jį dabar adresu {email}?",
+    "notices": {
+      "skipped": "PDF sėkmingai sukurtas. El. laiškas nesiųstas.",
+      "emailFailed": "PDF sukurtas, bet el. laiško išsiųsti nepavyko.",
+      "emailed": "PDF išsiųstas adresu {email}.",
+      "emailFailedNow": "PDF sukurtas, bet šiuo metu el. laiško išsiųsti nepavyko.",
+      "sending": "PDF siunčiamas el. paštu..."
+    },
+    "thanks": {
+      "kicker": "Kelionės užklausa pateikta",
+      "title": "Ačiū!",
+      "lead": "Jūsų asmeninė kelionės užklausa sėkmingai pateikta.",
+      "reference": "Užklausos numeris",
+      "nextTitle": "Mūsų kelionių konsultantai dabar:",
+      "nextSteps": [
+        "Peržiūrės jūsų maršrutą",
+        "Patikrins viešbučių užimtumą",
+        "Parengs kainos pasiūlymą",
+        "Netrukus su jumis susisieks"
+      ],
+      "preparing": "Ruošiamas PDF…",
+      "download": "Atsisiųsti PDF",
+      "edit": "Redaguoti užklausą",
+      "contact": "Susisiekite →"
+    },
+    "route": {
+      "banner": "Pasirinktos vietos",
+      "ready": "Paruošta peržiūrai",
+      "title": "Jūsų pasirinktas maršrutas",
+      "lead": "Peržiūrėkite pažymėtas vietas, pridėkite kontaktinę informaciją ir pateikite užklausą Serendia komandai.",
+      "stop": "{number} sustojimas",
+      "destinations": "{count, plural, one {# vieta} few {# vietos} other {# vietų}}",
+      "experiences": "{count, plural, one {# patirtis} few {# patirtys} other {# patirčių}}",
+      "travellers": "{count, plural, one {# keliautojas} few {# keliautojai} other {# keliautojų}}",
+      "pace": "Tempas: {pace}"
+    },
+    "final": {
+      "kicker": "Galutinis pateikimas",
+      "title": "Užbaigti mano kelionę",
+      "copy": "Pirmiausia sukursime profesionalų PDF, tada paklausime, ar norite jį išsiųsti adresu {email}.",
+      "fullName": "Vardas ir pavardė *",
+      "country": "Šalis",
+      "email": "El. pašto adresas",
+      "phone": "Telefono numeris",
+      "method": "Pageidaujamas susisiekimo būdas",
+      "methodEmail": "El. paštas",
+      "methodPhone": "Telefonas",
+      "consent": "Patvirtinu, kad šie duomenys teisingi, ir sutinku, kad Serendia Holidays tvarkytų šią užklausą maršrutui peržiūrėti ir kainai pasiūlyti.",
+      "callUs": "Taip pat galite rašyti per WhatsApp ar skambinti +94 77 398 6504.",
+      "editPreferences": "← Redaguoti pageidavimus",
+      "creating": "Kuriamas PDF…",
+      "sendingEmail": "Siunčiamas el. laiškas…",
+      "submit": "Užbaigti mano kelionę →",
+      "security": "Sukurta atmintyje · PDF nesaugomas serveryje · Pasiūlymas siųsti el. paštu rodomas po sukūrimo"
+    }
+  }
+}

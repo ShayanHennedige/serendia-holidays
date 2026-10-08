@@ -1,5 +1,6 @@
 import TripDetailPage from '../../components/TripDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES, getTripCopy, withSectionImages } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Sigiriya Excursion from Kandy - Serendia Holidays By Venom',
@@ -7,44 +8,22 @@ export const metadata = pageMetadata({
   path: '/excursions/sigiriya-excursion-from-kandy',
 });
 
-export default function SigiriyaFromKandyExcursionPage() {
+// Page text lives in messages/<locale>/excursions.json under ExcursionPages.sigiriya.
+const sectionImages = [
+  '/images/excursions/matale-spice-garden.webp',
+  '/images/excursions/sigiriya-lion-rock-ascent.webp',
+];
+
+export default async function SigiriyaFromKandyExcursionPage() {
+  const copy = await getTripCopy('ExcursionPages.sigiriya');
+
   return (
     <TripDetailPage
-      title="Sigiriya Excursion from Kandy"
-      subtitle="Full Day"
+      {...copy}
       heroImage="/images/excursion-heroes/sigiriya-hero.png"
-      heroNote="Travel through Matale’s spice country before an afternoon climb of Sri Lanka’s iconic Lion Rock fortress."
-      facts={[
-        { label: 'Duration', value: 'Full Day' },
-        { label: 'Excursion', value: 'Sigiriya from Kandy' },
-        { label: 'Distance', value: '100km (one way)' },
-        { label: 'Depart', value: '8.30am', note: 'Approximately 2.5 hours to Sigiriya' },
-      ]}
-      sections={[
-        {
-          title: 'Matale Spice Garden',
-          image: '/images/excursions/matale-spice-garden.webp',
-          paragraphs: [
-            'Pause in Matale to discover the fragrant plants behind Sri Lanka’s culinary traditions. A guided garden visit introduces familiar spices, their cultivation and their traditional uses.',
-            'Continue to Sigiriya for lunch at your own arrangement and time to prepare for the climb.',
-          ],
-        },
-        {
-          title: 'Climb Sigiriya Lion Rock',
-          image: '/images/excursions/sigiriya-lion-rock-ascent.webp',
-          paragraphs: [
-            'Sigiriya rose to prominence in the fifth century as the royal citadel of King Kashyapa. Its water gardens, monumental lion gateway, mirror wall, frescoes and summit ruins form one of Sri Lanka’s defining UNESCO World Heritage experiences.',
-            'The source itinerary schedules the climb at around 3.00pm and allows approximately two hours. Return to Kandy in the late evening after the descent.',
-          ],
-        },
-      ]}
-      bookingIntro="The climb involves many steps; tell us about mobility requirements so we can advise on pacing and alternatives."
+      sections={withSectionImages(copy.sections, sectionImages)}
       catalogSlug="excursion-sigiriya"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

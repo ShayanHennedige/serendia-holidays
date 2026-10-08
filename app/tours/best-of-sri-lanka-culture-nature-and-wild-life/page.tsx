@@ -1,5 +1,6 @@
 import TripDetailPage from '../../components/TripDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES, getTripCopy, withSectionImages } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Best of Sri Lanka Culture, Nature and Wild Life - Serendia Holidays By Venom',
@@ -7,60 +8,24 @@ export const metadata = pageMetadata({
   path: '/tours/best-of-sri-lanka-culture-nature-and-wild-life',
 });
 
-export default function BestOfSriLankaTourPage() {
+// Page text lives in messages/<locale>/tours.json under TourBestOfSriLanka.
+const sectionImages = [
+  '/images/hero-4.png',
+  '/images/polonnaruwa.webp',
+  '/images/kandy-to-nuwara-eliya-tea-country.png',
+  '/images/hero-3.png',
+];
+
+export default async function BestOfSriLankaTourPage() {
+  const copy = await getTripCopy('TourBestOfSriLanka');
+
   return (
     <TripDetailPage
-      title="Best of Sri Lanka Culture, Nature and Wild Life"
-      subtitle="8 Nights / 9 Days"
+      {...copy}
       heroImage="/images/hero-4.png"
-      heroNote="A flexible round trip combining culture, wildlife, tea country, and coast."
-      facts={[
-        { label: 'Duration', value: '8 Nights / 9 Days' },
-        { label: 'Tour', value: 'Best of Sri Lanka Culture, Nature and Wild Life' },
-        { label: 'Style', value: 'Private round trip' },
-        { label: 'Price', value: 'On request' },
-      ]}
-      sections={[
-        {
-          title: 'Day 01: Airport - Colombo',
-          image: '/images/hero-4.png',
-          paragraphs: [
-            'Arrival and transfer to Colombo for a first overnight stay that keeps the opening day easy and flexible.',
-            'The itinerary can be adapted to flight timing, preferred hotel class, and the pace you want for the rest of the circuit.',
-          ],
-        },
-        {
-          title: 'Day 03: Sigiriya - Polonnaruwa',
-          image: '/images/polonnaruwa.webp',
-          paragraphs: [
-            "This cultural stretch focuses on Sri Lanka's heritage triangle with time for ancient cities, rock fortresses, and well known archaeological sites.",
-            'Wildlife and nature are woven into the route so the holiday feels like a single, connected journey instead of disconnected stops.',
-          ],
-        },
-        {
-          title: 'Day 05: Kandy - Nuwara Eliya',
-          image: '/images/kandy-to-nuwara-eliya-tea-country.png',
-          paragraphs: [
-            'The trip then climbs into tea country, where cooler air, hill stations, and scenic train or road views shift the rhythm of the holiday.',
-            'Nuwara Eliya gives the tour a softer pace before the southern wildlife and beach portions begin.',
-          ],
-        },
-        {
-          title: 'Day 07: Yala - Galle - Bentota',
-          image: '/images/hero-3.png',
-          paragraphs: [
-            'The route finishes with a blend of safari and coast, moving from the national park through the south to the beach belt.',
-            'Because the itinerary is private, the stop order and overnight points can be adjusted around your interests and travel dates.',
-          ],
-        },
-      ]}
-      bookingIntro="Tell us your preferred travel month and hotel category, and we can shape the full circuit around your plan."
+      sections={withSectionImages(copy.sections, sectionImages)}
       catalogSlug="tour-best-of-sri-lanka"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

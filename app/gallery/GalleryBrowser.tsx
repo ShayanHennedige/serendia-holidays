@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { useTranslations } from 'next-intl';
 import type { GalleryCollection, GalleryImage } from '../lib/googleDriveGallery';
 
 type GalleryBrowserProps = {
@@ -10,8 +11,11 @@ type GalleryBrowserProps = {
 
 export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
   const router = useRouter();
+  const t = useTranslations('Gallery');
+  // Drive folders are named after the guests; only the built-in fallback collection needs translating.
+  const titleOf = (collection: GalleryCollection) => collection.id === 'sri-lanka-moments' ? t('fallbackTitle') : collection.title;
   const [activeCollection, setActiveCollection] = useState('all');
-  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [selectedImage, setSelectedImage] = useState<(GalleryImage & { collectionTitle: string }) | null>(null);
 
   const visibleCollections = useMemo(
     () =>
@@ -22,7 +26,7 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
   );
 
   const visibleImages = visibleCollections.flatMap((collection) =>
-    collection.images.map((image) => ({ ...image, collectionTitle: collection.title })),
+    collection.images.map((image) => ({ ...image, collectionTitle: titleOf(collection) })),
   );
 
   const totalImages = collections.reduce((total, collection) => total + collection.images.length, 0);
@@ -74,15 +78,14 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
       <div className="drive-gallery-toolbar">
         <div className="drive-gallery-summary">
           <p className="drive-gallery-count">
-            <span>{totalImages}</span> photographs from {collections.length}{' '}
-            {collections.length === 1 ? 'client journey' : 'client journeys'}
+            {t.rich('count', { photos: totalImages, journeys: collections.length, strong: (chunks) => <span>{chunks}</span> })}
           </p>
-          <p className="drive-gallery-summary-copy">Choose a journey to view the photographs from that stay.</p>
+          <p className="drive-gallery-summary-copy">{t('summary')}</p>
         </div>
 
         <div className="drive-gallery-filter-panel">
           <p className="drive-gallery-filter-label" id="journey-filter-label">
-            Browse by journey
+            {t('filterLabel')}
           </p>
           <div className="drive-gallery-filters" aria-labelledby="journey-filter-label">
             <button
@@ -91,7 +94,7 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
               aria-pressed={activeCollection === 'all'}
               onClick={() => setActiveCollection('all')}
             >
-              All journeys
+              {t('all')}
             </button>
             {collections.map((collection) => (
               <button
@@ -101,7 +104,7 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
                 key={collection.id}
                 onClick={() => setActiveCollection(collection.id)}
               >
-                {collection.title}
+                {titleOf(collection)}
               </button>
             ))}
           </div>
@@ -111,10 +114,10 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
       <div className="drive-gallery-grid">
         {visibleImages.map((image, index) => (
           <figure className="drive-gallery-card" key={image.id}>
-            <button type="button" onClick={() => setSelectedImage(image)} aria-label={`Open ${image.alt}`}>
+            <button type="button" onClick={() => setSelectedImage(image)} aria-label={t('openLabel', { alt: t('photoAlt', { title: image.collectionTitle, number: image.number }) })}>
               <img
                 src={image.src}
-                alt={image.alt}
+                alt={t('photoAlt', { title: image.collectionTitle, number: image.number })}
                 loading={index < 6 ? 'eager' : 'lazy'}
                 decoding="async"
                 referrerPolicy="no-referrer"
@@ -122,7 +125,7 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
               <span className="drive-gallery-card-shade" aria-hidden="true" />
               <span className="drive-gallery-card-meta">
                 <small>{image.collectionTitle}</small>
-                <span>View photograph <b>↗</b></span>
+                <span>{t('view')} <b>↗</b></span>
               </span>
             </button>
           </figure>
@@ -130,20 +133,20 @@ export default function GalleryBrowser({ collections }: GalleryBrowserProps) {
       </div>
 
       {selectedImage && (
-        <div className="drive-gallery-lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer">
+        <div className="drive-gallery-lightbox" role="dialog" aria-modal="true" aria-label={t('viewer')}>
           <button
             type="button"
             className="drive-gallery-lightbox-backdrop"
             onClick={() => setSelectedImage(null)}
-            aria-label="Close image viewer"
+            aria-label={t('close')}
           />
           <div className="drive-gallery-lightbox-frame">
-            <img src={selectedImage.fullSrc} alt={selectedImage.alt} referrerPolicy="no-referrer" />
+            <img src={selectedImage.fullSrc} alt={t('photoAlt', { title: selectedImage.collectionTitle, number: selectedImage.number })} referrerPolicy="no-referrer" />
             <button
               type="button"
               className="drive-gallery-lightbox-close"
               onClick={() => setSelectedImage(null)}
-              aria-label="Close image viewer"
+              aria-label={t('close')}
             >
               <span aria-hidden="true">×</span>
             </button>

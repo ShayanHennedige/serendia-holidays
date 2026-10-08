@@ -3,6 +3,7 @@
 import { useState, type FormEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import InnerHero from './InnerHero';
 import RecommendedGrid from './RecommendedGrid';
 import { useLanguage } from './LanguageProvider';
@@ -103,6 +104,7 @@ export default function TripDetailPage({
   catalogSlug,
 }: TripDetailPageProps) {
   const { locale } = useLanguage();
+  const t = useTranslations('TripDetail');
   const bookingCopy = tripBookingCopy[locale];
   const [form, setForm] = useState({ fullName: '', email: '', whatsapp: '', message: '' });
   const [sending, setSending] = useState(false);
@@ -141,8 +143,8 @@ export default function TripDetailPage({
       <section className="page-content trip-overview">
         <div className="container">
           <div className="section-header">
-            <p className="section-subtitle">Basic Information</p>
-            <h2 className="section-title">Trip Overview</h2>
+            <p className="section-subtitle">{t('overviewKicker')}</p>
+            <h2 className="section-title">{t('overviewTitle')}</h2>
             {heroNote && <p className="trip-hero-note">{heroNote}</p>}
           </div>
 

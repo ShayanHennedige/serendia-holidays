@@ -1,0 +1,302 @@
+{
+  "Planner": {
+    "footer": "© 2026 Serendia Holidays. All rights reserved.",
+    "back": "← Back",
+    "change": "Change",
+    "kinds": {
+      "individualTags": [
+        "1–5 travelers",
+        "Solo",
+        "Couple",
+        "Family",
+        "Small Group"
+      ],
+      "groupTags": [
+        "6+ travelers",
+        "Corporate",
+        "School",
+        "Tour Group",
+        "Event"
+      ]
+    },
+    "pill": {
+      "groupLong": "Group · 6+ travelers",
+      "individualLong": "Individual · 1–5 travelers",
+      "group": "Group",
+      "individual": "Individual",
+      "early": "Early Planning",
+      "full": "Full Details"
+    },
+    "start": {
+      "title": "How would you like to start?",
+      "copy": "Select based on how much information you have right now.",
+      "early": {
+        "title": "Early Planning",
+        "subtitle": "Rough dates and pax count. Flight info and personal details will be provided later.",
+        "tags": [
+          "3 steps",
+          "Dates",
+          "Pax Count",
+          "Preferences"
+        ]
+      },
+      "full": {
+        "title": "Full Details Ready",
+        "subtitle": "All information — flights, passport numbers, and complete personal details.",
+        "tags": [
+          "4 steps",
+          "Flights",
+          "Passports",
+          "All Details"
+        ]
+      }
+    },
+    "steps": {
+      "overview": "Trip Overview",
+      "travelers": "Travelers",
+      "dates": "Dates & Flights",
+      "accommodation": "Accommodation",
+      "activities": "Activities"
+    },
+    "agent": {
+      "toggle": "This booking is arranged by a travel agent",
+      "name": "Agent Name",
+      "namePlaceholder": "Agent name",
+      "email": "Agent Email",
+      "agency": "Agency / Company",
+      "agencyPlaceholder": "Travel agency"
+    },
+    "travelers": {
+      "title": "Travelers",
+      "numberTitle": "Number of Travelers",
+      "total": "{count} total",
+      "adults": "Adults",
+      "adultsHint": "18 and above",
+      "children": "Children",
+      "childrenHint": "Under 12"
+    },
+    "details": {
+      "title": "Traveler Details",
+      "copy": "Passport and contact information",
+      "lead": "Lead Traveler",
+      "primary": "Primary contact",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "First name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Last name",
+      "passport": "Passport No.",
+      "passportPlaceholder": "Passport number",
+      "country": "Country",
+      "countryPlaceholder": "Country",
+      "email": "E-Mail",
+      "emailPlaceholder": "Email address",
+      "phone": "Contact Number",
+      "phonePlaceholder": "Phone number"
+    },
+    "dates": {
+      "title": "Travel Dates",
+      "arrival": "Arrival Date *",
+      "departure": "Departure Date *",
+      "laterNote": "Flight numbers, arrival times, and passenger details can be added later from the inquiry page."
+    },
+    "flights": {
+      "title": "Travel Dates & Flights",
+      "arrival": "Arrival",
+      "departure": "Departure",
+      "date": "Date *",
+      "flight": "Flight No. (optional)",
+      "flightPlaceholder": "e.g. {code}",
+      "time": "Time (optional)",
+      "hours": "HH",
+      "minutes": "MM"
+    },
+    "accommodation": {
+      "title": "Accommodation Preferences",
+      "copy": "Select one or more options in every category that fits your trip.",
+      "hotelType": "Hotel Type *",
+      "roomCategory": "Room Category *",
+      "mealPlan": "Meal Plan",
+      "budget": "Budget Style *",
+      "multiple": "(multiple selection)",
+      "optionalMultiple": "(optional · multiple selection)",
+      "rooms": "Number of Rooms *",
+      "roomsTotal": "{count, plural, one {# room} other {# rooms}}"
+    },
+    "options": {
+      "activities": [
+        "Wildlife and Nature",
+        "Wellness and Spiritual",
+        "Archeology and Heritage",
+        "Tea Experience and Hill Country",
+        "Hiking & Adventure",
+        "Beach & Water Sports",
+        "Cultural & Heritage",
+        "Urban & Leisure",
+        "Eco & Village Experiences",
+        "Cricket & Sporting Experiences"
+      ],
+      "hotelTypes": [
+        "3 Star",
+        "4 Star",
+        "5 Star",
+        "Boutique",
+        "Villa",
+        "Budget"
+      ],
+      "roomCategories": [
+        "Standard",
+        "Deluxe",
+        "Superior",
+        "Suite"
+      ],
+      "mealPlans": [
+        "BB · Bed & breakfast",
+        "HB · Half board",
+        "FB · Full board",
+        "AI · All inclusive",
+        "RO · Room only"
+      ],
+      "budgets": [
+        "Smart value",
+        "Comfort",
+        "Premium",
+        "Ultra-luxury"
+      ],
+      "travelStyles": [
+        "Private & flexible",
+        "Culture & heritage",
+        "Wildlife & nature",
+        "Wellness & slow travel",
+        "Family discovery",
+        "Luxury island journey"
+      ],
+      "paces": [
+        "Relaxed",
+        "Balanced",
+        "Active"
+      ],
+      "transport": [
+        "Private car",
+        "Private van",
+        "Luxury vehicle",
+        "Rail + chauffeur",
+        "Coach"
+      ],
+      "rooms": {
+        "double": {
+          "title": "Double (DBL)",
+          "note": "1 double bed · 2 guests"
+        },
+        "single": {
+          "title": "Single (SGL)",
+          "note": "1 single bed · 1 guest"
+        },
+        "triple": {
+          "title": "Triple (TPL)",
+          "note": "3 beds · 3 guests"
+        },
+        "quad": {
+          "title": "Quadruple (QTPL)",
+          "note": "4 beds · 4 guests"
+        }
+      }
+    },
+    "activities": {
+      "title": "Activities",
+      "copy": "Select the activities you are interested in",
+      "error": "Please select at least one activity"
+    },
+    "journey": {
+      "title": "Journey Preferences",
+      "copy": "Help our consultants shape the pace, comfort and transport around you.",
+      "style": "Travel style",
+      "pace": "Travel pace",
+      "transport": "Transport preference",
+      "chauffeur": "Include a private chauffeur"
+    },
+    "requests": {
+      "title": "Special Requests & Desires",
+      "copy": "Specific preferences, dietary needs, or special arrangements",
+      "dietary": "Dietary requirements",
+      "dietaryPlaceholder": "E.g. vegetarian, allergies",
+      "accessibility": "Accessibility requirements",
+      "accessibilityPlaceholder": "E.g. wheelchair access, limited walking",
+      "requestsPlaceholder": "E.g. prefer boutique hotels, need wheelchair access, vegetarian meals, anniversary celebration..."
+    },
+    "summary": {
+      "travelers": "Travelers: {count}",
+      "style": "Style: {mode}"
+    },
+    "errors": {
+      "unavailable": "The AI trip planner is temporarily unavailable.",
+      "contact": "You can also WhatsApp/Call +94 77 398 6504 or <link>contact us</link>."
+    },
+    "actions": {
+      "generate": "Generate AI itinerary ✦",
+      "generating": "Building your itinerary…",
+      "continue": "Continue →"
+    }
+  },
+  "PlannerResult": {
+    "errors": {
+      "pdf": "We could not create your PDF right now.",
+      "pdfIncomplete": "The PDF download was incomplete. Please try again.",
+      "finalise": "Could not finalise your tour request right now."
+    },
+    "confirmEmail": "The PDF has been created. Send it to {email} now?",
+    "notices": {
+      "skipped": "PDF created successfully. Email sending was skipped.",
+      "emailFailed": "The PDF was created, but the email could not be sent.",
+      "emailed": "PDF emailed to {email}.",
+      "emailFailedNow": "The PDF was created, but the email could not be sent right now.",
+      "sending": "Sending the PDF by email now..."
+    },
+    "thanks": {
+      "kicker": "Tour request submitted",
+      "title": "Thank You!",
+      "lead": "Your personalised tour request has been submitted successfully.",
+      "reference": "Reference number",
+      "nextTitle": "Our travel consultants will now:",
+      "nextSteps": [
+        "Review your itinerary",
+        "Check hotel availability",
+        "Prepare your quotation",
+        "Contact you shortly"
+      ],
+      "preparing": "Preparing PDF…",
+      "download": "Download PDF",
+      "edit": "Edit Request",
+      "contact": "Contact Us →"
+    },
+    "route": {
+      "banner": "Selected destinations",
+      "ready": "Ready for your review",
+      "title": "Your selected route",
+      "lead": "Review the destinations you pinned, then add your contact details and finalise the request for the Serendia operations team.",
+      "stop": "Stop {number}",
+      "destinations": "{count, plural, one {# destination} other {# destinations}}",
+      "experiences": "{count, plural, one {# experience} other {# experiences}}",
+      "travellers": "{count, plural, one {# traveller} other {# travellers}}",
+      "pace": "{pace} pace"
+    },
+    "final": {
+      "kicker": "Final submission",
+      "title": "Finalise My Tour",
+      "copy": "We will create a professional PDF first, then ask whether you want it emailed to {email}.",
+      "fullName": "Full name *",
+      "country": "Country",
+      "email": "Email address",
+      "phone": "Contact number",
+      "method": "Preferred contact method",
+      "methodEmail": "Email",
+      "methodPhone": "Phone",
+      "consent": "I confirm these details are accurate and consent to Serendia Holidays processing this request for itinerary review and quotation.",
+      "callUs": "You can also WhatsApp/Call +94 77 398 6504.",
+      "editPreferences": "← Edit preferences",
+      "creating": "Creating PDF…",
+      "sendingEmail": "Sending email…",
+      "submit": "Finalise My Tour →",
+      "security": "Generated in memory · PDF not stored on the server · Email prompt appears after creation"
+    }
+  }
+}

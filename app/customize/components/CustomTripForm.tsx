@@ -2,40 +2,16 @@
 
 import type { Dispatch, FormEvent, SetStateAction } from 'react';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 import MapboxTripPicker, { mapPickerCopy } from './MapboxTripPicker';
 import AiItineraryResult from './AiItineraryResult';
+import { activityOptions, budgetOptions, hotelTypes, mealPlans, roomCategories, roomTypes, transportOptions, travelPaces, travelStyles } from './plannerOptions';
 import { useLanguage } from '../../components/LanguageProvider';
 import type { AiItinerary, PinnedLocation, TourDetails } from '../../lib/tour-types';
 
-const activityOptions = [
-  'Wildlife and Nature',
-  'Wellness and Spiritual',
-  'Archeology and Heritage',
-  'Tea Experience and Hill Country',
-  'Hiking & Adventure',
-  'Beach & Water Sports',
-  'Cultural & Heritage',
-  'Urban & Leisure',
-  'Eco & Village Experiences',
-  'Cricket & Sporting Experiences',
-];
-
-const hotelTypes = ['3 Star', '4 Star', '5 Star', 'Boutique', 'Villa', 'Budget'];
-const roomCategories = ['Standard', 'Deluxe', 'Superior', 'Suite'];
-const mealPlans = ['BB', 'HB', 'FB', 'AI', 'RO'];
-const budgetOptions = ['Smart value', 'Comfort', 'Premium', 'Ultra-luxury'];
-const travelStyles = ['Private & flexible', 'Culture & heritage', 'Wildlife & nature', 'Wellness & slow travel', 'Family discovery', 'Luxury island journey'];
-const travelPaces = ['Relaxed', 'Balanced', 'Active'];
-const transportOptions = ['Private car', 'Private van', 'Luxury vehicle', 'Rail + chauffeur', 'Coach'];
-const roomTypes = [
-  { key: 'double', title: 'Double (DBL)', note: '1 double bed · 2 guests' },
-  { key: 'single', title: 'Single (SGL)', note: '1 single bed · 1 guest' },
-  { key: 'triple', title: 'Triple (TPL)', note: '3 beds · 3 guests' },
-  { key: 'quad', title: 'Quadruple (QTPL)', note: '4 beds · 4 guests' },
-];
-
 type TravelerKind = 'individual' | 'group' | null;
 type PlanningMode = 'early' | 'full' | null;
+type StepKey = 'overview' | 'travelers' | 'dates' | 'accommodation' | 'activities';
 
 function ToggleCard({
   active,
@@ -132,6 +108,9 @@ function CountControl({
 
 export default function CustomTripForm() {
   const { locale, dictionary: { planner } } = useLanguage();
+  const t = useTranslations('Planner');
+  const labels = (key: string) => t.raw(`options.${key}`) as string[];
+  const optionLabel = (key: string, values: string[], value: string) => labels(key)[values.indexOf(value)] ?? value;
   const [travelerKind, setTravelerKind] = useState<TravelerKind>(null);
   const [planningMode, setPlanningMode] = useState<PlanningMode>(null);
   const [stepIndex, setStepIndex] = useState(0);
@@ -168,9 +147,9 @@ export default function CustomTripForm() {
   const [aiError, setAiError] = useState<string | null>(null);
 
   const isEarlyPlanning = planningMode === 'early';
-  const stepLabels = isEarlyPlanning
-    ? ['Trip Overview', 'Accommodation', 'Activities']
-    : ['Travelers', 'Dates & Flights', 'Accommodation', 'Activities'];
+  const stepLabels: StepKey[] = isEarlyPlanning
+    ? ['overview', 'accommodation', 'activities']
+    : ['travelers', 'dates', 'accommodation', 'activities'];
 
   const totalTravelers = adults + children;
   const selectedLocations = selectedDestinationPins.map((pin) => pin.label);
@@ -251,13 +230,13 @@ export default function CustomTripForm() {
       const data = await response.json();
 
       if (!response.ok) {
-        setAiError(data.error || 'The AI trip planner is temporarily unavailable.');
+        setAiError(data.error || t('errors.unavailable'));
         return;
       }
 
       setAiItinerary(data);
     } catch {
-      setAiError('The AI trip planner is temporarily unavailable.');
+      setAiError(t('errors.unavailable'));
     } finally {
       setAiLoading(false);
     }
@@ -317,7 +296,7 @@ export default function CustomTripForm() {
             active={false}
             title={planner.individual}
             subtitle={planner.individualCopy}
-            tags={['1–5 travelers', 'Solo', 'Couple', 'Family', 'Small Group']}
+            tags={t.raw('kinds.individualTags') as string[]}
             icon="individual"
             onClick={() => setTravelerKind('individual')}
           />
@@ -325,7 +304,7 @@ export default function CustomTripForm() {
             active={false}
             title={planner.group}
             subtitle={planner.groupCopy}
-            tags={['6+ travelers', 'Corporate', 'School', 'Tour Group', 'Event']}
+            tags={t.raw('kinds.groupTags') as string[]}
             icon="group"
             onClick={() => {
               setTravelerKind('group');
@@ -333,7 +312,7 @@ export default function CustomTripForm() {
             }}
           />
         </div>
-        <p className="planner-inline-footer">© 2026 Serendia Holidays. All rights reserved.</p>
+        <p className="planner-inline-footer">{t('footer')}</p>
       </div>
     );
   }
@@ -346,34 +325,34 @@ export default function CustomTripForm() {
     return (
       <div className="planner-card planner-selection-card">
         <div className="planner-selection-topline">
-          <button type="button" className="planner-back-link" onClick={goBack}>← Back</button>
+          <button type="button" className="planner-back-link" onClick={goBack}>{t('back')}</button>
           <span className="planner-pill">
-            {travelerKind === 'group' ? 'Group · 6+ travelers' : 'Individual · 1–5 travelers'}
+            {travelerKind === 'group' ? t('pill.groupLong') : t('pill.individualLong')}
           </span>
         </div>
         <div className="planner-selection-header">
-          <h2>How would you like to start?</h2>
-          <p>Select based on how much information you have right now.</p>
+          <h2>{t('start.title')}</h2>
+          <p>{t('start.copy')}</p>
         </div>
         <div className="planner-choice-grid">
           <ToggleCard
             active={false}
-            title="Early Planning"
-            subtitle="Rough dates and pax count. Flight info and personal details will be provided later."
-            tags={['3 steps', 'Dates', 'Pax Count', 'Preferences']}
+            title={t('start.early.title')}
+            subtitle={t('start.early.subtitle')}
+            tags={t.raw('start.early.tags') as string[]}
             icon="calendar"
             onClick={() => startPlanning('early')}
           />
           <ToggleCard
             active={false}
-            title="Full Details Ready"
-            subtitle="All information — flights, passport numbers, and complete personal details."
-            tags={['4 steps', 'Flights', 'Passports', 'All Details']}
+            title={t('start.full.title')}
+            subtitle={t('start.full.subtitle')}
+            tags={t.raw('start.full.tags') as string[]}
             icon="check"
             onClick={() => startPlanning('full')}
           />
         </div>
-        <p className="planner-inline-footer">© 2026 Serendia Holidays. All rights reserved.</p>
+        <p className="planner-inline-footer">{t('footer')}</p>
       </div>
     );
   }
@@ -385,8 +364,8 @@ export default function CustomTripForm() {
     <form className="planner-card planner-wizard-card" onSubmit={onSubmit}>
       <div className="planner-wizard-top">
         <div className="planner-pill-row">
-          <span className="planner-pill">{travelerKind === 'group' ? 'Group' : 'Individual'}</span>
-          <span className="planner-pill planner-pill-muted">{isEarlyPlanning ? 'Early Planning' : 'Full Details'}</span>
+          <span className="planner-pill">{travelerKind === 'group' ? t('pill.group') : t('pill.individual')}</span>
+          <span className="planner-pill planner-pill-muted">{isEarlyPlanning ? t('pill.early') : t('pill.full')}</span>
         </div>
         <button
           type="button"
@@ -396,7 +375,7 @@ export default function CustomTripForm() {
             setStepIndex(0);
           }}
         >
-          Change
+          {t('change')}
         </button>
       </div>
 
@@ -411,7 +390,7 @@ export default function CustomTripForm() {
                 {isCompleted ? '✓' : index + 1}
               </div>
               <div className="planner-progress-copy">
-                <span>{label}</span>
+                <span>{t(`steps.${label}`)}</span>
               </div>
               {index < stepLabels.length - 1 && <div className="planner-progress-line" aria-hidden="true" />}
             </div>
@@ -419,28 +398,28 @@ export default function CustomTripForm() {
         })}
       </div>
 
-      {(activeLabel === 'Trip Overview' || activeLabel === 'Travelers') && (
+      {(activeLabel === 'overview' || activeLabel === 'travelers') && (
         <>
           <section className="planner-panel planner-agent-panel">
             <label className={`planner-radio-row ${agentBooking ? 'checked' : ''}`}>
               <input type="checkbox" checked={agentBooking} onChange={(event) => setAgentBooking(event.target.checked)} />
               <span className="planner-radio-mark" aria-hidden="true" />
-              <span>This booking is arranged by a travel agent</span>
+              <span>{t('agent.toggle')}</span>
             </label>
 
             {agentBooking && (
               <div className="planner-grid planner-grid-2 planner-agent-grid">
                 <div>
-                  <label>Agent Name</label>
-                  <input className="planner-input" placeholder="Agent name" />
+                  <label>{t('agent.name')}</label>
+                  <input className="planner-input" placeholder={t('agent.namePlaceholder')} />
                 </div>
                 <div>
-                  <label>Agent Email</label>
+                  <label>{t('agent.email')}</label>
                   <input className="planner-input" placeholder="agent@example.com" />
                 </div>
                 <div className="planner-grid-span">
-                  <label>Agency / Company</label>
-                  <input className="planner-input planner-input-muted" placeholder="Travel agency" />
+                  <label>{t('agent.agency')}</label>
+                  <input className="planner-input planner-input-muted" placeholder={t('agent.agencyPlaceholder')} />
                 </div>
               </div>
             )}
@@ -448,48 +427,48 @@ export default function CustomTripForm() {
 
           <section className="planner-panel">
             <div className="planner-panel-header">
-              <h3>{activeLabel === 'Travelers' ? 'Travelers' : 'Number of Travelers'}</h3>
-              <span className="planner-total-pill">{totalTravelers} total</span>
+              <h3>{activeLabel === 'travelers' ? t('travelers.title') : t('travelers.numberTitle')}</h3>
+              <span className="planner-total-pill">{t('travelers.total', { count: totalTravelers })}</span>
             </div>
-            <CountControl label="Adults" hint="18 and above" value={adults} min={1} onChange={setAdults} />
-            <CountControl label="Children" hint="Under 12" value={children} onChange={setChildren} />
+            <CountControl label={t('travelers.adults')} hint={t('travelers.adultsHint')} value={adults} min={1} onChange={setAdults} />
+            <CountControl label={t('travelers.children')} hint={t('travelers.childrenHint')} value={children} onChange={setChildren} />
           </section>
 
-          {activeLabel === 'Travelers' && !isEarlyPlanning && (
+          {activeLabel === 'travelers' && !isEarlyPlanning && (
             <section className="planner-panel">
               <div className="planner-panel-header planner-panel-header-stack">
-                <h3>Traveler Details</h3>
-                <p>Passport and contact information</p>
+                <h3>{t('details.title')}</h3>
+                <p>{t('details.copy')}</p>
               </div>
               <div className="planner-lead-badge">
                 <span>1</span>
-                <strong>Lead Traveler</strong>
-                <small>Primary contact</small>
+                <strong>{t('details.lead')}</strong>
+                <small>{t('details.primary')}</small>
               </div>
               <div className="planner-grid planner-grid-2">
                 <div>
-                  <label>First Name</label>
-                  <input className="planner-input" placeholder="First name" />
+                  <label>{t('details.firstName')}</label>
+                  <input className="planner-input" placeholder={t('details.firstNamePlaceholder')} />
                 </div>
                 <div>
-                  <label>Last Name</label>
-                  <input className="planner-input" placeholder="Last name" />
+                  <label>{t('details.lastName')}</label>
+                  <input className="planner-input" placeholder={t('details.lastNamePlaceholder')} />
                 </div>
                 <div>
-                  <label>Passport No.</label>
-                  <input className="planner-input" placeholder="Passport number" />
+                  <label>{t('details.passport')}</label>
+                  <input className="planner-input" placeholder={t('details.passportPlaceholder')} />
                 </div>
                 <div>
-                  <label>Country</label>
-                  <input className="planner-input" placeholder="Country" />
+                  <label>{t('details.country')}</label>
+                  <input className="planner-input" placeholder={t('details.countryPlaceholder')} />
                 </div>
                 <div>
-                  <label>E-Mail</label>
-                  <input className="planner-input" placeholder="Email address" />
+                  <label>{t('details.email')}</label>
+                  <input className="planner-input" placeholder={t('details.emailPlaceholder')} />
                 </div>
                 <div>
-                  <label>Contact Number</label>
-                  <input className="planner-input" placeholder="Phone number" />
+                  <label>{t('details.phone')}</label>
+                  <input className="planner-input" placeholder={t('details.phonePlaceholder')} />
                 </div>
               </div>
             </section>
@@ -498,48 +477,48 @@ export default function CustomTripForm() {
           {isEarlyPlanning && (
             <section className="planner-panel">
               <div className="planner-panel-header planner-panel-header-stack">
-                <h3>Travel Dates</h3>
+                <h3>{t('dates.title')}</h3>
               </div>
               <div className="planner-grid planner-grid-2">
                 <div>
-                  <label>Arrival Date *</label>
+                  <label>{t('dates.arrival')}</label>
                   <input type="date" className="planner-input" value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)} />
                 </div>
                 <div>
-                  <label>Departure Date *</label>
+                  <label>{t('dates.departure')}</label>
                   <input type="date" className="planner-input" value={departureDate} onChange={(event) => setDepartureDate(event.target.value)} />
                 </div>
               </div>
-              <div className="planner-info-strip">Flight numbers, arrival times, and passenger details can be added later from the inquiry page.</div>
+              <div className="planner-info-strip">{t('dates.laterNote')}</div>
             </section>
           )}
         </>
       )}
 
-      {activeLabel === 'Dates & Flights' && (
+      {activeLabel === 'dates' && (
         <>
           <section className="planner-panel">
             <div className="planner-panel-header planner-panel-header-stack">
-              <h3>Travel Dates &amp; Flights</h3>
+              <h3>{t('flights.title')}</h3>
             </div>
 
             <div className="planner-subsection">
-              <span className="planner-subheading">Arrival</span>
+              <span className="planner-subheading">{t('flights.arrival')}</span>
               <div className="planner-grid planner-grid-3">
                 <div>
-                  <label>Date *</label>
+                  <label>{t('flights.date')}</label>
                   <input type="date" className="planner-input" value={arrivalDate} onChange={(event) => setArrivalDate(event.target.value)} />
                 </div>
                 <div>
-                  <label>Flight No. (optional)</label>
-                  <input className="planner-input" placeholder="e.g. UL123" value={arrivalFlight} onChange={(event) => setArrivalFlight(event.target.value)} />
+                  <label>{t('flights.flight')}</label>
+                  <input className="planner-input" placeholder={t('flights.flightPlaceholder', { code: 'UL123' })} value={arrivalFlight} onChange={(event) => setArrivalFlight(event.target.value)} />
                 </div>
                 <div>
-                  <label>Time (optional)</label>
+                  <label>{t('flights.time')}</label>
                   <div className="planner-time-row">
-                    <input className="planner-input" placeholder="HH" value={arrivalTime.hour} onChange={(event) => setArrivalTime({ ...arrivalTime, hour: event.target.value })} />
+                    <input className="planner-input" placeholder={t('flights.hours')} value={arrivalTime.hour} onChange={(event) => setArrivalTime({ ...arrivalTime, hour: event.target.value })} />
                     <span>:</span>
-                    <input className="planner-input" placeholder="MM" value={arrivalTime.minute} onChange={(event) => setArrivalTime({ ...arrivalTime, minute: event.target.value })} />
+                    <input className="planner-input" placeholder={t('flights.minutes')} value={arrivalTime.minute} onChange={(event) => setArrivalTime({ ...arrivalTime, minute: event.target.value })} />
                     <div className="planner-ampm">
                       <button type="button" className={arrivalTime.period === 'AM' ? 'active' : ''} onClick={() => setArrivalTime({ ...arrivalTime, period: 'AM' })}>AM</button>
                       <button type="button" className={arrivalTime.period === 'PM' ? 'active' : ''} onClick={() => setArrivalTime({ ...arrivalTime, period: 'PM' })}>PM</button>
@@ -550,22 +529,22 @@ export default function CustomTripForm() {
             </div>
 
             <div className="planner-subsection">
-              <span className="planner-subheading">Departure</span>
+              <span className="planner-subheading">{t('flights.departure')}</span>
               <div className="planner-grid planner-grid-3">
                 <div>
-                  <label>Date *</label>
+                  <label>{t('flights.date')}</label>
                   <input type="date" className="planner-input" value={departureDate} onChange={(event) => setDepartureDate(event.target.value)} />
                 </div>
                 <div>
-                  <label>Flight No. (optional)</label>
-                  <input className="planner-input" placeholder="e.g. UL124" value={departureFlight} onChange={(event) => setDepartureFlight(event.target.value)} />
+                  <label>{t('flights.flight')}</label>
+                  <input className="planner-input" placeholder={t('flights.flightPlaceholder', { code: 'UL124' })} value={departureFlight} onChange={(event) => setDepartureFlight(event.target.value)} />
                 </div>
                 <div>
-                  <label>Time (optional)</label>
+                  <label>{t('flights.time')}</label>
                   <div className="planner-time-row">
-                    <input className="planner-input" placeholder="HH" value={departureTime.hour} onChange={(event) => setDepartureTime({ ...departureTime, hour: event.target.value })} />
+                    <input className="planner-input" placeholder={t('flights.hours')} value={departureTime.hour} onChange={(event) => setDepartureTime({ ...departureTime, hour: event.target.value })} />
                     <span>:</span>
-                    <input className="planner-input" placeholder="MM" value={departureTime.minute} onChange={(event) => setDepartureTime({ ...departureTime, minute: event.target.value })} />
+                    <input className="planner-input" placeholder={t('flights.minutes')} value={departureTime.minute} onChange={(event) => setDepartureTime({ ...departureTime, minute: event.target.value })} />
                     <div className="planner-ampm">
                       <button type="button" className={departureTime.period === 'AM' ? 'active' : ''} onClick={() => setDepartureTime({ ...departureTime, period: 'AM' })}>AM</button>
                       <button type="button" className={departureTime.period === 'PM' ? 'active' : ''} onClick={() => setDepartureTime({ ...departureTime, period: 'PM' })}>PM</button>
@@ -579,7 +558,7 @@ export default function CustomTripForm() {
         </>
       )}
 
-      {(activeLabel === 'Trip Overview' || activeLabel === 'Dates & Flights') && (
+      {(activeLabel === 'overview' || activeLabel === 'dates') && (
         <section className="planner-panel">
           <div className="planner-panel-header planner-panel-header-stack">
             <h3>{mapPickerCopy[locale].preferred}</h3>
@@ -589,15 +568,15 @@ export default function CustomTripForm() {
         </section>
       )}
 
-      {activeLabel === 'Accommodation' && (
+      {activeLabel === 'accommodation' && (
         <section className="planner-panel">
           <div className="planner-panel-header planner-panel-header-stack">
-            <h3>Accommodation Preferences</h3>
-            <p>Select one or more options in every category that fits your trip.</p>
+            <h3>{t('accommodation.title')}</h3>
+            <p>{t('accommodation.copy')}</p>
           </div>
 
           <div className="planner-section-block">
-            <label className="planner-field-label">Hotel Type * <small>(multiple selection)</small></label>
+            <label className="planner-field-label">{t('accommodation.hotelType')} <small>{t('accommodation.multiple')}</small></label>
             <div className="planner-option-grid planner-option-grid-3">
               {hotelTypes.map((option) => (
                 <button
@@ -608,14 +587,14 @@ export default function CustomTripForm() {
                   onClick={() => togglePreference(option, setSelectedHotelTypes)}
                 >
                   <span className="planner-option-dot" aria-hidden="true" />
-                  {option}
+                  {optionLabel('hotelTypes', hotelTypes, option)}
                 </button>
               ))}
             </div>
           </div>
 
           <div className="planner-section-block">
-            <label className="planner-field-label">Room Category * <small>(multiple selection)</small></label>
+            <label className="planner-field-label">{t('accommodation.roomCategory')} <small>{t('accommodation.multiple')}</small></label>
             <div className="planner-option-grid planner-option-grid-4">
               {roomCategories.map((option) => (
                 <button
@@ -626,14 +605,14 @@ export default function CustomTripForm() {
                   onClick={() => togglePreference(option, setSelectedRoomCategories)}
                 >
                   <span className="planner-option-dot" aria-hidden="true" />
-                  {option}
+                  {optionLabel('roomCategories', roomCategories, option)}
                 </button>
               ))}
             </div>
           </div>
 
           <div className="planner-section-block">
-            <label className="planner-field-label">Meal Plan <small>(optional · multiple selection)</small></label>
+            <label className="planner-field-label">{t('accommodation.mealPlan')} <small>{t('accommodation.optionalMultiple')}</small></label>
             <div className="planner-option-grid planner-option-grid-5">
               {mealPlans.map((option) => (
                 <button
@@ -644,14 +623,14 @@ export default function CustomTripForm() {
                   onClick={() => togglePreference(option, setSelectedMealPlans)}
                 >
                   <span className="planner-option-dot" aria-hidden="true" />
-                  {option}
+                  {optionLabel('mealPlans', mealPlans, option)}
                 </button>
               ))}
             </div>
           </div>
 
           <div className="planner-section-block">
-            <label className="planner-field-label">Budget Style * <small>(multiple selection)</small></label>
+            <label className="planner-field-label">{t('accommodation.budget')} <small>{t('accommodation.multiple')}</small></label>
             <div className="planner-option-grid planner-option-grid-4">
               {budgetOptions.map((option) => (
                 <button
@@ -662,7 +641,7 @@ export default function CustomTripForm() {
                   onClick={() => togglePreference(option, setSelectedBudgets)}
                 >
                   <span className="planner-option-dot" aria-hidden="true" />
-                  {option}
+                  {optionLabel('budgets', budgetOptions, option)}
                 </button>
               ))}
             </div>
@@ -670,22 +649,22 @@ export default function CustomTripForm() {
 
           <div className="planner-section-block">
             <div className="planner-panel-header">
-              <label className="planner-field-label">Number of Rooms *</label>
+              <label className="planner-field-label">{t('accommodation.rooms')}</label>
               <span className="planner-total-pill">
-                {Object.values(roomCounts).reduce((sum, count) => sum + count, 0)} rooms
+                {t('accommodation.roomsTotal', { count: Object.values(roomCounts).reduce((sum, count) => sum + count, 0) })}
               </span>
             </div>
             <div className="planner-room-list">
               {roomTypes.map((room) => (
-                <div key={room.key} className="planner-room-row">
+                <div key={room} className="planner-room-row">
                   <div>
-                    <strong>{room.title}</strong>
-                    <p>{room.note}</p>
+                    <strong>{t(`options.rooms.${room}.title`)}</strong>
+                    <p>{t(`options.rooms.${room}.note`)}</p>
                   </div>
                   <div className="planner-stepper">
-                    <button type="button" onClick={() => updateRoomCount(room.key, roomCounts[room.key] - 1)}>−</button>
-                    <span>{roomCounts[room.key]}</span>
-                    <button type="button" onClick={() => updateRoomCount(room.key, roomCounts[room.key] + 1)}>+</button>
+                    <button type="button" onClick={() => updateRoomCount(room, roomCounts[room] - 1)}>−</button>
+                    <span>{roomCounts[room]}</span>
+                    <button type="button" onClick={() => updateRoomCount(room, roomCounts[room] + 1)}>+</button>
                   </div>
                 </div>
               ))}
@@ -694,14 +673,14 @@ export default function CustomTripForm() {
         </section>
       )}
 
-      {activeLabel === 'Activities' && (
+      {activeLabel === 'activities' && (
         <>
           <section className="planner-panel">
             <div className="planner-panel-header planner-panel-header-stack">
-              <h3>Activities</h3>
-              <p>Select the activities you are interested in</p>
+              <h3>{t('activities.title')}</h3>
+              <p>{t('activities.copy')}</p>
             </div>
-            {activities.length === 0 && <div className="planner-inline-error">Please select at least one activity</div>}
+            {activities.length === 0 && <div className="planner-inline-error">{t('activities.error')}</div>}
             <div className="planner-option-grid planner-option-grid-3">
               {activityOptions.map((activity) => (
                 <button
@@ -711,7 +690,7 @@ export default function CustomTripForm() {
                   onClick={() => toggleActivity(activity)}
                 >
                   <span className="planner-option-dot" aria-hidden="true" />
-                  {activity}
+                  {optionLabel('activities', activityOptions, activity)}
                 </button>
               ))}
             </div>
@@ -719,50 +698,50 @@ export default function CustomTripForm() {
 
           <section className="planner-panel">
             <div className="planner-panel-header planner-panel-header-stack">
-              <h3>Journey Preferences</h3>
-              <p>Help our consultants shape the pace, comfort and transport around you.</p>
+              <h3>{t('journey.title')}</h3>
+              <p>{t('journey.copy')}</p>
             </div>
             <div className="planner-grid planner-grid-3">
-              <label className="planner-field-stack">Travel style
+              <label className="planner-field-stack">{t('journey.style')}
                 <select className="planner-input" value={travelStyle} onChange={(event) => setTravelStyle(event.target.value)}>
-                  {travelStyles.map((option) => <option key={option}>{option}</option>)}
+                  {travelStyles.map((option, index) => <option key={option} value={option}>{labels('travelStyles')[index]}</option>)}
                 </select>
               </label>
-              <label className="planner-field-stack">Travel pace
+              <label className="planner-field-stack">{t('journey.pace')}
                 <select className="planner-input" value={travelPace} onChange={(event) => setTravelPace(event.target.value)}>
-                  {travelPaces.map((option) => <option key={option}>{option}</option>)}
+                  {travelPaces.map((option, index) => <option key={option} value={option}>{labels('paces')[index]}</option>)}
                 </select>
               </label>
-              <label className="planner-field-stack">Transport preference
+              <label className="planner-field-stack">{t('journey.transport')}
                 <select className="planner-input" value={transportPreference} onChange={(event) => setTransportPreference(event.target.value)}>
-                  {transportOptions.map((option) => <option key={option}>{option}</option>)}
+                  {transportOptions.map((option, index) => <option key={option} value={option}>{labels('transport')[index]}</option>)}
                 </select>
               </label>
             </div>
             <label className={`planner-radio-row planner-journey-check ${chauffeurRequired ? 'checked' : ''}`}>
               <input type="checkbox" checked={chauffeurRequired} onChange={(event) => setChauffeurRequired(event.target.checked)} />
               <span className="planner-radio-mark" aria-hidden="true" />
-              <span>Include a private chauffeur</span>
+              <span>{t('journey.chauffeur')}</span>
             </label>
           </section>
 
           <section className="planner-panel">
             <div className="planner-panel-header planner-panel-header-stack">
-              <h3>Special Requests &amp; Desires</h3>
-              <p>Specific preferences, dietary needs, or special arrangements</p>
+              <h3>{t('requests.title')}</h3>
+              <p>{t('requests.copy')}</p>
             </div>
             <div className="planner-grid planner-grid-2 planner-request-grid">
-              <label className="planner-field-stack">Dietary requirements
-                <input className="planner-input" placeholder="E.g. vegetarian, allergies" value={dietaryRequirements} onChange={(event) => setDietaryRequirements(event.target.value)} />
+              <label className="planner-field-stack">{t('requests.dietary')}
+                <input className="planner-input" placeholder={t('requests.dietaryPlaceholder')} value={dietaryRequirements} onChange={(event) => setDietaryRequirements(event.target.value)} />
               </label>
-              <label className="planner-field-stack">Accessibility requirements
-                <input className="planner-input" placeholder="E.g. wheelchair access, limited walking" value={accessibilityRequirements} onChange={(event) => setAccessibilityRequirements(event.target.value)} />
+              <label className="planner-field-stack">{t('requests.accessibility')}
+                <input className="planner-input" placeholder={t('requests.accessibilityPlaceholder')} value={accessibilityRequirements} onChange={(event) => setAccessibilityRequirements(event.target.value)} />
               </label>
             </div>
             <textarea
               className="planner-input planner-textarea"
               rows={5}
-              placeholder="E.g. prefer boutique hotels, need wheelchair access, vegetarian meals, anniversary celebration..."
+              placeholder={t('requests.requestsPlaceholder')}
               value={specialRequests}
               onChange={(event) => setSpecialRequests(event.target.value)}
             />
@@ -770,31 +749,31 @@ export default function CustomTripForm() {
               <div className="planner-summary-chip">
                 {mapPickerCopy[locale].preferred}: {selectedLocations.length > 0 ? selectedLocations.join(' · ') : '—'}
               </div>
-              <div className="planner-summary-chip">Travelers: {totalTravelers}</div>
-              <div className="planner-summary-chip">Style: {planningMode === 'early' ? 'Early Planning' : 'Full Details'}</div>
+              <div className="planner-summary-chip">{t('summary.travelers', { count: totalTravelers })}</div>
+              <div className="planner-summary-chip">{t('summary.style', { mode: planningMode === 'early' ? t('pill.early') : t('pill.full') })}</div>
             </div>
           </section>
         </>
       )}
 
       {isLastStep && aiError && (
-        <div className="planner-inline-error">{aiError} You can also WhatsApp/Call +94 77 398 6504 or <a href="/contact">contact us</a>.</div>
+        <div className="planner-inline-error">{aiError} {t.rich('errors.contact', { link: (chunks) => <a href="/contact">{chunks}</a> })}</div>
       )}
 
       <div className="planner-actions">
-        <button type="button" className="planner-secondary-button" onClick={goBack}>← Back</button>
+        <button type="button" className="planner-secondary-button" onClick={goBack}>{t('back')}</button>
         {isLastStep ? (
           <button type="submit" className="planner-primary-button" disabled={aiLoading || activities.length === 0}>
-            {aiLoading ? 'Building your itinerary…' : 'Generate AI itinerary ✦'}
+            {aiLoading ? t('actions.generating') : t('actions.generate')}
           </button>
         ) : (
           <button type="button" className="planner-primary-button" onClick={() => setStepIndex((current) => Math.min(stepLabels.length - 1, current + 1))}>
-            Continue →
+            {t('actions.continue')}
           </button>
         )}
       </div>
 
-      <p className="planner-inline-footer">© 2026 Serendia Holidays. All rights reserved.</p>
+      <p className="planner-inline-footer">{t('footer')}</p>
     </form>
   );
 }

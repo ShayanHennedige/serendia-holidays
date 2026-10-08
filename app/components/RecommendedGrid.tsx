@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { catalog, findCatalogItem, relatedCatalogItems, type CatalogItem } from '../lib/catalog';
 
 interface RecommendedGridProps {
@@ -9,7 +10,9 @@ interface RecommendedGridProps {
   heading?: string;
 }
 
-export default function RecommendedGrid({ currentSlug, heading = 'You may also like' }: RecommendedGridProps) {
+export default function RecommendedGrid({ currentSlug, heading }: RecommendedGridProps) {
+  const t = useTranslations('Recommended');
+  const catalogText = useTranslations('Catalog');
   const [history, setHistory] = useState<string[]>([]);
 
   useEffect(() => {
@@ -39,15 +42,15 @@ export default function RecommendedGrid({ currentSlug, heading = 'You may also l
     <section className="recommended-grid-section">
       <div className="container">
         <div className="section-header">
-          <p className="section-subtitle">Selected from your interests</p>
-          <h2 className="section-title">{history.length > 1 ? 'Picked for your journey' : heading}</h2>
+          <p className="section-subtitle">{t('kicker')}</p>
+          <h2 className="section-title">{history.length > 1 ? t('picked') : heading ?? t('heading')}</h2>
         </div>
         <div className="recommended-grid">
           {items.map((item) => (
             <Link key={item.slug} href={item.href} className="recommended-card">
-              <span className="recommended-card-type">{item.type}</span>
-              <h3>{item.title}</h3>
-              <p>{item.summary}</p>
+              <span className="recommended-card-type">{t(`types.${item.type}`)}</span>
+              <h3>{catalogText.has(`${item.slug}.title`) ? catalogText(`${item.slug}.title`) : item.title}</h3>
+              <p>{catalogText.has(`${item.slug}.summary`) ? catalogText(`${item.slug}.summary`) : item.summary}</p>
             </Link>
           ))}
         </div>

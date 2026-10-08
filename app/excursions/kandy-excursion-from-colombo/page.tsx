@@ -1,5 +1,6 @@
 import TripDetailPage from '../../components/TripDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES, getTripCopy, withSectionImages } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Kandy Excursion from Colombo - Serendia Holidays By Venom',
@@ -7,52 +8,23 @@ export const metadata = pageMetadata({
   path: '/excursions/kandy-excursion-from-colombo',
 });
 
-export default function KandyFromColomboExcursionPage() {
+// Page text lives in messages/<locale>/excursions.json under ExcursionPages.kandyColombo.
+const sectionImages = [
+  '/images/packages/kandy-temple.jpg',
+  '/images/packages/botanical-garden.jpg',
+  '/images/excursions/pinnawala-river-elephants.webp',
+];
+
+export default async function KandyFromColomboExcursionPage() {
+  const copy = await getTripCopy('ExcursionPages.kandyColombo');
+
   return (
     <TripDetailPage
-      title="Kandy Excursion from Colombo"
-      subtitle="Full Day"
+      {...copy}
       heroImage="/images/excursion-heroes/kandy-hero.png"
-      heroNote="Sri Lanka’s hill capital, its most venerated temple, botanical gardens and a Pinnawala stop in one full day."
-      facts={[
-        { label: 'Duration', value: 'Full Day' },
-        { label: 'Excursion', value: 'Kandy from Colombo' },
-        { label: 'Distance', value: '140km (one way)' },
-        { label: 'Depart', value: '8.30am', note: 'Approximately 3 hours to Kandy' },
-      ]}
-      sections={[
-        {
-          title: 'Temple of the Sacred Tooth Relic',
-          image: '/images/packages/kandy-temple.jpg',
-          paragraphs: [
-            'Set beside Kandy Lake, the Temple of the Sacred Tooth Relic is the spiritual focal point of Sri Lanka’s hill capital. Its daily rituals and historic palace buildings introduce the living traditions of this UNESCO-listed city.',
-            'Allow approximately one hour for the temple complex before lunch in Kandy at your own arrangement.',
-          ],
-        },
-        {
-          title: 'Royal Botanical Gardens, Peradeniya',
-          image: '/images/packages/botanical-garden.jpg',
-          paragraphs: [
-            'The Royal Botanical Gardens at Peradeniya spread across a river-bound landscape just outside Kandy. Palms, flowering trees, giant tropical specimens and the orchid collection make it one of the island’s most rewarding garden walks.',
-            'The visit can be paced gently, with shaded paths and time for photography before beginning the return journey.',
-          ],
-        },
-        {
-          title: 'Pinnawala on the Return Route',
-          image: '/images/excursions/pinnawala-river-elephants.webp',
-          paragraphs: [
-            'A stop at Pinnawala can be arranged around the published care and river routines. Exact viewing conditions and timings remain subject to the facility’s current programme.',
-            'Continue to Colombo after the visit, arriving at the hotel in the evening.',
-          ],
-        },
-      ]}
-      bookingIntro="We will confirm temple dress guidance, attraction opening times and the best departure time for Colombo traffic."
+      sections={withSectionImages(copy.sections, sectionImages)}
       catalogSlug="excursion-kandy-colombo"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

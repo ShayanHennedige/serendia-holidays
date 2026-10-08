@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
 import TrustSignalStrip from '../components/TrustSignalStrip';
-import { companyFacts } from '../lib/companyFacts';
+import { getLocale, getTranslations } from 'next-intl/server';
+import type { Locale } from '../lib/i18n';
+import { homeDictionaries } from '../lib/homeI18n';
 import { pageMetadata } from '../lib/seo';
 
 export const metadata = pageMetadata({
@@ -10,12 +12,16 @@ export const metadata = pageMetadata({
   path: '/why-choose-us',
 });
 
-export default function WhyChooseUsPage() {
+export default async function WhyChooseUsPage() {
+  const t = await getTranslations('WhyChooseUs');
+  // Same translated company facts as the rotating trust strip on the homepage.
+  const companyFacts = homeDictionaries[await getLocale() as Locale].trust.facts;
+
   return (
     <main>
       <InnerHero
-        title="Why Choose Us"
-        subtitle="What sets Serendia Holidays apart"
+        title={t('heroTitle')}
+        subtitle={t('heroSubtitle')}
         bgImage="/images/hero-1.png"
       />
 
@@ -24,8 +30,8 @@ export default function WhyChooseUsPage() {
       <section className="page-content why-choose-us-page">
         <div className="container">
           <div className="section-header">
-            <p className="section-subtitle">The evidence</p>
-            <h2 className="section-title">A clear case for choosing Serendia Holidays</h2>
+            <p className="section-subtitle">{t('kicker')}</p>
+            <h2 className="section-title">{t('title')}</h2>
           </div>
 
           <div className="why-choose-us-grid">
@@ -39,10 +45,10 @@ export default function WhyChooseUsPage() {
           </div>
 
           <div className="why-choose-us-cta">
-            <p>Hear it directly from past guests, or see the destinations for yourself.</p>
+            <p>{t('cta')}</p>
             <div className="why-choose-us-cta-links">
-              <Link href="/#testimonials" className="btn-primary">Read Testimonials</Link>
-              <Link href="/gallery" className="btn-secondary">View Gallery</Link>
+              <Link href="/#testimonials" className="btn-primary">{t('testimonials')}</Link>
+              <Link href="/gallery" className="btn-secondary">{t('gallery')}</Link>
             </div>
           </div>
         </div>

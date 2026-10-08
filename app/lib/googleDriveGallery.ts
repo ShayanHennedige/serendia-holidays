@@ -13,6 +13,8 @@ type DriveRecord = {
 export type GalleryImage = {
   id: string;
   alt: string;
+  /** 1-based position in its collection; the gallery builds a translated alt text from it. */
+  number: number;
   src: string;
   fullSrc: string;
 };
@@ -66,6 +68,7 @@ const fallbackCollections: GalleryCollection[] = [
     ].map((src, index) => ({
       id: `fallback-${index + 1}`,
       alt: `A Serendia journey through Sri Lanka, photograph ${index + 1}`,
+      number: index + 1,
       src,
       fullSrc: src,
     })),
@@ -151,6 +154,7 @@ function makeGalleryImage(record: DriveRecord, collectionTitle: string, index: n
   return {
     id: record.id,
     alt: `${collectionTitle}, guest photograph ${index + 1}`,
+    number: index + 1,
     src: `https://drive.google.com/thumbnail?id=${encodedId}&sz=w1600`,
     fullSrc: `https://drive.google.com/thumbnail?id=${encodedId}&sz=w2400`,
   };

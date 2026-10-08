@@ -1,0 +1,129 @@
+{
+  "TripDetail": {
+    "overviewKicker": "Basisinformationen",
+    "overviewTitle": "Reiseüberblick"
+  },
+  "Recommended": {
+    "kicker": "Passend zu Ihren Interessen",
+    "heading": "Das könnte Ihnen auch gefallen",
+    "picked": "Für Ihre Reise ausgewählt",
+    "types": {
+      "tour": "Rundreise",
+      "excursion": "Ausflug",
+      "hotel": "Hotel",
+      "transport": "Transport",
+      "cricket": "Cricket",
+      "consultancy": "Beratung"
+    }
+  },
+  "Catalog": {
+    "tour-best-of-sri-lanka": {
+      "title": "Das Beste von Sri Lanka: Kultur, Natur und Tierwelt",
+      "summary": "8 Nächte / 9 Tage mit antiken Städten, Teeland und einem Abschluss von der Safari bis zum Strand."
+    },
+    "tours-index": {
+      "title": "Rundreisen",
+      "summary": "Maßgeschneiderte mehrtägige Rundreisen – vom Kurztrip bis zur zweiwöchigen Inselrunde."
+    },
+    "excursion-polonnaruwa": {
+      "title": "Ausflug nach Polonnaruwa",
+      "summary": "Ein Tagesausflug in die antike Königsstadt Polonnaruwa."
+    },
+    "excursion-anuradhapura": {
+      "title": "Ausflug nach Anuradhapura ab Dambulla",
+      "summary": "Ein ganztägiger Ausflug von Dambulla zu den Stupas, Tempeln und antiken Stauseen der heiligen Stadt Anuradhapura."
+    },
+    "excursion-colombo": {
+      "title": "Ausflug nach Colombo",
+      "summary": "Eine Halbtagesrunde durch Pettah, das historische Colombo, das Nationalmuseum und moderne Wahrzeichen der Stadt."
+    },
+    "excursion-kandy-colombo": {
+      "title": "Ausflug nach Kandy ab Colombo",
+      "summary": "Ein ganztägiger Ausflug ab Colombo zum Zahntempel in Kandy, zum Botanischen Garten Peradeniya und nach Pinnawala."
+    },
+    "excursion-sigiriya": {
+      "title": "Ausflug nach Sigiriya ab Kandy",
+      "summary": "Ein Tagesausflug durch das Gewürzland um Matale und hinauf auf die Felsenfestung Sigiriya (Löwenfelsen)."
+    },
+    "excursion-trincomalee": {
+      "title": "Ausflug nach Trincomalee",
+      "summary": "Ein Tagesausflug an die Ostküste zum Hafen von Trincomalee, zum Marble Beach und zum Koneswaram-Tempel."
+    },
+    "excursion-yala": {
+      "title": "Ausflug nach Yala ab Bentota oder Galle",
+      "summary": "Eine Tagessafari als Ergänzung für Gäste an der Südküste."
+    },
+    "excursion-nuwara-eliya": {
+      "title": "Ausflug nach Nuwara Eliya ab Kandy",
+      "summary": "Ein Tagesausflug von Kandy ins Teeland."
+    },
+    "excursion-kandy-negombo": {
+      "title": "Ausflug nach Kandy ab Negombo",
+      "summary": "Eine private Tagesrunde durch Kandy, zugeschnitten auf Reisende mit Unterkunft in Negombo."
+    },
+    "excursions-index": {
+      "title": "Ausflüge",
+      "summary": "Tagesausflüge ab wichtigen Ausgangsorten zu antiken Städten, ins Hochland, in Nationalparks und an die Küste."
+    },
+    "hotel-devi-tranquil-villa": {
+      "title": "Devi Tranquil Villa",
+      "summary": "Eine exklusive private Villa."
+    },
+    "hotel-secrets-of-ceylon": {
+      "title": "Secrets of Ceylon",
+      "summary": "Eine ausgewählte Kollektion von Boutique-Unterkünften in Sri Lanka."
+    },
+    "hotels-index": {
+      "title": "Hotels in Sri Lanka",
+      "summary": "Das vollständige Unterkunftsverzeichnis – von Fünf-Sterne-Hotels bis zu Boutique-Villen und Privatunterkünften."
+    },
+    "transport-options": {
+      "title": "Transport",
+      "summary": "Autos, Vans und Busse zum Selbstfahren oder mit Chauffeur, Luxuszüge, Hubschrauber- und Lufttaxi-Charter sowie eine Hop-on-Stadtrundfahrt."
+    },
+    "cricket-tourism": {
+      "title": "Cricket-Reisen",
+      "summary": "Cricket-Reisen für Schulen und Vereine, Zuschauerpakete, Platzbuchungen und Techniktraining."
+    },
+    "hospitality-consultancy": {
+      "title": "Projektmanagement-Beratung für die Hotellerie",
+      "summary": "Beratung für Hotelinvestoren – vom Grundstückserwerb bis zur Inbetriebnahme."
+    }
+  },
+  "ChatToggle": {
+    "open": "KI-Concierge-Chat öffnen",
+    "close": "KI-Concierge-Chat schließen"
+  },
+  "ItineraryMap": {
+    "style": "Kartenstil",
+    "satellite": "Satellit",
+    "map": "Karte",
+    "unavailable": "Routenkarte nicht verfügbar.",
+    "controls": {
+      "NavigationControl": {
+        "ZoomIn": "Vergrößern",
+        "ZoomOut": "Verkleinern",
+        "ResetBearing": "Nach Norden ausrichten"
+      },
+      "AttributionControl": {
+        "ToggleAttribution": "Quellenangaben ein-/ausblenden"
+      },
+      "ScrollZoomBlocker": {
+        "CmdMessage": "Mit ⌘ + Scrollen zoomen",
+        "CtrlMessage": "Mit Strg + Scrollen zoomen"
+      },
+      "TouchPanBlocker": {
+        "Message": "Karte mit zwei Fingern verschieben"
+      },
+      "Marker": {
+        "Title": "Kartenmarkierung"
+      },
+      "Map": {
+        "Title": "Karte"
+      },
+      "LogoControl": {
+        "Title": "Mapbox-Startseite"
+      }
+    }
+  }
+}

@@ -2,77 +2,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AboutMotion from './AboutMotion';
 import styles from './about.module.css';
+import { getTranslations } from 'next-intl/server';
 import { pageMetadata } from '../lib/seo';
 
+// Text for these lists lives in messages/<locale>/about.json (About.disciplines / team / hotelJourney),
+// matched by position.
 const disciplines = [
-  {
-    signal: 'Travel design',
-    title: 'See the island as one connected story.',
-    copy: 'Private journeys, beach stays, hotels and transport are shaped around your pace—not assembled as separate bookings.',
-    image: '/images/transport-train.png',
-    href: '/tours',
-    link: 'Explore tours',
-    meta: 'Tailor-made · Sri Lanka & Maldives',
-  },
-  {
-    signal: 'Cricket tourism',
-    title: 'Tour with people who understand the game.',
-    copy: 'Fixtures, grounds, coaching, supporters and family travel are coordinated by a team with genuine international cricket experience.',
-    image: '/images/cricket-stadium-hero.webp',
-    href: '/cricket-tourism',
-    link: 'Enter cricket tourism',
-    meta: 'Schools · Clubs · Supporters',
-  },
-  {
-    signal: 'Hospitality intelligence',
-    title: 'Build the welcome before the first guest arrives.',
-    copy: 'Hotel concepts move from planning and procurement through operations, training and a supported soft opening.',
-    image: '/images/hero-2.png',
-    href: '/hospitality-consultancy',
-    link: 'View consultancy',
-    meta: 'Concept · Operations · Opening',
-  },
+  { image: '/images/transport-train.png', href: '/tours' },
+  { image: '/images/cricket-stadium-hero.webp', href: '/cricket-tourism' },
+  { image: '/images/hero-2.png', href: '/hospitality-consultancy' },
 ];
 
 const team = [
-  {
-    name: 'Dharshan Hennedige',
-    role: 'Founder · Travel & hospitality',
-    image: '/dharshanimage 2.jpg',
-    copy: '24 years across hotels and travel, including nearly seven years as Executive Secretary of the Sri Lanka Tourism Development Authority.',
-  },
-  {
-    name: 'Desmond Bertholameusz',
-    role: 'Hospitality & commercial',
-    image: '/desmond image .JPG',
-    copy: '37 years of hospitality experience across food and beverage leadership, sales and marketing.',
-  },
-  {
-    name: 'Brendon Kuruppu',
-    role: 'Cricket tourism',
-    image: '/brendon .webp',
-    copy: 'Former Sri Lanka Test and One Day international cricketer with more than 20 years in professional cricket and coaching.',
-  },
-  {
-    name: 'Shayan Hennedige',
-    role: 'Travel consultant',
-    image: '/shayan image .jpg',
-    copy: 'Connects travel planning and technology to make every journey clearer, easier and more personal.',
-  },
-  {
-    name: 'Tharuka Gamage',
-    role: 'System operations',
-    image: '/tharuka.jpeg',
-    copy: 'Supports the digital systems that keep the company’s day-to-day travel operations moving smoothly.',
-  },
+  { name: 'Dharshan Hennedige', image: '/dharshanimage 2.jpg' },
+  { name: 'Desmond Bertholameusz', image: '/desmond image .JPG' },
+  { name: 'Brendon Kuruppu', image: '/brendon .webp' },
+  { name: 'Shayan Hennedige', image: '/shayan image .jpg' },
+  { name: 'Tharuka Gamage', image: '/tharuka.jpeg' },
 ];
 
-const hotelJourney = [
-  ['Shape', 'Concept design, construction planning and practical review of the spaces guests and teams will use.'],
-  ['Protect', 'Project finance, procurement, cost-saving opportunities and statutory documentation.'],
-  ['Prepare', 'Operational manuals, automation, equipment commissioning, people and marketing plans.'],
-  ['Open', 'Training, site supervision and hands-on guidance through the hotel soft opening.'],
-];
+type DisciplineCopy = { signal: string; title: string; copy: string; link: string; meta: string };
+type TeamCopy = { role: string; copy: string };
+type StepCopy = { title: string; text: string };
 
 function ArrowIcon() {
   return (
@@ -88,7 +39,12 @@ export const metadata = pageMetadata({
   path: '/about',
 });
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const t = await getTranslations('About');
+  const disciplineCopy = t.raw('disciplines') as DisciplineCopy[];
+  const teamCopy = t.raw('team') as TeamCopy[];
+  const hotelJourney = t.raw('hotelJourney') as StepCopy[];
+
   return (
     <main className={styles.page} data-about-page>
       <AboutMotion />
@@ -111,21 +67,21 @@ export default function AboutPage() {
         <div className={styles.heroGrid} aria-hidden="true" />
 
         <div className={`container ${styles.heroInner}`}>
-          <p className={styles.heroLabel}>Serendia Holidays by Venom · Sri Lanka</p>
+          <p className={styles.heroLabel}>{t('hero.label')}</p>
           <h1 id="about-hero-title">
-            <span><span data-hero-line>Local knowledge.</span></span>
-            <span><span data-hero-line>Always moving.</span></span>
+            <span><span data-hero-line>{t('hero.line1')}</span></span>
+            <span><span data-hero-line>{t('hero.line2')}</span></span>
           </h1>
 
           <div className={styles.heroDock}>
-            <p>Travel, cricket and hospitality—connected by one Sri Lankan team.</p>
+            <p>{t('hero.dock')}</p>
             <div className={styles.heroMeta}>
-              <span>Independent</span>
-              <span>Established 2019</span>
-              <span>Sri Lanka</span>
+              <span>{t('hero.meta1')}</span>
+              <span>{t('hero.meta2')}</span>
+              <span>{t('hero.meta3')}</span>
             </div>
-            <a href="#our-perspective" className={styles.heroScroll} aria-label="Scroll to our perspective">
-              <span>Discover our perspective</span>
+            <a href="#our-perspective" className={styles.heroScroll} aria-label={t('hero.scrollLabel')}>
+              <span>{t('hero.scroll')}</span>
               <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </a>
           </div>
@@ -135,22 +91,22 @@ export default function AboutPage() {
       <section className={styles.perspective} id="our-perspective" aria-labelledby="perspective-title">
         <div className={`container ${styles.perspectiveGrid}`}>
           <div className={styles.perspectiveHeading} data-reveal>
-            <p className={styles.signal}>Our perspective</p>
-            <h2 id="perspective-title">Not from a guidebook.<br /><span>From experience.</span></h2>
+            <p className={styles.signal}>{t('perspective.signal')}</p>
+            <h2 id="perspective-title">{t('perspective.title1')}<br /><span>{t('perspective.title2')}</span></h2>
           </div>
           <div className={styles.perspectiveCopy} data-reveal>
-            <p>Serendia was created in 2019 by people whose careers were already rooted in Sri Lankan tourism, hotel operations and international cricket.</p>
-            <p>That experience changes the questions we ask, the details we notice and the journeys we build.</p>
+            <p>{t('perspective.copy1')}</p>
+            <p>{t('perspective.copy2')}</p>
           </div>
           <div className={styles.perspectiveVisual} data-reveal>
             <div className={styles.visualMain}>
-              <Image src="/images/hero-3.png" alt="Leopard in a Sri Lankan forest" fill sizes="(max-width: 800px) 100vw, 72vw" />
+              <Image src="/images/hero-3.png" alt={t('perspective.altLeopard')} fill sizes="(max-width: 800px) 100vw, 72vw" />
             </div>
             <div className={styles.visualInset}>
-              <Image src="/images/excursion-colombo.webp" alt="Colombo skyline at sunset" fill sizes="(max-width: 800px) 46vw, 24vw" />
-              <span>Island energy</span>
+              <Image src="/images/excursion-colombo.webp" alt={t('perspective.altColombo')} fill sizes="(max-width: 800px) 46vw, 24vw" />
+              <span>{t('perspective.inset')}</span>
             </div>
-            <p>We plan with the whole island in view—from the quietest road to the busiest match day.</p>
+            <p>{t('perspective.caption')}</p>
           </div>
         </div>
       </section>
@@ -159,27 +115,27 @@ export default function AboutPage() {
         <div className={styles.journeyPin} data-horizontal-pin>
           <div className={`container ${styles.journeyHeading}`}>
             <div data-reveal>
-              <p className={styles.signal}>How we think</p>
-              <h2 id="disciplines-title">Three disciplines.<br />One moving plan.</h2>
+              <p className={styles.signal}>{t('disciplinesSection.signal')}</p>
+              <h2 id="disciplines-title">{t('disciplinesSection.title1')}<br />{t('disciplinesSection.title2')}</h2>
             </div>
-            <p data-reveal>Scroll through the three worlds that shape every Serendia journey.</p>
+            <p data-reveal>{t('disciplinesSection.copy')}</p>
           </div>
 
           <div className={styles.journeyViewport}>
             <div className={styles.journeyTrack} data-horizontal-track>
               {disciplines.map((item, index) => (
-                <article className={styles.disciplineCard} key={item.title}>
+                <article className={styles.disciplineCard} key={item.href}>
                   <div className={styles.disciplineImage}>
                     <Image src={item.image} alt="" fill sizes="(max-width: 899px) 100vw, 66vw" />
                     <div className={styles.disciplineShade} />
                     <span className={styles.disciplineCount}>{String(index + 1).padStart(2, '0')} / 03</span>
-                    <span className={styles.disciplineMeta}>{item.meta}</span>
+                    <span className={styles.disciplineMeta}>{disciplineCopy[index].meta}</span>
                   </div>
                   <div className={styles.disciplineCopy}>
-                    <p>{item.signal}</p>
-                    <h3>{item.title}</h3>
-                    <span>{item.copy}</span>
-                    <Link href={item.href}>{item.link}<ArrowIcon /></Link>
+                    <p>{disciplineCopy[index].signal}</p>
+                    <h3>{disciplineCopy[index].title}</h3>
+                    <span>{disciplineCopy[index].copy}</span>
+                    <Link href={item.href}>{disciplineCopy[index].link}<ArrowIcon /></Link>
                   </div>
                 </article>
               ))}
@@ -192,14 +148,14 @@ export default function AboutPage() {
         <div className="container">
           <div className={styles.teamHeading}>
             <div data-reveal>
-              <p className={styles.signal}>The human layer</p>
-              <h2 id="team-title">The people who connect it all.</h2>
+              <p className={styles.signal}>{t('teamSection.signal')}</p>
+              <h2 id="team-title">{t('teamSection.title')}</h2>
             </div>
-            <p data-reveal>No hand-offs between anonymous departments. The people shaping the idea stay close to the details.</p>
+            <p data-reveal>{t('teamSection.copy')}</p>
           </div>
 
           <div className={styles.teamGrid}>
-            {team.map((member) => (
+            {team.map((member, index) => (
               <article className={styles.person} data-reveal key={member.name}>
                 <div className={styles.personImage}>
                   <Image
@@ -212,9 +168,9 @@ export default function AboutPage() {
                   <div className={styles.personGlow} />
                 </div>
                 <div className={styles.personInfo}>
-                  <p>{member.role}</p>
+                  <p>{teamCopy[index].role}</p>
                   <h3>{member.name}</h3>
-                  <span>{member.copy}</span>
+                  <span>{teamCopy[index].copy}</span>
                 </div>
               </article>
             ))}
@@ -225,13 +181,13 @@ export default function AboutPage() {
       <section className={styles.hotelSection} aria-labelledby="hotel-title">
         <div className={`container ${styles.hotelGrid}`}>
           <div className={styles.hotelIntro} data-reveal>
-            <p className={styles.signal}>Hospitality consultancy</p>
-            <h2 id="hotel-title">A hotel is a journey before it is a destination.</h2>
-            <p>We help investors move from the first practical decisions to an operation ready to welcome its first guests.</p>
-            <Link href="/hospitality-consultancy">Explore the full service <ArrowIcon /></Link>
+            <p className={styles.signal}>{t('hotel.signal')}</p>
+            <h2 id="hotel-title">{t('hotel.title')}</h2>
+            <p>{t('hotel.copy')}</p>
+            <Link href="/hospitality-consultancy">{t('hotel.link')} <ArrowIcon /></Link>
           </div>
           <div className={styles.hotelSteps}>
-            {hotelJourney.map(([title, text], index) => (
+            {hotelJourney.map(({ title, text }, index) => (
               <article data-reveal key={title}>
                 <span>{String(index + 1).padStart(2, '0')}</span>
                 <div><h3>{title}</h3><p>{text}</p></div>
@@ -242,14 +198,14 @@ export default function AboutPage() {
       </section>
 
       <section className={styles.closing} aria-labelledby="closing-title">
-        <Image src="/images/hero-4.png" alt="Sri Lankan coast at sunset" fill sizes="100vw" />
+        <Image src="/images/hero-4.png" alt={t('closing.alt')} fill sizes="100vw" />
         <div className={styles.closingShade} />
         <div className={`container ${styles.closingInner}`} data-reveal>
-          <p className={styles.signal}>Ready when you are</p>
-          <h2 id="closing-title">Your Sri Lanka story starts with someone who knows it.</h2>
+          <p className={styles.signal}>{t('closing.signal')}</p>
+          <h2 id="closing-title">{t('closing.title')}</h2>
           <div className={styles.closingActions}>
-            <Link href="/customize">Plan your journey <ArrowIcon /></Link>
-            <Link href="/contact">Talk to the team</Link>
+            <Link href="/customize">{t('closing.plan')} <ArrowIcon /></Link>
+            <Link href="/contact">{t('closing.talk')}</Link>
           </div>
         </div>
       </section>
