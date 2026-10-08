@@ -1,0 +1,154 @@
+{
+  "Tours": {
+    "heroTitle": "Tours",
+    "heroSubtitle": "Private journeys · local expertise · entirely your own",
+    "intro": {
+      "eyebrow": "Journeys, shaped around you",
+      "title": "See Sri Lanka at your own rhythm.",
+      "copy": "These routes are thoughtful starting points, not fixed packages. We adjust the pace, stays and experiences around the way you want to travel.",
+      "cta": "Start with your travel style",
+      "factsLabel": "Tour collection overview",
+      "journeys": "Curated journeys",
+      "days": "Days on the island",
+      "tailorMade": "Tailor-made"
+    },
+    "catalogue": {
+      "eyebrow": "The collection",
+      "title": "Choose your starting point",
+      "copy": "Culture, wildlife, coast or adventure—every route can be refined by our local team.",
+      "exploreLabel": "Explore {title}",
+      "highlightsLabel": "{title} highlights",
+      "viewJourney": "View the full journey",
+      "designJourney": "Design this journey"
+    },
+    "planner": {
+      "eyebrow": "A route that feels like yours",
+      "title": "Can’t find the exact journey?",
+      "copy": "Tell us what draws you to Sri Lanka and we’ll shape a first draft around your time, interests and preferred pace.",
+      "plan": "Plan your trip",
+      "talk": "Talk to our team"
+    },
+    "items": {
+      "bestOf": {
+        "title": "Best of Sri Lanka: Culture, Nature and Wildlife",
+        "duration": "8 nights · 9 days",
+        "eyebrow": "Signature journey",
+        "summary": "A richly paced introduction to the island, pairing ancient cities and misty highlands with wildlife encounters and a relaxed coastal finish.",
+        "highlights": [
+          "Cultural Triangle",
+          "Hill country",
+          "Wildlife safari"
+        ]
+      },
+      "amazing": {
+        "title": "Amazing Sri Lanka",
+        "duration": "9 nights · 10 days",
+        "eyebrow": "Culture and coast",
+        "summary": "A generous island loop designed for travellers who want heritage, local life, scenic rail country and time beside the Indian Ocean.",
+        "highlights": [
+          "Ancient cities",
+          "Tea country",
+          "Southern coast"
+        ]
+      },
+      "escape": {
+        "title": "Escape to Paradise",
+        "duration": "4 nights · 5 days",
+        "eyebrow": "Short coastal escape",
+        "summary": "A compact, unhurried route with warm-water beaches, characterful stays and just enough culture between slow island mornings.",
+        "highlights": [
+          "Beach stays",
+          "Private transfers",
+          "Local dining"
+        ]
+      },
+      "nature": {
+        "title": "Nature and Wildlife of Sri Lanka",
+        "duration": "10 nights · 11 days",
+        "eyebrow": "Wild island",
+        "summary": "Move from rainforest edges to open national parks on a nature-led journey shaped around responsible wildlife viewing.",
+        "highlights": [
+          "Yala safari",
+          "Birdlife",
+          "Forest stays"
+        ]
+      },
+      "classic": {
+        "title": "Sri Lanka Classic",
+        "duration": "6 nights · 7 days",
+        "eyebrow": "Essential Sri Lanka",
+        "summary": "The island essentials in one considered week: living heritage, cool highlands, a memorable train ride and warm local hosting.",
+        "highlights": [
+          "Kandy",
+          "Scenic rail",
+          "Galle"
+        ]
+      },
+      "adventure": {
+        "title": "Independent Adventure",
+        "duration": "14 nights · 15 days",
+        "eyebrow": "Active journey",
+        "summary": "A flexible expedition for curious travellers, combining hiking, cycling, canoeing and camping with space to explore independently.",
+        "highlights": [
+          "Hiking",
+          "Cycling",
+          "Canoeing"
+        ]
+      }
+    }
+  },
+  "TourBestOfSriLanka": {
+    "title": "Best of Sri Lanka Culture, Nature and Wild Life",
+    "subtitle": "8 Nights / 9 Days",
+    "heroNote": "A flexible round trip combining culture, wildlife, tea country, and coast.",
+    "facts": [
+      {
+        "label": "Duration",
+        "value": "8 Nights / 9 Days"
+      },
+      {
+        "label": "Tour",
+        "value": "Best of Sri Lanka Culture, Nature and Wild Life"
+      },
+      {
+        "label": "Style",
+        "value": "Private round trip"
+      },
+      {
+        "label": "Price",
+        "value": "On request"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Day 01: Airport - Colombo",
+        "paragraphs": [
+          "Arrival and transfer to Colombo for a first overnight stay that keeps the opening day easy and flexible.",
+          "The itinerary can be adapted to flight timing, preferred hotel class, and the pace you want for the rest of the circuit."
+        ]
+      },
+      {
+        "title": "Day 03: Sigiriya - Polonnaruwa",
+        "paragraphs": [
+          "This cultural stretch focuses on Sri Lanka’s heritage triangle with time for ancient cities, rock fortresses, and well known archaeological sites.",
+          "Wildlife and nature are woven into the route so the holiday feels like a single, connected journey instead of disconnected stops."
+        ]
+      },
+      {
+        "title": "Day 05: Kandy - Nuwara Eliya",
+        "paragraphs": [
+          "The trip then climbs into tea country, where cooler air, hill stations, and scenic train or road views shift the rhythm of the holiday.",
+          "Nuwara Eliya gives the tour a softer pace before the southern wildlife and beach portions begin."
+        ]
+      },
+      {
+        "title": "Day 07: Yala - Galle - Bentota",
+        "paragraphs": [
+          "The route finishes with a blend of safari and coast, moving from the national park through the south to the beach belt.",
+          "Because the itinerary is private, the stop order and overnight points can be adjusted around your interests and travel dates."
+        ]
+      }
+    ],
+    "bookingIntro": "Tell us your preferred travel month and hotel category, and we can shape the full circuit around your plan."
+  }
+}

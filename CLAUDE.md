@@ -30,11 +30,13 @@ This is a Next.js App Router marketing site for a Sri Lanka/Maldives travel agen
 - `app/components/TripDetailPage.tsx` renders any tour/excursion page — takes `title`, `facts[]`, `sections[]` (day-by-day itinerary blocks with image + paragraphs), and `bookingLines[]`. Used by everything under `app/tours/*` and `app/excursions/*`.
 - `app/components/HotelDetailPage.tsx` is the equivalent template for `app/sri-lankan-hotels/*` pages.
 
-  To add a new tour/excursion/hotel page, create `app/<section>/<slug>/page.tsx` that imports the matching template and supplies its content object plus a Next.js `metadata` export — do not build a new page layout from scratch.
+  To add a new tour/excursion/hotel page, create `app/<section>/<slug>/page.tsx` that imports the matching template plus a Next.js `metadata` export — do not build a new page layout from scratch. The page's text goes in `messages/<locale>/*.json` (see Languages below); the page file keeps only images, links and slugs (see `app/lib/tripCopy.ts` and any existing excursion page).
 
 - Index pages (`app/tours/page.tsx`, `app/excursions/page.tsx`, `app/sri-lankan-hotels/page.tsx`) list/link to these detail pages; there's no shared data source, so titles/paths are duplicated between the index and the detail page and must be kept in sync by hand.
 
 **Cinematic scroll hero.** The homepage hero (`app/components/CinematicHero.tsx` + `CinematicScrollScene.tsx`) is a GSAP `ScrollTrigger`-driven, WebGL-canvas scene defined as an array of `Scene` objects (kicker/title/caption/image/ctas). `SmoothScrolling.tsx` wraps the page with Lenis for inertial scroll, which the GSAP timeline is synced against. Styling for this feature lives in the co-located `app/components/cinematic.css` rather than `globals.css`. `scripts/verify-cinematic.mjs` exists specifically to catch regressions in this scene (canvas not rendering, copy not visible).
+
+**Languages.** The site is translated into en/fr/de/it/es/lt with `next-intl`, without locale URL prefixes. `i18n/request.ts` picks the language per request (cookie `serendia-locale` from the header selector → Vercel IP country → `Accept-Language` → English; see `app/lib/localeDetection.ts`) and merges the per-section files in `messages/<locale>/`. Server pages use `getTranslations`, client components `useTranslations`. All locales must have identical keys — run `node scripts/check-messages.mjs` after editing them. The homepage, header/footer and `/tour-packages` still use the older hand-rolled dictionaries (`app/lib/i18n.ts`, `homeI18n.ts`, `tourPackagesI18n.ts` + `packages-content/*`) exposed via `LanguageProvider`'s `useLanguage()`.
 
 **Styling.** Plain CSS, no Tailwind/CSS-in-JS — nearly all global styles live in one large `app/globals.css` (3500+ lines); component-scoped styles are the exception (`cinematic.css`). Most images are rendered via plain `<img>`, not `next/image` (one exception: `app/transportation/page.tsx`).
 

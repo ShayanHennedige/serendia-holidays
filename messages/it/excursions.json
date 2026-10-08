@@ -1,0 +1,361 @@
+{
+  "Excursions": {
+    "heroTitle": "Escursioni",
+    "heroSubtitle": "Un giorno libero può aprirti uno Sri Lanka completamente diverso",
+    "intro": {
+      "eyebrow": "La guida di un giorno",
+      "titleLine1": "Parti al mattino.",
+      "titleLine2": "Torna con una storia.",
+      "copy": "Parti dal luogo in cui soggiorni già. Disegniamo percorso, orari e tappe intorno alla tua base, così una sola giornata sembra ampia e non frettolosa.",
+      "assurancesLabel": "Dettagli del servizio escursioni",
+      "assurances": ["Prelievo privato", "Ritmo flessibile", "Organizzazione locale"]
+    },
+    "list": {
+      "eyebrow": "Scegli in base alla curiosità",
+      "title": "Nove modi di trascorrere una giornata",
+      "copy": "Antiche capitali, l’aria delle terre del tè, l’energia della città, paesaggi selvaggi e l’orizzonte della costa orientale.",
+      "exploreLabel": "Scopri {title}",
+      "seeDay": "Scopri la giornata"
+    },
+    "cta": {
+      "eyebrow": "Sai già dove soggiornerai?",
+      "title": "Troveremo la giornata migliore intorno a te.",
+      "copy": "Indicaci il tuo hotel o la località in cui soggiorni e l’esperienza che desideri. Il nostro team ti proporrà un percorso privato pratico.",
+      "plan": "Pianifica un’escursione",
+      "ask": "Chiedi al team locale"
+    },
+    "items": {
+      "sigiriya": {
+        "title": "Sigiriya da Kandy",
+        "route": "Kandy → Sigiriya",
+        "duration": "Giornata intera",
+        "theme": "Escursione storica",
+        "summary": "Attraversa la terra delle spezie e sali sull’antica cittadella della Roccia del Leone, sospesa sopra la pianura."
+      },
+      "anuradhapura": {
+        "title": "Anuradhapura da Dambulla",
+        "route": "Dambulla → Anuradhapura",
+        "duration": "Giornata intera",
+        "theme": "Città sacra",
+        "summary": "Esplora stupa monumentali, recinti templari e bacini nella prima grande capitale dello Sri Lanka."
+      },
+      "colombo": {
+        "title": "Colombo",
+        "route": "Giro della città di Colombo",
+        "duration": "Mezza giornata",
+        "theme": "Cultura urbana",
+        "summary": "Tra Pettah, architettura coloniale, musei e i simboli moderni della capitale."
+      },
+      "nuwaraEliya": {
+        "title": "Nuwara Eliya da Kandy",
+        "route": "Kandy → Nuwara Eliya",
+        "duration": "Giornata intera",
+        "theme": "Terre del tè",
+        "summary": "Sali verso i freschi altopiani tra piantagioni di tè, cascate e un ritmo di montagna più lento."
+      },
+      "polonnaruwa": {
+        "title": "Polonnaruwa",
+        "route": "Triangolo culturale",
+        "duration": "Giornata intera",
+        "theme": "Città antica",
+        "summary": "Passeggia tra rovine reali, pietre scolpite e bacini di una capitale medievale straordinariamente conservata."
+      },
+      "yala": {
+        "title": "Yala da Bentota o Galle",
+        "route": "Costa sud → Yala",
+        "duration": "Giornata intera",
+        "theme": "Safari",
+        "summary": "Lascia la costa per la natura selvaggia con un safari privato nel parco nazionale più famoso dello Sri Lanka."
+      },
+      "trincomalee": {
+        "title": "Trincomalee",
+        "route": "Giro della costa orientale",
+        "duration": "Giornata intera",
+        "theme": "Mare e cultura",
+        "summary": "Uno dei grandi porti naturali del mondo, insieme a Marble Beach e al Tempio di Koneswaram."
+      },
+      "kandyColombo": {
+        "title": "Kandy da Colombo",
+        "route": "Colombo → Kandy",
+        "duration": "Giornata intera",
+        "theme": "Capitale delle colline",
+        "summary": "Un percorso privato verso il Tempio del Dente, i giardini di Peradeniya e il lungolago di Kandy."
+      },
+      "kandyNegombo": {
+        "title": "Kandy da Negombo",
+        "route": "Negombo → Kandy",
+        "duration": "Giornata intera",
+        "theme": "Cultura e giardini",
+        "summary": "Raggiungi dalla costa occidentale la storica capitale delle colline con un percorso pensato per il tuo soggiorno."
+      }
+    }
+  },
+  "ExcursionPages": {
+    "anuradhapura": {
+      "title": "Escursione ad Anuradhapura da Dambulla",
+      "subtitle": "Giornata intera",
+      "heroNote": "Una giornata nella prima capitale dello Sri Lanka, tra stupa sacri, antichi bacini e sculture in pietra senza tempo.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Anuradhapura da Dambulla" },
+        { "label": "Distanza", "value": "90 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30", "note": "Circa 1 ora e mezza fino ad Anuradhapura" }
+      ],
+      "sections": [
+        {
+          "title": "Ruwanwelisaya e la città sacra",
+          "paragraphs": [
+            "Anuradhapura fu la prima grande capitale reale dello Sri Lanka e rimase per oltre un millennio un centro di potere e di cultura buddhista. I suoi stupa monumentali, i bacini e i monasteri rivelano la grandezza e la raffinatezza della città antica.",
+            "Il percorso comprende il Ruwanwelisaya, costruito durante il regno del re Dutugemunu, e una selezione di luoghi della città sacra come lo Sri Maha Bodhi, il Buddha Samadhi e Kuttam Pokuna. Il pranzo ad Anuradhapura è libero."
+          ]
+        },
+        {
+          "title": "Tempio di Isurumuniya",
+          "paragraphs": [
+            "Isurumuniya sorge accanto al Tissa Wewa ed è noto per la sua posizione scavata nella roccia e per i celebri bassorilievi, tra cui gli Amanti di Isurumuniya, lo Stagno degli elefanti e le scene della Famiglia reale.",
+            "Dopo aver visitato il recinto del tempio e il museo, si rientra a Dambulla nel tardo pomeriggio o in prima serata."
+          ]
+        }
+      ],
+      "bookingIntro": "Possiamo adattare il percorso nella città sacra ai monumenti che preferisci, alle tue esigenze di mobilità e al tempo a disposizione."
+    },
+    "colombo": {
+      "title": "Escursione a Colombo",
+      "subtitle": "Mezza giornata",
+      "heroNote": "Un’introduzione compatta a mercati, edifici storici, musei e skyline moderno di Colombo.",
+      "facts": [
+        { "label": "Durata", "value": "Mezza giornata" },
+        { "label": "Escursione", "value": "Escursione nella città di Colombo" },
+        { "label": "Distanza", "value": "Circa 50 km" },
+        { "label": "Percorso", "value": "Giro privato della città", "note": "Gli orari possono essere adattati all’hotel e al traffico" }
+      ],
+      "sections": [
+        {
+          "title": "Colombo vecchia e Pettah",
+          "paragraphs": [
+            "Colombo unisce energia commerciale e strati di storia coloniale, religiosa e civile. Il percorso attraversa le vie del mercato di Pettah e alcuni luoghi simbolo che mostrano il mix di Oriente e Occidente, passato e presente.",
+            "A seconda degli orari di apertura e dei tuoi interessi, le tappe possono includere templi buddhisti e induisti, chiese storiche e la zona del Vecchio Parlamento."
+          ]
+        },
+        {
+          "title": "Musei e simboli moderni",
+          "paragraphs": [
+            "Si prosegue nella zona del Museo nazionale e davanti al teatro Nelum Pokuna, per poi vedere il moderno quartiere amministrativo e lo skyline in evoluzione di Colombo.",
+            "La Lotus Tower è il simbolo contemporaneo più riconoscibile della città. L’escursione termina con il rientro al tuo hotel a Colombo."
+          ]
+        }
+      ],
+      "bookingIntro": "Scegli una partenza al mattino o al pomeriggio e costruiremo il giro intorno ai luoghi che desideri vedere di più."
+    },
+    "kandyColombo": {
+      "title": "Escursione a Kandy da Colombo",
+      "subtitle": "Giornata intera",
+      "heroNote": "La capitale delle colline dello Sri Lanka, il suo tempio più venerato, i giardini botanici e una sosta a Pinnawala in un’unica giornata.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Kandy da Colombo" },
+        { "label": "Distanza", "value": "140 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30", "note": "Circa 3 ore fino a Kandy" }
+      ],
+      "sections": [
+        {
+          "title": "Tempio della Sacra Reliquia del Dente",
+          "paragraphs": [
+            "Affacciato sul lago di Kandy, il Tempio della Sacra Reliquia del Dente è il cuore spirituale della capitale delle colline. I rituali quotidiani e gli storici edifici del palazzo introducono alle tradizioni vive di questa città patrimonio UNESCO.",
+            "Calcola circa un’ora per il complesso del tempio prima del pranzo libero a Kandy."
+          ]
+        },
+        {
+          "title": "Giardino botanico reale di Peradeniya",
+          "paragraphs": [
+            "Il Giardino botanico reale di Peradeniya si estende in un’ansa del fiume appena fuori Kandy. Palme, alberi in fiore, giganteschi esemplari tropicali e la collezione di orchidee ne fanno una delle passeggiate più belle dell’isola.",
+            "La visita può svolgersi con calma, lungo sentieri ombreggiati e con tempo per le foto prima del viaggio di ritorno."
+          ]
+        },
+        {
+          "title": "Pinnawala sulla via del ritorno",
+          "paragraphs": [
+            "Una sosta a Pinnawala può essere organizzata in base agli orari pubblicati di cura e bagno al fiume. Condizioni e orari esatti dipendono dal programma in vigore della struttura.",
+            "Dopo la visita si prosegue verso Colombo, con arrivo in hotel in serata."
+          ]
+        }
+      ],
+      "bookingIntro": "Ti confermeremo l’abbigliamento richiesto al tempio, gli orari di apertura e l’orario di partenza migliore in base al traffico di Colombo."
+    },
+    "kandyNegombo": {
+      "title": "Escursione a Kandy da Negombo",
+      "subtitle": "Giornata intera",
+      "heroNote": "Una giornata privata nella capitale delle colline, pensata per chi soggiorna a Negombo, tra cultura e giardini.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Kandy da Negombo" },
+        { "label": "Distanza", "value": "Circa 115 km (solo andata)" },
+        { "label": "Partenza", "value": "Mattina", "note": "L’orario esatto di prelievo viene confermato in base all’hotel e al traffico" }
+      ],
+      "sections": [
+        {
+          "title": "Kandy e il Tempio del Dente",
+          "paragraphs": [
+            "Da Negombo si viaggia verso l’interno fino alla storica capitale delle colline. Il cuore culturale della città è il Tempio della Sacra Reliquia del Dente, all’interno dell’antico palazzo reale sul lago di Kandy.",
+            "La visita è organizzata in base agli orari di apertura e ai rituali del tempio, con il tempo necessario per un pranzo libero a Kandy."
+          ]
+        },
+        {
+          "title": "Giardini di Peradeniya e Pinnawala",
+          "paragraphs": [
+            "Si prosegue verso il Giardino botanico reale di Peradeniya, con viali ombreggiati, collezioni tropicali e la serra delle orchidee.",
+            "A seconda degli orari in vigore si può aggiungere una sosta a Pinnawala all’andata o al ritorno, prima di rientrare a Negombo in serata."
+          ]
+        }
+      ],
+      "bookingIntro": "Questo percorso si basa sulla nostra collaudata escursione di un giorno a Kandy ed è organizzato appositamente in base al tuo hotel a Negombo."
+    },
+    "nuwaraEliya": {
+      "title": "Escursione a Nuwara Eliya da Kandy",
+      "subtitle": "Giornata intera",
+      "heroNote": "Un viaggio panoramico nelle terre del tè con soste a una cascata e in una fabbrica di tè.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Escursione a Nuwara Eliya da Kandy" },
+        { "label": "Distanza", "value": "100 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30 per Nuwara Eliya" }
+      ],
+      "sections": [
+        {
+          "title": "Lungo il percorso: le cascate di Ramboda",
+          "paragraphs": [
+            "Le cascate di Ramboda sono tra le più famose dello Sri Lanka e rappresentano una sosta naturale nel viaggio da Kandy verso gli altopiani.",
+            "L’altitudine, le temperature più fresche e le piantagioni di tè lungo la strada trasformano il trasferimento stesso in parte dell’esperienza."
+          ]
+        },
+        {
+          "title": "Visita alla fabbrica di tè di Labookellie",
+          "paragraphs": [
+            "Labookellie è una storica fabbrica di tè dove potrai vedere come viene lavorato il tè prima di raggiungere i mercati di esportazione.",
+            "Dopo il pranzo e una passeggiata rilassata in città, il ritorno a Kandy chiude la giornata con un fresco viaggio di montagna attraverso gli altopiani centrali."
+          ]
+        },
+        {
+          "title": "Scopri come nasce il tè di Ceylon",
+          "paragraphs": [
+            "Osserva le foglie appena raccolte attraversare le prime fasi della lavorazione, dall’appassimento alla preparazione accurata che dà al tè di Ceylon il suo carattere.",
+            "Uno sguardo ravvicinato al lavoro che si cela dietro le piantagioni che rendono così speciale questo percorso negli altopiani."
+          ]
+        }
+      ],
+      "bookingIntro": "Questa escursione è facile da personalizzare se desideri più tempo per i giardini del tè, le cascate o il centro città."
+    },
+    "polonnaruwa": {
+      "title": "Escursione a Polonnaruwa",
+      "subtitle": "Giornata intera",
+      "heroNote": "Rovine della città antica, fauna selvatica e un rilassante ritorno in hotel dopo pranzo.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Escursione a Polonnaruwa" },
+        { "label": "Distanza", "value": "110 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30 per Polonnaruwa" }
+      ],
+      "sections": [
+        {
+          "title": "La città antica di Polonnaruwa",
+          "paragraphs": [
+            "Meta di ecoturismo, la città è divisa in città nuova e città vecchia, e le rovine, straordinariamente conservate, sono suddivise in cinque aree principali, tra cui il Quadrilatero, il gruppo della Città Nord e il gruppo del Rest House.",
+            "Il percorso si esplora facilmente a piedi e l’area circostante è ben curata: puoi lasciare l’auto e muoverti tra i monumenti con calma."
+          ]
+        },
+        {
+          "title": "Parco nazionale di Minneriya",
+          "paragraphs": [
+            "Il safari in jeep a Minneriya è una delle attività più amate da chi desidera vedere gli elefanti nel loro habitat naturale.",
+            "Gli orari consigliati per il safari sono dalle 5:30 alle 8:30 del mattino o dalle 15:00 alle 18:00 del pomeriggio, prima del rientro in hotel."
+          ]
+        }
+      ],
+      "bookingIntro": "Venom Holidays (Pvt) Ltd. può organizzare l’escursione, il trasporto e l’assistenza locale per la giornata."
+    },
+    "sigiriya": {
+      "title": "Escursione a Sigiriya da Kandy",
+      "subtitle": "Giornata intera",
+      "heroNote": "Attraversa la terra delle spezie di Matale prima della salita pomeridiana sulla celebre fortezza della Roccia del Leone.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Sigiriya da Kandy" },
+        { "label": "Distanza", "value": "100 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30", "note": "Circa 2 ore e mezza fino a Sigiriya" }
+      ],
+      "sections": [
+        {
+          "title": "Giardino delle spezie di Matale",
+          "paragraphs": [
+            "Una sosta a Matale per scoprire le piante profumate alla base della tradizione culinaria dello Sri Lanka. Una visita guidata al giardino presenta spezie conosciute, la loro coltivazione e i loro usi tradizionali.",
+            "Si prosegue verso Sigiriya per il pranzo libero e il tempo per prepararsi alla salita."
+          ]
+        },
+        {
+          "title": "Salita sulla Roccia del Leone di Sigiriya",
+          "paragraphs": [
+            "Sigiriya divenne celebre nel V secolo come cittadella reale del re Kashyapa. I giardini d’acqua, la monumentale porta del Leone, il muro a specchio, gli affreschi e le rovine in cima sono una delle esperienze più rappresentative del patrimonio UNESCO dello Sri Lanka.",
+            "La salita è prevista intorno alle 15:00 e richiede circa due ore. Dopo la discesa si rientra a Kandy in tarda serata."
+          ]
+        }
+      ],
+      "bookingIntro": "La salita prevede molti gradini: comunicaci eventuali esigenze di mobilità così potremo consigliarti su ritmo e alternative."
+    },
+    "trincomalee": {
+      "title": "Escursione a Trincomalee",
+      "subtitle": "Giornata intera",
+      "heroNote": "Il grande porto orientale dello Sri Lanka, una spiaggia luminosa e il sacro scenario di Koneswaram a picco sul mare.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Escursione a Trincomalee" },
+        { "label": "Distanza", "value": "115 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30", "note": "Circa 1 ora e mezza da Habarana" }
+      ],
+      "sections": [
+        {
+          "title": "Porto naturale e Marble Beach",
+          "paragraphs": [
+            "Trincomalee è famosa per uno dei grandi porti naturali del mondo e per una costa di baie riparate, sabbia chiara e acque calde.",
+            "L’escursione prevede del tempo a Marble Beach, dove l’acqua limpida e la posizione riparata invitano a una pausa rilassante al mare. Il pranzo a Trincomalee è libero."
+          ]
+        },
+        {
+          "title": "Tempio di Koneswaram e Swami Rock",
+          "paragraphs": [
+            "Il Tempio di Koneswaram occupa uno spettacolare sito sacro a picco sul mare, sullo Swami Rock. L’area di Trincomalee ospita luoghi importanti sia per la comunità induista sia per quella buddhista, a testimonianza della storia stratificata della costa orientale.",
+            "Dopo il tempio e i belvedere sulla costa, rientro in hotel a Habarana in serata."
+          ]
+        }
+      ],
+      "bookingIntro": "Il tempo in spiaggia può essere adattato in base al meteo, alle condizioni del mare e agli orari di apertura del tempio."
+    },
+    "yala": {
+      "title": "Escursione a Yala da Bentota o Galle",
+      "subtitle": "Giornata intera",
+      "heroNote": "Safari pomeridiano e rientro in hotel in serata.",
+      "facts": [
+        { "label": "Durata", "value": "Giornata intera" },
+        { "label": "Escursione", "value": "Escursione a Yala da Bentota o Galle" },
+        { "label": "Distanza", "value": "200 km (solo andata)" },
+        { "label": "Partenza", "value": "8:30 per Yala" }
+      ],
+      "sections": [
+        {
+          "title": "Safari nel Parco nazionale di Yala",
+          "paragraphs": [
+            "Yala è il parco nazionale più antico dello Sri Lanka ed è suddiviso in blocchi: il Blocco 1 è aperto al pubblico ed è molto noto per l’osservazione della fauna.",
+            "Il parco è famoso soprattutto per elefanti, leopardi, coccodrilli, pavoni e una grande varietà di uccelli: ogni uscita offre ottime possibilità di avvistamenti indimenticabili."
+          ]
+        },
+        {
+          "title": "Il safari del pomeriggio",
+          "paragraphs": [
+            "La strada principale che attraversa il parco divide il paesaggio, con foresta fitta da un lato e praterie dall’altro, creando un percorso spettacolare per i safari.",
+            "Il periodo migliore è la stagione secca, quando gli animali sono più facili da avvistare e il parco offre una classica esperienza di safari in Sri Lanka."
+          ]
+        }
+      ],
+      "bookingIntro": "Possiamo organizzare un safari privato o condiviso in base al luogo in cui soggiorni."
+    }
+  }
+}

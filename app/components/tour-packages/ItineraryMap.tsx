@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
 
 const MAPBOX_ACCESS_TOKEN =
   'pk.eyJ1IjoidGhhcnVrYWdhbWFnZTAxIiwiYSI6ImNtcGdqOWtmcDBhZDEyc3M4OWxtZ2t4OTkifQ.GPu5Lt5ax9FmIQTfkfKj2w';
@@ -84,8 +85,17 @@ export default function ItineraryMap({
   const mapRef = useRef<MapboxMap | null>(null);
   const markersRef = useRef<Map<string, MapboxMarker>>(new Map());
   const activeIdRef = useRef(activeId);
+  // latest stops (their labels translate after first render); read when the pins are drawn
+  const stopsRef = useRef(stops);
   const [styleKey, setStyleKey] = useState<keyof typeof STYLES>('map');
   const [failed, setFailed] = useState(false);
+  const t = useTranslations('ItineraryMap');
+  // Mapbox's own control labels (zoom buttons, attribution, scroll hints), in the page language.
+  // Stored nested in the messages (next-intl keys can't contain dots); Mapbox wants "Control.Key".
+  const controlCopy = t.raw('controls') as Record<string, Record<string, string>>;
+  const mapboxLocale = Object.fromEntries(Object.entries(controlCopy).flatMap(([control, labels]) =>
+    Object.entries(labels).map(([key, label]) => [`${control}.${key}`, label])));
+  const locale = useLocale();
 
   useEffect(() => {
     let cancelled = false;
@@ -121,10 +131,11 @@ export default function ItineraryMap({
       markersRef.current.forEach((marker) => marker.remove());
       markersRef.current.clear();
 
-      stops.forEach((stop) => {
+      stopsRef.current.forEach((stop) => {
         const el = document.createElement('span');
         el.className = 'pkg-map-pin';
         el.title = stop.label;
+        el.setAttribute('aria-label', stop.label);
         if (stop.id === activeIdRef.current) el.classList.add('is-active');
         const marker = new mapboxgl.Marker({ element: el })
           .setLngLat(stop.coordinates)
@@ -152,6 +163,7 @@ export default function ItineraryMap({
           bounds,
           fitBoundsOptions: { padding: 70 },
           cooperativeGestures: true,
+          locale: mapboxLocale,
           attributionControl: true,
         });
         mapRef.current = map;
@@ -171,9 +183,20 @@ export default function ItineraryMap({
       mapRef.current?.remove();
       mapRef.current = null;
     };
-    // stops are static per page
+    // stops are static per page; the map is rebuilt only when the language changes
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [locale]);
+
+  // stop names arrive translated a moment after the map is drawn; keep the pins' labels in step
+  useEffect(() => {
+    stopsRef.current = stops;
+    stops.forEach((stop) => {
+      const el = markersRef.current.get(stop.id)?.getElement();
+      if (!el) return;
+      el.title = stop.label;
+      el.setAttribute('aria-label', stop.label);
+    });
+  }, [stops]);
 
   // reflect the stop currently in view
   useEffect(() => {
@@ -186,7 +209,7 @@ export default function ItineraryMap({
   if (failed) {
     return (
       <div className="pkg-map-fallback">
-        <p>Route map unavailable.</p>
+        <p>{t('unavailable')}</p>
         <ol>
           {stops.map((stop) => <li key={stop.id}>{stop.label}</li>)}
         </ol>
@@ -197,7 +220,7 @@ export default function ItineraryMap({
   return (
     <div className="pkg-map">
       <div className="pkg-map-canvas" ref={containerRef} />
-      <div className="pkg-map-styles" role="group" aria-label="Map style">
+      <div className="pkg-map-styles" role="group" aria-label={t('style')}>
         <button
           type="button"
           className={styleKey === 'satellite' ? 'is-active' : ''}
@@ -206,7 +229,7 @@ export default function ItineraryMap({
             mapRef.current?.setStyle(STYLES.satellite);
           }}
         >
-          Satellite
+          {t('satellite')}
         </button>
         <button
           type="button"
@@ -216,7 +239,7 @@ export default function ItineraryMap({
             mapRef.current?.setStyle(STYLES.map);
           }}
         >
-          Map
+          {t('map')}
         </button>
       </div>
     </div>

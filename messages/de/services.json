@@ -1,0 +1,198 @@
+{
+  "Transport": {
+    "heroTitle": "Transport",
+    "heroSubtitle": "Straße, Schiene und Luft – verbunden zu einer durchdachten Route",
+    "intro": {
+      "kicker": "Unterwegs sein als Teil der Reise",
+      "title": "Vor Ihrem Fenster verändert sich die Insel.",
+      "copy": "Wir planen den Transport als Teil des Erlebnisses – nicht als Nebensache. Nehmen Sie den Panoramazug, wo er sich lohnt, ein privates Fahrzeug, wo Flexibilität zählt, und Flugverbindungen, wenn Zeit am wichtigsten ist.",
+      "link": "Transport in meine Reise einplanen"
+    },
+    "modes": {
+      "kicker": "Drei Wege über die Insel",
+      "title": "Wählen Sie einen. Kombinieren Sie mehrere."
+    },
+    "rail": {
+      "alt": "Zug fährt durch das Teeland Sri Lankas",
+      "tag": "Bahn",
+      "label": "Langsam und malerisch",
+      "title": "Nehmen Sie den Zug, wenn die Aussicht das Ziel ist.",
+      "copy": "Die Bahnfahrt durchs Hochland ist mehr als ein Transfer. Wir bauen den schönsten Abschnitt in eine private Gesamtroute ein – mit Straßenverbindungen davor und danach.",
+      "points": [
+        "Landschaft des Teelands",
+        "Passend zur Gesamtroute reserviert",
+        "Koordinierte Straßentransfers"
+      ]
+    },
+    "road": {
+      "label": "Straße",
+      "title": "Ihre private Route, in passender Größe.",
+      "copy": "Von zwei Reisenden bis zur ganzen Reisegruppe – wählen Sie das Fahrzeug, das zur Reise passt."
+    },
+    "fleet": [
+      {
+        "title": "Privatwagen",
+        "fit": "Alleinreisende und Paare",
+        "note": "Die flexibelste Art, in Ihrem eigenen Tempo zu reisen."
+      },
+      {
+        "title": "Van",
+        "fit": "Familien und kleine Gruppen",
+        "note": "Mehr Platz für Personen, Gepäck und längere Strecken."
+      },
+      {
+        "title": "Kleinbus",
+        "fit": "Kleine Reisegruppen",
+        "note": "Eine praktische Balance aus Komfort und Gruppengröße."
+      },
+      {
+        "title": "Reisebus",
+        "fit": "Vereine und größere Gruppen",
+        "note": "Koordinierte Fahrten für gemeinsame Reiserouten und Ausrüstung."
+      }
+    ],
+    "air": {
+      "label": "Luft",
+      "title": "Überqueren Sie die Insel, wenn Zeit am meisten zählt.",
+      "copy": "Hubschrauber und Lufttaxis machen aus einem langen Transfer eine außergewöhnliche Perspektive von oben – abhängig von Route, Wetter und Verfügbarkeit.",
+      "points": [
+        "Private Charteroptionen",
+        "Flughafenverbindungen",
+        "Verfügbarkeit von unserem Team bestätigt"
+      ],
+      "alt": "Hubschrauber über der Küste Sri Lankas"
+    },
+    "service": {
+      "kicker": "Ein Team hinter jedem Transfer",
+      "title": "Geplant von der Ankunft bis zur Abreise",
+      "cta": "Nennen Sie uns Gruppengröße und Route – wir empfehlen die passende Kombination.",
+      "link": "Meinen Transport planen"
+    },
+    "promises": [
+      {
+        "title": "Vom Flughafen in die Reise",
+        "detail": "Transfers sind direkt mit der Route verbunden, statt neben ihr zu stehen."
+      },
+      {
+        "title": "Fahrzeuge in passender Größe",
+        "detail": "Wir stimmen die Kapazität auf Ihre Gruppe, Ihr Gepäck und Ihren Komfortwunsch ab."
+      },
+      {
+        "title": "Ortskenntnis der Strecken",
+        "detail": "Fahrzeiten, Straßenverhältnisse und sinnvolle Stopps prägen jeden Tag."
+      },
+      {
+        "title": "Ein abgestimmter Plan",
+        "detail": "Straße, Schiene und Luft lassen sich zu einer geprüften Reise kombinieren."
+      }
+    ]
+  },
+  "Cricket": {
+    "heroTitle": "Cricket-Reisen",
+    "heroSubtitle": "Bereisen Sie die Insel mit Menschen, die das Spiel verstehen",
+    "opening": {
+      "kicker": "Eine Serendia-Spezialität",
+      "title": "Von innerhalb der Spielfeldgrenze aufgebaut.",
+      "copy": "Cricket-Reisen brauchen mehr als Hotelzimmer und einen Bus. Spiele, Training, Plätze, Erholung und Familienreisen müssen zusammenpassen. Genau dort macht echte Spieler- und Trainererfahrung den Unterschied."
+    },
+    "profile": {
+      "tag": "Tourleitung",
+      "kicker": "Glaubwürdigkeit, auf die Sie eine Tour bauen können",
+      "role": "Ehemaliger Test- und ODI-Nationalspieler Sri Lankas",
+      "copy": "Brendon leitet den Bereich Cricket-Reisen bei Serendia und bringt mehr als 20 Jahre Erfahrung im Profi-Cricket und als Nationaltrainer mit. Er weiß, was eine Reisemannschaft auf und neben dem Platz braucht.",
+      "stat1": "Test + ODI",
+      "stat1Label": "Internationale Spielerfahrung",
+      "stat2": "20+ Jahre",
+      "stat2Label": "Profi-Cricket und Training",
+      "stat3": "Zugang vor Ort",
+      "stat3Label": "Vereine, Plätze und Cricket-Know-how"
+    },
+    "offerings": {
+      "kicker": "Das Tourprogramm gestalten",
+      "title": "Jeder Teil des Spiels, miteinander verbunden.",
+      "copy": "Wählen Sie die Bausteine, die Ihre Mannschaft braucht. Wir fügen sie zu einem prüfbaren Programm rund um Ihre Termine und Ihre Reisegruppe zusammen.",
+      "items": [
+        {
+          "label": "Tourformat",
+          "title": "Schul- und Vereinstouren",
+          "description": "Komplette Tourprogramme, die Spiele, Unterkunft, Transport und Inselerlebnisse in einem praktischen Plan vereinen."
+        },
+        {
+          "label": "Fans",
+          "title": "Zuschauerpakete",
+          "description": "Reise und Unterkunft abgestimmt auf Turnierplan, Zugang zum Stadion und Zeit, Sri Lanka zwischen den Spielen zu erleben."
+        },
+        {
+          "label": "Spielvorbereitung",
+          "title": "Platz- und Trainingsbuchungen",
+          "description": "Spielplätze und Trainingsanlagen, direkt mit passenden lokalen Vereinen und Einrichtungen koordiniert."
+        },
+        {
+          "label": "Leistung",
+          "title": "Techniktraining",
+          "description": "Gezielte Techniktrainings, lokale Gegner und spezialisierte Unterstützung für Spin- oder Fast-Bowling – zugeschnitten auf die Mannschaft."
+        },
+        {
+          "label": "Reisegruppe",
+          "title": "Spieler und Familien",
+          "description": "Unterkünfte für Spieler, Betreuer und mitreisende Familien, eingebunden in die gesamte Tourplanung."
+        }
+      ]
+    },
+    "spectator": {
+      "kicker": "Sie reisen als Zuschauer?",
+      "title": "Folgen Sie den Spielen. Entdecken Sie die Insel zwischen den Overs.",
+      "copy": "Wir gestalten eine Fanreise rund um internationale Spieltermine und verbinden Stadiontage mit Küste, Kultur und Tierwelt.",
+      "link": "Eine Zuschauerreise besprechen"
+    },
+    "cta": {
+      "kicker": "Ihr Tour-Briefing",
+      "title": "Bringen Sie das Team mit. Wir planen die Tour.",
+      "copy": "Nennen Sie uns Gruppengröße, ungefähre Termine, Alter oder Spielniveau und gewünschte Spiele.",
+      "link": "Eine Cricket-Tour anfragen"
+    },
+    "related": {
+      "label": "Weiter entdecken",
+      "title": "Weiter über die Insel",
+      "tours": "Rundreisen",
+      "excursions": "Ausflüge",
+      "transport": "Transport"
+    }
+  },
+  "Consultancy": {
+    "heroTitle": "Projektmanagement-Beratung für die Hotellerie",
+    "heroSubtitle": "Für Hotelinvestoren und Projektentwickler",
+    "intro": {
+      "kicker": "Ein B2B-Angebot, getrennt von unseren Urlaubsreisen",
+      "title": "Fachkundige Beratung vom Grundstückserwerb bis zur Inbetriebnahme",
+      "copy": "Eine der großen Stärken von Serendia Holidays ist unser Know-how im Projektmanagement für Hotels. Wir bieten potenziellen Investoren Fachwissen – vom Erwerb des Grundstücks bis zum Bau und zur Inbetriebnahme eines Sternehotels."
+    },
+    "servicesTitle": "Wir beraten Investoren in folgenden Bereichen",
+    "items": [
+      "Mitwirkung an der Konzeptgestaltung.",
+      "Erstellung eines Bauzeitenplans.",
+      "Beratung zu den praktischen Auswirkungen des Bauplans auf Lager, Zimmer und weitere Betriebsbereiche.",
+      "Beratung zu Einsparideen und Trends bei Investitionen.",
+      "Verwaltung der Projektfinanzen.",
+      "Abwicklung aller gesetzlichen BOI-Anforderungen bei Importen.",
+      "Erledigung aller erforderlichen Unterlagen beim Inland Revenue Department für VAT, NBT und SVAT.",
+      "Beschaffung von SVAT-Gutschriften sowie Überwachung und Einreichung der Quartalsberichte.",
+      "Erstellung eines Beschaffungsplans für alle Einkäufe, um die beste verfügbare Qualität zum niedrigsten Preis zu sichern.",
+      "Sicherstellung einer termingerechten Fertigstellung des Projekts.",
+      "Beratung bei der Inbetriebnahme aller Geräte, Anlagen und Maschinen.",
+      "Aufbau und Erstellung aller Schulungs- und Betriebshandbücher für jede Abteilung.",
+      "Beratung bei der Umsetzung des gesamten Personalplans.",
+      "Beratung und Erstellung eines umfassenden Marketingplans für das geplante Hotel.",
+      "Beratung zur Automatisierung des Hotelbetriebs.",
+      "Schulung des Personals gemäß dem oben festgelegten Schulungsplan.",
+      "Regelmäßige Baustellenbesuche und Bauüberwachung.",
+      "Beratung und Begleitung während des Probebetriebs des Hotels."
+    ],
+    "cta": {
+      "title": "Planen Sie ein Hotelprojekt in Sri Lanka?",
+      "copy": "Sprechen Sie direkt mit unserem Beratungsteam für Projektmanagement – dieser Anfrageweg ist von unserer Urlaubsplanung getrennt.",
+      "button": "Beratung anfragen"
+    },
+    "related": "Das könnte Sie auch interessieren"
+  }
+}

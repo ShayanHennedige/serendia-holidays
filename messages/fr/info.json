@@ -1,0 +1,70 @@
+{
+  "Contact": {
+    "heroTitle": "Contactez-nous",
+    "title": "Contactez-nous",
+    "subtitle": "Nous serions ravis d’avoir de vos nouvelles !",
+    "kicker": "Retrouvez-nous sur",
+    "mapTitle": "Nous trouver sur la carte",
+    "openMap": "Ouvrir dans Google Maps",
+    "mapFrameTitle": "Emplacement de Serendia Holidays"
+  },
+  "ContactForm": {
+    "title": "Commencer sur WhatsApp",
+    "intro": "Indiquez quelques détails sur votre voyage, nous les recevrons directement sur WhatsApp.",
+    "fields": {
+      "fullName": "Nom complet *",
+      "whatsapp": "Numéro WhatsApp *",
+      "email": "Adresse e-mail",
+      "country": "Pays",
+      "arrival": "Date d’arrivée",
+      "departure": "Date de départ",
+      "travellers": "Nombre de voyageurs",
+      "message": "Comment pouvons-nous vous aider ?",
+      "messagePlaceholder": "Dites-nous où vous aimeriez aller, ce qui vous intéresse ou vos demandes particulières."
+    },
+    "sendWhatsapp": "Envoyer la demande sur WhatsApp",
+    "sendEmail": "Envoyer la demande par e-mail",
+    "sendingEmail": "Envoi de l’e-mail…",
+    "note": "Choisissez WhatsApp pour discuter instantanément, ou l’e-mail pour envoyer les détails à notre équipe.",
+    "errors": {
+      "dates": "Votre date de départ doit être postérieure à votre date d’arrivée.",
+      "popup": "WhatsApp n’a pas pu s’ouvrir. Autorisez les fenêtres pop-up et réessayez.",
+      "email": "Nous n’avons pas pu envoyer votre demande par e-mail.",
+      "emailFallback": "Nous n’avons pas pu envoyer votre demande par e-mail. Essayez plutôt WhatsApp."
+    },
+    "confirm": {
+      "whatsappTitle": "Votre demande est prête sur WhatsApp",
+      "whatsappMessage": "WhatsApp s’est ouvert avec les détails de votre voyage. Appuyez sur Envoyer dans WhatsApp pour que notre équipe reçoive votre demande.",
+      "emailTitle": "Demande reçue",
+      "emailMessage": "Merci. Votre demande a été envoyée à notre équipe, qui vous répondra très prochainement.",
+      "done": "Terminé",
+      "refresh": "Cette page va se rafraîchir automatiquement."
+    }
+  },
+  "Gallery": {
+    "heroTitle": "Galerie",
+    "eyebrow": "Récits de voyage",
+    "title1": "De vrais voyages.",
+    "title2": "Des moments spontanés.",
+    "copy": "Une collection vivante du Sri Lanka tel que nos voyageurs l’ont vécu : accueils chaleureux, paysages sauvages et petits moments qui restent en mémoire.",
+    "count": "<strong>{photos}</strong> {photos, plural, one {photo} other {photos}} de {journeys, plural, one {# voyage client} other {# voyages clients}}",
+    "summary": "Choisissez un voyage pour voir les photos de ce séjour.",
+    "filterLabel": "Parcourir par voyage",
+    "all": "Tous les voyages",
+    "openLabel": "Ouvrir {alt}",
+    "view": "Voir la photo",
+    "viewer": "Visionneuse de la galerie",
+    "close": "Fermer la visionneuse",
+    "photoAlt": "{title}, photo de voyageur {number}",
+    "fallbackTitle": "Moments au Sri Lanka"
+  },
+  "WhyChooseUs": {
+    "heroTitle": "Pourquoi nous",
+    "heroSubtitle": "Ce qui distingue Serendia Holidays",
+    "kicker": "Les faits",
+    "title": "De bonnes raisons de choisir Serendia Holidays",
+    "cta": "Écoutez nos anciens voyageurs, ou découvrez les destinations par vous-même.",
+    "testimonials": "Lire les témoignages",
+    "gallery": "Voir la galerie"
+  }
+}

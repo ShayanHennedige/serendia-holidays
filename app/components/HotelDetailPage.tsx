@@ -1,6 +1,9 @@
 import InnerHero from './InnerHero';
 import Link from 'next/link';
+import { getLocale, getTranslations } from 'next-intl/server';
 import RecommendedGrid from './RecommendedGrid';
+import type { Locale } from '../lib/i18n';
+import { localizeBookingText } from '../lib/tripBookingI18n';
 
 interface HighlightItem {
   label: string;
@@ -25,7 +28,7 @@ interface HotelDetailPageProps {
   catalogSlug?: string;
 }
 
-export default function HotelDetailPage({
+export default async function HotelDetailPage({
   title,
   subtitle,
   heroImage,
@@ -35,6 +38,9 @@ export default function HotelDetailPage({
   bookingLines,
   catalogSlug,
 }: HotelDetailPageProps) {
+  const t = await getTranslations('HotelDetail');
+  const locale = await getLocale() as Locale;
+
   return (
     <main>
       <InnerHero title={title} subtitle={subtitle} bgImage={heroImage} />
@@ -42,8 +48,8 @@ export default function HotelDetailPage({
       <section className="page-content">
         <div className="container">
           <div className="section-header">
-            <p className="section-subtitle">Hotel profile</p>
-            <h2 className="section-title">Overview</h2>
+            <p className="section-subtitle">{t('profileKicker')}</p>
+            <h2 className="section-title">{t('overviewTitle')}</h2>
           </div>
 
           <div style={{ maxWidth: '850px', margin: '0 auto', textAlign: 'center' }}>
@@ -65,7 +71,7 @@ export default function HotelDetailPage({
       <section className="page-content" style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Gallery</h2>
+            <h2 className="section-title">{t('galleryTitle')}</h2>
           </div>
           <div className="page-grid">
             {gallery.map((item) => (
@@ -86,17 +92,15 @@ export default function HotelDetailPage({
       <section className="page-content trip-booking" id="enquire-now">
         <div className="container trip-booking-grid">
           <div className="trip-booking-contact">
-            <p className="section-subtitle">Book your stay</p>
-            <h2 className="section-title">Get in touch</h2>
+            <p className="section-subtitle">{t('bookKicker')}</p>
+            <h2 className="section-title">{t('bookTitle')}</h2>
             {bookingLines.map((line) => (
-              <p key={line}>{line}</p>
+              <p key={line}>{localizeBookingText(locale, line)}</p>
             ))}
-            <Link href="/contact" className="trip-inline-link">Contact us for availability</Link>
+            <Link href="/contact" className="trip-inline-link">{t('contactLink')}</Link>
           </div>
           <div className="card" style={{ padding: '28px' }}>
-            <p>
-              We can include these hotels as part of your Sri Lanka holiday plan and arrange transfers, excursions, and airport pickup around your booking.
-            </p>
+            <p>{t('packageNote')}</p>
           </div>
         </div>
       </section>

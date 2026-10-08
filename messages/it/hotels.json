@@ -1,0 +1,148 @@
+{
+  "HotelDetail": {
+    "profileKicker": "Scheda dell’hotel",
+    "overviewTitle": "Panoramica",
+    "galleryTitle": "Galleria",
+    "bookKicker": "Prenota il tuo soggiorno",
+    "bookTitle": "Contattaci",
+    "contactLink": "Chiedi la disponibilità",
+    "packageNote": "Possiamo includere questi hotel nel tuo viaggio in Sri Lanka e organizzare trasferimenti, escursioni e prelievo in aeroporto in base alla tua prenotazione."
+  },
+  "Hotels": {
+    "heroTitle": "Hotel in Sri Lanka",
+    "partners": {
+      "title": "Le nostre strutture partner",
+      "subtitle": "Scopri la vera ospitalità dello Sri Lanka",
+      "copy": "Scopri strutture selezionate in Sri Lanka, ideali per vacanze al mare, tour dell’isola e viaggi privati. Ogni scheda offre una breve panoramica e le informazioni utili per organizzare il soggiorno."
+    },
+    "ratings": {
+      "title": "Classificazione degli hotel per stelle",
+      "subtitle": "Una guida rapida al livello di servizio e di dotazioni",
+      "items": [
+        {
+          "label": "5 stelle",
+          "value": "Livello superiore e un’ampia gamma di servizi di prima classe"
+        },
+        {
+          "label": "4 stelle",
+          "value": "Livello eccezionale con arredi di alta qualità e grande comfort"
+        },
+        {
+          "label": "3 stelle",
+          "value": "Strutture ben attrezzate con camere confortevoli e pulite e arredi di qualità"
+        },
+        {
+          "label": "Meno di 3 stelle",
+          "value": "Un livello essenziale e ben curato"
+        },
+        {
+          "label": "Hotel non classificati",
+          "value": "Strutture ben tenute con servizi adeguati che non rientrano nella classificazione a stelle."
+        },
+        {
+          "label": "Hotel boutique e ville",
+          "value": "Strutture piccole ma esclusive per una clientela esigente, con un servizio eccezionale a prezzi premium."
+        }
+      ]
+    },
+    "types": {
+      "title": "Tipologie di alloggio comuni",
+      "subtitle": "Gli stili di alloggio che puoi trovare in Sri Lanka",
+      "items": [
+        {
+          "label": "Bungalow",
+          "value": "Una piccola casa a un piano con veranda chiusa."
+        },
+        {
+          "label": "Soggiorno in famiglia",
+          "value": "Un soggiorno presso una famiglia locale che permette ai viaggiatori di conoscere meglio lo stile di vita del posto."
+        },
+        {
+          "label": "Appartamenti in affitto",
+          "value": "Una stanza o un insieme di stanze adibite ad abitazione, di solito in un edificio con più nuclei familiari."
+        },
+        {
+          "label": "Guest house",
+          "value": "Le guest house vanno dalle camere economiche agli appartamenti di lusso e nelle città più grandi somigliano spesso a piccoli hotel."
+        },
+        {
+          "label": "Hotel boutique",
+          "value": "Una struttura piccola ma esclusiva per una clientela esigente, con un servizio eccezionale a prezzi premium."
+        }
+      ]
+    },
+    "help": {
+      "copy": "Se vuoi aiuto nella scelta del tipo di hotel giusto, possiamo abbinare il soggiorno al tuo itinerario, al tuo budget e al livello di servizio che preferisci.",
+      "link": "Chiedici un consiglio"
+    },
+    "viewDetails": "Vedi dettagli"
+  },
+  "HotelPages": {
+    "devi": {
+      "title": "Devi Tranquil Villa",
+      "subtitle": "Hotel in Sri Lanka",
+      "overview": "Devi Tranquil Villa è una struttura tranquilla e di piccole dimensioni, adatta a chi cerca una base serena con un servizio pratico, buoni collegamenti e un’atmosfera più personale rispetto a un grande resort.",
+      "highlights": [
+        {
+          "label": "Formula",
+          "value": "Soggiorno in villa"
+        },
+        {
+          "label": "Ideale per",
+          "value": "Vacanze private"
+        },
+        {
+          "label": "Atmosfera",
+          "value": "Rilassata e personale"
+        },
+        {
+          "label": "Posizione",
+          "value": "Comoda per i tour"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Camere confortevoli",
+          "text": "Ideali per soggiorni brevi, tour dell’isola e coppie in cerca di un alloggio più tranquillo."
+        },
+        {
+          "title": "Vacanza facile da organizzare",
+          "text": "Una scelta pratica se vuoi abbinare l’alloggio a escursioni e trasferimenti."
+        }
+      ]
+    },
+    "secrets": {
+      "title": "Secrets of Ceylon",
+      "subtitle": "Hotel boutique",
+      "overview": "Secrets of Ceylon è una struttura in stile boutique con un servizio più raffinato, ideale per chi desidera comfort, privacy e un’accoglienza curata.",
+      "highlights": [
+        {
+          "label": "Formula",
+          "value": "Hotel boutique"
+        },
+        {
+          "label": "Ideale per",
+          "value": "Coppie e piccoli gruppi"
+        },
+        {
+          "label": "Servizio",
+          "value": "Personale e di alto livello"
+        },
+        {
+          "label": "Adatto a",
+          "value": "Tour e brevi fughe"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Soggiorno raffinato",
+          "text": "Un ambiente curato, ideale per chi desidera un alloggio più ricercato."
+        },
+        {
+          "title": "Base ideale per i tour",
+          "text": "Una tappa utile negli itinerari in cui la qualità del soggiorno conta quanto la posizione."
+        }
+      ]
+    }
+  }
+}

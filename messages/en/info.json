@@ -1,0 +1,70 @@
+{
+  "Contact": {
+    "heroTitle": "Contact Us",
+    "title": "Get In Touch",
+    "subtitle": "We would love to hear from you!",
+    "kicker": "Get in touch with us on",
+    "mapTitle": "Find us on the map",
+    "openMap": "Open in Google Maps",
+    "mapFrameTitle": "Serendia Holidays location"
+  },
+  "ContactForm": {
+    "title": "Start on WhatsApp",
+    "intro": "Share a few trip details and we will receive them directly in WhatsApp.",
+    "fields": {
+      "fullName": "Full name *",
+      "whatsapp": "WhatsApp number *",
+      "email": "Email address",
+      "country": "Country",
+      "arrival": "Arrival date",
+      "departure": "Departure date",
+      "travellers": "Number of travellers",
+      "message": "How can we help?",
+      "messagePlaceholder": "Tell us where you would like to go, your interests, or any special requests."
+    },
+    "sendWhatsapp": "Send inquiry on WhatsApp",
+    "sendEmail": "Send inquiry by email",
+    "sendingEmail": "Sending email…",
+    "note": "Choose WhatsApp for an instant chat or email to send the details to our travel team.",
+    "errors": {
+      "dates": "Your departure date must be after your arrival date.",
+      "popup": "WhatsApp could not open. Please allow pop-ups and try again.",
+      "email": "We could not send your email inquiry.",
+      "emailFallback": "We could not send your email inquiry. Please try WhatsApp instead."
+    },
+    "confirm": {
+      "whatsappTitle": "Your inquiry is ready on WhatsApp",
+      "whatsappMessage": "WhatsApp has opened with your trip details. Please press Send in WhatsApp so our travel team receives your inquiry.",
+      "emailTitle": "Inquiry received",
+      "emailMessage": "Thank you. Your inquiry has been sent to our travel team, and we will get back to you shortly.",
+      "done": "Done",
+      "refresh": "This page will refresh automatically."
+    }
+  },
+  "Gallery": {
+    "heroTitle": "Gallery",
+    "eyebrow": "Stories from the road",
+    "title1": "Real journeys.",
+    "title2": "Unscripted moments.",
+    "copy": "A living collection of Sri Lanka as our guests experienced it—warm welcomes, wild landscapes and the small moments that stay with you.",
+    "count": "<strong>{photos}</strong> {photos, plural, one {photograph} other {photographs}} from {journeys, plural, one {# client journey} other {# client journeys}}",
+    "summary": "Choose a journey to view the photographs from that stay.",
+    "filterLabel": "Browse by journey",
+    "all": "All journeys",
+    "openLabel": "Open {alt}",
+    "view": "View photograph",
+    "viewer": "Gallery image viewer",
+    "close": "Close image viewer",
+    "photoAlt": "{title}, guest photograph {number}",
+    "fallbackTitle": "Sri Lanka Moments"
+  },
+  "WhyChooseUs": {
+    "heroTitle": "Why Choose Us",
+    "heroSubtitle": "What sets Serendia Holidays apart",
+    "kicker": "The evidence",
+    "title": "A clear case for choosing Serendia Holidays",
+    "cta": "Hear it directly from past guests, or see the destinations for yourself.",
+    "testimonials": "Read Testimonials",
+    "gallery": "View Gallery"
+  }
+}

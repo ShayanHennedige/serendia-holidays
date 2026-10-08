@@ -20,23 +20,15 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Automatic page translation
+## Languages
 
-The site-wide language selector translates legacy English page copy through a self-hosted LibreTranslate service. No Google API key is needed.
+The site is available in English, French, German, Italian, Spanish and Lithuanian using [next-intl](https://next-intl.dev) (no URL prefixes). The language is chosen per request in `i18n/request.ts`: a language picked in the header selector (cookie) wins, then the visitor's IP country (Vercel's `x-vercel-ip-country` header), then the browser language, then English.
 
-For local development, start it in a second terminal:
-
-```bash
-npm run translate:server
-```
-
-The website uses `http://127.0.0.1:5100` by default. To run LibreTranslate with Docker instead of the local Python service:
+Page text lives in `messages/<locale>/*.json`. When you add or change English text, add the same keys to every other locale and run:
 
 ```bash
-docker compose -f docker-compose.libretranslate.yml up -d --build
+node scripts/check-messages.mjs
 ```
-
-The first start downloads the six language models and stores them in the Docker volume. For production, run the same Compose service on an always-on public server with HTTPS, set Vercel's `LIBRETRANSLATE_URL` to that server URL, and redeploy. The API route is the only website code that calls this service; do not put that URL in a `NEXT_PUBLIC_` variable.
 
 ## Learn More
 

@@ -1,0 +1,198 @@
+{
+  "Transport": {
+    "heroTitle": "Transporte",
+    "heroSubtitle": "Carretera, tren y avión, unidos en una ruta bien pensada",
+    "intro": {
+      "kicker": "El trayecto, parte del viaje",
+      "title": "La isla cambia al otro lado de la ventana.",
+      "copy": "Planificamos el transporte como parte de la experiencia, no como un añadido. Toma el tren panorámico donde merece la pena, un vehículo privado donde importa la flexibilidad y conexiones aéreas cuando el tiempo es prioritario.",
+      "link": "Incluir el transporte en mi viaje"
+    },
+    "modes": {
+      "kicker": "Tres formas de recorrer la isla",
+      "title": "Elige una. Combina varias."
+    },
+    "rail": {
+      "alt": "Tren atravesando la región del té de Sri Lanka",
+      "tag": "Tren",
+      "label": "Lento y panorámico",
+      "title": "Toma el tren cuando lo importante es el paisaje.",
+      "copy": "El tren de las tierras altas no es solo un traslado. Podemos incluir el tramo más memorable en una ruta privada más amplia, con conexiones por carretera antes y después.",
+      "points": [
+        "Paisajes de la región del té",
+        "Reservado según la ruta completa",
+        "Traslados por carretera coordinados"
+      ]
+    },
+    "road": {
+      "label": "Carretera",
+      "title": "Tu ruta privada, a la medida.",
+      "copy": "Desde dos viajeros hasta un grupo completo, elige el espacio que encaja con tu viaje."
+    },
+    "fleet": [
+      {
+        "title": "Coche privado",
+        "fit": "Viajeros solos y parejas",
+        "note": "La forma más flexible de moverse a tu ritmo."
+      },
+      {
+        "title": "Furgoneta",
+        "fit": "Familias y grupos pequeños",
+        "note": "Más espacio para personas, equipaje y trayectos largos."
+      },
+      {
+        "title": "Minibús",
+        "fit": "Grupos pequeños de viaje",
+        "note": "Un equilibrio práctico entre comodidad y capacidad."
+      },
+      {
+        "title": "Autocar",
+        "fit": "Clubes y grupos grandes",
+        "note": "Desplazamientos coordinados para itinerarios compartidos y equipamiento."
+      }
+    ],
+    "air": {
+      "label": "Avión",
+      "title": "Cruza la isla cuando el tiempo es lo más importante.",
+      "copy": "Los helicópteros y taxis aéreos pueden convertir un largo traslado en una vista aérea extraordinaria, según la ruta, el clima y la disponibilidad.",
+      "points": [
+        "Vuelos chárter privados",
+        "Conexiones con el aeropuerto",
+        "Disponibilidad confirmada por nuestro equipo"
+      ],
+      "alt": "Helicóptero sobrevolando la costa de Sri Lanka"
+    },
+    "service": {
+      "kicker": "Un equipo detrás de cada traslado",
+      "title": "Planificado de la llegada a la salida",
+      "cta": "Cuéntanos el tamaño del grupo y la ruta. Te recomendaremos la combinación adecuada.",
+      "link": "Planificar mi transporte"
+    },
+    "promises": [
+      {
+        "title": "Del aeropuerto al itinerario",
+        "detail": "Los traslados se conectan directamente con la ruta en lugar de quedar al margen."
+      },
+      {
+        "title": "Vehículos a medida",
+        "detail": "Ajustamos la capacidad a tu grupo, tu equipaje y el nivel de comodidad."
+      },
+      {
+        "title": "Conocimiento local de las rutas",
+        "detail": "Los tiempos de viaje, el estado de las carreteras y las paradas lógicas marcan cada día."
+      },
+      {
+        "title": "Un solo plan coordinado",
+        "detail": "Carretera, tren y avión pueden combinarse en un único viaje revisado."
+      }
+    ]
+  },
+  "Cricket": {
+    "heroTitle": "Turismo de críquet",
+    "heroSubtitle": "Recorre la isla con quienes entienden el juego",
+    "opening": {
+      "kicker": "Una especialidad de Serendia",
+      "title": "Construido desde dentro del campo.",
+      "copy": "Un viaje de críquet necesita más que habitaciones de hotel y un autocar. Partidos, entrenamientos, campos, recuperación y viajes en familia tienen que encajar. Ahí es donde la experiencia real como jugador y entrenador marca la diferencia."
+    },
+    "profile": {
+      "tag": "Dirección de la gira",
+      "kicker": "Credibilidad sobre la que construir una gira",
+      "role": "Exjugador internacional de Sri Lanka en Test y ODI",
+      "copy": "Brendon dirige el área de turismo de críquet de Serendia con más de 20 años en el críquet profesional y como entrenador de la selección nacional. Sabe lo que necesita un equipo de gira dentro y fuera del campo.",
+      "stat1": "Test + ODI",
+      "stat1Label": "Experiencia internacional como jugador",
+      "stat2": "20+ años",
+      "stat2Label": "Críquet profesional y entrenamiento",
+      "stat3": "Acceso local",
+      "stat3Label": "Clubes, campos y conocimiento del críquet"
+    },
+    "offerings": {
+      "kicker": "Diseña el programa de la gira",
+      "title": "Cada parte del juego, conectada.",
+      "copy": "Elige los elementos que necesita tu equipo. Los combinamos en un programa revisable según tus fechas y tu grupo.",
+      "items": [
+        {
+          "label": "Formato de gira",
+          "title": "Giras de colegios y clubes",
+          "description": "Programas completos que reúnen partidos, alojamiento, transporte y experiencias en la isla en un plan práctico."
+        },
+        {
+          "label": "Aficionados",
+          "title": "Paquetes para espectadores",
+          "description": "Viajes y estancias organizados según el calendario del torneo, el acceso a los estadios y tiempo para conocer Sri Lanka entre partidos."
+        },
+        {
+          "label": "Preparación de partidos",
+          "title": "Reserva de campos y entrenamientos",
+          "description": "Campos de juego e instalaciones de entrenamiento coordinados directamente con clubes y centros locales adecuados."
+        },
+        {
+          "label": "Rendimiento",
+          "title": "Entrenamiento técnico",
+          "description": "Sesiones técnicas específicas, rivales locales y apoyo especializado en spin o fast bowling, adaptado al equipo."
+        },
+        {
+          "label": "Grupo de gira",
+          "title": "Jugadores y familias",
+          "description": "Opciones de alojamiento para jugadores, cuerpo técnico y familias acompañantes, integradas en el itinerario de la gira."
+        }
+      ]
+    },
+    "spectator": {
+      "kicker": "¿Viajas para ver los partidos?",
+      "title": "Sigue los partidos. Descubre la isla entre overs.",
+      "copy": "Podemos diseñar un itinerario para aficionados en torno a las fechas de los partidos internacionales, combinando los días de estadio con costa, cultura y vida salvaje.",
+      "link": "Hablar de un viaje como espectador"
+    },
+    "cta": {
+      "kicker": "Tu propuesta de gira",
+      "title": "Trae al equipo. Nosotros organizamos la gira.",
+      "copy": "Cuéntanos el tamaño del grupo, las fechas aproximadas, la edad o el nivel de juego y los partidos que te interesan.",
+      "link": "Consultar por una gira de críquet"
+    },
+    "related": {
+      "label": "Sigue explorando",
+      "title": "Sigue recorriendo la isla",
+      "tours": "Circuitos",
+      "excursions": "Excursiones",
+      "transport": "Transporte"
+    }
+  },
+  "Consultancy": {
+    "heroTitle": "Consultoría en gestión de proyectos hoteleros",
+    "heroSubtitle": "Para inversores y promotores hoteleros",
+    "intro": {
+      "kicker": "Un servicio B2B, independiente de nuestros viajes de ocio",
+      "title": "Asesoramiento experto de la adquisición a la puesta en marcha",
+      "copy": "Uno de los puntos fuertes de Serendia Holidays es nuestra experiencia en la gestión de proyectos hoteleros. Ofrecemos conocimiento experto a posibles inversores, desde la adquisición del terreno hasta la construcción y puesta en marcha de un hotel de categoría."
+    },
+    "servicesTitle": "Asesoramos a los inversores en las siguientes áreas",
+    "items": [
+      "Contribución al diseño del concepto.",
+      "Elaboración de un calendario de obra.",
+      "Asesoramiento sobre las implicaciones prácticas del proyecto en almacenes, habitaciones y otras áreas operativas.",
+      "Asesoramiento sobre ideas y tendencias para ahorrar en la inversión.",
+      "Gestión de las finanzas del proyecto.",
+      "Gestión de todos los requisitos legales del BOI sobre importaciones.",
+      "Tramitación de toda la documentación necesaria ante el Inland Revenue Department para obtener el VAT, NBT y SVAT.",
+      "Obtención de vales de crédito SVAT, seguimiento y presentación de informes trimestrales.",
+      "Elaboración de un plan de compras que garantice la mejor calidad disponible en el mercado al menor precio.",
+      "Garantizar que el proyecto se complete a tiempo.",
+      "Asesoramiento en la puesta en marcha de todos los equipos, instalaciones y maquinaria.",
+      "Estructuración y redacción de todos los manuales de formación y operativos de cada departamento.",
+      "Asesoramiento en la ejecución del plan integral de recursos humanos.",
+      "Asesoramiento y elaboración de un plan de marketing integral para el hotel proyectado.",
+      "Consultoría para la automatización operativa del hotel.",
+      "Formación del personal según el calendario de formación establecido.",
+      "Visitas periódicas y supervisión de la obra.",
+      "Asesoramiento y supervisión durante la fase de prueba del hotel."
+    ],
+    "cta": {
+      "title": "¿Estás pensando en un proyecto hotelero en Sri Lanka?",
+      "copy": "Habla directamente con nuestro equipo de consultoría en gestión de proyectos; este canal es independiente de nuestro planificador de viajes de ocio.",
+      "button": "Solicitar una consulta"
+    },
+    "related": "También te puede interesar"
+  }
+}

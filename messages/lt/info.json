@@ -1,0 +1,70 @@
+{
+  "Contact": {
+    "heroTitle": "Kontaktai",
+    "title": "Susisiekite",
+    "subtitle": "Mielai jus išgirsime!",
+    "kicker": "Susisiekite su mumis",
+    "mapTitle": "Raskite mus žemėlapyje",
+    "openMap": "Atidaryti „Google Maps“",
+    "mapFrameTitle": "Serendia Holidays vieta"
+  },
+  "ContactForm": {
+    "title": "Pradėkite per WhatsApp",
+    "intro": "Pasidalykite keliomis kelionės detalėmis – jas gausime tiesiai per WhatsApp.",
+    "fields": {
+      "fullName": "Vardas ir pavardė *",
+      "whatsapp": "WhatsApp numeris *",
+      "email": "El. pašto adresas",
+      "country": "Šalis",
+      "arrival": "Atvykimo data",
+      "departure": "Išvykimo data",
+      "travellers": "Keliautojų skaičius",
+      "message": "Kaip galime padėti?",
+      "messagePlaceholder": "Papasakokite, kur norėtumėte keliauti, kas jus domina ar kokių turite ypatingų pageidavimų."
+    },
+    "sendWhatsapp": "Siųsti užklausą per WhatsApp",
+    "sendEmail": "Siųsti užklausą el. paštu",
+    "sendingEmail": "Siunčiamas el. laiškas…",
+    "note": "Rinkitės WhatsApp greitam pokalbiui arba el. paštą, kad informacija būtų išsiųsta mūsų kelionių komandai.",
+    "errors": {
+      "dates": "Išvykimo data turi būti vėlesnė nei atvykimo data.",
+      "popup": "Nepavyko atidaryti WhatsApp. Leiskite iššokančius langus ir bandykite dar kartą.",
+      "email": "Nepavyko išsiųsti jūsų užklausos el. paštu.",
+      "emailFallback": "Nepavyko išsiųsti jūsų užklausos el. paštu. Pabandykite per WhatsApp."
+    },
+    "confirm": {
+      "whatsappTitle": "Jūsų užklausa paruošta WhatsApp",
+      "whatsappMessage": "WhatsApp atsidarė su jūsų kelionės informacija. Paspauskite „Siųsti“ WhatsApp programoje, kad mūsų komanda gautų užklausą.",
+      "emailTitle": "Užklausa gauta",
+      "emailMessage": "Ačiū. Jūsų užklausa išsiųsta mūsų kelionių komandai, netrukus su jumis susisieksime.",
+      "done": "Gerai",
+      "refresh": "Šis puslapis atsinaujins automatiškai."
+    }
+  },
+  "Gallery": {
+    "heroTitle": "Galerija",
+    "eyebrow": "Istorijos iš kelionių",
+    "title1": "Tikros kelionės.",
+    "title2": "Nesurežisuotos akimirkos.",
+    "copy": "Gyva Šri Lankos kolekcija tokia, kokią ją patyrė mūsų svečiai: šiltas sutikimas, laukinė gamta ir mažos akimirkos, kurios išlieka atmintyje.",
+    "count": "<strong>{photos}</strong> {photos, plural, one {nuotrauka} few {nuotraukos} other {nuotraukų}} iš {journeys, plural, one {# klientų kelionės} other {# klientų kelionių}}",
+    "summary": "Pasirinkite kelionę, kad pamatytumėte tos viešnagės nuotraukas.",
+    "filterLabel": "Naršyti pagal kelionę",
+    "all": "Visos kelionės",
+    "openLabel": "Atidaryti: {alt}",
+    "view": "Peržiūrėti nuotrauką",
+    "viewer": "Galerijos nuotraukų peržiūra",
+    "close": "Uždaryti peržiūrą",
+    "photoAlt": "{title}, svečių nuotrauka {number}",
+    "fallbackTitle": "Akimirkos Šri Lankoje"
+  },
+  "WhyChooseUs": {
+    "heroTitle": "Kodėl verta rinktis mus",
+    "heroSubtitle": "Kuo išsiskiria Serendia Holidays",
+    "kicker": "Faktai",
+    "title": "Aiškios priežastys rinktis Serendia Holidays",
+    "cta": "Išgirskite tai iš buvusių svečių arba patys pamatykite kelionių vietas.",
+    "testimonials": "Skaityti atsiliepimus",
+    "gallery": "Peržiūrėti galeriją"
+  }
+}

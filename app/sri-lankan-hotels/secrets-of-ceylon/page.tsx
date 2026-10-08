@@ -1,5 +1,7 @@
+import { getTranslations } from 'next-intl/server';
 import HotelDetailPage from '../../components/HotelDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Secrets of Ceylon - Serendia Holidays By Venom',
@@ -7,37 +9,26 @@ export const metadata = pageMetadata({
   path: '/sri-lankan-hotels/secrets-of-ceylon',
 });
 
-export default function SecretsOfCeylonPage() {
+// Page text lives in messages/<locale>/hotels.json under HotelPages.secrets.
+const galleryImages = [
+  '/images/tour-polonnaruwa.png',
+  '/images/hero-3.png',
+];
+
+export default async function SecretsOfCeylonPage() {
+  const t = await getTranslations('HotelPages.secrets');
+  const gallery = t.raw('gallery') as { title: string; text: string }[];
+
   return (
     <HotelDetailPage
-      title="Secrets of Ceylon"
-      subtitle="Boutique Hotel"
+      title={t('title')}
+      subtitle={t('subtitle')}
       heroImage="/images/tour-polonnaruwa.png"
-      overview="Secrets of Ceylon is presented as a boutique-style property with a more elevated service feel, making it a strong fit for travelers who want comfort, privacy, and a polished guest experience."
-      highlights={[
-        { label: 'Style', value: 'Boutique hotel' },
-        { label: 'Best for', value: 'Couples and small groups' },
-        { label: 'Service', value: 'Personal and premium' },
-        { label: 'Use case', value: 'Round trips and escapes' },
-      ]}
-      gallery={[
-        {
-          title: 'Refined stay',
-          image: '/images/tour-polonnaruwa.png',
-          text: 'A polished setting that works well for guests who want a more curated accommodation choice.',
-        },
-        {
-          title: 'Tour-friendly base',
-          image: '/images/hero-3.png',
-          text: 'A useful stop for touring itineraries where quality of stay matters as much as location.',
-        },
-      ]}
+      overview={t('overview')}
+      highlights={t.raw('highlights') as { label: string; value: string }[]}
+      gallery={gallery.map((item, index) => ({ ...item, image: galleryImages[index] }))}
       catalogSlug="hotel-secrets-of-ceylon"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

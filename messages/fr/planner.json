@@ -1,0 +1,302 @@
+{
+  "Planner": {
+    "footer": "© 2026 Serendia Holidays. Tous droits réservés.",
+    "back": "← Retour",
+    "change": "Modifier",
+    "kinds": {
+      "individualTags": [
+        "1 à 5 voyageurs",
+        "Solo",
+        "Couple",
+        "Famille",
+        "Petit groupe"
+      ],
+      "groupTags": [
+        "6 voyageurs et +",
+        "Entreprise",
+        "École",
+        "Groupe organisé",
+        "Événement"
+      ]
+    },
+    "pill": {
+      "groupLong": "Groupe · 6 voyageurs et +",
+      "individualLong": "Individuel · 1 à 5 voyageurs",
+      "group": "Groupe",
+      "individual": "Individuel",
+      "early": "Première ébauche",
+      "full": "Dossier complet"
+    },
+    "start": {
+      "title": "Comment souhaitez-vous commencer ?",
+      "copy": "Choisissez selon les informations dont vous disposez déjà.",
+      "early": {
+        "title": "Première ébauche",
+        "subtitle": "Dates approximatives et nombre de voyageurs. Vols et informations personnelles à fournir plus tard.",
+        "tags": [
+          "3 étapes",
+          "Dates",
+          "Voyageurs",
+          "Préférences"
+        ]
+      },
+      "full": {
+        "title": "Dossier complet prêt",
+        "subtitle": "Toutes les informations : vols, numéros de passeport et coordonnées complètes.",
+        "tags": [
+          "4 étapes",
+          "Vols",
+          "Passeports",
+          "Tous les détails"
+        ]
+      }
+    },
+    "steps": {
+      "overview": "Aperçu du voyage",
+      "travelers": "Voyageurs",
+      "dates": "Dates et vols",
+      "accommodation": "Hébergement",
+      "activities": "Activités"
+    },
+    "agent": {
+      "toggle": "Cette réservation est faite par une agence de voyages",
+      "name": "Nom de l’agent",
+      "namePlaceholder": "Nom de l’agent",
+      "email": "E-mail de l’agent",
+      "agency": "Agence / Société",
+      "agencyPlaceholder": "Agence de voyages"
+    },
+    "travelers": {
+      "title": "Voyageurs",
+      "numberTitle": "Nombre de voyageurs",
+      "total": "{count} au total",
+      "adults": "Adultes",
+      "adultsHint": "18 ans et plus",
+      "children": "Enfants",
+      "childrenHint": "Moins de 12 ans"
+    },
+    "details": {
+      "title": "Informations voyageurs",
+      "copy": "Passeport et coordonnées",
+      "lead": "Voyageur principal",
+      "primary": "Contact principal",
+      "firstName": "Prénom",
+      "firstNamePlaceholder": "Prénom",
+      "lastName": "Nom",
+      "lastNamePlaceholder": "Nom",
+      "passport": "N° de passeport",
+      "passportPlaceholder": "Numéro de passeport",
+      "country": "Pays",
+      "countryPlaceholder": "Pays",
+      "email": "E-mail",
+      "emailPlaceholder": "Adresse e-mail",
+      "phone": "Téléphone",
+      "phonePlaceholder": "Numéro de téléphone"
+    },
+    "dates": {
+      "title": "Dates du voyage",
+      "arrival": "Date d’arrivée *",
+      "departure": "Date de départ *",
+      "laterNote": "Numéros de vol, heures d’arrivée et informations sur les passagers pourront être ajoutés plus tard depuis la page de demande."
+    },
+    "flights": {
+      "title": "Dates et vols",
+      "arrival": "Arrivée",
+      "departure": "Départ",
+      "date": "Date *",
+      "flight": "N° de vol (facultatif)",
+      "flightPlaceholder": "ex. {code}",
+      "time": "Heure (facultatif)",
+      "hours": "HH",
+      "minutes": "MM"
+    },
+    "accommodation": {
+      "title": "Préférences d’hébergement",
+      "copy": "Choisissez une ou plusieurs options adaptées à votre voyage dans chaque catégorie.",
+      "hotelType": "Type d’hôtel *",
+      "roomCategory": "Catégorie de chambre *",
+      "mealPlan": "Formule repas",
+      "budget": "Budget *",
+      "multiple": "(choix multiple)",
+      "optionalMultiple": "(facultatif · choix multiple)",
+      "rooms": "Nombre de chambres *",
+      "roomsTotal": "{count, plural, one {# chambre} other {# chambres}}"
+    },
+    "options": {
+      "activities": [
+        "Faune et nature",
+        "Bien-être et spiritualité",
+        "Archéologie et patrimoine",
+        "Thé et hautes terres",
+        "Randonnée et aventure",
+        "Plage et sports nautiques",
+        "Culture et patrimoine",
+        "Ville et loisirs",
+        "Écotourisme et vie de village",
+        "Cricket et sport"
+      ],
+      "hotelTypes": [
+        "3 étoiles",
+        "4 étoiles",
+        "5 étoiles",
+        "Boutique",
+        "Villa",
+        "Économique"
+      ],
+      "roomCategories": [
+        "Standard",
+        "Deluxe",
+        "Supérieure",
+        "Suite"
+      ],
+      "mealPlans": [
+        "BB · Petit-déjeuner",
+        "HB · Demi-pension",
+        "FB · Pension complète",
+        "AI · Tout compris",
+        "RO · Chambre seule"
+      ],
+      "budgets": [
+        "Petit budget",
+        "Confort",
+        "Premium",
+        "Grand luxe"
+      ],
+      "travelStyles": [
+        "Privé et flexible",
+        "Culture et patrimoine",
+        "Faune et nature",
+        "Bien-être et voyage lent",
+        "Découverte en famille",
+        "Voyage de luxe sur l’île"
+      ],
+      "paces": [
+        "Détendu",
+        "Équilibré",
+        "Actif"
+      ],
+      "transport": [
+        "Voiture privée",
+        "Van privé",
+        "Véhicule de luxe",
+        "Train + chauffeur",
+        "Autocar"
+      ],
+      "rooms": {
+        "double": {
+          "title": "Double (DBL)",
+          "note": "1 lit double · 2 personnes"
+        },
+        "single": {
+          "title": "Simple (SGL)",
+          "note": "1 lit simple · 1 personne"
+        },
+        "triple": {
+          "title": "Triple (TPL)",
+          "note": "3 lits · 3 personnes"
+        },
+        "quad": {
+          "title": "Quadruple (QTPL)",
+          "note": "4 lits · 4 personnes"
+        }
+      }
+    },
+    "activities": {
+      "title": "Activités",
+      "copy": "Choisissez les activités qui vous intéressent",
+      "error": "Veuillez choisir au moins une activité"
+    },
+    "journey": {
+      "title": "Préférences de voyage",
+      "copy": "Aidez nos conseillers à adapter le rythme, le confort et le transport à vos envies.",
+      "style": "Style de voyage",
+      "pace": "Rythme du voyage",
+      "transport": "Transport souhaité",
+      "chauffeur": "Inclure un chauffeur privé"
+    },
+    "requests": {
+      "title": "Demandes particulières",
+      "copy": "Préférences, besoins alimentaires ou arrangements spécifiques",
+      "dietary": "Besoins alimentaires",
+      "dietaryPlaceholder": "Ex. végétarien, allergies",
+      "accessibility": "Accessibilité",
+      "accessibilityPlaceholder": "Ex. accès fauteuil roulant, marche limitée",
+      "requestsPlaceholder": "Ex. hôtels de charme, accès fauteuil roulant, repas végétariens, anniversaire de mariage..."
+    },
+    "summary": {
+      "travelers": "Voyageurs : {count}",
+      "style": "Formule : {mode}"
+    },
+    "errors": {
+      "unavailable": "Le planificateur IA est momentanément indisponible.",
+      "contact": "Vous pouvez aussi nous joindre par WhatsApp/téléphone au +94 77 398 6504 ou <link>nous contacter</link>."
+    },
+    "actions": {
+      "generate": "Générer l’itinéraire IA ✦",
+      "generating": "Création de votre itinéraire…",
+      "continue": "Continuer →"
+    }
+  },
+  "PlannerResult": {
+    "errors": {
+      "pdf": "Nous n’avons pas pu créer votre PDF pour le moment.",
+      "pdfIncomplete": "Le téléchargement du PDF est incomplet. Veuillez réessayer.",
+      "finalise": "Impossible de finaliser votre demande pour le moment."
+    },
+    "confirmEmail": "Le PDF a été créé. L’envoyer maintenant à {email} ?",
+    "notices": {
+      "skipped": "PDF créé. L’envoi par e-mail a été ignoré.",
+      "emailFailed": "Le PDF a été créé, mais l’e-mail n’a pas pu être envoyé.",
+      "emailed": "PDF envoyé à {email}.",
+      "emailFailedNow": "Le PDF a été créé, mais l’e-mail n’a pas pu être envoyé pour le moment.",
+      "sending": "Envoi du PDF par e-mail en cours..."
+    },
+    "thanks": {
+      "kicker": "Demande de voyage envoyée",
+      "title": "Merci !",
+      "lead": "Votre demande de voyage personnalisée a bien été envoyée.",
+      "reference": "Numéro de référence",
+      "nextTitle": "Nos conseillers vont maintenant :",
+      "nextSteps": [
+        "Étudier votre itinéraire",
+        "Vérifier les disponibilités hôtelières",
+        "Préparer votre devis",
+        "Vous contacter très prochainement"
+      ],
+      "preparing": "Préparation du PDF…",
+      "download": "Télécharger le PDF",
+      "edit": "Modifier la demande",
+      "contact": "Nous contacter →"
+    },
+    "route": {
+      "banner": "Destinations choisies",
+      "ready": "Prêt pour votre relecture",
+      "title": "Votre itinéraire",
+      "lead": "Vérifiez les destinations épinglées, ajoutez vos coordonnées et finalisez la demande pour l’équipe Serendia.",
+      "stop": "Étape {number}",
+      "destinations": "{count, plural, one {# destination} other {# destinations}}",
+      "experiences": "{count, plural, one {# expérience} other {# expériences}}",
+      "travellers": "{count, plural, one {# voyageur} other {# voyageurs}}",
+      "pace": "Rythme : {pace}"
+    },
+    "final": {
+      "kicker": "Envoi final",
+      "title": "Finaliser mon voyage",
+      "copy": "Nous créons d’abord un PDF professionnel, puis nous vous demandons si vous souhaitez l’envoyer à {email}.",
+      "fullName": "Nom complet *",
+      "country": "Pays",
+      "email": "Adresse e-mail",
+      "phone": "Téléphone",
+      "method": "Moyen de contact préféré",
+      "methodEmail": "E-mail",
+      "methodPhone": "Téléphone",
+      "consent": "Je confirme l’exactitude de ces informations et j’accepte que Serendia Holidays traite cette demande pour l’étude de l’itinéraire et l’établissement d’un devis.",
+      "callUs": "Vous pouvez aussi nous joindre par WhatsApp/téléphone au +94 77 398 6504.",
+      "editPreferences": "← Modifier mes préférences",
+      "creating": "Création du PDF…",
+      "sendingEmail": "Envoi de l’e-mail…",
+      "submit": "Finaliser mon voyage →",
+      "security": "Créé en mémoire · PDF non stocké sur le serveur · Proposition d’envoi par e-mail après la création"
+    }
+  }
+}

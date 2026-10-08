@@ -1,0 +1,113 @@
+{
+  "About": {
+    "hero": {
+      "label": "Serendia Holidays by Venom · Sri Lanka",
+      "line1": "Conocimiento local.",
+      "line2": "Siempre en movimiento.",
+      "dock": "Viajes, críquet y hostelería, unidos por un mismo equipo de Sri Lanka.",
+      "meta1": "Independientes",
+      "meta2": "Fundada en 2019",
+      "meta3": "Sri Lanka",
+      "scrollLabel": "Ir a nuestra perspectiva",
+      "scroll": "Descubre nuestra perspectiva"
+    },
+    "perspective": {
+      "signal": "Nuestra perspectiva",
+      "title1": "No sale de una guía.",
+      "title2": "Sale de la experiencia.",
+      "copy1": "Serendia nació en 2019 de la mano de personas cuya trayectoria ya estaba arraigada en el turismo de Sri Lanka, la gestión hotelera y el críquet internacional.",
+      "copy2": "Esa experiencia cambia las preguntas que hacemos, los detalles en los que nos fijamos y los viajes que creamos.",
+      "altLeopard": "Leopardo en un bosque de Sri Lanka",
+      "altColombo": "Perfil de Colombo al atardecer",
+      "inset": "Energía de la isla",
+      "caption": "Planificamos con toda la isla en mente, desde la carretera más tranquila hasta el día de partido más intenso."
+    },
+    "disciplinesSection": {
+      "signal": "Cómo pensamos",
+      "title1": "Tres disciplinas.",
+      "title2": "Un solo plan en movimiento.",
+      "copy": "Desplázate por los tres mundos que dan forma a cada viaje de Serendia."
+    },
+    "disciplines": [
+      {
+        "signal": "Diseño de viajes",
+        "title": "Vive la isla como una sola historia.",
+        "copy": "Viajes privados, estancias de playa, hoteles y transporte se diseñan a tu ritmo, no se combinan como reservas sueltas.",
+        "link": "Ver circuitos",
+        "meta": "A medida · Sri Lanka y Maldivas"
+      },
+      {
+        "signal": "Turismo de críquet",
+        "title": "Viaja con quienes entienden el juego.",
+        "copy": "Partidos, campos, entrenamiento, aficionados y viajes en familia los coordina un equipo con auténtica experiencia en críquet internacional.",
+        "link": "Ir al turismo de críquet",
+        "meta": "Colegios · Clubes · Aficionados"
+      },
+      {
+        "signal": "Conocimiento hotelero",
+        "title": "Construir la bienvenida antes de que llegue el primer huésped.",
+        "copy": "Los proyectos hoteleros avanzan desde la planificación y las compras hasta la operación, la formación y una preapertura acompañada.",
+        "link": "Ver consultoría",
+        "meta": "Concepto · Operación · Apertura"
+      }
+    ],
+    "teamSection": {
+      "signal": "El factor humano",
+      "title": "Las personas que lo conectan todo.",
+      "copy": "Sin traspasos entre departamentos anónimos. Quienes dan forma a la idea siguen de cerca los detalles."
+    },
+    "team": [
+      {
+        "role": "Fundador · Viajes y hostelería",
+        "copy": "24 años en hoteles y viajes, incluidos casi siete como Secretario Ejecutivo de la Sri Lanka Tourism Development Authority."
+      },
+      {
+        "role": "Hostelería y área comercial",
+        "copy": "37 años de experiencia en hostelería, al frente de alimentos y bebidas, ventas y marketing."
+      },
+      {
+        "role": "Turismo de críquet",
+        "copy": "Exjugador internacional de Sri Lanka en Test y ODI, con más de 20 años en el críquet profesional y como entrenador."
+      },
+      {
+        "role": "Asesor de viajes",
+        "copy": "Une la planificación de viajes y la tecnología para que cada viaje sea más claro, sencillo y personal."
+      },
+      {
+        "role": "Operación de sistemas",
+        "copy": "Se ocupa de los sistemas digitales que mantienen en marcha, sin contratiempos, la operativa diaria de viajes de la empresa."
+      }
+    ],
+    "hotel": {
+      "signal": "Consultoría hotelera",
+      "title": "Un hotel es un viaje antes de ser un destino.",
+      "copy": "Acompañamos a los inversores desde las primeras decisiones prácticas hasta una operación lista para recibir a sus primeros huéspedes.",
+      "link": "Ver el servicio completo"
+    },
+    "hotelJourney": [
+      {
+        "title": "Diseñar",
+        "text": "Diseño del concepto, planificación de la obra y revisión práctica de los espacios que usarán huéspedes y equipos."
+      },
+      {
+        "title": "Proteger",
+        "text": "Financiación del proyecto, compras, oportunidades de ahorro y documentación legal."
+      },
+      {
+        "title": "Preparar",
+        "text": "Manuales operativos, automatización, puesta en marcha de equipos y planes de personal y marketing."
+      },
+      {
+        "title": "Abrir",
+        "text": "Formación, supervisión de obra y acompañamiento práctico durante la preapertura del hotel."
+      }
+    ],
+    "closing": {
+      "alt": "Costa de Sri Lanka al atardecer",
+      "signal": "Listos cuando tú lo estés",
+      "title": "Tu historia en Sri Lanka empieza con alguien que la conoce.",
+      "plan": "Planifica tu viaje",
+      "talk": "Habla con el equipo"
+    }
+  }
+}

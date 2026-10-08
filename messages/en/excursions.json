@@ -1,0 +1,361 @@
+{
+  "Excursions": {
+    "heroTitle": "Excursions",
+    "heroSubtitle": "One free day can open an entirely different Sri Lanka",
+    "intro": {
+      "eyebrow": "The one-day field guide",
+      "titleLine1": "Leave in the morning.",
+      "titleLine2": "Return with a story.",
+      "copy": "Start from the place you are already staying. We shape the route, timing and stops around your base, so a single day feels expansive rather than rushed.",
+      "assurancesLabel": "Excursion service details",
+      "assurances": ["Private pickup", "Flexible pace", "Local planning"]
+    },
+    "list": {
+      "eyebrow": "Choose by curiosity",
+      "title": "Nine ways to spend a day",
+      "copy": "Ancient capitals, tea-country air, city energy, wild landscapes and an east-coast horizon.",
+      "exploreLabel": "Explore {title}",
+      "seeDay": "See the day"
+    },
+    "cta": {
+      "eyebrow": "Already know where you’re staying?",
+      "title": "We’ll find the best day around it.",
+      "copy": "Share your hotel or base town and the experience you want. Our team will suggest a practical private route.",
+      "plan": "Plan an excursion",
+      "ask": "Ask the local team"
+    },
+    "items": {
+      "sigiriya": {
+        "title": "Sigiriya from Kandy",
+        "route": "Kandy → Sigiriya",
+        "duration": "Full day",
+        "theme": "Heritage hike",
+        "summary": "Travel through spice country, then climb the ancient Lion Rock citadel above the plains."
+      },
+      "anuradhapura": {
+        "title": "Anuradhapura from Dambulla",
+        "route": "Dambulla → Anuradhapura",
+        "duration": "Full day",
+        "theme": "Sacred city",
+        "summary": "Explore monumental stupas, temple precincts and reservoirs in Sri Lanka’s first great capital."
+      },
+      "colombo": {
+        "title": "Colombo",
+        "route": "Colombo city circuit",
+        "duration": "Half day",
+        "theme": "City culture",
+        "summary": "Move between Pettah, colonial architecture, museums and the capital’s modern landmarks."
+      },
+      "nuwaraEliya": {
+        "title": "Nuwara Eliya from Kandy",
+        "route": "Kandy → Nuwara Eliya",
+        "duration": "Full day",
+        "theme": "Tea country",
+        "summary": "Climb into cool highlands for tea estates, waterfalls and a slower mountain rhythm."
+      },
+      "polonnaruwa": {
+        "title": "Polonnaruwa",
+        "route": "Cultural Triangle",
+        "duration": "Full day",
+        "theme": "Ancient city",
+        "summary": "Walk among royal ruins, carved stone and reservoirs in a remarkably preserved medieval capital."
+      },
+      "yala": {
+        "title": "Yala from Bentota or Galle",
+        "route": "South coast → Yala",
+        "duration": "Full day",
+        "theme": "Wildlife safari",
+        "summary": "Trade the coast for open wilderness on a private safari through Sri Lanka’s best-known national park."
+      },
+      "trincomalee": {
+        "title": "Trincomalee",
+        "route": "East coast circuit",
+        "duration": "Full day",
+        "theme": "Coast and culture",
+        "summary": "Pair one of the world’s great natural harbours with Marble Beach and Koneswaram Temple."
+      },
+      "kandyColombo": {
+        "title": "Kandy from Colombo",
+        "route": "Colombo → Kandy",
+        "duration": "Full day",
+        "theme": "Hill capital",
+        "summary": "A private route to the Temple of the Tooth, Peradeniya gardens and Kandy’s lakefront."
+      },
+      "kandyNegombo": {
+        "title": "Kandy from Negombo",
+        "route": "Negombo → Kandy",
+        "duration": "Full day",
+        "theme": "Culture and gardens",
+        "summary": "Reach the island’s historic hill capital from the west coast with a route tailored to your stay."
+      }
+    }
+  },
+  "ExcursionPages": {
+    "anuradhapura": {
+      "title": "Anuradhapura Excursion from Dambulla",
+      "subtitle": "Full Day",
+      "heroNote": "A day among Sri Lanka’s first capital, sacred stupas, ancient reservoirs and enduring stone carvings.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Anuradhapura from Dambulla" },
+        { "label": "Distance", "value": "90km (one way)" },
+        { "label": "Depart", "value": "8.30am", "note": "Approximately 1.5 hours to Anuradhapura" }
+      ],
+      "sections": [
+        {
+          "title": "Ruwanwelisaya & the Sacred City",
+          "paragraphs": [
+            "Anuradhapura was Sri Lanka’s first great royal capital and remained a centre of power and Buddhist culture for more than a millennium. Its monumental stupas, reservoirs and monasteries reveal the scale and sophistication of the ancient city.",
+            "The route includes Ruwanwelisaya, built during the reign of King Dutugemunu, followed by selected sacred-city landmarks such as the Sri Maha Bodhi, the Samadhi Buddha and Kuttam Pokuna. Lunch is arranged independently in Anuradhapura."
+          ]
+        },
+        {
+          "title": "Isurumuniya Temple",
+          "paragraphs": [
+            "Isurumuniya stands beside Tissa Wewa and is known for its rock-cut setting and celebrated carvings, including the Isurumuniya Lovers, Elephant Pond and Royal Family scenes.",
+            "After time to explore the temple precinct and museum, the excursion returns to Dambulla in the late afternoon or early evening."
+          ]
+        }
+      ],
+      "bookingIntro": "We can tailor the sacred-city route around your preferred monuments, mobility needs and available time."
+    },
+    "colombo": {
+      "title": "Colombo Excursion",
+      "subtitle": "Half Day",
+      "heroNote": "A compact introduction to Colombo’s markets, heritage buildings, museums and modern skyline.",
+      "facts": [
+        { "label": "Duration", "value": "Half Day" },
+        { "label": "Excursion", "value": "Colombo City Excursion" },
+        { "label": "Distance", "value": "Approximately 50km" },
+        { "label": "Route", "value": "Private city circuit", "note": "Timing can be adapted to hotel and traffic conditions" }
+      ],
+      "sections": [
+        {
+          "title": "Old Colombo & Pettah",
+          "paragraphs": [
+            "Colombo combines commercial energy with layers of colonial, religious and civic history. The route moves through Pettah’s market streets and selected landmarks that show the city’s blend of East and West, past and present.",
+            "Depending on opening hours and your interests, stops can include Buddhist and Hindu temples, historic churches and the Old Parliament area."
+          ]
+        },
+        {
+          "title": "Museums & Modern Landmarks",
+          "paragraphs": [
+            "Continue through the National Museum area and past Nelum Pokuna theatre before seeing the modern administrative district and Colombo’s evolving skyline.",
+            "The Lotus Tower provides the city’s most recognizable contemporary landmark. The excursion concludes with a return to your Colombo hotel."
+          ]
+        }
+      ],
+      "bookingIntro": "Choose a morning or afternoon departure and we will shape the circuit around the places you most want to see."
+    },
+    "kandyColombo": {
+      "title": "Kandy Excursion from Colombo",
+      "subtitle": "Full Day",
+      "heroNote": "Sri Lanka’s hill capital, its most venerated temple, botanical gardens and a Pinnawala stop in one full day.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Kandy from Colombo" },
+        { "label": "Distance", "value": "140km (one way)" },
+        { "label": "Depart", "value": "8.30am", "note": "Approximately 3 hours to Kandy" }
+      ],
+      "sections": [
+        {
+          "title": "Temple of the Sacred Tooth Relic",
+          "paragraphs": [
+            "Set beside Kandy Lake, the Temple of the Sacred Tooth Relic is the spiritual focal point of Sri Lanka’s hill capital. Its daily rituals and historic palace buildings introduce the living traditions of this UNESCO-listed city.",
+            "Allow approximately one hour for the temple complex before lunch in Kandy at your own arrangement."
+          ]
+        },
+        {
+          "title": "Royal Botanical Gardens, Peradeniya",
+          "paragraphs": [
+            "The Royal Botanical Gardens at Peradeniya spread across a river-bound landscape just outside Kandy. Palms, flowering trees, giant tropical specimens and the orchid collection make it one of the island’s most rewarding garden walks.",
+            "The visit can be paced gently, with shaded paths and time for photography before beginning the return journey."
+          ]
+        },
+        {
+          "title": "Pinnawala on the Return Route",
+          "paragraphs": [
+            "A stop at Pinnawala can be arranged around the published care and river routines. Exact viewing conditions and timings remain subject to the facility’s current programme.",
+            "Continue to Colombo after the visit, arriving at the hotel in the evening."
+          ]
+        }
+      ],
+      "bookingIntro": "We will confirm temple dress guidance, attraction opening times and the best departure time for Colombo traffic."
+    },
+    "kandyNegombo": {
+      "title": "Kandy Excursion from Negombo",
+      "subtitle": "Full Day",
+      "heroNote": "A private hill-capital day shaped for guests staying in Negombo, with cultural and garden highlights.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Kandy from Negombo" },
+        { "label": "Distance", "value": "Approximately 115km (one way)" },
+        { "label": "Depart", "value": "Morning", "note": "Final pickup time confirmed for your hotel and traffic conditions" }
+      ],
+      "sections": [
+        {
+          "title": "Kandy & the Temple of the Tooth",
+          "paragraphs": [
+            "Travel inland from Negombo to Sri Lanka’s historic hill capital. The city’s cultural centre is the Temple of the Sacred Tooth Relic, set within the former royal palace complex beside Kandy Lake.",
+            "The visit is arranged around current opening hours and temple rituals, with appropriate time for a privately arranged lunch in Kandy."
+          ]
+        },
+        {
+          "title": "Peradeniya Gardens & Pinnawala",
+          "paragraphs": [
+            "Continue to the Royal Botanical Gardens at Peradeniya for shaded avenues, tropical collections and the orchid house.",
+            "A Pinnawala stop can be added on the outward or return journey depending on current schedules, before arriving back in Negombo in the evening."
+          ]
+        }
+      ],
+      "bookingIntro": "This route is adapted from our established Kandy day excursion and timed specifically for your Negombo hotel."
+    },
+    "nuwaraEliya": {
+      "title": "Nuwara-Eliya Excursion from Kandy",
+      "subtitle": "Full Day",
+      "heroNote": "Scenic tea country drive with waterfall and factory stops.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Nuwara-Eliya Excursion from Kandy" },
+        { "label": "Distance", "value": "100km (one way)" },
+        { "label": "Depart", "value": "8.30am to Nuwara-Eliya" }
+      ],
+      "sections": [
+        {
+          "title": "En Route View Ramboda Falls",
+          "paragraphs": [
+            "Ramboda Falls is among Sri Lanka’s best-known waterfall stops and makes a natural pause on the journey from Kandy to the hill country.",
+            "Altitude, cooler temperatures, and tea estates along the road turn the transfer itself into part of the experience rather than just the transit."
+          ]
+        },
+        {
+          "title": "Visit The Labookellie Tea Factory",
+          "paragraphs": [
+            "Labookellie is a historic tea factory where you can see how tea is processed before it reaches Sri Lanka’s export markets.",
+            "After lunch and a relaxed town visit, the return to Kandy closes the day with a cool mountain drive through the central highlands."
+          ]
+        },
+        {
+          "title": "See How Ceylon Tea Is Made",
+          "paragraphs": [
+            "Watch freshly picked leaves move through the early stages of tea making, from withering to the careful preparation that shapes Ceylon tea’s character.",
+            "It is a close-up look at the work behind the estates that make this highland route so distinctive."
+          ]
+        }
+      ],
+      "bookingIntro": "This excursion is easy to customize if you want more time for tea gardens, waterfalls, or the town center."
+    },
+    "polonnaruwa": {
+      "title": "Polonnaruwa Excursion",
+      "subtitle": "Full Day",
+      "heroNote": "Ancient city ruins, wildlife, and a relaxed return to the hotel after lunch.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Polonnaruwa Excursion" },
+        { "label": "Distance", "value": "110km (one way)" },
+        { "label": "Depart", "value": "8.30am to Polonnaruwa" }
+      ],
+      "sections": [
+        {
+          "title": "Polonnaruwa Ancient City",
+          "paragraphs": [
+            "As an eco-tourism venue, the city is divided into new and old town with the impressively preserved ruins split into five main areas, including The Quadrangle, the Northern City Group and the Rest House group.",
+            "The route is easy to explore on foot, and the surrounding area is well maintained so you can leave the car behind and move between the monuments at a relaxed pace."
+          ]
+        },
+        {
+          "title": "Minneriya National Park",
+          "paragraphs": [
+            "Minneriya Jeep Safari is one of the most popular activities for travelers who want to see elephants in their natural habitat.",
+            "Suggested safari times are 5.30am to 8.30am in the morning or 3.00pm to 6.00pm in the afternoon before returning to the hotel."
+          ]
+        }
+      ],
+      "bookingIntro": "Venom Holidays (Pvt) Ltd. can arrange the excursion, transport, and local support for the day."
+    },
+    "sigiriya": {
+      "title": "Sigiriya Excursion from Kandy",
+      "subtitle": "Full Day",
+      "heroNote": "Travel through Matale’s spice country before an afternoon climb of Sri Lanka’s iconic Lion Rock fortress.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Sigiriya from Kandy" },
+        { "label": "Distance", "value": "100km (one way)" },
+        { "label": "Depart", "value": "8.30am", "note": "Approximately 2.5 hours to Sigiriya" }
+      ],
+      "sections": [
+        {
+          "title": "Matale Spice Garden",
+          "paragraphs": [
+            "Pause in Matale to discover the fragrant plants behind Sri Lanka’s culinary traditions. A guided garden visit introduces familiar spices, their cultivation and their traditional uses.",
+            "Continue to Sigiriya for lunch at your own arrangement and time to prepare for the climb."
+          ]
+        },
+        {
+          "title": "Climb Sigiriya Lion Rock",
+          "paragraphs": [
+            "Sigiriya rose to prominence in the fifth century as the royal citadel of King Kashyapa. Its water gardens, monumental lion gateway, mirror wall, frescoes and summit ruins form one of Sri Lanka’s defining UNESCO World Heritage experiences.",
+            "The source itinerary schedules the climb at around 3.00pm and allows approximately two hours. Return to Kandy in the late evening after the descent."
+          ]
+        }
+      ],
+      "bookingIntro": "The climb involves many steps; tell us about mobility requirements so we can advise on pacing and alternatives."
+    },
+    "trincomalee": {
+      "title": "Trincomalee Excursion",
+      "subtitle": "Full Day",
+      "heroNote": "Sri Lanka’s great eastern harbour, a luminous beach and the sacred cliff-top setting of Koneswaram.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Trincomalee Excursion" },
+        { "label": "Distance", "value": "115km (one way)" },
+        { "label": "Depart", "value": "8.30am", "note": "Approximately 1.5 hours from Habarana" }
+      ],
+      "sections": [
+        {
+          "title": "Natural Harbour & Marble Beach",
+          "paragraphs": [
+            "Trincomalee is known for one of the world’s great natural harbours and a coastline of sheltered bays, pale sand and warm eastern waters.",
+            "The excursion includes time around Marble Beach, whose clear water and protected setting create a relaxed coastal pause. Lunch is arranged independently in Trincomalee."
+          ]
+        },
+        {
+          "title": "Koneswaram Temple & Swami Rock",
+          "paragraphs": [
+            "Koneswaram Temple occupies a dramatic sacred site above the sea at Swami Rock. The wider Trincomalee area contains places of significance to both Hindu and Buddhist communities, reflecting the east coast’s layered history.",
+            "After the temple and coastal viewpoints, return to the Habarana hotel in the evening."
+          ]
+        }
+      ],
+      "bookingIntro": "Beach time can be adjusted around weather, sea conditions and temple opening hours."
+    },
+    "yala": {
+      "title": "Yala Excursion from Bentota or Galle",
+      "subtitle": "Full Day",
+      "heroNote": "Afternoon safari departures and hotel return in the evening.",
+      "facts": [
+        { "label": "Duration", "value": "Full Day" },
+        { "label": "Excursion", "value": "Yala Excursion from Bentota or Galle" },
+        { "label": "Distance", "value": "200km (one way)" },
+        { "label": "Depart", "value": "8.30am to Yala" }
+      ],
+      "sections": [
+        {
+          "title": "Yala National Park Safari",
+          "paragraphs": [
+            "Yala is the oldest National Park in Sri Lanka and is split into blocks, with Block 1 open to the public and widely known for wildlife viewing.",
+            "The park is best known for elephants, leopards, crocodiles, peafowl, and a large variety of birds, so every drive has a strong chance of producing memorable sightings."
+          ]
+        },
+        {
+          "title": "Afternoon Safari Proceeds",
+          "paragraphs": [
+            "The main road through the park separates the landscape, with dense forest on one side and grasslands on the other, creating a dramatic route for game drives.",
+            "The best time to visit is during the dry season, when animals are easier to spot and the park delivers a classic Sri Lankan safari experience."
+          ]
+        }
+      ],
+      "bookingIntro": "We can arrange a private or shared safari plan depending on where you are staying."
+    }
+  }
+}

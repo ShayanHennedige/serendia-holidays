@@ -1,0 +1,154 @@
+{
+  "Tours": {
+    "heroTitle": "Rundreisen",
+    "heroSubtitle": "Private Reisen · lokale Expertise · ganz nach Ihren Wünschen",
+    "intro": {
+      "eyebrow": "Reisen, die sich nach Ihnen richten",
+      "title": "Erleben Sie Sri Lanka in Ihrem eigenen Rhythmus.",
+      "copy": "Diese Routen sind durchdachte Ausgangspunkte, keine starren Pakete. Wir passen Tempo, Unterkünfte und Erlebnisse an die Art an, wie Sie reisen möchten.",
+      "cta": "Beginnen Sie mit Ihrem Reisestil",
+      "factsLabel": "Überblick über unsere Rundreisen",
+      "journeys": "Ausgewählte Reisen",
+      "days": "Tage auf der Insel",
+      "tailorMade": "Maßgeschneidert"
+    },
+    "catalogue": {
+      "eyebrow": "Die Kollektion",
+      "title": "Wählen Sie Ihren Ausgangspunkt",
+      "copy": "Kultur, Tierwelt, Küste oder Abenteuer – unser Team vor Ort passt jede Route individuell an.",
+      "exploreLabel": "{title} entdecken",
+      "highlightsLabel": "Highlights von {title}",
+      "viewJourney": "Die ganze Reise ansehen",
+      "designJourney": "Diese Reise gestalten"
+    },
+    "planner": {
+      "eyebrow": "Eine Route, die zu Ihnen passt",
+      "title": "Nicht die passende Reise gefunden?",
+      "copy": "Erzählen Sie uns, was Sie an Sri Lanka reizt, und wir erstellen einen ersten Entwurf passend zu Ihrer Zeit, Ihren Interessen und Ihrem Wunschtempo.",
+      "plan": "Reise planen",
+      "talk": "Mit unserem Team sprechen"
+    },
+    "items": {
+      "bestOf": {
+        "title": "Das Beste von Sri Lanka: Kultur, Natur und Tierwelt",
+        "duration": "8 Nächte · 9 Tage",
+        "eyebrow": "Unsere Signature-Reise",
+        "summary": "Eine abwechslungsreiche Einführung in die Insel: antike Städte und nebliges Hochland, Begegnungen mit Wildtieren und ein entspannter Abschluss an der Küste.",
+        "highlights": [
+          "Kulturelles Dreieck",
+          "Hochland",
+          "Safari"
+        ]
+      },
+      "amazing": {
+        "title": "Faszinierendes Sri Lanka",
+        "duration": "9 Nächte · 10 Tage",
+        "eyebrow": "Kultur und Küste",
+        "summary": "Eine großzügige Inselrunde für Reisende, die Kulturerbe, lokales Leben, malerische Bahnstrecken und Zeit am Indischen Ozean erleben möchten.",
+        "highlights": [
+          "Antike Städte",
+          "Teeland",
+          "Südküste"
+        ]
+      },
+      "escape": {
+        "title": "Flucht ins Paradies",
+        "duration": "4 Nächte · 5 Tage",
+        "eyebrow": "Kurze Auszeit an der Küste",
+        "summary": "Eine kompakte, entspannte Route mit Stränden am warmen Meer, besonderen Unterkünften und gerade genug Kultur zwischen ruhigen Inselmorgen.",
+        "highlights": [
+          "Strandaufenthalte",
+          "Private Transfers",
+          "Lokale Küche"
+        ]
+      },
+      "nature": {
+        "title": "Natur und Tierwelt Sri Lankas",
+        "duration": "10 Nächte · 11 Tage",
+        "eyebrow": "Wilde Insel",
+        "summary": "Vom Rand des Regenwalds bis in weite Nationalparks – eine Naturreise, die auf verantwortungsvolle Tierbeobachtung ausgerichtet ist.",
+        "highlights": [
+          "Yala-Safari",
+          "Vogelwelt",
+          "Unterkünfte im Wald"
+        ]
+      },
+      "classic": {
+        "title": "Sri Lanka Klassisch",
+        "duration": "6 Nächte · 7 Tage",
+        "eyebrow": "Sri Lanka kompakt",
+        "summary": "Das Wesentliche der Insel in einer durchdachten Woche: lebendiges Kulturerbe, kühles Hochland, eine unvergessliche Zugfahrt und herzliche Gastfreundschaft.",
+        "highlights": [
+          "Kandy",
+          "Malerische Zugfahrt",
+          "Galle"
+        ]
+      },
+      "adventure": {
+        "title": "Abenteuer auf eigene Faust",
+        "duration": "14 Nächte · 15 Tage",
+        "eyebrow": "Aktivreise",
+        "summary": "Eine flexible Expedition für neugierige Reisende mit Wandern, Radfahren, Kanufahren und Camping – und Freiraum, um selbst auf Entdeckungstour zu gehen.",
+        "highlights": [
+          "Wandern",
+          "Radfahren",
+          "Kanufahren"
+        ]
+      }
+    }
+  },
+  "TourBestOfSriLanka": {
+    "title": "Das Beste von Sri Lanka: Kultur, Natur und Tierwelt",
+    "subtitle": "8 Nächte / 9 Tage",
+    "heroNote": "Eine flexible Rundreise mit Kultur, Tierwelt, Teeland und Küste.",
+    "facts": [
+      {
+        "label": "Dauer",
+        "value": "8 Nächte / 9 Tage"
+      },
+      {
+        "label": "Rundreise",
+        "value": "Das Beste von Sri Lanka: Kultur, Natur und Tierwelt"
+      },
+      {
+        "label": "Reiseart",
+        "value": "Private Rundreise"
+      },
+      {
+        "label": "Preis",
+        "value": "Auf Anfrage"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Tag 01: Flughafen – Colombo",
+        "paragraphs": [
+          "Ankunft und Transfer nach Colombo zur ersten Übernachtung – so bleibt der Anreisetag entspannt und flexibel.",
+          "Die Reiseroute lässt sich an Ihre Flugzeiten, die gewünschte Hotelkategorie und Ihr Wunschtempo für den Rest der Rundreise anpassen."
+        ]
+      },
+      {
+        "title": "Tag 03: Sigiriya – Polonnaruwa",
+        "paragraphs": [
+          "Dieser kulturelle Abschnitt führt durch Sri Lankas Kulturelles Dreieck, mit Zeit für antike Städte, Felsenfestungen und bekannte archäologische Stätten.",
+          "Tierwelt und Natur sind so in die Route eingebunden, dass sich der Urlaub wie eine zusammenhängende Reise anfühlt und nicht wie eine Reihe einzelner Stationen."
+        ]
+      },
+      {
+        "title": "Tag 05: Kandy – Nuwara Eliya",
+        "paragraphs": [
+          "Danach geht es hinauf ins Teeland, wo kühlere Luft, Bergorte und malerische Ausblicke von Zug oder Straße dem Urlaub einen neuen Rhythmus geben.",
+          "Nuwara Eliya sorgt für ein ruhigeres Tempo, bevor die Safari- und Strandtage im Süden beginnen."
+        ]
+      },
+      {
+        "title": "Tag 07: Yala – Galle – Bentota",
+        "paragraphs": [
+          "Die Route endet mit einer Mischung aus Safari und Küste – vom Nationalpark durch den Süden bis an die Strandküste.",
+          "Da es sich um eine private Reise handelt, können Reihenfolge der Stationen und Übernachtungsorte an Ihre Interessen und Reisedaten angepasst werden."
+        ]
+      }
+    ],
+    "bookingIntro": "Nennen Sie uns Ihren bevorzugten Reisemonat und Ihre Hotelkategorie, und wir gestalten die gesamte Rundreise nach Ihren Plänen."
+  }
+}

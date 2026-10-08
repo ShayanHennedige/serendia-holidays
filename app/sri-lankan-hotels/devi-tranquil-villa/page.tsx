@@ -1,5 +1,7 @@
+import { getTranslations } from 'next-intl/server';
 import HotelDetailPage from '../../components/HotelDetailPage';
 import { pageMetadata } from '../../lib/seo';
+import { BOOKING_LINES } from '../../lib/tripCopy';
 
 export const metadata = pageMetadata({
   title: 'Devi Tranquil Villa - Serendia Holidays By Venom',
@@ -7,37 +9,26 @@ export const metadata = pageMetadata({
   path: '/sri-lankan-hotels/devi-tranquil-villa',
 });
 
-export default function DeviTranquilVillaPage() {
+// Page text lives in messages/<locale>/hotels.json under HotelPages.devi.
+const galleryImages = [
+  '/images/hero-2.png',
+  '/images/hero-4.png',
+];
+
+export default async function DeviTranquilVillaPage() {
+  const t = await getTranslations('HotelPages.devi');
+  const gallery = t.raw('gallery') as { title: string; text: string }[];
+
   return (
     <HotelDetailPage
-      title="Devi Tranquil Villa"
-      subtitle="Sri Lankan Hotel"
+      title={t('title')}
+      subtitle={t('subtitle')}
       heroImage="/images/hero-2.png"
-      overview="Devi Tranquil Villa is a calm, small-scale stay that suits travelers who want a quieter base with practical service, good access, and a more personal atmosphere than a large resort hotel."
-      highlights={[
-        { label: 'Style', value: 'Villa stay' },
-        { label: 'Best for', value: 'Private holidays' },
-        { label: 'Atmosphere', value: 'Relaxed and personal' },
-        { label: 'Location', value: 'Convenient for touring' },
-      ]}
-      gallery={[
-        {
-          title: 'Comfortable rooms',
-          image: '/images/hero-2.png',
-          text: 'Well-suited for short stays, round trips, and couples looking for a quieter accommodation base.',
-        },
-        {
-          title: 'Easy holiday planning',
-          image: '/images/hero-4.png',
-          text: 'A practical choice when you want to combine accommodation with excursions and transfers.',
-        },
-      ]}
+      overview={t('overview')}
+      highlights={t.raw('highlights') as { label: string; value: string }[]}
+      gallery={gallery.map((item, index) => ({ ...item, image: galleryImages[index] }))}
       catalogSlug="hotel-devi-tranquil-villa"
-      bookingLines={[
-        '63A, Old Road, Pannipitiya, Sri Lanka',
-        'WhatsApp/Call: +94 77 398 6504',
-        'Email: dharshan@venomholidays.com',
-      ]}
+      bookingLines={BOOKING_LINES}
     />
   );
 }

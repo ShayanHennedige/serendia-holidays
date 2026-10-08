@@ -1,0 +1,361 @@
+{
+  "Excursions": {
+    "heroTitle": "Ekskursijos",
+    "heroSubtitle": "Viena laisva diena gali atverti visiškai kitokią Šri Lanką",
+    "intro": {
+      "eyebrow": "Vienos dienos gidas",
+      "titleLine1": "Išvykite ryte.",
+      "titleLine2": "Grįžkite su istorija.",
+      "copy": "Pradėkite nuo ten, kur jau esate apsistoję. Maršrutą, laiką ir sustojimus pritaikome prie jūsų buvimo vietos, kad viena diena atrodytų erdvi, o ne skubota.",
+      "assurancesLabel": "Ekskursijų paslaugos informacija",
+      "assurances": ["Privatus paėmimas", "Lankstus tempas", "Vietos planavimas"]
+    },
+    "list": {
+      "eyebrow": "Rinkitės pagal smalsumą",
+      "title": "Devyni būdai praleisti dieną",
+      "copy": "Senovės sostinės, arbatos krašto oras, miesto energija, laukiniai kraštovaizdžiai ir rytinės pakrantės horizontas.",
+      "exploreLabel": "Atrasti: {title}",
+      "seeDay": "Peržiūrėti dieną"
+    },
+    "cta": {
+      "eyebrow": "Jau žinote, kur apsistosite?",
+      "title": "Rasime geriausią dienos išvyką šalia jūsų.",
+      "copy": "Nurodykite savo viešbutį ar miestą ir kokios patirties norite. Mūsų komanda pasiūlys patogų privatų maršrutą.",
+      "plan": "Planuoti ekskursiją",
+      "ask": "Klausti vietos komandos"
+    },
+    "items": {
+      "sigiriya": {
+        "title": "Sigirija iš Kandžio",
+        "route": "Kandis → Sigirija",
+        "duration": "Visa diena",
+        "theme": "Paveldo žygis",
+        "summary": "Keliaukite per prieskonių kraštą ir užkopkite į senovinę Liūto uolos citadelę, iškilusią virš lygumų."
+      },
+      "anuradhapura": {
+        "title": "Anuradapura iš Dambulos",
+        "route": "Dambula → Anuradapura",
+        "duration": "Visa diena",
+        "theme": "Šventasis miestas",
+        "summary": "Apžiūrėkite monumentalias stupas, šventyklų kompleksus ir rezervuarus pirmojoje didžiojoje Šri Lankos sostinėje."
+      },
+      "colombo": {
+        "title": "Kolombas",
+        "route": "Maršrutas po Kolombą",
+        "duration": "Pusė dienos",
+        "theme": "Miesto kultūra",
+        "summary": "Tarp Petos, kolonijinės architektūros, muziejų ir moderniųjų sostinės simbolių."
+      },
+      "nuwaraEliya": {
+        "title": "Nuvara Elija iš Kandžio",
+        "route": "Kandis → Nuvara Elija",
+        "duration": "Visa diena",
+        "theme": "Arbatos kraštas",
+        "summary": "Pakilkite į vėsias aukštumas, kur laukia arbatos plantacijos, kriokliai ir lėtesnis kalnų ritmas."
+      },
+      "polonnaruwa": {
+        "title": "Polonaruva",
+        "route": "Kultūrinis trikampis",
+        "duration": "Visa diena",
+        "theme": "Senovės miestas",
+        "summary": "Pasivaikščiokite tarp karališkųjų griuvėsių, raižyto akmens ir rezervuarų nepaprastai gerai išlikusioje viduramžių sostinėje."
+      },
+      "yala": {
+        "title": "Jala iš Bentotos ar Galės",
+        "route": "Pietų pakrantė → Jala",
+        "duration": "Visa diena",
+        "theme": "Safaris",
+        "summary": "Iškeiskite pakrantę į laukinę gamtą per privatų safarį žinomiausiame Šri Lankos nacionaliniame parke."
+      },
+      "trincomalee": {
+        "title": "Trinkomalis",
+        "route": "Maršrutas rytinėje pakrantėje",
+        "duration": "Visa diena",
+        "theme": "Pakrantė ir kultūra",
+        "summary": "Vienas didžiausių pasaulio natūralių uostų kartu su Marble Beach ir Konesvaramo šventykla."
+      },
+      "kandyColombo": {
+        "title": "Kandis iš Kolombo",
+        "route": "Kolombas → Kandis",
+        "duration": "Visa diena",
+        "theme": "Kalnų sostinė",
+        "summary": "Privatus maršrutas į Dantų šventyklą, Peradenijos sodus ir Kandžio ežero pakrantę."
+      },
+      "kandyNegombo": {
+        "title": "Kandis iš Negombo",
+        "route": "Negombas → Kandis",
+        "duration": "Visa diena",
+        "theme": "Kultūra ir sodai",
+        "summary": "Iš vakarinės pakrantės pasiekite istorinę kalnų sostinę maršrutu, pritaikytu jūsų apsistojimo vietai."
+      }
+    }
+  },
+  "ExcursionPages": {
+    "anuradhapura": {
+      "title": "Ekskursija į Anuradapurą iš Dambulos",
+      "subtitle": "Visa diena",
+      "heroNote": "Diena pirmojoje Šri Lankos sostinėje tarp šventųjų stupų, senovinių rezervuarų ir amžinų akmens raižinių.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Anuradapura iš Dambulos" },
+        { "label": "Atstumas", "value": "90 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val.", "note": "Apie 1,5 val. iki Anuradapuros" }
+      ],
+      "sections": [
+        {
+          "title": "Ruvanvelisaja ir šventasis miestas",
+          "paragraphs": [
+            "Anuradapura buvo pirmoji didžioji Šri Lankos karališkoji sostinė ir daugiau nei tūkstantmetį išliko valdžios bei budizmo kultūros centru. Monumentalios stupos, rezervuarai ir vienuolynai atskleidžia senovės miesto mastą ir išmonę.",
+            "Maršrutas apima karaliaus Dutugemunu laikais pastatytą Ruvanvelisają ir pasirinktas šventojo miesto vietas, tokias kaip Šri Maha Bodhi, Samadhi Buda ir Kutam Pokuna. Pietūs Anuradapuroje – savarankiškai."
+          ]
+        },
+        {
+          "title": "Isurumunijos šventykla",
+          "paragraphs": [
+            "Isurumunija stovi prie Tisos Vevos ežero ir garsėja uoloje iškirsta aplinka bei žymiais raižiniais, tarp jų – Isurumunijos įsimylėjėliais, Dramblių tvenkiniu ir Karališkosios šeimos scenomis.",
+            "Apžiūrėjus šventyklos teritoriją ir muziejų, vėlyvą popietę ar ankstyvą vakarą grįžtama į Dambulą."
+          ]
+        }
+      ],
+      "bookingIntro": "Šventojo miesto maršrutą galime pritaikyti prie jūsų pasirinktų paminklų, judėjimo poreikių ir turimo laiko."
+    },
+    "colombo": {
+      "title": "Ekskursija po Kolombą",
+      "subtitle": "Pusė dienos",
+      "heroNote": "Glausta pažintis su Kolombo turgumis, paveldo pastatais, muziejais ir moderniu miesto siluetu.",
+      "facts": [
+        { "label": "Trukmė", "value": "Pusė dienos" },
+        { "label": "Ekskursija", "value": "Ekskursija po Kolombo miestą" },
+        { "label": "Atstumas", "value": "Apie 50 km" },
+        { "label": "Maršrutas", "value": "Privatus maršrutas po miestą", "note": "Laiką galima pritaikyti prie viešbučio ir eismo sąlygų" }
+      ],
+      "sections": [
+        {
+          "title": "Senasis Kolombas ir Peta",
+          "paragraphs": [
+            "Kolombas jungia prekybinį šurmulį su kolonijinės, religinės ir pilietinės istorijos sluoksniais. Maršrutas veda Petos turgaus gatvėmis ir pasirinktomis vietomis, atskleidžiančiomis Rytų ir Vakarų, praeities ir dabarties derinį.",
+            "Priklausomai nuo darbo laiko ir jūsų pomėgių, galima aplankyti budistų ir induistų šventyklas, istorines bažnyčias ir Senojo parlamento rajoną."
+          ]
+        },
+        {
+          "title": "Muziejai ir modernūs simboliai",
+          "paragraphs": [
+            "Toliau keliaujama pro Nacionalinio muziejaus rajoną ir Nelum Pokuna teatrą, o tada apžiūrimas modernus administracinis rajonas ir besikeičiantis Kolombo siluetas.",
+            "Lotus Tower – labiausiai atpažįstamas šiuolaikinis miesto simbolis. Ekskursija baigiasi grįžimu į jūsų viešbutį Kolombe."
+          ]
+        }
+      ],
+      "bookingIntro": "Pasirinkite išvykimą ryte arba po pietų, o mes sudarysime maršrutą pagal vietas, kurias labiausiai norite pamatyti."
+    },
+    "kandyColombo": {
+      "title": "Ekskursija į Kandį iš Kolombo",
+      "subtitle": "Visa diena",
+      "heroNote": "Šri Lankos kalnų sostinė, labiausiai gerbiama jos šventykla, botanikos sodai ir sustojimas Pinavaloje – per vieną dieną.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Kandis iš Kolombo" },
+        { "label": "Atstumas", "value": "140 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val.", "note": "Apie 3 val. iki Kandžio" }
+      ],
+      "sections": [
+        {
+          "title": "Šventosios Danties relikvijos šventykla",
+          "paragraphs": [
+            "Prie Kandžio ežero stovinti Šventosios Danties relikvijos šventykla yra dvasinis kalnų sostinės centras. Kasdieniai ritualai ir istoriniai rūmų pastatai supažindina su gyvomis šio UNESCO saugomo miesto tradicijomis.",
+            "Šventyklos kompleksui skirkite apie valandą, o po to – pietūs Kandyje savarankiškai."
+          ]
+        },
+        {
+          "title": "Peradenijos karališkasis botanikos sodas",
+          "paragraphs": [
+            "Peradenijos karališkasis botanikos sodas plyti upės vingyje visai šalia Kandžio. Palmės, žydintys medžiai, milžiniški atogrąžų augalai ir orchidėjų kolekcija daro jį vienu vertingiausių pasivaikščiojimų saloje.",
+            "Sodą galima apžiūrėti neskubant, pavėsingais takais, su laiku nuotraukoms prieš leidžiantis atgal."
+          ]
+        },
+        {
+          "title": "Pinavala grįžtant",
+          "paragraphs": [
+            "Sustojimą Pinavaloje galima suplanuoti pagal skelbiamą priežiūros ir maudynių upėje tvarkaraštį. Tikslios sąlygos ir laikas priklauso nuo dabartinės centro programos.",
+            "Po apsilankymo kelionė tęsiama į Kolombą, į viešbutį atvykstama vakare."
+          ]
+        }
+      ],
+      "bookingIntro": "Patvirtinsime aprangos reikalavimus šventykloje, lankytinų vietų darbo laiką ir geriausią išvykimo laiką atsižvelgiant į Kolombo eismą."
+    },
+    "kandyNegombo": {
+      "title": "Ekskursija į Kandį iš Negombo",
+      "subtitle": "Visa diena",
+      "heroNote": "Privati diena kalnų sostinėje, sukurta Negombe apsistojusiems svečiams, su kultūros ir sodų akcentais.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Kandis iš Negombo" },
+        { "label": "Atstumas", "value": "Apie 115 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "Rytas", "note": "Tikslus paėmimo laikas patvirtinamas pagal jūsų viešbutį ir eismo sąlygas" }
+      ],
+      "sections": [
+        {
+          "title": "Kandis ir Dantų šventykla",
+          "paragraphs": [
+            "Iš Negombo keliaukite į salos gilumą – į istorinę kalnų sostinę. Kultūrinis miesto centras yra Šventosios Danties relikvijos šventykla buvusių karališkųjų rūmų komplekse prie Kandžio ežero.",
+            "Apsilankymas planuojamas pagal dabartinį darbo laiką ir šventyklos ritualus, paliekant laiko savarankiškiems pietums Kandyje."
+          ]
+        },
+        {
+          "title": "Peradenijos sodai ir Pinavala",
+          "paragraphs": [
+            "Toliau – Peradenijos karališkasis botanikos sodas su pavėsingomis alėjomis, atogrąžų kolekcijomis ir orchidėjų šiltnamiu.",
+            "Pagal dabartinį tvarkaraštį pakeliui ten arba atgal galima sustoti Pinavaloje, o vakare grįžti į Negombą."
+          ]
+        }
+      ],
+      "bookingIntro": "Šis maršrutas sukurtas pagal mūsų išbandytą vienos dienos ekskursiją į Kandį ir suderintas būtent su jūsų viešbučiu Negombe."
+    },
+    "nuwaraEliya": {
+      "title": "Ekskursija į Nuvara Eliją iš Kandžio",
+      "subtitle": "Visa diena",
+      "heroNote": "Vaizdinga kelionė per arbatos kraštą su sustojimais prie krioklio ir arbatos fabrike.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Ekskursija į Nuvara Eliją iš Kandžio" },
+        { "label": "Atstumas", "value": "100 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val. į Nuvara Eliją" }
+      ],
+      "sections": [
+        {
+          "title": "Pakeliui: Rambodos kriokliai",
+          "paragraphs": [
+            "Rambodos kriokliai – vieni žinomiausių Šri Lankos krioklių ir natūrali stotelė kelyje iš Kandžio į kalnų regioną.",
+            "Aukštis, vėsesnė temperatūra ir arbatos plantacijos pakelėse paverčia pačią kelionę patirties dalimi."
+          ]
+        },
+        {
+          "title": "Apsilankymas Labukelio arbatos fabrike",
+          "paragraphs": [
+            "Labukelis – istorinis arbatos fabrikas, kuriame pamatysite, kaip apdorojama arbata prieš patekdama į Šri Lankos eksporto rinkas.",
+            "Po pietų ir neskubaus pasivaikščiojimo po miestelį grįžimas į Kandį užbaigia dieną vėsia kalnų kelione per centrines aukštumas."
+          ]
+        },
+        {
+          "title": "Pamatykite, kaip gaminama Ceilono arbata",
+          "paragraphs": [
+            "Stebėkite, kaip šviežiai nuskinti lapai pereina pirmuosius gamybos etapus – nuo vytinimo iki kruopštaus paruošimo, suteikiančio Ceilono arbatai jos charakterį.",
+            "Tai artimas žvilgsnis į darbą, slypintį už plantacijų, kurios daro šį kalnų maršrutą tokį išskirtinį."
+          ]
+        }
+      ],
+      "bookingIntro": "Šią ekskursiją lengva pritaikyti, jei norite daugiau laiko arbatos soduose, prie krioklių ar miestelio centre."
+    },
+    "polonnaruwa": {
+      "title": "Ekskursija į Polonaruvą",
+      "subtitle": "Visa diena",
+      "heroNote": "Senovės miesto griuvėsiai, laukinė gamta ir neskubus grįžimas į viešbutį po pietų.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Ekskursija į Polonaruvą" },
+        { "label": "Atstumas", "value": "110 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val. į Polonaruvą" }
+      ],
+      "sections": [
+        {
+          "title": "Senovės Polonaruvos miestas",
+          "paragraphs": [
+            "Šis ekoturizmo objektas padalytas į naująjį ir senąjį miestą, o įspūdingai išlikę griuvėsiai išsidėstę penkiose pagrindinėse zonose, tarp jų – Keturkampyje, Šiaurinio miesto grupėje ir Rest House grupėje.",
+            "Maršrutą patogu apžiūrėti pėsčiomis, o aplinka gerai prižiūrima, todėl galite palikti automobilį ir neskubėdami vaikščioti tarp paminklų."
+          ]
+        },
+        {
+          "title": "Minerijos nacionalinis parkas",
+          "paragraphs": [
+            "Džipų safaris Minerijoje – viena populiariausių veiklų keliautojams, norintiems pamatyti dramblius natūralioje aplinkoje.",
+            "Rekomenduojamas safario laikas – ryte nuo 5.30 iki 8.30 val. arba po pietų nuo 15.00 iki 18.00 val., po to grįžtama į viešbutį."
+          ]
+        }
+      ],
+      "bookingIntro": "Venom Holidays (Pvt) Ltd. gali organizuoti ekskursiją, transportą ir vietinę pagalbą šiai dienai."
+    },
+    "sigiriya": {
+      "title": "Ekskursija į Sigiriją iš Kandžio",
+      "subtitle": "Visa diena",
+      "heroNote": "Kelionė per Matalės prieskonių kraštą ir popietinis kopimas į garsiąją Liūto uolos tvirtovę.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Sigirija iš Kandžio" },
+        { "label": "Atstumas", "value": "100 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val.", "note": "Apie 2,5 val. iki Sigirijos" }
+      ],
+      "sections": [
+        {
+          "title": "Matalės prieskonių sodas",
+          "paragraphs": [
+            "Sustokite Matalėje ir susipažinkite su kvapniais augalais, slypinčiais už Šri Lankos kulinarinių tradicijų. Ekskursija po sodą su gidu pristato žinomus prieskonius, jų auginimą ir tradicinį naudojimą.",
+            "Toliau kelionė į Sigiriją – pietūs savarankiškai ir laikas pasiruošti kopimui."
+          ]
+        },
+        {
+          "title": "Kopimas į Sigirijos Liūto uolą",
+          "paragraphs": [
+            "Sigirija išgarsėjo V amžiuje kaip karaliaus Kašjapos karališkoji citadelė. Vandens sodai, monumentalūs Liūto vartai, veidrodinė siena, freskos ir griuvėsiai viršūnėje – viena ryškiausių Šri Lankos UNESCO pasaulio paveldo patirčių.",
+            "Kopimas planuojamas apie 15.00 val. ir trunka maždaug dvi valandas. Nusileidus vėlai vakare grįžtama į Kandį."
+          ]
+        }
+      ],
+      "bookingIntro": "Kopiant tenka įveikti daug laiptų; praneškite apie judėjimo poreikius, kad galėtume patarti dėl tempo ir alternatyvų."
+    },
+    "trincomalee": {
+      "title": "Ekskursija į Trinkomalį",
+      "subtitle": "Visa diena",
+      "heroNote": "Didysis rytinis Šri Lankos uostas, šviesus paplūdimys ir šventa Konesvaramo vieta ant skardžio.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Ekskursija į Trinkomalį" },
+        { "label": "Atstumas", "value": "115 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val.", "note": "Apie 1,5 val. iš Habaranos" }
+      ],
+      "sections": [
+        {
+          "title": "Natūralus uostas ir Marble Beach",
+          "paragraphs": [
+            "Trinkomalis garsėja vienu didžiausių pasaulio natūralių uostų ir pakrante su užuovėjos įlankomis, šviesiu smėliu ir šiltu vandeniu.",
+            "Ekskursijos metu laiko skiriama Marble Beach, kurio skaidrus vanduo ir apsaugota aplinka kviečia ramiai pailsėti prie jūros. Pietūs Trinkomalyje – savarankiškai."
+          ]
+        },
+        {
+          "title": "Konesvaramo šventykla ir Svamio uola",
+          "paragraphs": [
+            "Konesvaramo šventykla stovi įspūdingoje šventoje vietoje virš jūros, ant Svamio uolos. Trinkomalio apylinkėse yra vietų, svarbių tiek induistams, tiek budistams, – tai atspindi daugiasluoksnę rytinės pakrantės istoriją.",
+            "Aplankius šventyklą ir pakrantės apžvalgos vietas, vakare grįžtama į viešbutį Habaranoje."
+          ]
+        }
+      ],
+      "bookingIntro": "Laiką paplūdimyje galima pritaikyti prie oro, jūros sąlygų ir šventyklos darbo laiko."
+    },
+    "yala": {
+      "title": "Ekskursija į Jalą iš Bentotos ar Galės",
+      "subtitle": "Visa diena",
+      "heroNote": "Popietinis safaris ir grįžimas į viešbutį vakare.",
+      "facts": [
+        { "label": "Trukmė", "value": "Visa diena" },
+        { "label": "Ekskursija", "value": "Ekskursija į Jalą iš Bentotos ar Galės" },
+        { "label": "Atstumas", "value": "200 km (į vieną pusę)" },
+        { "label": "Išvykimas", "value": "8.30 val. į Jalą" }
+      ],
+      "sections": [
+        {
+          "title": "Safaris Jalos nacionaliniame parke",
+          "paragraphs": [
+            "Jala – seniausias Šri Lankos nacionalinis parkas, padalytas į blokus; 1-asis blokas atviras lankytojams ir garsėja laukinės gamtos stebėjimu.",
+            "Parkas labiausiai žinomas dėl dramblių, leopardų, krokodilų, povų ir didelės paukščių įvairovės, todėl kiekviena išvyka žada įsimintinų susitikimų."
+          ]
+        },
+        {
+          "title": "Popietinis safaris",
+          "paragraphs": [
+            "Pagrindinis kelias per parką dalija kraštovaizdį: vienoje pusėje tankus miškas, kitoje – pievos, todėl safario maršrutas tampa itin įspūdingas.",
+            "Geriausias metas apsilankyti – sausasis sezonas, kai gyvūnus lengviau pastebėti, o parkas suteikia klasikinę Šri Lankos safario patirtį."
+          ]
+        }
+      ],
+      "bookingIntro": "Priklausomai nuo jūsų apsistojimo vietos, galime organizuoti privatų arba bendrą safarį."
+    }
+  }
+}

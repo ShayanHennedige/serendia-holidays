@@ -1,0 +1,113 @@
+{
+  "About": {
+    "hero": {
+      "label": "Serendia Holidays by Venom · Sri Lanka",
+      "line1": "Wissen von vor Ort.",
+      "line2": "Immer in Bewegung.",
+      "dock": "Reisen, Cricket und Gastgewerbe – verbunden durch ein srilankisches Team.",
+      "meta1": "Unabhängig",
+      "meta2": "Gegründet 2019",
+      "meta3": "Sri Lanka",
+      "scrollLabel": "Zu unserer Sichtweise scrollen",
+      "scroll": "Unsere Sichtweise entdecken"
+    },
+    "perspective": {
+      "signal": "Unsere Sichtweise",
+      "title1": "Nicht aus dem Reiseführer.",
+      "title2": "Aus Erfahrung.",
+      "copy1": "Serendia wurde 2019 von Menschen gegründet, deren Laufbahn bereits fest im srilankischen Tourismus, im Hotelbetrieb und im internationalen Cricket verwurzelt war.",
+      "copy2": "Diese Erfahrung verändert die Fragen, die wir stellen, die Details, die uns auffallen, und die Reisen, die wir gestalten.",
+      "altLeopard": "Leopard in einem Wald in Sri Lanka",
+      "altColombo": "Skyline von Colombo bei Sonnenuntergang",
+      "inset": "Energie der Insel",
+      "caption": "Wir planen mit Blick auf die ganze Insel – von der ruhigsten Straße bis zum vollsten Spieltag."
+    },
+    "disciplinesSection": {
+      "signal": "Wie wir denken",
+      "title1": "Drei Disziplinen.",
+      "title2": "Ein Plan in Bewegung.",
+      "copy": "Scrollen Sie durch die drei Welten, die jede Serendia-Reise prägen."
+    },
+    "disciplines": [
+      {
+        "signal": "Reisegestaltung",
+        "title": "Erleben Sie die Insel als zusammenhängende Geschichte.",
+        "copy": "Private Reisen, Strandaufenthalte, Hotels und Transport werden auf Ihr Tempo abgestimmt – statt als einzelne Buchungen zusammengestückelt.",
+        "link": "Rundreisen entdecken",
+        "meta": "Maßgeschneidert · Sri Lanka & Malediven"
+      },
+      {
+        "signal": "Cricket-Reisen",
+        "title": "Reisen Sie mit Menschen, die das Spiel verstehen.",
+        "copy": "Spiele, Plätze, Training, Fans und Familienreisen werden von einem Team mit echter internationaler Cricket-Erfahrung koordiniert.",
+        "link": "Zu den Cricket-Reisen",
+        "meta": "Schulen · Vereine · Fans"
+      },
+      {
+        "signal": "Hotellerie-Know-how",
+        "title": "Gastfreundschaft aufbauen, bevor der erste Gast ankommt.",
+        "copy": "Hotelkonzepte reichen von Planung und Beschaffung über Betrieb und Schulung bis zu einer begleiteten Soft-Opening-Phase.",
+        "link": "Zur Beratung",
+        "meta": "Konzept · Betrieb · Eröffnung"
+      }
+    ],
+    "teamSection": {
+      "signal": "Der menschliche Faktor",
+      "title": "Die Menschen, die alles verbinden.",
+      "copy": "Keine Übergaben zwischen anonymen Abteilungen. Wer die Idee entwickelt, bleibt nah an den Details."
+    },
+    "team": [
+      {
+        "role": "Gründer · Reisen & Gastgewerbe",
+        "copy": "24 Jahre in Hotellerie und Tourismus, davon fast sieben Jahre als Exekutivsekretär der Sri Lanka Tourism Development Authority."
+      },
+      {
+        "role": "Gastgewerbe & Vertrieb",
+        "copy": "37 Jahre Erfahrung im Gastgewerbe, in leitenden Positionen in Food & Beverage, Vertrieb und Marketing."
+      },
+      {
+        "role": "Cricket-Reisen",
+        "copy": "Ehemaliger Test- und ODI-Nationalspieler Sri Lankas mit über 20 Jahren im Profi-Cricket und als Trainer."
+      },
+      {
+        "role": "Reiseberater",
+        "copy": "Verbindet Reiseplanung und Technologie, um jede Reise klarer, einfacher und persönlicher zu machen."
+      },
+      {
+        "role": "Systembetrieb",
+        "copy": "Betreut die digitalen Systeme, die den täglichen Reisebetrieb des Unternehmens reibungslos am Laufen halten."
+      }
+    ],
+    "hotel": {
+      "signal": "Hotelberatung",
+      "title": "Ein Hotel ist eine Reise, bevor es ein Reiseziel ist.",
+      "copy": "Wir begleiten Investoren von den ersten praktischen Entscheidungen bis zu einem Betrieb, der bereit ist, seine ersten Gäste zu empfangen.",
+      "link": "Die gesamte Leistung ansehen"
+    },
+    "hotelJourney": [
+      {
+        "title": "Gestalten",
+        "text": "Konzeptentwicklung, Bauplanung und praktische Prüfung der Räume, die Gäste und Teams nutzen werden."
+      },
+      {
+        "title": "Absichern",
+        "text": "Projektfinanzierung, Beschaffung, Einsparpotenziale und behördliche Unterlagen."
+      },
+      {
+        "title": "Vorbereiten",
+        "text": "Betriebshandbücher, Automatisierung, Inbetriebnahme der Ausstattung sowie Personal- und Marketingpläne."
+      },
+      {
+        "title": "Eröffnen",
+        "text": "Schulung, Bauüberwachung und praktische Begleitung während der Soft-Opening-Phase des Hotels."
+      }
+    ],
+    "closing": {
+      "alt": "Küste Sri Lankas bei Sonnenuntergang",
+      "signal": "Bereit, wenn Sie es sind",
+      "title": "Ihre Sri-Lanka-Geschichte beginnt mit jemandem, der das Land kennt.",
+      "plan": "Reise planen",
+      "talk": "Mit dem Team sprechen"
+    }
+  }
+}

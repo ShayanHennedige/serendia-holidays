@@ -1,0 +1,129 @@
+{
+  "TripDetail": {
+    "overviewKicker": "Informations essentielles",
+    "overviewTitle": "Aperçu du voyage"
+  },
+  "Recommended": {
+    "kicker": "Sélectionné selon vos centres d’intérêt",
+    "heading": "Vous aimerez aussi",
+    "picked": "Choisi pour votre voyage",
+    "types": {
+      "tour": "Circuit",
+      "excursion": "Excursion",
+      "hotel": "Hôtel",
+      "transport": "Transport",
+      "cricket": "Cricket",
+      "consultancy": "Conseil"
+    }
+  },
+  "Catalog": {
+    "tour-best-of-sri-lanka": {
+      "title": "Le meilleur du Sri Lanka : culture, nature et faune",
+      "summary": "8 nuits / 9 jours entre cités antiques, pays du thé et une fin de séjour du safari à la plage."
+    },
+    "tours-index": {
+      "title": "Circuits",
+      "summary": "Circuits sur mesure de plusieurs jours, de la courte escapade au tour complet de deux semaines."
+    },
+    "excursion-polonnaruwa": {
+      "title": "Excursion à Polonnaruwa",
+      "summary": "Une excursion d’une journée dans la cité antique de Polonnaruwa."
+    },
+    "excursion-anuradhapura": {
+      "title": "Excursion à Anuradhapura depuis Dambulla",
+      "summary": "Une journée complète de Dambulla à la ville sacrée d’Anuradhapura, ses stupas, ses temples et ses anciens réservoirs."
+    },
+    "excursion-colombo": {
+      "title": "Excursion à Colombo",
+      "summary": "Une demi-journée entre Pettah, le Colombo historique, le Musée national et les sites modernes de la ville."
+    },
+    "excursion-kandy-colombo": {
+      "title": "Excursion à Kandy depuis Colombo",
+      "summary": "Une journée complète au départ de Colombo : temple de la Dent à Kandy, jardins de Peradeniya et Pinnawala."
+    },
+    "excursion-sigiriya": {
+      "title": "Excursion à Sigiriya depuis Kandy",
+      "summary": "Une journée à travers le pays des épices de Matale pour gravir la citadelle du Rocher du Lion de Sigiriya."
+    },
+    "excursion-trincomalee": {
+      "title": "Excursion à Trincomalee",
+      "summary": "Une journée sur la côte est : port de Trincomalee, Marble Beach et temple de Koneswaram."
+    },
+    "excursion-yala": {
+      "title": "Excursion à Yala depuis Bentota ou Galle",
+      "summary": "Un safari d’une journée pour les voyageurs séjournant sur la côte sud."
+    },
+    "excursion-nuwara-eliya": {
+      "title": "Excursion à Nuwara Eliya depuis Kandy",
+      "summary": "Une excursion d’une journée au pays du thé depuis Kandy."
+    },
+    "excursion-kandy-negombo": {
+      "title": "Excursion à Kandy depuis Negombo",
+      "summary": "Une journée privée à Kandy, pensée pour les voyageurs séjournant à Negombo."
+    },
+    "excursions-index": {
+      "title": "Excursions",
+      "summary": "Des excursions d’une journée depuis les principales villes étapes : cités antiques, hautes terres, parcs nationaux et côte."
+    },
+    "hotel-devi-tranquil-villa": {
+      "title": "Devi Tranquil Villa",
+      "summary": "Une villa privée d’exception."
+    },
+    "hotel-secrets-of-ceylon": {
+      "title": "Secrets of Ceylon",
+      "summary": "Une sélection d’hébergements de charme au Sri Lanka."
+    },
+    "hotels-index": {
+      "title": "Hôtels au Sri Lanka",
+      "summary": "Le répertoire complet des hébergements, des hôtels cinq étoiles aux villas de charme et chambres d’hôtes."
+    },
+    "transport-options": {
+      "title": "Transport",
+      "summary": "Voitures, vans et autocars avec ou sans chauffeur, trains de luxe, hélicoptères et taxis aériens, et visite de ville en bus à arrêts multiples."
+    },
+    "cricket-tourism": {
+      "title": "Tourisme cricket",
+      "summary": "Séjours cricket pour écoles et clubs, forfaits spectateurs, réservation de terrains et entraînement technique."
+    },
+    "hospitality-consultancy": {
+      "title": "Conseil en gestion de projets hôteliers",
+      "summary": "Accompagnement des investisseurs hôteliers, de l’acquisition du terrain jusqu’à la mise en exploitation."
+    }
+  },
+  "ChatToggle": {
+    "open": "Ouvrir le chat du concierge IA",
+    "close": "Fermer le chat du concierge IA"
+  },
+  "ItineraryMap": {
+    "style": "Style de carte",
+    "satellite": "Satellite",
+    "map": "Carte",
+    "unavailable": "Carte de l’itinéraire indisponible.",
+    "controls": {
+      "NavigationControl": {
+        "ZoomIn": "Zoomer",
+        "ZoomOut": "Dézoomer",
+        "ResetBearing": "Réorienter vers le nord"
+      },
+      "AttributionControl": {
+        "ToggleAttribution": "Afficher/masquer les crédits"
+      },
+      "ScrollZoomBlocker": {
+        "CmdMessage": "Utilisez ⌘ + défilement pour zoomer",
+        "CtrlMessage": "Utilisez Ctrl + défilement pour zoomer"
+      },
+      "TouchPanBlocker": {
+        "Message": "Utilisez deux doigts pour déplacer la carte"
+      },
+      "Marker": {
+        "Title": "Repère sur la carte"
+      },
+      "Map": {
+        "Title": "Carte"
+      },
+      "LogoControl": {
+        "Title": "Page d’accueil de Mapbox"
+      }
+    }
+  }
+}

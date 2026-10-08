@@ -1,0 +1,148 @@
+{
+  "HotelDetail": {
+    "profileKicker": "Hotel profile",
+    "overviewTitle": "Overview",
+    "galleryTitle": "Gallery",
+    "bookKicker": "Book your stay",
+    "bookTitle": "Get in touch",
+    "contactLink": "Contact us for availability",
+    "packageNote": "We can include these hotels as part of your Sri Lanka holiday plan and arrange transfers, excursions, and airport pickup around your booking."
+  },
+  "Hotels": {
+    "heroTitle": "Sri Lankan Hotels",
+    "partners": {
+      "title": "Our Accommodation Partners",
+      "subtitle": "Experience true Sri Lankan hospitality",
+      "copy": "Browse hand-picked Sri Lankan stays that work well for beach holidays, round trips, and private tours. Each property page includes a quick overview and the details needed to plan your stay."
+    },
+    "ratings": {
+      "title": "Hotel Star Classifications",
+      "subtitle": "A quick guide to the standard of service and facilities",
+      "items": [
+        {
+          "label": "5 Stars",
+          "value": "Superior standard and an extensive range of first-class guest services"
+        },
+        {
+          "label": "4 Stars",
+          "value": "Exceptional standard with high-quality furnishings and comfort"
+        },
+        {
+          "label": "3 Stars",
+          "value": "Well-appointed establishments with comfortable, clean rooms and quality furnishings"
+        },
+        {
+          "label": "Less than 3 Stars",
+          "value": "A basic, well-maintained standard"
+        },
+        {
+          "label": "Unclassified Hotels",
+          "value": "Well maintained properties with adequate facilities which do not fall under star classifications."
+        },
+        {
+          "label": "Boutique Hotel and Villas",
+          "value": "Small but exclusive property that caters to the affluent clientele with an exceptional level of service at premium prices."
+        }
+      ]
+    },
+    "types": {
+      "title": "Common Hotel Types",
+      "subtitle": "Accommodation styles you may see in Sri Lanka",
+      "items": [
+        {
+          "label": "Bungalow",
+          "value": "A type of real estate property that consists of a small, one story home with an enclosed porch."
+        },
+        {
+          "label": "Home Stay",
+          "value": "A stay at a residence by a traveler and especially by a tourist who is hosted by a local family to better learn about the local lifestyle"
+        },
+        {
+          "label": "Rented Apartments",
+          "value": "Is a room or suite of rooms designed as a residence and generally located in a building occupied by more than one household."
+        },
+        {
+          "label": "Guest House",
+          "value": "Guest houses range from low budget rooms to luxury apartments, and tend to be like small hotels in larger cities."
+        },
+        {
+          "label": "Boutique Hotel",
+          "value": "Small but exclusive property that caters to the affluent clientele with an exceptional level of service at premium prices."
+        }
+      ]
+    },
+    "help": {
+      "copy": "If you want help selecting the right hotel type for your trip, we can match the stay to your route, budget, and preferred level of service.",
+      "link": "Ask us for recommendations"
+    },
+    "viewDetails": "View Details"
+  },
+  "HotelPages": {
+    "devi": {
+      "title": "Devi Tranquil Villa",
+      "subtitle": "Sri Lankan Hotel",
+      "overview": "Devi Tranquil Villa is a calm, small-scale stay that suits travelers who want a quieter base with practical service, good access, and a more personal atmosphere than a large resort hotel.",
+      "highlights": [
+        {
+          "label": "Style",
+          "value": "Villa stay"
+        },
+        {
+          "label": "Best for",
+          "value": "Private holidays"
+        },
+        {
+          "label": "Atmosphere",
+          "value": "Relaxed and personal"
+        },
+        {
+          "label": "Location",
+          "value": "Convenient for touring"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Comfortable rooms",
+          "text": "Well-suited for short stays, round trips, and couples looking for a quieter accommodation base."
+        },
+        {
+          "title": "Easy holiday planning",
+          "text": "A practical choice when you want to combine accommodation with excursions and transfers."
+        }
+      ]
+    },
+    "secrets": {
+      "title": "Secrets of Ceylon",
+      "subtitle": "Boutique Hotel",
+      "overview": "Secrets of Ceylon is presented as a boutique-style property with a more elevated service feel, making it a strong fit for travelers who want comfort, privacy, and a polished guest experience.",
+      "highlights": [
+        {
+          "label": "Style",
+          "value": "Boutique hotel"
+        },
+        {
+          "label": "Best for",
+          "value": "Couples and small groups"
+        },
+        {
+          "label": "Service",
+          "value": "Personal and premium"
+        },
+        {
+          "label": "Use case",
+          "value": "Round trips and escapes"
+        }
+      ],
+      "gallery": [
+        {
+          "title": "Refined stay",
+          "text": "A polished setting that works well for guests who want a more curated accommodation choice."
+        },
+        {
+          "title": "Tour-friendly base",
+          "text": "A useful stop for touring itineraries where quality of stay matters as much as location."
+        }
+      ]
+    }
+  }
+}

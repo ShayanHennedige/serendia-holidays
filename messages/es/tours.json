@@ -1,0 +1,154 @@
+{
+  "Tours": {
+    "heroTitle": "Circuitos",
+    "heroSubtitle": "Viajes privados · experiencia local · totalmente a tu medida",
+    "intro": {
+      "eyebrow": "Viajes pensados para ti",
+      "title": "Descubre Sri Lanka a tu propio ritmo.",
+      "copy": "Estas rutas son puntos de partida bien pensados, no paquetes cerrados. Ajustamos el ritmo, los alojamientos y las experiencias a tu manera de viajar.",
+      "cta": "Empieza por tu estilo de viaje",
+      "factsLabel": "Resumen de nuestros circuitos",
+      "journeys": "Viajes seleccionados",
+      "days": "Días en la isla",
+      "tailorMade": "A medida"
+    },
+    "catalogue": {
+      "eyebrow": "La colección",
+      "title": "Elige tu punto de partida",
+      "copy": "Cultura, vida salvaje, costa o aventura: nuestro equipo local puede perfeccionar cada ruta.",
+      "exploreLabel": "Descubrir {title}",
+      "highlightsLabel": "Lo más destacado: {title}",
+      "viewJourney": "Ver el viaje completo",
+      "designJourney": "Diseñar este viaje"
+    },
+    "planner": {
+      "eyebrow": "Una ruta que sientas tuya",
+      "title": "¿No encuentras el viaje exacto?",
+      "copy": "Cuéntanos qué te atrae de Sri Lanka y prepararemos un primer borrador según tu tiempo, tus intereses y el ritmo que prefieras.",
+      "plan": "Planifica tu viaje",
+      "talk": "Habla con nuestro equipo"
+    },
+    "items": {
+      "bestOf": {
+        "title": "Lo mejor de Sri Lanka: cultura, naturaleza y vida salvaje",
+        "duration": "8 noches · 9 días",
+        "eyebrow": "Viaje insignia",
+        "summary": "Una introducción a la isla con un ritmo rico y variado: ciudades antiguas y tierras altas entre la bruma, encuentros con la fauna y un final relajado en la costa.",
+        "highlights": [
+          "Triángulo Cultural",
+          "Tierras altas",
+          "Safari"
+        ]
+      },
+      "amazing": {
+        "title": "Sri Lanka asombrosa",
+        "duration": "9 noches · 10 días",
+        "eyebrow": "Cultura y costa",
+        "summary": "Un amplio recorrido por la isla para quienes buscan patrimonio, vida local, paisajes en tren y tiempo junto al océano Índico.",
+        "highlights": [
+          "Ciudades antiguas",
+          "Región del té",
+          "Costa sur"
+        ]
+      },
+      "escape": {
+        "title": "Escapada al paraíso",
+        "duration": "4 noches · 5 días",
+        "eyebrow": "Escapada corta a la costa",
+        "summary": "Una ruta compacta y sin prisas, con playas de aguas cálidas, alojamientos con carácter y la cultura justa entre tranquilas mañanas en la isla.",
+        "highlights": [
+          "Estancias de playa",
+          "Traslados privados",
+          "Gastronomía local"
+        ]
+      },
+      "nature": {
+        "title": "Naturaleza y vida salvaje de Sri Lanka",
+        "duration": "10 noches · 11 días",
+        "eyebrow": "Isla salvaje",
+        "summary": "Desde el borde de la selva tropical hasta los grandes parques nacionales, un viaje de naturaleza centrado en la observación responsable de la fauna.",
+        "highlights": [
+          "Safari en Yala",
+          "Aves",
+          "Alojamientos en el bosque"
+        ]
+      },
+      "classic": {
+        "title": "Sri Lanka clásica",
+        "duration": "6 noches · 7 días",
+        "eyebrow": "Lo esencial de Sri Lanka",
+        "summary": "Lo esencial de la isla en una semana bien pensada: patrimonio vivo, tierras altas frescas, un viaje en tren inolvidable y una cálida hospitalidad local.",
+        "highlights": [
+          "Kandy",
+          "Tren panorámico",
+          "Galle"
+        ]
+      },
+      "adventure": {
+        "title": "Aventura independiente",
+        "duration": "14 noches · 15 días",
+        "eyebrow": "Viaje activo",
+        "summary": "Una expedición flexible para viajeros curiosos que combina senderismo, ciclismo, canoa y acampada, con espacio para explorar por tu cuenta.",
+        "highlights": [
+          "Senderismo",
+          "Ciclismo",
+          "Canoa"
+        ]
+      }
+    }
+  },
+  "TourBestOfSriLanka": {
+    "title": "Lo mejor de Sri Lanka: cultura, naturaleza y vida salvaje",
+    "subtitle": "8 noches / 9 días",
+    "heroNote": "Un circuito flexible que combina cultura, vida salvaje, la región del té y la costa.",
+    "facts": [
+      {
+        "label": "Duración",
+        "value": "8 noches / 9 días"
+      },
+      {
+        "label": "Circuito",
+        "value": "Lo mejor de Sri Lanka: cultura, naturaleza y vida salvaje"
+      },
+      {
+        "label": "Modalidad",
+        "value": "Circuito privado"
+      },
+      {
+        "label": "Precio",
+        "value": "Bajo petición"
+      }
+    ],
+    "sections": [
+      {
+        "title": "Día 01: Aeropuerto – Colombo",
+        "paragraphs": [
+          "Llegada y traslado a Colombo para una primera noche que hace que el día de llegada sea sencillo y flexible.",
+          "El itinerario puede adaptarse al horario de tu vuelo, a la categoría de hotel que prefieras y al ritmo que quieras para el resto del circuito."
+        ]
+      },
+      {
+        "title": "Día 03: Sigiriya – Polonnaruwa",
+        "paragraphs": [
+          "Este tramo cultural se centra en el Triángulo Cultural de Sri Lanka, con tiempo para ciudades antiguas, fortalezas en la roca y conocidos yacimientos arqueológicos.",
+          "La vida salvaje y la naturaleza forman parte de la ruta, de modo que las vacaciones se viven como un único viaje conectado y no como paradas sueltas."
+        ]
+      },
+      {
+        "title": "Día 05: Kandy – Nuwara Eliya",
+        "paragraphs": [
+          "Después, el viaje sube a la región del té, donde el aire más fresco, los pueblos de montaña y las vistas desde el tren o la carretera cambian el ritmo de las vacaciones.",
+          "Nuwara Eliya aporta un ritmo más pausado antes de las etapas de safari y playa en el sur."
+        ]
+      },
+      {
+        "title": "Día 07: Yala – Galle – Bentota",
+        "paragraphs": [
+          "La ruta termina combinando safari y costa, desde el parque nacional, atravesando el sur, hasta la franja de playas.",
+          "Como el viaje es privado, el orden de las paradas y los lugares de alojamiento pueden ajustarse a tus intereses y fechas de viaje."
+        ]
+      }
+    ],
+    "bookingIntro": "Indícanos el mes en el que quieres viajar y la categoría de hotel que prefieres, y diseñaremos el circuito completo según tus planes."
+  }
+}

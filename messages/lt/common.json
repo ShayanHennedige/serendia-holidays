@@ -1,0 +1,129 @@
+{
+  "TripDetail": {
+    "overviewKicker": "Pagrindinė informacija",
+    "overviewTitle": "Kelionės apžvalga"
+  },
+  "Recommended": {
+    "kicker": "Atrinkta pagal jūsų pomėgius",
+    "heading": "Jums taip pat gali patikti",
+    "picked": "Parinkta jūsų kelionei",
+    "types": {
+      "tour": "Kelionė",
+      "excursion": "Ekskursija",
+      "hotel": "Viešbutis",
+      "transport": "Transportas",
+      "cricket": "Kriketas",
+      "consultancy": "Konsultacijos"
+    }
+  },
+  "Catalog": {
+    "tour-best-of-sri-lanka": {
+      "title": "Geriausia Šri Lankoje: kultūra, gamta ir laukinė gamta",
+      "summary": "8 naktys / 9 dienos: senovės miestai, arbatos kraštas ir pabaiga nuo safario iki paplūdimio."
+    },
+    "tours-index": {
+      "title": "Kelionės",
+      "summary": "Individualiai pritaikytos kelių dienų kelionės – nuo trumpų išvykų iki dviejų savaičių kelionių aplink salą."
+    },
+    "excursion-polonnaruwa": {
+      "title": "Ekskursija į Polonaruvą",
+      "summary": "Vienos dienos išvyka į senovinį Polonaruvos miestą."
+    },
+    "excursion-anuradhapura": {
+      "title": "Ekskursija į Anuradapurą iš Dambulos",
+      "summary": "Visos dienos kelionė iš Dambulos į šventąjį Anuradapuros miestą: stupos, šventyklos ir senoviniai rezervuarai."
+    },
+    "excursion-colombo": {
+      "title": "Ekskursija po Kolombą",
+      "summary": "Pusės dienos maršrutas po Petą, istorinį Kolombą, Nacionalinį muziejų ir moderniojo miesto lankytinas vietas."
+    },
+    "excursion-kandy-colombo": {
+      "title": "Ekskursija į Kandį iš Kolombo",
+      "summary": "Visos dienos kelionė iš Kolombo į Kandžio Dantų šventyklą, Peradenijos sodus ir Pinavalą."
+    },
+    "excursion-sigiriya": {
+      "title": "Ekskursija į Sigiriją iš Kandžio",
+      "summary": "Visos dienos kelionė per Matalės prieskonių kraštą ir užkopimas į Sigirijos Liūto uolos citadelę."
+    },
+    "excursion-trincomalee": {
+      "title": "Ekskursija į Trinkomalį",
+      "summary": "Visos dienos išvyka į rytinę pakrantę: Trinkomalio uostas, Marble Beach ir Konesvaramo šventykla."
+    },
+    "excursion-yala": {
+      "title": "Ekskursija į Jalą iš Bentotos ar Galės",
+      "summary": "Vienos dienos safaris svečiams, apsistojusiems pietinėje pakrantėje."
+    },
+    "excursion-nuwara-eliya": {
+      "title": "Ekskursija į Nuvara Eliją iš Kandžio",
+      "summary": "Vienos dienos išvyka iš Kandžio į arbatos kraštą."
+    },
+    "excursion-kandy-negombo": {
+      "title": "Ekskursija į Kandį iš Negombo",
+      "summary": "Privati visos dienos kelionė po Kandį, pritaikyta Negombe apsistojusiems keliautojams."
+    },
+    "excursions-index": {
+      "title": "Ekskursijos",
+      "summary": "Vienos dienos išvykos iš pagrindinių miestų į senovės miestus, kalnų regionus, nacionalinius parkus ir pakrantę."
+    },
+    "hotel-devi-tranquil-villa": {
+      "title": "Devi Tranquil Villa",
+      "summary": "Išskirtinė privati vila."
+    },
+    "hotel-secrets-of-ceylon": {
+      "title": "Secrets of Ceylon",
+      "summary": "Kruopščiai atrinkti butikiniai apgyvendinimo variantai Šri Lankoje."
+    },
+    "hotels-index": {
+      "title": "Šri Lankos viešbučiai",
+      "summary": "Visas apgyvendinimo katalogas – nuo penkių žvaigždučių viešbučių iki butikinių vilų ir svečių namų."
+    },
+    "transport-options": {
+      "title": "Transportas",
+      "summary": "Automobiliai, mikroautobusai ir autobusai su vairuotoju arba be jo, prabangūs traukiniai, sraigtasparnių ir oro taksi užsakymai bei miesto ekskursija „hop-on“."
+    },
+    "cricket-tourism": {
+      "title": "Kriketo turizmas",
+      "summary": "Kriketo kelionės mokykloms ir klubams, žiūrovų paketai, aikščių rezervavimas ir techninės treniruotės."
+    },
+    "hospitality-consultancy": {
+      "title": "Svetingumo projektų valdymo konsultacijos",
+      "summary": "Konsultacijos viešbučių investuotojams – nuo žemės įsigijimo iki veiklos pradžios."
+    }
+  },
+  "ChatToggle": {
+    "open": "Atidaryti DI konsjeržo pokalbį",
+    "close": "Uždaryti DI konsjeržo pokalbį"
+  },
+  "ItineraryMap": {
+    "style": "Žemėlapio stilius",
+    "satellite": "Palydovas",
+    "map": "Žemėlapis",
+    "unavailable": "Maršruto žemėlapis nepasiekiamas.",
+    "controls": {
+      "NavigationControl": {
+        "ZoomIn": "Priartinti",
+        "ZoomOut": "Atitolinti",
+        "ResetBearing": "Atstatyti kryptį į šiaurę"
+      },
+      "AttributionControl": {
+        "ToggleAttribution": "Rodyti / slėpti šaltinius"
+      },
+      "ScrollZoomBlocker": {
+        "CmdMessage": "Naudokite ⌘ + slinkimą, kad priartintumėte",
+        "CtrlMessage": "Naudokite Ctrl + slinkimą, kad priartintumėte"
+      },
+      "TouchPanBlocker": {
+        "Message": "Žemėlapį stumkite dviem pirštais"
+      },
+      "Marker": {
+        "Title": "Žemėlapio žymeklis"
+      },
+      "Map": {
+        "Title": "Žemėlapis"
+      },
+      "LogoControl": {
+        "Title": "Mapbox pagrindinis puslapis"
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { NextIntlClientProvider } from 'next-intl';
+import { getLocale } from 'next-intl/server';
 import './globals.css';
 import './collection-pages.css';
 import './tour-packages.css';
@@ -10,8 +12,8 @@ import ScrollToTop from './components/ScrollToTop';
 import BackButton from './components/BackButton';
 import AIChatConcierge from './components/AIChatConcierge';
 import LanguageProvider from './components/LanguageProvider';
-import AutoPageTranslation from './components/AutoPageTranslation';
 import WhatsAppSupport from './components/WhatsAppSupport';
+import type { Locale } from './lib/i18n';
 import { siteName, siteUrl, siteUrlFor } from './lib/site';
 import { jsonLdScript, organizationJsonLd } from './lib/seo';
 
@@ -68,9 +70,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const locale = await getLocale() as Locale;
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -81,16 +85,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body suppressHydrationWarning>
         <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(organizationJsonLd)} />
-        <LanguageProvider>
-          <Header />
-          <BackButton />
-          {children}
-          <AutoPageTranslation />
-          <Footer />
-          <ScrollToTop />
-          <AIChatConcierge />
-          <WhatsAppSupport phoneNumber={process.env.COMPANY_WHATSAPP_NUMBER || '94773986504'} />
-        </LanguageProvider>
+        <NextIntlClientProvider>
+          <LanguageProvider initialLocale={locale}>
+            <Header />
+            <BackButton />
+            {children}
+            <Footer />
+            <ScrollToTop />
+            <AIChatConcierge />
+            <WhatsAppSupport phoneNumber={process.env.COMPANY_WHATSAPP_NUMBER || '94773986504'} />
+          </LanguageProvider>
+        </NextIntlClientProvider>
         <Analytics />
       </body>
     </html>

@@ -1,0 +1,113 @@
+{
+  "About": {
+    "hero": {
+      "label": "Serendia Holidays by Venom · Sri Lanka",
+      "line1": "Local knowledge.",
+      "line2": "Always moving.",
+      "dock": "Travel, cricket and hospitality—connected by one Sri Lankan team.",
+      "meta1": "Independent",
+      "meta2": "Established 2019",
+      "meta3": "Sri Lanka",
+      "scrollLabel": "Scroll to our perspective",
+      "scroll": "Discover our perspective"
+    },
+    "perspective": {
+      "signal": "Our perspective",
+      "title1": "Not from a guidebook.",
+      "title2": "From experience.",
+      "copy1": "Serendia was created in 2019 by people whose careers were already rooted in Sri Lankan tourism, hotel operations and international cricket.",
+      "copy2": "That experience changes the questions we ask, the details we notice and the journeys we build.",
+      "altLeopard": "Leopard in a Sri Lankan forest",
+      "altColombo": "Colombo skyline at sunset",
+      "inset": "Island energy",
+      "caption": "We plan with the whole island in view—from the quietest road to the busiest match day."
+    },
+    "disciplinesSection": {
+      "signal": "How we think",
+      "title1": "Three disciplines.",
+      "title2": "One moving plan.",
+      "copy": "Scroll through the three worlds that shape every Serendia journey."
+    },
+    "disciplines": [
+      {
+        "signal": "Travel design",
+        "title": "See the island as one connected story.",
+        "copy": "Private journeys, beach stays, hotels and transport are shaped around your pace—not assembled as separate bookings.",
+        "link": "Explore tours",
+        "meta": "Tailor-made · Sri Lanka & Maldives"
+      },
+      {
+        "signal": "Cricket tourism",
+        "title": "Tour with people who understand the game.",
+        "copy": "Fixtures, grounds, coaching, supporters and family travel are coordinated by a team with genuine international cricket experience.",
+        "link": "Enter cricket tourism",
+        "meta": "Schools · Clubs · Supporters"
+      },
+      {
+        "signal": "Hospitality intelligence",
+        "title": "Build the welcome before the first guest arrives.",
+        "copy": "Hotel concepts move from planning and procurement through operations, training and a supported soft opening.",
+        "link": "View consultancy",
+        "meta": "Concept · Operations · Opening"
+      }
+    ],
+    "teamSection": {
+      "signal": "The human layer",
+      "title": "The people who connect it all.",
+      "copy": "No hand-offs between anonymous departments. The people shaping the idea stay close to the details."
+    },
+    "team": [
+      {
+        "role": "Founder · Travel & hospitality",
+        "copy": "24 years across hotels and travel, including nearly seven years as Executive Secretary of the Sri Lanka Tourism Development Authority."
+      },
+      {
+        "role": "Hospitality & commercial",
+        "copy": "37 years of hospitality experience across food and beverage leadership, sales and marketing."
+      },
+      {
+        "role": "Cricket tourism",
+        "copy": "Former Sri Lanka Test and One Day international cricketer with more than 20 years in professional cricket and coaching."
+      },
+      {
+        "role": "Travel consultant",
+        "copy": "Connects travel planning and technology to make every journey clearer, easier and more personal."
+      },
+      {
+        "role": "System operations",
+        "copy": "Supports the digital systems that keep the company’s day-to-day travel operations moving smoothly."
+      }
+    ],
+    "hotel": {
+      "signal": "Hospitality consultancy",
+      "title": "A hotel is a journey before it is a destination.",
+      "copy": "We help investors move from the first practical decisions to an operation ready to welcome its first guests.",
+      "link": "Explore the full service"
+    },
+    "hotelJourney": [
+      {
+        "title": "Shape",
+        "text": "Concept design, construction planning and practical review of the spaces guests and teams will use."
+      },
+      {
+        "title": "Protect",
+        "text": "Project finance, procurement, cost-saving opportunities and statutory documentation."
+      },
+      {
+        "title": "Prepare",
+        "text": "Operational manuals, automation, equipment commissioning, people and marketing plans."
+      },
+      {
+        "title": "Open",
+        "text": "Training, site supervision and hands-on guidance through the hotel soft opening."
+      }
+    ],
+    "closing": {
+      "alt": "Sri Lankan coast at sunset",
+      "signal": "Ready when you are",
+      "title": "Your Sri Lanka story starts with someone who knows it.",
+      "plan": "Plan your journey",
+      "talk": "Talk to the team"
+    }
+  }
+}

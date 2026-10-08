@@ -1,0 +1,198 @@
+{
+  "Transport": {
+    "heroTitle": "Transportas",
+    "heroSubtitle": "Keliai, geležinkelis ir oras – sujungti į vieną apgalvotą maršrutą",
+    "intro": {
+      "kicker": "Judėjimas kaip kelionės dalis",
+      "title": "Už lango keičiasi sala.",
+      "copy": "Transportą planuojame kaip patirties dalį, o ne kaip antraeilį dalyką. Rinkitės vaizdingą traukinį ten, kur verta, privatų automobilį ten, kur svarbu lankstumas, o skrydžius – kai svarbiausia laikas.",
+      "link": "Įtraukti transportą į mano kelionę"
+    },
+    "modes": {
+      "kicker": "Trys būdai keliauti po salą",
+      "title": "Pasirinkite vieną. Derinkite kelis."
+    },
+    "rail": {
+      "alt": "Traukinys važiuoja per Šri Lankos arbatos kraštą",
+      "tag": "Traukinys",
+      "label": "Lėtai ir vaizdingai",
+      "title": "Rinkitės traukinį, kai svarbiausia – vaizdai.",
+      "copy": "Kelionė traukiniu per kalnus – ne tik pervežimas. Įsimintiniausią atkarpą galime įtraukti į platesnį privatų maršrutą su kelionėmis automobiliu prieš ir po jos.",
+      "points": [
+        "Arbatos krašto vaizdai",
+        "Rezervuojama pagal visą maršrutą",
+        "Suderinti pervežimai keliais"
+      ]
+    },
+    "road": {
+      "label": "Keliai",
+      "title": "Jūsų privatus maršrutas, tinkamo dydžio.",
+      "copy": "Nuo dviejų keliautojų iki visos grupės – pasirinkite kelionei tinkamą transportą."
+    },
+    "fleet": [
+      {
+        "title": "Privatus automobilis",
+        "fit": "Keliaujantiems vieniems ir poroms",
+        "note": "Lanksčiausias būdas keliauti savo tempu."
+      },
+      {
+        "title": "Mikroautobusas",
+        "fit": "Šeimoms ir nedidelėms grupėms",
+        "note": "Daugiau vietos žmonėms, bagažui ir ilgesniems maršrutams."
+      },
+      {
+        "title": "Mažas autobusas",
+        "fit": "Nedidelėms keliautojų grupėms",
+        "note": "Praktiškas komforto ir talpos derinys."
+      },
+      {
+        "title": "Autobusas",
+        "fit": "Klubams ir didesnėms grupėms",
+        "note": "Suderintos kelionės bendriems maršrutams ir įrangai."
+      }
+    ],
+    "air": {
+      "label": "Oru",
+      "title": "Perskriskite salą, kai svarbiausia laikas.",
+      "copy": "Sraigtasparniai ir oro taksi ilgą pervežimą gali paversti nepaprastu vaizdu iš viršaus – priklausomai nuo maršruto, oro sąlygų ir laisvų vietų.",
+      "points": [
+        "Privatūs užsakomieji skrydžiai",
+        "Susisiekimas su oro uostu",
+        "Galimybes patvirtina mūsų komanda"
+      ],
+      "alt": "Sraigtasparnis skrenda virš Šri Lankos pakrantės"
+    },
+    "service": {
+      "kicker": "Viena komanda už kiekvieno pervežimo",
+      "title": "Suplanuota nuo atvykimo iki išvykimo",
+      "cta": "Nurodykite grupės dydį ir maršrutą – pasiūlysime tinkamiausią derinį.",
+      "link": "Planuoti mano transportą"
+    },
+    "promises": [
+      {
+        "title": "Nuo oro uosto iki maršruto",
+        "detail": "Pervežimai tiesiogiai sujungti su maršrutu, o ne atskirti nuo jo."
+      },
+      {
+        "title": "Tinkamo dydžio transportas",
+        "detail": "Talpą parenkame pagal jūsų grupę, bagažą ir pageidaujamą komfortą."
+      },
+      {
+        "title": "Vietos kelių išmanymas",
+        "detail": "Kelionės laikas, kelių būklė ir protingi sustojimai formuoja kiekvieną dieną."
+      },
+      {
+        "title": "Vienas suderintas planas",
+        "detail": "Kelius, geležinkelį ir skrydžius galima sujungti į vieną patikrintą kelionę."
+      }
+    ]
+  },
+  "Cricket": {
+    "heroTitle": "Kriketo turizmas",
+    "heroSubtitle": "Keliaukite po salą su žmonėmis, kurie supranta žaidimą",
+    "opening": {
+      "kicker": "Serendia specializacija",
+      "title": "Sukurta iš aikštės vidaus.",
+      "copy": "Kriketo kelionėms reikia daugiau nei viešbučio kambarių ir autobuso. Rungtynės, treniruotės, aikštės, poilsis ir šeimų kelionės turi derėti tarpusavyje. Būtent čia tikra žaidėjo ir trenerio patirtis keičia visą turą."
+    },
+    "profile": {
+      "tag": "Turo vadovavimas",
+      "kicker": "Patikimumas, ant kurio galima kurti turą",
+      "role": "Buvęs Šri Lankos rinktinės Test ir ODI žaidėjas",
+      "copy": "Brendonas vadovauja Serendia kriketo turizmo krypčiai ir turi daugiau nei 20 metų profesionalaus kriketo bei rinktinės trenerio patirties. Jis žino, ko reikia gastroliuojančiai komandai aikštėje ir už jos ribų.",
+      "stat1": "Test + ODI",
+      "stat1Label": "Tarptautinio žaidimo patirtis",
+      "stat2": "20+ metų",
+      "stat2Label": "Profesionalus kriketas ir treniravimas",
+      "stat3": "Vietos ryšiai",
+      "stat3Label": "Klubai, aikštės ir kriketo žinios"
+    },
+    "offerings": {
+      "kicker": "Sukurkite turo programą",
+      "title": "Kiekviena žaidimo dalis – sujungta.",
+      "copy": "Pasirinkite, ko reikia jūsų komandai. Viską sujungsime į peržiūrai paruoštą programą pagal jūsų datas ir grupę.",
+      "items": [
+        {
+          "label": "Turo formatas",
+          "title": "Mokyklų ir klubų turai",
+          "description": "Išsamios turo programos, sujungiančios rungtynes, apgyvendinimą, transportą ir salos patirtis į vieną praktišką planą."
+        },
+        {
+          "label": "Sirgaliai",
+          "title": "Žiūrovų paketai",
+          "description": "Kelionės ir apgyvendinimas pagal turnyro tvarkaraštį, patekimą į stadionus ir laiką pažinti Šri Lanką tarp rungtynių."
+        },
+        {
+          "label": "Pasiruošimas rungtynėms",
+          "title": "Aikščių ir treniruočių rezervavimas",
+          "description": "Rungtynių aikštės ir treniruočių vietos, suderintos tiesiogiai su tinkamais vietos klubais ir įrenginiais."
+        },
+        {
+          "label": "Rezultatai",
+          "title": "Techninės treniruotės",
+          "description": "Tikslinės techninės treniruotės, vietiniai varžovai ir specializuota sukamųjų ar greitųjų metimų pagalba, pritaikyta komandai."
+        },
+        {
+          "label": "Turo grupė",
+          "title": "Žaidėjai ir šeimos",
+          "description": "Apgyvendinimas žaidėjams, personalui ir kartu keliaujančioms šeimoms, įtrauktas į bendrą turo maršrutą."
+        }
+      ]
+    },
+    "spectator": {
+      "kicker": "Keliaujate stebėti rungtynių?",
+      "title": "Sekite rungtynes. Pažinkite salą tarp overių.",
+      "copy": "Galime sukurti sirgalių maršrutą pagal tarptautinių rungtynių datas, derinant stadiono dienas su pakrante, kultūra ir laukine gamta.",
+      "link": "Aptarti žiūrovo kelionę"
+    },
+    "cta": {
+      "kicker": "Jūsų turo užduotis",
+      "title": "Atsiveskite komandą. Turą suplanuosime mes.",
+      "copy": "Nurodykite grupės dydį, apytiksles datas, amžių ar žaidimo lygį ir jus dominančias rungtynes.",
+      "link": "Teirautis dėl kriketo turo"
+    },
+    "related": {
+      "label": "Tęskite pažintį",
+      "title": "Keliaukite toliau po salą",
+      "tours": "Kelionės",
+      "excursions": "Ekskursijos",
+      "transport": "Transportas"
+    }
+  },
+  "Consultancy": {
+    "heroTitle": "Svetingumo projektų valdymo konsultacijos",
+    "heroSubtitle": "Viešbučių investuotojams ir plėtotojams",
+    "intro": {
+      "kicker": "B2B paslauga, atskirta nuo mūsų laisvalaikio kelionių",
+      "title": "Ekspertinės konsultacijos nuo įsigijimo iki veiklos pradžios",
+      "copy": "Viena didžiausių Serendia Holidays stiprybių – viešbučių projektų valdymo patirtis. Potencialiems investuotojams teikiame ekspertines žinias – nuo žemės įsigijimo iki žvaigždutėmis įvertinto viešbučio statybos ir veiklos pradžios."
+    },
+    "servicesTitle": "Investuotojus konsultuojame šiose srityse",
+    "items": [
+      "Prisidėjimas prie koncepcijos kūrimo.",
+      "Statybų grafiko sudarymas.",
+      "Konsultacijos dėl praktinių pastato plano pasekmių sandėliams, kambariams ir kitoms veikloms.",
+      "Konsultacijos dėl investicijų taupymo idėjų ir tendencijų.",
+      "Projekto finansų tvarkymas.",
+      "Visų teisinių BOI reikalavimų dėl importo tvarkymas.",
+      "Visų reikiamų dokumentų Inland Revenue Department tvarkymas siekiant gauti VAT, NBT ir SVAT.",
+      "SVAT kredito kvitų gavimas, stebėsena ir ketvirtinių ataskaitų teikimas.",
+      "Pirkimų plano sudarymas visiems pirkiniams, užtikrinant geriausią rinkoje esančią kokybę už mažiausią kainą.",
+      "Užtikrinimas, kad projektas būtų baigtas laiku.",
+      "Konsultacijos dėl visos įrangos, įrenginių ir mašinų paleidimo.",
+      "Visų skyrių mokymo ir veiklos vadovų struktūravimas ir rengimas.",
+      "Konsultacijos dėl viso žmogiškųjų išteklių plano įgyvendinimo.",
+      "Konsultacijos ir išsamaus rinkodaros plano rengimas planuojamam viešbučiui.",
+      "Konsultacijos dėl viešbučio veiklos automatizavimo.",
+      "Personalo mokymas pagal nustatytą mokymų grafiką.",
+      "Reguliarūs statybvietės lankymai ir priežiūra.",
+      "Konsultacijos ir priežiūra bandomojo viešbučio veikimo metu."
+    ],
+    "cta": {
+      "title": "Svarstote viešbučio projektą Šri Lankoje?",
+      "copy": "Kalbėkitės tiesiogiai su mūsų projektų valdymo konsultantų komanda – šis užklausų kanalas atskirtas nuo laisvalaikio kelionių planavimo.",
+      "button": "Užsisakyti konsultaciją"
+    },
+    "related": "Jus taip pat gali sudominti"
+  }
+}

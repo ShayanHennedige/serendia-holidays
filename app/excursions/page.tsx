@@ -1,102 +1,27 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
+import { getTranslations } from 'next-intl/server';
 import { pageMetadata } from '../lib/seo';
 
+// Copy for each excursion lives in messages/*/excursions.json under Excursions.items.<id>.
 interface Excursion {
-  title: string;
+  id: 'sigiriya' | 'anuradhapura' | 'colombo' | 'nuwaraEliya' | 'polonnaruwa' | 'yala' | 'trincomalee' | 'kandyColombo' | 'kandyNegombo';
   image: string;
   href: string;
-  route: string;
-  duration: string;
-  theme: string;
-  summary: string;
   featured?: boolean;
 }
 
 const excursions: Excursion[] = [
-  {
-    title: 'Sigiriya from Kandy',
-    image: '/images/excursion-sigiriya.webp',
-    href: '/excursions/sigiriya-excursion-from-kandy',
-    route: 'Kandy → Sigiriya',
-    duration: 'Full day',
-    theme: 'Heritage hike',
-    summary: 'Travel through spice country, then climb the ancient Lion Rock citadel above the plains.',
-    featured: true,
-  },
-  {
-    title: 'Anuradhapura from Dambulla',
-    image: '/images/excursion-anuradhapura.webp',
-    href: '/excursions/anuradhapura-excursion-from-dambulla',
-    route: 'Dambulla → Anuradhapura',
-    duration: 'Full day',
-    theme: 'Sacred city',
-    summary: 'Explore monumental stupas, temple precincts and reservoirs in Sri Lanka’s first great capital.',
-  },
-  {
-    title: 'Colombo',
-    image: '/images/excursion-colombo.webp',
-    href: '/excursions/colombo-excursion',
-    route: 'Colombo city circuit',
-    duration: 'Half day',
-    theme: 'City culture',
-    summary: 'Move between Pettah, colonial architecture, museums and the capital’s modern landmarks.',
-  },
-  {
-    title: 'Nuwara Eliya from Kandy',
-    image: '/images/excursions/nuwara-eliya-tea-train.webp',
-    href: '/excursions/nuwara-eliya-excursion-from-kandy',
-    route: 'Kandy → Nuwara Eliya',
-    duration: 'Full day',
-    theme: 'Tea country',
-    summary: 'Climb into cool highlands for tea estates, waterfalls and a slower mountain rhythm.',
-  },
-  {
-    title: 'Polonnaruwa',
-    image: '/images/tour-polonnaruwa.png',
-    href: '/excursions/polonnaruwa-excursion',
-    route: 'Cultural Triangle',
-    duration: 'Full day',
-    theme: 'Ancient city',
-    summary: 'Walk among royal ruins, carved stone and reservoirs in a remarkably preserved medieval capital.',
-  },
-  {
-    title: 'Yala from Bentota or Galle',
-    image: '/images/excursion-yala.webp',
-    href: '/excursions/yala-excursion-from-bentota-or-galle',
-    route: 'South coast → Yala',
-    duration: 'Full day',
-    theme: 'Wildlife safari',
-    summary: 'Trade the coast for open wilderness on a private safari through Sri Lanka’s best-known national park.',
-  },
-  {
-    title: 'Trincomalee',
-    image: '/images/excursion-trincomalee.webp',
-    href: '/excursions/trincomalee-excursion',
-    route: 'East coast circuit',
-    duration: 'Full day',
-    theme: 'Coast and culture',
-    summary: 'Pair one of the world’s great natural harbours with Marble Beach and Koneswaram Temple.',
-  },
-  {
-    title: 'Kandy from Colombo',
-    image: '/images/excursion-kandy.webp',
-    href: '/excursions/kandy-excursion-from-colombo',
-    route: 'Colombo → Kandy',
-    duration: 'Full day',
-    theme: 'Hill capital',
-    summary: 'A private route to the Temple of the Tooth, Peradeniya gardens and Kandy’s lakefront.',
-  },
-  {
-    title: 'Kandy from Negombo',
-    image: '/images/excursions/negombo-beach-outtrigger.webp',
-    href: '/excursions/kandy-excursion-from-negombo',
-    route: 'Negombo → Kandy',
-    duration: 'Full day',
-    theme: 'Culture and gardens',
-    summary: 'Reach the island’s historic hill capital from the west coast with a route tailored to your stay.',
-  },
+  { id: 'sigiriya', image: '/images/excursion-sigiriya.webp', href: '/excursions/sigiriya-excursion-from-kandy', featured: true },
+  { id: 'anuradhapura', image: '/images/excursion-anuradhapura.webp', href: '/excursions/anuradhapura-excursion-from-dambulla' },
+  { id: 'colombo', image: '/images/excursion-colombo.webp', href: '/excursions/colombo-excursion' },
+  { id: 'nuwaraEliya', image: '/images/excursions/nuwara-eliya-tea-train.webp', href: '/excursions/nuwara-eliya-excursion-from-kandy' },
+  { id: 'polonnaruwa', image: '/images/tour-polonnaruwa.png', href: '/excursions/polonnaruwa-excursion' },
+  { id: 'yala', image: '/images/excursion-yala.webp', href: '/excursions/yala-excursion-from-bentota-or-galle' },
+  { id: 'trincomalee', image: '/images/excursion-trincomalee.webp', href: '/excursions/trincomalee-excursion' },
+  { id: 'kandyColombo', image: '/images/excursion-kandy.webp', href: '/excursions/kandy-excursion-from-colombo' },
+  { id: 'kandyNegombo', image: '/images/excursions/negombo-beach-outtrigger.webp', href: '/excursions/kandy-excursion-from-negombo' },
 ];
 
 export const metadata = pageMetadata({
@@ -105,27 +30,27 @@ export const metadata = pageMetadata({
   path: '/excursions',
 });
 
-export default function ExcursionsPage() {
+export default async function ExcursionsPage() {
+  const t = await getTranslations('Excursions');
+
   return (
     <main className="excursions-page">
       <InnerHero
-        title="Excursions"
-        subtitle="One free day can open an entirely different Sri Lanka"
+        title={t('heroTitle')}
+        subtitle={t('heroSubtitle')}
         bgImage="/images/hero-3.png"
       />
 
       <section className="excursions-intro" aria-labelledby="excursions-intro-title">
         <div className="container excursions-intro-grid">
           <div>
-            <p className="collection-kicker">The one-day field guide</p>
-            <h2 id="excursions-intro-title">Leave in the morning.<br />Return with a story.</h2>
+            <p className="collection-kicker">{t('intro.eyebrow')}</p>
+            <h2 id="excursions-intro-title">{t('intro.titleLine1')}<br />{t('intro.titleLine2')}</h2>
           </div>
           <div className="excursions-intro-copy">
-            <p>Start from the place you are already staying. We shape the route, timing and stops around your base, so a single day feels expansive rather than rushed.</p>
-            <div className="excursion-assurances" aria-label="Excursion service details">
-              <span>Private pickup</span>
-              <span>Flexible pace</span>
-              <span>Local planning</span>
+            <p>{t('intro.copy')}</p>
+            <div className="excursion-assurances" aria-label={t('intro.assurancesLabel')}>
+              {(t.raw('intro.assurances') as string[]).map((item) => <span key={item}>{item}</span>)}
             </div>
           </div>
         </div>
@@ -135,42 +60,45 @@ export default function ExcursionsPage() {
         <div className="container">
           <div className="collection-heading">
             <div>
-              <p className="collection-kicker">Choose by curiosity</p>
-              <h2 id="excursions-list-title">Nine ways to spend a day</h2>
+              <p className="collection-kicker">{t('list.eyebrow')}</p>
+              <h2 id="excursions-list-title">{t('list.title')}</h2>
             </div>
-            <p>Ancient capitals, tea-country air, city energy, wild landscapes and an east-coast horizon.</p>
+            <p>{t('list.copy')}</p>
           </div>
 
           <div className="excursion-journal-grid">
-            {excursions.map((item) => (
-              <article className={`excursion-story-card${item.featured ? ' is-featured' : ''}`} key={item.href}>
-                <Link href={item.href} className="excursion-story-image" aria-label={`Explore ${item.title}`}>
-                  <Image
-                    src={item.image}
-                    alt=""
-                    fill
-                    sizes={item.featured ? '(max-width: 760px) 100vw, 60vw' : '(max-width: 760px) 100vw, (max-width: 1050px) 50vw, 33vw'}
-                  />
-                  <span className="excursion-story-theme">{item.theme}</span>
-                </Link>
-                <div className="excursion-story-copy">
-                  <div className="excursion-story-meta"><span>{item.route}</span><span>{item.duration}</span></div>
-                  <h3><Link href={item.href}>{item.title}</Link></h3>
-                  <p>{item.summary}</p>
-                  <Link href={item.href} className="collection-text-link">See the day <span aria-hidden="true">↗</span></Link>
-                </div>
-              </article>
-            ))}
+            {excursions.map((item) => {
+              const title = t(`items.${item.id}.title`);
+              return (
+                <article className={`excursion-story-card${item.featured ? ' is-featured' : ''}`} key={item.href}>
+                  <Link href={item.href} className="excursion-story-image" aria-label={t('list.exploreLabel', { title })}>
+                    <Image
+                      src={item.image}
+                      alt=""
+                      fill
+                      sizes={item.featured ? '(max-width: 760px) 100vw, 60vw' : '(max-width: 760px) 100vw, (max-width: 1050px) 50vw, 33vw'}
+                    />
+                    <span className="excursion-story-theme">{t(`items.${item.id}.theme`)}</span>
+                  </Link>
+                  <div className="excursion-story-copy">
+                    <div className="excursion-story-meta"><span>{t(`items.${item.id}.route`)}</span><span>{t(`items.${item.id}.duration`)}</span></div>
+                    <h3><Link href={item.href}>{title}</Link></h3>
+                    <p>{t(`items.${item.id}.summary`)}</p>
+                    <Link href={item.href} className="collection-text-link">{t('list.seeDay')} <span aria-hidden="true">↗</span></Link>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
 
       <section className="excursions-cta" aria-labelledby="excursions-cta-title">
         <div className="container excursions-cta-inner">
-          <p className="collection-kicker">Already know where you&apos;re staying?</p>
-          <h2 id="excursions-cta-title">We&apos;ll find the best day around it.</h2>
-          <p>Share your hotel or base town and the experience you want. Our team will suggest a practical private route.</p>
-          <div><Link href="/customize">Plan an excursion <span aria-hidden="true">↗</span></Link><Link href="/contact">Ask the local team</Link></div>
+          <p className="collection-kicker">{t('cta.eyebrow')}</p>
+          <h2 id="excursions-cta-title">{t('cta.title')}</h2>
+          <p>{t('cta.copy')}</p>
+          <div><Link href="/customize">{t('cta.plan')} <span aria-hidden="true">↗</span></Link><Link href="/contact">{t('cta.ask')}</Link></div>
         </div>
       </section>
     </main>

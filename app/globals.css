@@ -6410,18 +6410,3 @@ button.nav-search {
   opacity: 0.75;
 }
 
-.translation-service-notice {
-  position: fixed;
-  z-index: 1200;
-  right: 20px;
-  bottom: 20px;
-  max-width: min(360px, calc(100vw - 40px));
-  margin: 0;
-  padding: 12px 16px;
-  border-radius: 10px;
-  background: #17312d;
-  box-shadow: 0 12px 28px rgba(15, 44, 39, 0.22);
-  color: #fff;
-  font-size: 0.86rem;
-  line-height: 1.45;
-}

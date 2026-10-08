@@ -1,0 +1,198 @@
+{
+  "Transport": {
+    "heroTitle": "Transportation",
+    "heroSubtitle": "Road, rail and air—joined into one considered route",
+    "intro": {
+      "kicker": "Movement, made part of the journey",
+      "title": "The island changes outside your window.",
+      "copy": "We plan transport as part of the experience—not an afterthought. Take the scenic train where it matters, use a private vehicle where flexibility counts, and consider air connections when time is the priority.",
+      "link": "Build transport into my trip"
+    },
+    "modes": {
+      "kicker": "Three ways across the island",
+      "title": "Choose one. Combine several."
+    },
+    "rail": {
+      "alt": "Train crossing Sri Lanka's tea country",
+      "tag": "Rail",
+      "label": "Slow and scenic",
+      "title": "Take the train when the view is the point.",
+      "copy": "Hill-country rail is not simply a transfer. We can place the most memorable section inside a wider private route, with road connections before and after.",
+      "points": [
+        "Tea-country scenery",
+        "Reserved around the wider route",
+        "Road transfers coordinated"
+      ]
+    },
+    "road": {
+      "label": "Road",
+      "title": "Your private route, right-sized.",
+      "copy": "From two travellers to a full touring party, choose the space that fits the journey."
+    },
+    "fleet": [
+      {
+        "title": "Private car",
+        "fit": "Solo travellers and couples",
+        "note": "The most flexible way to move at your own pace."
+      },
+      {
+        "title": "Van",
+        "fit": "Families and small groups",
+        "note": "Extra space for people, luggage and longer routes."
+      },
+      {
+        "title": "Mini bus",
+        "fit": "Small touring parties",
+        "note": "A practical balance of comfort and group capacity."
+      },
+      {
+        "title": "Coach",
+        "fit": "Clubs and larger groups",
+        "note": "Coordinated movement for shared itineraries and equipment."
+      }
+    ],
+    "air": {
+      "label": "Air",
+      "title": "Cross the island when time matters most.",
+      "copy": "Helicopter and air-taxi options can turn a long transfer into an extraordinary aerial perspective, subject to route, weather and availability.",
+      "points": [
+        "Private charter options",
+        "Airport connections",
+        "Availability confirmed by our team"
+      ],
+      "alt": "Helicopter flying above Sri Lanka's coast"
+    },
+    "service": {
+      "kicker": "One team behind every transfer",
+      "title": "Planned from arrival to departure",
+      "cta": "Tell us your party size and route. We’ll recommend the right mix.",
+      "link": "Plan my transport"
+    },
+    "promises": [
+      {
+        "title": "Airport to itinerary",
+        "detail": "Transfers connect directly with the route rather than sitting outside it."
+      },
+      {
+        "title": "Right-sized vehicles",
+        "detail": "We match capacity to your party, luggage and level of comfort."
+      },
+      {
+        "title": "Local route knowledge",
+        "detail": "Travel times, road conditions and sensible stops shape every day."
+      },
+      {
+        "title": "One coordinated plan",
+        "detail": "Road, rail and air options can be combined into one reviewed journey."
+      }
+    ]
+  },
+  "Cricket": {
+    "heroTitle": "Cricket Tourism",
+    "heroSubtitle": "Tour the island with people who understand the game",
+    "opening": {
+      "kicker": "A Serendia specialty",
+      "title": "Built from inside the boundary.",
+      "copy": "Cricket travel asks for more than hotel rooms and a coach. Fixtures, training, grounds, recovery time and family travel all have to work together. That is where genuine playing and coaching experience changes the tour."
+    },
+    "profile": {
+      "tag": "Tour leadership",
+      "kicker": "Credibility you can build a tour around",
+      "role": "Former Sri Lanka Test and One Day international cricketer",
+      "copy": "Brendon leads Serendia’s cricket-tourism capability with more than 20 years in professional cricket and national-team coaching. He understands what a touring side needs both on the field and around it.",
+      "stat1": "Test + ODI",
+      "stat1Label": "International playing experience",
+      "stat2": "20+ years",
+      "stat2Label": "Professional cricket and coaching",
+      "stat3": "Local access",
+      "stat3Label": "Clubs, grounds and cricket expertise"
+    },
+    "offerings": {
+      "kicker": "Build the touring programme",
+      "title": "Every part of the game, connected.",
+      "copy": "Choose the elements your side needs. We combine them into a staff-reviewable programme around your dates and touring party.",
+      "items": [
+        {
+          "label": "Tour format",
+          "title": "School and club tours",
+          "description": "Complete touring programmes that bring fixtures, accommodation, transport and island experiences into one practical plan."
+        },
+        {
+          "label": "Supporters",
+          "title": "Spectator packages",
+          "description": "Travel and stays arranged around tournament schedules, venue access and time to experience Sri Lanka between matches."
+        },
+        {
+          "label": "Match preparation",
+          "title": "Ground and practice bookings",
+          "description": "Match grounds and dedicated practice venues coordinated directly with suitable local clubs and facilities."
+        },
+        {
+          "label": "Performance",
+          "title": "Technical coaching",
+          "description": "Focused technical sessions, local opposition and specialist spin or fast-bowling support shaped to the touring side."
+        },
+        {
+          "label": "Touring party",
+          "title": "Players and families",
+          "description": "Accommodation options for players, staff and accompanying families, integrated with the wider touring itinerary."
+        }
+      ]
+    },
+    "spectator": {
+      "kicker": "Travelling to watch?",
+      "title": "Follow the fixture. See the island between overs.",
+      "copy": "We can shape a supporter itinerary around international match dates, connecting venue days with coast, culture and wildlife.",
+      "link": "Discuss a spectator trip"
+    },
+    "cta": {
+      "kicker": "Your touring brief",
+      "title": "Bring the squad. We’ll build the tour.",
+      "copy": "Share your party size, approximate dates, age or playing level, and fixture interests.",
+      "link": "Enquire about a cricket tour"
+    },
+    "related": {
+      "label": "Continue exploring",
+      "title": "Continue around the island",
+      "tours": "Tours",
+      "excursions": "Excursions",
+      "transport": "Transportation"
+    }
+  },
+  "Consultancy": {
+    "heroTitle": "Hospitality Project Management Consultancy",
+    "heroSubtitle": "For hotel investors and developers",
+    "intro": {
+      "kicker": "A B2B service, distinct from our leisure travel arrangements",
+      "title": "Expert advisory from acquisition to commissioning",
+      "copy": "One of the key strengths of Serendia Holidays is our know-how in hospitality hotel project management. We provide expert knowledge to potential investors — from the acquisition of land through to the building and commissioning of a star-class hotel."
+    },
+    "servicesTitle": "We advise investors in the following areas",
+    "items": [
+      "Contribution to concept design.",
+      "To draw up a construction time plan.",
+      "Advice on the practical implications of the building plan, stores, rooms and other operations.",
+      "To advice on investment saving ideas and trends.",
+      "Maintenance of project finances.",
+      "Handling all statutory requirement of BOI on imports.",
+      "Attending to all necessary documentation of the Inland Revenue Department in obtaining VAT, NBT and SVAT.",
+      "Obtain SVAT credit vouchers, monitoring and submitting quarterly reports.",
+      "Drawing up of procurement plan for all purchases and ensure the least is paid for the best quality items available in the market.",
+      "To ensure that the project is completed in a timely manner.",
+      "To advice on the commissioning of all equipment, plant and machinery.",
+      "Structuring and drawing up of all training and operational manuals of each department.",
+      "Advice on the execution of the total human resources plan.",
+      "To advice and draw up a total marketing plan for the proposed hotel.",
+      "To act as consultants for the hotel operational automation.",
+      "Training of staff as per the training schedule specified above.",
+      "To make timely site visits and supervision.",
+      "Provide advice and supervision on the hotel soft run."
+    ],
+    "cta": {
+      "title": "Considering a hotel development in Sri Lanka?",
+      "copy": "Talk to our project management consultancy team directly — this enquiry path is kept separate from our leisure trip planner.",
+      "button": "Request a Consultation"
+    },
+    "related": "Also of interest"
+  }
+}

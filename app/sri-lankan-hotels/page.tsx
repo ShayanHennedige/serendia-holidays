@@ -1,5 +1,6 @@
 import InnerHero from '../components/InnerHero';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
 import { pageMetadata } from '../lib/seo';
 
 const hotels = [
@@ -15,83 +16,35 @@ const hotels = [
   }
 ];
 
-const hotelRatings = [
-  {
-    label: '5 Stars',
-    value: 'Superior standard and an extensive range of first-class guest services',
-  },
-  {
-    label: '4 Stars',
-    value: 'Exceptional standard with high-quality furnishings and comfort',
-  },
-  {
-    label: '3 Stars',
-    value: 'Well-appointed establishments with comfortable, clean rooms and quality furnishings',
-  },
-  {
-    label: 'Less than 3 Stars',
-    value: 'A basic, well-maintained standard',
-  },
-  {
-    label: 'Unclassified Hotels',
-    value: 'Well maintained properties with adequate facilities which do not fall under star classifications.',
-  },
-  {
-    label: 'Boutique Hotel and Villas',
-    value: 'Small but exclusive property that caters to the affluent clientele with an exceptional level of service at premium prices.',
-  },
-];
-
-const propertyTypes = [
-  {
-    label: 'Bungalow',
-    value: 'A type of real estate property that consists of a small, one story home with an enclosed porch.',
-  },
-  {
-    label: 'Home Stay',
-    value: 'A stay at a residence by a traveler and especially by a tourist who is hosted by a local family to better learn about the local lifestyle',
-  },
-  {
-    label: 'Rented Apartments',
-    value: 'Is a room or suite of rooms designed as a residence and generally located in a building occupied by more than one household.',
-  },
-  {
-    label: 'Guest House',
-    value: 'Guest houses range from low budget rooms to luxury apartments, and tend to be like small hotels in larger cities.',
-  },
-  {
-    label: 'Boutique Hotel',
-    value: 'Small but exclusive property that caters to the affluent clientele with an exceptional level of service at premium prices.',
-  },
-];
-
 export const metadata = pageMetadata({
   title: 'Sri Lankan Hotels - Serendia Holidays By Venom',
   description: 'Hand-picked Sri Lankan hotel and villa partners, from boutique stays to tranquil villas, bookable with your tailor-made Serendia Holidays itinerary.',
   path: '/sri-lankan-hotels',
 });
 
-export default function HotelsPage() {
+export default async function HotelsPage() {
+  const t = await getTranslations('Hotels');
+  const hotelRatings = t.raw('ratings.items') as { label: string; value: string }[];
+  const propertyTypes = t.raw('types.items') as { label: string; value: string }[];
+
   return (
     <main>
       <InnerHero 
-        title="Sri Lankan Hotels" 
+        title={t('heroTitle')}
         bgImage="/images/hero-4.png"
       />
       <section className="page-content">
         <div className="container">
           <div className="section-header">
-            <h2 className="section-title">Our Accommodation Partners</h2>
-            <p className="section-subtitle">Experience true Sri Lankan hospitality</p>
+            <h2 className="section-title">{t('partners.title')}</h2>
+            <p className="section-subtitle">{t('partners.subtitle')}</p>
           </div>
           <div style={{ maxWidth: '850px', margin: '0 auto 30px', textAlign: 'center' }}>
-            <p>
-              Browse hand-picked Sri Lankan stays that work well for beach holidays, round trips, and private tours. Each property page includes a quick overview and the details needed to plan your stay.
-            </p>
+            <p>{t('partners.copy')}</p>
           </div>
           <div className="section-header" style={{ marginTop: '50px' }}>
-            <h2 className="section-title">Hotel Star Classifications</h2>
-            <p className="section-subtitle">A quick guide to the standard of service and facilities</p>
+            <h2 className="section-title">{t('ratings.title')}</h2>
+            <p className="section-subtitle">{t('ratings.subtitle')}</p>
           </div>
           <div className="trip-facts">
             {hotelRatings.map((item) => (
@@ -103,8 +56,8 @@ export default function HotelsPage() {
           </div>
 
           <div className="section-header" style={{ marginTop: '60px' }}>
-            <h2 className="section-title">Common Hotel Types</h2>
-            <p className="section-subtitle">Accommodation styles you may see in Sri Lanka</p>
+            <h2 className="section-title">{t('types.title')}</h2>
+            <p className="section-subtitle">{t('types.subtitle')}</p>
           </div>
           <div className="trip-facts" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}>
             {propertyTypes.map((item) => (
@@ -116,10 +69,8 @@ export default function HotelsPage() {
           </div>
 
           <div style={{ maxWidth: '850px', margin: '60px auto 30px', textAlign: 'center' }}>
-            <p>
-              If you want help selecting the right hotel type for your trip, we can match the stay to your route, budget, and preferred level of service.
-            </p>
-            <Link href="/contact" className="trip-inline-link">Ask us for recommendations</Link>
+            <p>{t('help.copy')}</p>
+            <Link href="/contact" className="trip-inline-link">{t('help.link')}</Link>
           </div>
           <div className="page-grid">
             {hotels.map((item, idx) => {
@@ -136,7 +87,7 @@ export default function HotelsPage() {
                   <img src={item.image} alt={item.title} className="card-img" />
                   <div className="card-content">
                     <h3 className="card-title" style={{ fontSize: '1.2rem', marginTop: 0 }}>{item.title}</h3>
-                    <span className="btn-primary" style={{ padding: '8px 16px', fontSize: '0.85rem', marginTop: '10px' }}>View Details</span>
+                    <span className="btn-primary" style={{ padding: '8px 16px', fontSize: '0.85rem', marginTop: '10px' }}>{t('viewDetails')}</span>
                   </div>
                 </a>
               );

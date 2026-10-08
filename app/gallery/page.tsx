@@ -1,6 +1,7 @@
 import InnerHero from '../components/InnerHero';
 import GalleryBrowser from './GalleryBrowser';
 import { getGoogleDriveGallery } from '../lib/googleDriveGallery';
+import { getTranslations } from 'next-intl/server';
 import { pageMetadata } from '../lib/seo';
 
 // Render on request so the gallery always reflects the latest public Drive contents.
@@ -14,22 +15,20 @@ export const metadata = pageMetadata({
 
 export default async function GalleryPage() {
   const collections = await getGoogleDriveGallery();
+  const t = await getTranslations('Gallery');
 
   return (
     <main className="drive-gallery-page">
       <InnerHero 
-        title="Gallery" 
+        title={t('heroTitle')}
         bgImage="/images/hero-1.png"
       />
       <section className="drive-gallery-intro">
         <div className="container">
           <div className="drive-gallery-heading">
-            <p className="drive-gallery-eyebrow">Stories from the road</p>
-            <h2>Real journeys.<br /><em>Unscripted moments.</em></h2>
-            <p className="drive-gallery-copy">
-              A living collection of Sri Lanka as our guests experienced it—warm welcomes,
-              wild landscapes and the small moments that stay with you.
-            </p>
+            <p className="drive-gallery-eyebrow">{t('eyebrow')}</p>
+            <h2>{t('title1')}<br /><em>{t('title2')}</em></h2>
+            <p className="drive-gallery-copy">{t('copy')}</p>
           </div>
           <GalleryBrowser collections={collections} />
         </div>

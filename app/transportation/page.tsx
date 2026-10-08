@@ -1,21 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '../components/InnerHero';
+import { getTranslations } from 'next-intl/server';
 import { pageMetadata } from '../lib/seo';
 
-const roadFleet = [
-  { title: 'Private car', image: '/images/transport-car.png', fit: 'Solo travellers and couples', note: 'The most flexible way to move at your own pace.' },
-  { title: 'Van', image: '/images/transport-van.png', fit: 'Families and small groups', note: 'Extra space for people, luggage and longer routes.' },
-  { title: 'Mini bus', image: '/images/transport-minibus.png', fit: 'Small touring parties', note: 'A practical balance of comfort and group capacity.' },
-  { title: 'Coach', image: '/images/transport-coach.png', fit: 'Clubs and larger groups', note: 'Coordinated movement for shared itineraries and equipment.' },
-];
-
-const servicePromises = [
-  ['Airport to itinerary', 'Transfers connect directly with the route rather than sitting outside it.'],
-  ['Right-sized vehicles', 'We match capacity to your party, luggage and level of comfort.'],
-  ['Local route knowledge', 'Travel times, road conditions and sensible stops shape every day.'],
-  ['One coordinated plan', 'Road, rail and air options can be combined into one reviewed journey.'],
-];
+// Vehicle and service text lives in messages/<locale>/services.json (Transport.fleet / promises),
+// matched by position.
+const fleetImages = ['/images/transport-car.png', '/images/transport-van.png', '/images/transport-minibus.png', '/images/transport-coach.png'];
 
 export const metadata = pageMetadata({
   title: 'Transportation - Serendia Holidays By Venom',
@@ -23,24 +14,28 @@ export const metadata = pageMetadata({
   path: '/transportation',
 });
 
-export default function TransportationPage() {
+export default async function TransportationPage() {
+  const t = await getTranslations('Transport');
+  const roadFleet = (t.raw('fleet') as { title: string; fit: string; note: string }[]).map((vehicle, index) => ({ ...vehicle, image: fleetImages[index] }));
+  const servicePromises = t.raw('promises') as { title: string; detail: string }[];
+
   return (
     <main className="transportation-page">
       <InnerHero
-        title="Transportation"
-        subtitle="Road, rail and air—joined into one considered route"
+        title={t('heroTitle')}
+        subtitle={t('heroSubtitle')}
         bgImage="/images/transport-train.png"
       />
 
       <section className="transport-intro" aria-labelledby="transport-intro-title">
         <div className="container transport-intro-grid">
           <div>
-            <p className="collection-kicker">Movement, made part of the journey</p>
-            <h2 id="transport-intro-title">The island changes outside your window.</h2>
+            <p className="collection-kicker">{t('intro.kicker')}</p>
+            <h2 id="transport-intro-title">{t('intro.title')}</h2>
           </div>
           <div>
-            <p>We plan transport as part of the experience—not an afterthought. Take the scenic train where it matters, use a private vehicle where flexibility counts, and consider air connections when time is the priority.</p>
-            <Link href="/customize" className="collection-text-link">Build transport into my trip <span aria-hidden="true">↗</span></Link>
+            <p>{t('intro.copy')}</p>
+            <Link href="/customize" className="collection-text-link">{t('intro.link')} <span aria-hidden="true">↗</span></Link>
           </div>
         </div>
       </section>
@@ -48,27 +43,27 @@ export default function TransportationPage() {
       <section className="transport-modes" aria-labelledby="transport-modes-title">
         <div className="container">
           <div className="transport-section-heading">
-            <p className="collection-kicker">Three ways across the island</p>
-            <h2 id="transport-modes-title">Choose one. Combine several.</h2>
+            <p className="collection-kicker">{t('modes.kicker')}</p>
+            <h2 id="transport-modes-title">{t('modes.title')}</h2>
           </div>
 
           <article className="transport-feature transport-feature-rail">
             <div className="transport-feature-image">
-              <Image src="/images/transport-train.png" alt="Train crossing Sri Lanka's tea country" fill sizes="(max-width: 800px) 100vw, 62vw" />
-              <span>Rail</span>
+              <Image src="/images/transport-train.png" alt={t('rail.alt')} fill sizes="(max-width: 800px) 100vw, 62vw" />
+              <span>{t('rail.tag')}</span>
             </div>
             <div className="transport-feature-copy">
-              <p className="transport-mode-label">Slow and scenic</p>
-              <h3>Take the train when the view is the point.</h3>
-              <p>Hill-country rail is not simply a transfer. We can place the most memorable section inside a wider private route, with road connections before and after.</p>
-              <ul><li>Tea-country scenery</li><li>Reserved around the wider route</li><li>Road transfers coordinated</li></ul>
+              <p className="transport-mode-label">{t('rail.label')}</p>
+              <h3>{t('rail.title')}</h3>
+              <p>{t('rail.copy')}</p>
+              <ul>{(t.raw('rail.points') as string[]).map((point) => <li key={point}>{point}</li>)}</ul>
             </div>
           </article>
 
           <div className="transport-road-section">
             <div className="transport-road-heading">
-              <div><p className="transport-mode-label">Road</p><h3>Your private route, right-sized.</h3></div>
-              <p>From two travellers to a full touring party, choose the space that fits the journey.</p>
+              <div><p className="transport-mode-label">{t('road.label')}</p><h3>{t('road.title')}</h3></div>
+              <p>{t('road.copy')}</p>
             </div>
             <div className="transport-fleet-grid">
               {roadFleet.map((vehicle) => (
@@ -82,14 +77,14 @@ export default function TransportationPage() {
 
           <article className="transport-feature transport-feature-air">
             <div className="transport-feature-copy">
-              <p className="transport-mode-label">Air</p>
-              <h3>Cross the island when time matters most.</h3>
-              <p>Helicopter and air-taxi options can turn a long transfer into an extraordinary aerial perspective, subject to route, weather and availability.</p>
-              <ul><li>Private charter options</li><li>Airport connections</li><li>Availability confirmed by our team</li></ul>
+              <p className="transport-mode-label">{t('air.label')}</p>
+              <h3>{t('air.title')}</h3>
+              <p>{t('air.copy')}</p>
+              <ul>{(t.raw('air.points') as string[]).map((point) => <li key={point}>{point}</li>)}</ul>
             </div>
             <div className="transport-feature-image">
-              <Image src="/images/transport-helicopter.png" alt="Helicopter flying above Sri Lanka's coast" fill sizes="(max-width: 800px) 100vw, 58vw" />
-              <span>Air</span>
+              <Image src="/images/transport-helicopter.png" alt={t('air.alt')} fill sizes="(max-width: 800px) 100vw, 58vw" />
+              <span>{t('air.label')}</span>
             </div>
           </article>
         </div>
@@ -97,11 +92,11 @@ export default function TransportationPage() {
 
       <section className="transport-service-strip" aria-labelledby="transport-service-title">
         <div className="container">
-          <div className="transport-service-title"><p className="collection-kicker">One team behind every transfer</p><h2 id="transport-service-title">Planned from arrival to departure</h2></div>
+          <div className="transport-service-title"><p className="collection-kicker">{t('service.kicker')}</p><h2 id="transport-service-title">{t('service.title')}</h2></div>
           <div className="transport-service-grid">
-            {servicePromises.map(([title, detail]) => <article key={title}><h3>{title}</h3><p>{detail}</p></article>)}
+            {servicePromises.map(({ title, detail }) => <article key={title}><h3>{title}</h3><p>{detail}</p></article>)}
           </div>
-          <div className="transport-cta-row"><p>Tell us your party size and route. We&apos;ll recommend the right mix.</p><Link href="/customize">Plan my transport <span aria-hidden="true">↗</span></Link></div>
+          <div className="transport-cta-row"><p>{t('service.cta')}</p><Link href="/customize">{t('service.link')} <span aria-hidden="true">↗</span></Link></div>
         </div>
       </section>
     </main>
