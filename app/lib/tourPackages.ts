@@ -1083,7 +1083,7 @@ export const tourPackages: TourPackage[] = [
     tourType: 'Multi-centre',
     visiting: ['Bentota', 'Galle', 'Yala', 'Ella', 'Kandy', 'Colombo', 'Negombo'],
     bestFor: ['Beach first', 'Wildlife & 4x4 safari', 'Best value', 'Honeymoon', 'Tea country'],
-    priceFrom: 'USD 1,615',
+    priceFrom: 'USD 1,960',
     priceBasis: 'per person',
     period: '01 Nov – 19 Dec 2026 & 11 Jan – 30 Apr 2027',
     extensionPrice: 'USD 325 per room, per night',
