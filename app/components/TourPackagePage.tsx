@@ -104,7 +104,13 @@ function IntroFacts({
         ...countWords(locale, copy, pkg.nights),
       }),
     },
-    { icon: <VisitingIcon />, label: copy.detail.visiting, value: pkg.visiting.join(', '), wide: true },
+    {
+      icon: <VisitingIcon />,
+      label: copy.detail.visiting,
+      value: pkg.visiting.join(', '),
+      note: copy.detail.entranceFeesNote,
+      wide: true,
+    },
     { icon: <BestForIcon />, label: copy.detail.bestFor, value: pkg.bestFor.join(', '), wide: true },
     { icon: <PeriodIcon />, label: copy.detail.travelPeriod, value: pkg.period },
     { icon: <ExtensionIcon />, label: copy.detail.beachExtension, value: pkg.extensionPrice },
@@ -122,6 +128,7 @@ function IntroFacts({
               <div>
                 <dt>{fact.label}</dt>
                 <dd>{fact.value}</dd>
+                {'note' in fact && fact.note && <dd className="pkg-fact-note">{fact.note}</dd>}
               </div>
             </div>
           ))}

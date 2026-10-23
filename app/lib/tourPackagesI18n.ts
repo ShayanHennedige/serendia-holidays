@@ -63,6 +63,7 @@ export type PackagesCopy = {
     bestFor: string;
     travelPeriod: string;
     beachExtension: string;
+    entranceFeesNote: string;
     itineraryOverview: string;
     extendHoliday: string;
     otherItineraries: string;
@@ -159,6 +160,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Best for',
       travelPeriod: 'Travel period',
       beachExtension: 'Beach extension',
+      entranceFeesNote: 'Entrance fees to tourist sites are not included in the price.',
       itineraryOverview: 'Itinerary overview',
       extendHoliday: 'Extend your holiday',
       otherItineraries: 'Other itineraries',
@@ -254,6 +256,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Idéal pour',
       travelPeriod: 'Période de voyage',
       beachExtension: 'Extension balnéaire',
+      entranceFeesNote: 'Les droits d’entrée des sites touristiques ne sont pas inclus dans le prix.',
       itineraryOverview: 'Aperçu de l’itinéraire',
       extendHoliday: 'Prolonger vos vacances',
       otherItineraries: 'Autres itinéraires',
@@ -349,6 +352,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Ideal für',
       travelPeriod: 'Reisezeitraum',
       beachExtension: 'Strandverlängerung',
+      entranceFeesNote: 'Eintrittsgelder für Sehenswürdigkeiten sind nicht im Preis enthalten.',
       itineraryOverview: 'Überblick über den Reiseverlauf',
       extendHoliday: 'Urlaub verlängern',
       otherItineraries: 'Weitere Reiserouten',
@@ -444,6 +448,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Ideale per',
       travelPeriod: 'Periodo di viaggio',
       beachExtension: 'Estensione mare',
+      entranceFeesNote: 'I biglietti d’ingresso ai siti turistici non sono inclusi nel prezzo.',
       itineraryOverview: 'Panoramica dell’itinerario',
       extendHoliday: 'Prolunga la vacanza',
       otherItineraries: 'Altri itinerari',
@@ -539,6 +544,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Ideal para',
       travelPeriod: 'Periodo de viaje',
       beachExtension: 'Extensión de playa',
+      entranceFeesNote: 'Las entradas a los sitios turísticos no están incluidas en el precio.',
       itineraryOverview: 'Resumen del itinerario',
       extendHoliday: 'Alarga tus vacaciones',
       otherItineraries: 'Otros itinerarios',
@@ -634,6 +640,7 @@ export const packagesDictionaries: Record<Locale, PackagesCopy> = {
       bestFor: 'Puikiai tinka',
       travelPeriod: 'Kelionės laikotarpis',
       beachExtension: 'Poilsis paplūdimyje',
+      entranceFeesNote: 'Įėjimo mokesčiai į turistines vietas į kainą neįskaičiuoti.',
       itineraryOverview: 'Maršruto apžvalga',
       extendHoliday: 'Pratęskite atostogas',
       otherItineraries: 'Kiti maršrutai',
