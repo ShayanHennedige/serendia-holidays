@@ -97,7 +97,7 @@ export const experiences: Record<string, Experience> = {
   'polonnaruwa': {
     name: 'Ancient City of Polonnaruwa',
     location: 'Cultural Triangle',
-    included: true,
+    included: false,
     summary:
       'Sri Lanka’s second capital is the best-preserved of the island’s ruined cities — a compact, walkable sweep of royal palaces, bathing pools and colossal rock-cut Buddhas left behind by the 12th-century kings.',
     detail: [
@@ -119,7 +119,7 @@ export const experiences: Record<string, Experience> = {
   'minneriya': {
     name: 'Minneriya National Park Jeep Safari',
     location: 'Cultural Triangle',
-    included: true,
+    included: false,
     summary:
       'Late afternoon in the dry season draws hundreds of wild elephants onto the grasslands of a receding reservoir — the largest gathering of Asian elephants anywhere on earth.',
     detail: [
@@ -141,7 +141,7 @@ export const experiences: Record<string, Experience> = {
   'sigiriya-rock': {
     name: 'Sigiriya Rock Fortress',
     location: 'Sigiriya',
-    included: true,
+    included: false,
     summary:
       'A sheer granite plug rising 200 metres out of flat jungle, topped by the ruins of a fifth-century sky palace and reached by a staircase that passes between the paws of a vanished stone lion.',
     detail: [
@@ -163,7 +163,7 @@ export const experiences: Record<string, Experience> = {
   'anuradhapura': {
     name: 'Sacred City of Anuradhapura',
     location: 'Anuradhapura',
-    included: true,
+    included: false,
     summary:
       'The island’s first capital and still a living pilgrimage site — brick stupas the size of small hills, monastery ruins under the trees, and a fig tree grown from a cutting taken in 288 BC.',
     detail: [
@@ -207,7 +207,7 @@ export const experiences: Record<string, Experience> = {
   'dambulla': {
     name: 'Dambulla Golden Cave Temple',
     location: 'Dambulla',
-    included: true,
+    included: false,
     summary:
       'Five caves hollowed into the side of a rock, filled with 150 Buddha statues and painted from floor to ceiling — the largest and best-preserved cave temple complex in Sri Lanka.',
     detail: [
@@ -229,7 +229,7 @@ export const experiences: Record<string, Experience> = {
   'spice-garden': {
     name: 'Matale Spice Garden',
     location: 'Matale',
-    included: true,
+    included: false,
     summary:
       'Walk a working spice garden in the hills above Matale, where Ceylon cinnamon, cardamom, pepper and vanilla grow side by side — and learn what each one actually looks like before it reaches a jar.',
     detail: [
@@ -251,7 +251,7 @@ export const experiences: Record<string, Experience> = {
   'kandy-temple': {
     name: 'Temple of the Sacred Tooth Relic',
     location: 'Kandy',
-    included: true,
+    included: false,
     summary:
       'The most venerated Buddhist site in Sri Lanka, holding a tooth of the Buddha that has been a symbol of sovereignty for over a thousand years — best seen during the drumming of the evening puja.',
     detail: [
@@ -295,7 +295,7 @@ export const experiences: Record<string, Experience> = {
   'botanical-garden': {
     name: 'Royal Botanical Gardens, Peradeniya',
     location: 'Kandy',
-    included: true,
+    included: false,
     summary:
       'Sixty hectares in a loop of the Mahaweli river, laid out as a royal pleasure garden and now holding four thousand species, an avenue of royal palms and a Javan fig with a canopy the size of a tennis court.',
     detail: [
@@ -317,7 +317,7 @@ export const experiences: Record<string, Experience> = {
   'kandy-city': {
     name: 'Kandy City Tour',
     location: 'Kandy',
-    included: true,
+    included: false,
     summary:
       'The hill capital at its own pace: the lake, the covered market, a gem workshop, and the viewpoint above town where the whole bowl of Kandy opens up at dusk.',
     detail: [
@@ -339,7 +339,7 @@ export const experiences: Record<string, Experience> = {
   'tea-factory': {
     name: 'Tea Factory & Plantation Visit',
     location: 'Hill Country',
-    included: true,
+    included: false,
     summary:
       'Follow the leaf from the hillside to the cup inside a working highland factory — withering lofts, rolling machines, the firing ovens and a tasting of the grades you will never see exported.',
     detail: [
@@ -361,7 +361,7 @@ export const experiences: Record<string, Experience> = {
   'nuwara-eliya-city': {
     name: 'Nuwara Eliya City Tour',
     location: 'Nuwara Eliya',
-    included: true,
+    included: false,
     summary:
       'Sri Lanka’s improbable hill station — mock-Tudor bungalows, a racecourse, a colonial post office and a boating lake, all at 1,900 metres in the middle of the tropics.',
     detail: [
@@ -383,7 +383,7 @@ export const experiences: Record<string, Experience> = {
   'sita-amman': {
     name: 'Seetha Amman Temple',
     location: 'Nuwara Eliya',
-    included: true,
+    included: false,
     summary:
       'A brightly painted Hindu temple beside a mountain stream, held to be the spot where Sita was kept captive by Ravana in the Ramayana — with footprint-shaped hollows in the rock to prove it.',
     detail: [
@@ -427,7 +427,7 @@ export const experiences: Record<string, Experience> = {
   'ella-city': {
     name: 'Ella Town & Nine Arch Bridge',
     location: 'Ella',
-    included: true,
+    included: false,
     summary:
       'A hill town that has become the island’s favourite place to do nothing — plus the Nine Arch Bridge, a colonial-era viaduct curving out of the jungle on nine stone spans.',
     detail: [
@@ -471,7 +471,7 @@ export const experiences: Record<string, Experience> = {
   'ravana-falls': {
     name: 'Ravana Falls',
     location: 'Ella',
-    included: true,
+    included: false,
     summary:
       'A 25-metre cascade tumbling in stages down a rock face right beside the Ella–Wellawaya road, at its most dramatic in the months after the monsoon.',
     detail: [
@@ -493,7 +493,7 @@ export const experiences: Record<string, Experience> = {
   'kataragama': {
     name: 'Kataragama & Kiri Vehera',
     location: 'Kataragama',
-    included: true,
+    included: false,
     summary:
       'One of the few places on earth sacred to Buddhists, Hindus and Muslims alike — an evening of drums, oil lamps and offerings at the shrine of the god Kataragama, beside a brilliant white stupa.',
     detail: [
@@ -515,7 +515,7 @@ export const experiences: Record<string, Experience> = {
   'yala-safari': {
     name: 'Yala National Park Jeep Safari',
     location: 'Yala',
-    included: true,
+    included: false,
     summary:
       'Sri Lanka’s flagship reserve holds one of the densest leopard populations in the world, along with sloth bears, elephants and crocodiles — and the only safari on the island that ends at the sea.',
     detail: [
@@ -537,7 +537,7 @@ export const experiences: Record<string, Experience> = {
   'galle-fort': {
     name: 'Galle Fort',
     location: 'Galle',
-    included: true,
+    included: false,
     summary:
       'A walled Dutch trading town on a headland in the Indian Ocean, still lived in, still walkable in an hour — coral-stone ramparts, a lighthouse, and streets of colonnaded villas now full of galleries and cafés.',
     detail: [
@@ -559,7 +559,7 @@ export const experiences: Record<string, Experience> = {
   'madu-river': {
     name: 'Madu River Boat Safari',
     location: 'Balapitiya',
-    included: true,
+    included: false,
     summary:
       'A wetland of 64 islands and dense mangrove tunnels behind the coast, explored by motorboat — cinnamon smallholdings, an island temple, monitor lizards and kingfishers.',
     detail: [
@@ -581,7 +581,7 @@ export const experiences: Record<string, Experience> = {
   'turtle-hatchery': {
     name: 'Kosgoda Turtle Hatchery',
     location: 'Kosgoda',
-    included: true,
+    included: false,
     summary:
       'A conservation hatchery on the beach where eggs bought back from poachers are reburied, protected and the hatchlings released to the sea after dark.',
     detail: [
@@ -647,7 +647,7 @@ export const experiences: Record<string, Experience> = {
   'colombo-city': {
     name: 'Colombo City Tour',
     location: 'Colombo',
-    included: true,
+    included: false,
     summary:
       'The commercial capital in half a day — the Pettah bazaar, a red-and-white striped mosque, colonial Fort, the Gangaramaya temple and sunset on Galle Face Green.',
     detail: [
@@ -669,7 +669,7 @@ export const experiences: Record<string, Experience> = {
   'negombo-lagoon': {
     name: 'Negombo Lagoon & Fish Market',
     location: 'Negombo',
-    included: true,
+    included: false,
     summary:
       'A Catholic fishing town twenty minutes from the airport — Dutch canals, outrigger oruwa boats coming in at dawn, and the biggest fish market on the west coast.',
     detail: [
@@ -691,7 +691,7 @@ export const experiences: Record<string, Experience> = {
   'kitulgala': {
     name: 'Kitulgala & the Kelani Valley',
     location: 'Kitulgala',
-    included: true,
+    included: false,
     summary:
       'The rainforest gorge where The Bridge on the River Kwai was filmed, and the best white-water rafting in Sri Lanka — five kilometres of grade 2 and 3 rapids through the jungle.',
     detail: [
