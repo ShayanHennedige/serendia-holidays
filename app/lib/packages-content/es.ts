@@ -6,7 +6,7 @@ const daily = 'Salidas diarias';
 const privateGuide = 'Experiencia privada con tu chófer-guía';
 const unesco = 'Entrada al sitio Patrimonio Mundial de la UNESCO incluida';
 const onRequest = 'Precio bajo petición';
-const perPerson = 'para 2 personas';
+const perPerson = 'por persona';
 const period = '01 nov – 19 dic 2026 y 11 ene – 30 abr 2027';
 const roomNight = (amount: number) => `USD ${amount} por habitación y noche`;
 const departure = 'Salida';

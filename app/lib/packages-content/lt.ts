@@ -6,7 +6,7 @@ const daily = 'Kasdienės išvykos';
 const privateGuide = 'Privati patirtis su jūsų vairuotoju-gidu';
 const unesco = 'Įėjimas į UNESCO pasaulio paveldo objektą įskaičiuotas';
 const onRequest = 'Kaina pagal užklausą';
-const perPerson = '2 asmenims';
+const perPerson = 'asmeniui';
 const period = '2026 m. lapkr. 1–gruod. 19 d. ir 2027 m. saus. 11–bal. 30 d.';
 const roomNight = (amount: number) => `USD ${amount} už kambarį per naktį`;
 const departure = 'Išvykimas';
